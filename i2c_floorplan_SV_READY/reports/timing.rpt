@@ -1,0 +1,361 @@
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : i2c_master_top
+Version: U-2022.12
+Date   : Tue Jun 16 10:38:46 2026
+****************************************
+
+Operating Conditions: nom_pvt   Library: gtech
+Wire Load Model Mode: top
+
+  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
+  Endpoint: al_reg (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock wb_clk_i (rise edge)               0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  wb_rst_i (in)                            0.00       0.00 r
+  B_17/Z (GTECH_BUF)                       0.00       0.00 r
+  B_11/Z (GTECH_BUF)                       0.00       0.00 r
+  C443/Z_0 (*SELECT_OP_2.1_2.1_1)          0.00       0.00 r
+  al_reg/next_state (**SEQGEN**)           0.00       0.00 r
+  data arrival time                                   0.00
+
+  clock wb_clk_i (rise edge)              10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  al_reg/clocked_on (**SEQGEN**)           0.00      10.00 r
+  library setup time                       0.00      10.00
+  data required time                                 10.00
+  -----------------------------------------------------------
+  data required time                                 10.00
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  slack (MET)                                        10.00
+
+
+  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cSDA_reg[1]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wb_rst_i (in)                                           0.00       0.00 r
+  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
+  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/B_1/Z (GTECH_BUF)        0.00       0.00 r
+  byte_controller/bit_controller/C620/Z_1 (*SELECT_OP_2.2_2.1_2)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cSDA_reg[1]/next_state (**SEQGEN**)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/cSDA_reg[1]/clocked_on (**SEQGEN**)
+                                                          0.00      10.00 r
+  library setup time                                      0.00      10.00
+  data required time                                                10.00
+  --------------------------------------------------------------------------
+  data required time                                                10.00
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.00
+
+
+  Startpoint: sda_pad_i (input port clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cSDA_reg[0]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  sda_pad_i (in)                                          0.00       0.00 r
+  byte_controller/sda_i (i2c_master_byte_ctrl)            0.00       0.00 r
+  byte_controller/bit_controller/sda_i (i2c_master_bit_ctrl)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/C620/Z_0 (*SELECT_OP_2.2_2.1_2)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cSDA_reg[0]/next_state (**SEQGEN**)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/cSDA_reg[0]/clocked_on (**SEQGEN**)
+                                                          0.00      10.00 r
+  library setup time                                      0.00      10.00
+  data required time                                                10.00
+  --------------------------------------------------------------------------
+  data required time                                                10.00
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.00
+
+
+  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cSCL_reg[1]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wb_rst_i (in)                                           0.00       0.00 r
+  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
+  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/B_1/Z (GTECH_BUF)        0.00       0.00 r
+  byte_controller/bit_controller/C619/Z_1 (*SELECT_OP_2.2_2.1_2)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cSCL_reg[1]/next_state (**SEQGEN**)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/cSCL_reg[1]/clocked_on (**SEQGEN**)
+                                                          0.00      10.00 r
+  library setup time                                      0.00      10.00
+  data required time                                                10.00
+  --------------------------------------------------------------------------
+  data required time                                                10.00
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.00
+
+
+  Startpoint: scl_pad_i (input port clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cSCL_reg[0]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  scl_pad_i (in)                                          0.00       0.00 r
+  byte_controller/scl_i (i2c_master_byte_ctrl)            0.00       0.00 r
+  byte_controller/bit_controller/scl_i (i2c_master_bit_ctrl)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/C619/Z_0 (*SELECT_OP_2.2_2.1_2)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cSCL_reg[0]/next_state (**SEQGEN**)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/cSCL_reg[0]/clocked_on (**SEQGEN**)
+                                                          0.00      10.00 r
+  library setup time                                      0.00      10.00
+  data required time                                                10.00
+  --------------------------------------------------------------------------
+  data required time                                                10.00
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.00
+
+
+  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/busy_reg
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wb_rst_i (in)                                           0.00       0.00 r
+  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
+  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/B_1/Z (GTECH_BUF)        0.00       0.00 r
+  byte_controller/bit_controller/C631/Z_0 (*SELECT_OP_2.1_2.1_1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/busy_reg/next_state (**SEQGEN**)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/busy_reg/clocked_on (**SEQGEN**)
+                                                          0.00      10.00 r
+  library setup time                                      0.00      10.00
+  data required time                                                10.00
+  --------------------------------------------------------------------------
+  data required time                                                10.00
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.00
+
+
+  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/al_reg
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wb_rst_i (in)                                           0.00       0.00 r
+  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
+  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/B_1/Z (GTECH_BUF)        0.00       0.00 r
+  byte_controller/bit_controller/C634/Z_0 (*SELECT_OP_2.1_2.1_1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/al_reg/next_state (**SEQGEN**)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/al_reg/clocked_on (**SEQGEN**)
+                                                          0.00      10.00 r
+  library setup time                                      0.00      10.00
+  data required time                                                10.00
+  --------------------------------------------------------------------------
+  data required time                                                10.00
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.00
+
+
+  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/c_state_reg[0]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wb_rst_i (in)                                           0.00       0.00 r
+  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
+  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/C786/Z (GTECH_OR2)       0.00       0.00 r
+  byte_controller/bit_controller/B_27/Z (GTECH_BUF)       0.00       0.00 r
+  byte_controller/bit_controller/C644/Z_0 (*SELECT_OP_2.17_2.1_17)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/c_state_reg[0]/next_state (**SEQGEN**)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/c_state_reg[0]/clocked_on (**SEQGEN**)
+                                                          0.00      10.00 r
+  library setup time                                      0.00      10.00
+  data required time                                                10.00
+  --------------------------------------------------------------------------
+  data required time                                                10.00
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.00
+
+
+  Startpoint: byte_controller/bit_controller/dout_reg
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/ack_out_reg
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/dout_reg/clocked_on (**SEQGEN**)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/dout_reg/Q (**SEQGEN**)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/dout (i2c_master_bit_ctrl)
+                                                          0.00       0.00 r
+  byte_controller/C440/Z_0 (*SELECT_OP_2.1_2.1_1)         0.00       0.00 r
+  byte_controller/ack_out_reg/next_state (**SEQGEN**)     0.00       0.00 r
+  data arrival time                                                  0.00
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/ack_out_reg/clocked_on (**SEQGEN**)     0.00      10.00 r
+  library setup time                                      0.00      10.00
+  data required time                                                10.00
+  --------------------------------------------------------------------------
+  data required time                                                10.00
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.00
+
+
+  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
+  Endpoint: byte_controller/ack_out_reg
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wb_rst_i (in)                                           0.00       0.00 r
+  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
+  byte_controller/C479/Z (GTECH_OR2)                      0.00       0.00 r
+  byte_controller/B_10/Z (GTECH_BUF)                      0.00       0.00 r
+  byte_controller/C439/Z_0 (*SELECT_OP_2.1_2.1_1)         0.00       0.00 r
+  byte_controller/ack_out_reg/synch_enable (**SEQGEN**)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/ack_out_reg/clocked_on (**SEQGEN**)     0.00      10.00 r
+  library setup time                                      0.00      10.00
+  data required time                                                10.00
+  --------------------------------------------------------------------------
+  data required time                                                10.00
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.00
+
+
+1

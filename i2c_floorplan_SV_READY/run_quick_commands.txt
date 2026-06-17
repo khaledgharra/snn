@@ -1,0 +1,7 @@
+cd ~/Downloads
+unzip i2c_floorplan_SV_READY.zip
+cd i2c_floorplan_SV_READY
+ls -1
+design_vision &
+# inside Design Vision:
+# source syn.tcl

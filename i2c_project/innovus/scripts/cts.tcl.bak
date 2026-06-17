@@ -1,0 +1,20 @@
+puts "############### sourcing cts.tcl ###############"
+setOptMode -effort high -powerEffort none  -leakageToDynamicRatio 0.1 -yieldEffort none -reclaimArea true -simplifyNetlist true -setupTargetSlack 0 -holdTargetSlack 0 -maxDensity 0.80 -drcMargin 0 -usefulSkew false
+
+# enable max capacitance , transition and fanout fixing during timing optimization
+setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+
+
+create_ccopt_clock_tree -name top -source I5/I1/CIN
+set_ccopt_mode -cts_inverter_cells " CLKINV_X1_18_SVT CLKINV_X2_18_SVT CLKINV_X3_18_SVT CLKINV_X4_18_SVT CLKINV_X6_18_SVT CLKINV_X8_18_SVT CLKINV_X12_18_SVT CLKINV_X16_18_SVT CLKINV_X20_18_SVT CLKINV_X24_18_SVT CLKINV_X32_18_SVT CLKINV_X40_18_SVT" -cts_target_skew  0.7 -cts_target_slew 0.7
+
+set_ccopt_mode -cts_buffer_cells { CLKBUF_X2_18_SVT CLKBUF_X3_18_SVT CLKBUF_X4_18_SVT CLKBUF_X6_18_SVT CLKBUF_X8_18_SVT CLKBUF_X12_18_SVT CLKBUF_X16_18_SVT CLKBUF_X20_18_SVT CLKBUF_X24_18_SVT CLKBUF_X32_18_SVT CLKBUF_X40_18_SVT}
+#set_ccopt_mode -route_top_top_preferred_layer M4 -route_top_bottom_preferred_layer M3
+set_ccopt_property target_max_trans 700ps 
+set_ccopt_property  target_skew 700ps
+create_route_type -name RT_trunk_leaf -top_preferred_layer M4 -bottom_preferred_layer M3 -preferred_routing_layer_effort high
+set_ccopt_property route_type RT_trunk_leaf  -net_type leaf 
+set_ccopt_property route_type RT_trunk_leaf  -net_type trunk 
+set_ccopt_mode -integration native
+ccopt_design -cts
+

@@ -1,0 +1,64 @@
+catch { setAnalysisMode -analysisType bcwc }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation forcedIdeal }
+catch { setAnalysisMode -usefulSkew true }
+catch { setAnalysisMode -virtualIPO false }
+catch { setOptMode -opt_view_pruning_hold_views_active_list { FastView } }
+catch { setOptMode -opt_view_pruning_setup_views_active_list { SlowView } }
+catch { setOptMode -opt_view_pruning_setup_views_persistent_list { SlowView} }
+catch { setOptMode -opt_view_pruning_tdgr_setup_views_persistent_list { SlowView} }
+catch { setOptMode -opt_drv_margin 0 }
+catch { setOptMode -opt_drv true }
+catch { setOptMode -opt_local_density_max_allowed 0.98 }
+catch { setOptMode -opt_resize_flip_flops true }
+catch { setOptMode -opt_refine_place true }
+catch { setOptMode -opt_setup_target_slack 0 }
+catch { setExtractRCMode  -engine preRoute }
+catch {setNanoRouteMode -quiet -route_global_exp_timing_driven_std_delay 59.600000}
+
+catch { setPlaceMode -place_design_floorplan_mode false }
+catch { setPlaceMode -place_detail_check_route false }
+catch { setPlaceMode -place_detail_preserve_routing false }
+catch { setPlaceMode -place_detail_remove_affected_routing false }
+catch { setPlaceMode -place_detail_swap_eeq_cells false }
+catch { setPlaceMode -place_global_clock_gate_aware false }
+catch { setPlaceMode -place_global_cong_effort high }
+catch { setPlaceMode -place_global_ignore_scan true }
+catch { setPlaceMode -place_global_ignore_spare true }
+catch { setPlaceMode -place_global_max_density 0.4 }
+catch { setPlaceMode -place_global_module_aware_spare false }
+catch { setPlaceMode -place_global_place_io_pins true }
+catch { setPlaceMode -place_global_reorder_scan true }
+catch { setPlaceMode -powerDriven false }
+catch { setPlaceMode -timingDriven true }
+catch { setScanReorderMode -compLogic true }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -enable_ideal_seq_async_pins false }
+catch { setDelayCalMode -eng_enablePrePlacedFlow false }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -ignoreNetLoad false }
+catch { setDelayCalMode -socv_accuracy_mode low }
+catch { setImportMode -discardFloatingVNets false }
+catch { setImportMode -keepEmptyModule false }
+catch { setImportMode -treatUndefinedCellAsBbox false }
+catch { setTieHiLoMode -cell {{TIEL_18_SVT TIEH_18_SVT}} }
+catch { setTieHiLoMode -maxDistance 10 }
+catch { setTieHiLoMode -maxFanout 4 }
+catch { setTieHiLoMode -prefix TIEOFF }
+catch { setSIMode -separate_delta_delay_on_data true }
+catch { setFPlanMode -cellsForExtraSites {} }
+catch { setFPlanMode -defaultRowPatternSite {} }
+catch { setFPlanMode -defaultTechSite CoreSite }
+catch { setFPlanMode -disableEolBlockageOnEdges {} }
+catch { setFPlanMode -extraRowPattern {} }
+catch { setFPlanMode -extraSites {} }
+catch { setFPlanMode -firstRowSiteIndex 0 }
+catch { setFPlanMode -ignore_check_power_domain_overlap {} }
+catch { setFPlanMode -lastRowSiteIndex -1 }
+catch { setFPlanMode -maxIoHeight false }
+catch { setFPlanMode -place_check_ignore_fixed_cell_list {} }
+catch { setFPlanMode -powerRailLayer {} }
+catch { setFPlanMode -skipViolations {} }
+catch { setFPlanMode -snapIoGrid userDefine }
