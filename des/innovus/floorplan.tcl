@@ -68,7 +68,21 @@ addStripe \
     -stacked_via_top_layer TOP_M \
     -stacked_via_bottom_layer M1
 
-puts "=== STEP 6: Route power to standard cell pins and pad pins ==="
+puts "=== STEP 6: Add routing blockage M3-TOP_M in IO pad ring area ==="
+# Blocks signal routing on upper layers inside the IO pad cells
+set die_w 1799.84
+set die_h 1799.84
+set pad_h 320.0
+createRouteBlk -name blk_io_south -layer {M3 M4 M5 TOP_M} \
+    -box [list 0 0 $die_w $pad_h]
+createRouteBlk -name blk_io_north -layer {M3 M4 M5 TOP_M} \
+    -box [list 0 [expr {$die_h - $pad_h}] $die_w $die_h]
+createRouteBlk -name blk_io_west -layer {M3 M4 M5 TOP_M} \
+    -box [list 0 $pad_h $pad_h [expr {$die_h - $pad_h}]]
+createRouteBlk -name blk_io_east -layer {M3 M4 M5 TOP_M} \
+    -box [list [expr {$die_w - $pad_h}] $pad_h $die_w [expr {$die_h - $pad_h}]]
+
+puts "=== STEP 7: Route power to standard cell pins and pad pins ==="
 sroute \
     -connect { corePin padPin padRing } \
     -layerChangeRange { M1 TOP_M } \
