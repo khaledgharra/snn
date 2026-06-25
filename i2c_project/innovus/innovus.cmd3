@@ -1,0 +1,50 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Wed Jun 17 22:49:37 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v23.33-s082_1 (64bit) 11/13/2024 14:07 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 23.33-s082_1 NR241029-2256/23_13-UB (database version 18.20.652_1) {superthreading v2.20}
+#@(#)CDS: AAE 23.13-s019 (64bit) 11/13/2024 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 23.13-s028_1 () Nov 11 2024 03:58:52 ( )
+#@(#)CDS: SYNTECH 23.13-s009_1 () Oct 30 2024 09:17:13 ( )
+#@(#)CDS: CPE v23.13-s062
+#@(#)CDS: IQuantus/TQuantus 23.1.1-s235 (64bit) Fri Sep 27 22:21:33 PDT 2024 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+getVersion
+getVersion
+win
+set init_lef_file {/tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/tech/lef/6M1L/tsl180l6.lef /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/lef/tsl18fs190svt.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+set init_verilog datain/top_before_pads.v
+set init_mmmc_file datain/mmmc.view
+set init_top_cell i2c_master_top
+set init_io_file datain/top.io
+init_design
+create_clock -name wb_clk_i -period 10 -waveform {0 5} [get_ports wb_clk_i]
+set_analysis_view -setup {SlowView} -hold {FastView}
+create_clock -name wb_clk_i -period 10 -waveform {0 5} [get_ports wb_clk_i]
+gui_select -rect {0.03400 2.66400 -0.50800 0.35200}
+gui_select -rect {-0.82600 1.46200 0.55100 -0.20800}
+floorPlan -site CoreSite -d 4980.08 4980.08 120.5 120.5 120.5 120.5
+specifyScanChain scan_in1 -start I40/I1/CIN -stop I77/I1/I
+specifyScanChain scan_in2 -start I41/I1/CIN -stop I78/I1/I
+specifyScanChain scan_in3 -start I42/I1/CIN -stop I79/I1/I
+specifyScanChain scan_in4 -start I43/I1/CIN -stop I80/I1/I
+specifyScanChain scan_in5 -start I44/I1/CIN -stop I81/I1/I
+setScanReorderMode -compLogic true
+scanTrace
+update_constraint_mode -name TypCM -sdc_files {top.sdc}
+set_analysis_view -setup {SlowView} -hold {FastView}
+setPlaceMode -place_global_place_io_pins true
+place_design
+set init_lef_file {/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/cds/lef/tsl18_6lm_tech.lef /tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/cds/lef/tsl18fs120.lef}
+set init_verilog datain/top_before_pads.v
+set init_mmmc_file datain/mmmc_120.view
+set init_top_cell i2c_master_top
+set init_io_file {}
+init_design

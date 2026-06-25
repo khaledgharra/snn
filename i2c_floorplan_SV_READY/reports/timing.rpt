@@ -1,10 +1,3 @@
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Error: Could not read the following target libraries:
-your_library.db 
- (UIO-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Information: Updating design information... (UID-85)
  
 ****************************************
@@ -14,348 +7,651 @@ Report : timing
         -max_paths 10
 Design : i2c_master_top
 Version: U-2022.12
-Date   : Tue Jun 16 10:38:46 2026
+Date   : Wed Jun 17 21:31:40 2026
 ****************************************
 
-Operating Conditions: nom_pvt   Library: gtech
-Wire Load Model Mode: top
+Operating Conditions: tsl18fs120_typ   Library: tsl18fs120_typ
+Wire Load Model Mode: enclosed
 
-  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
-  Endpoint: al_reg (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock wb_clk_i (rise edge)               0.00       0.00
-  clock network delay (ideal)              0.00       0.00
-  input external delay                     0.00       0.00 r
-  wb_rst_i (in)                            0.00       0.00 r
-  B_17/Z (GTECH_BUF)                       0.00       0.00 r
-  B_11/Z (GTECH_BUF)                       0.00       0.00 r
-  C443/Z_0 (*SELECT_OP_2.1_2.1_1)          0.00       0.00 r
-  al_reg/next_state (**SEQGEN**)           0.00       0.00 r
-  data arrival time                                   0.00
-
-  clock wb_clk_i (rise edge)              10.00      10.00
-  clock network delay (ideal)              0.00      10.00
-  al_reg/clocked_on (**SEQGEN**)           0.00      10.00 r
-  library setup time                       0.00      10.00
-  data required time                                 10.00
-  -----------------------------------------------------------
-  data required time                                 10.00
-  data arrival time                                   0.00
-  -----------------------------------------------------------
-  slack (MET)                                        10.00
-
-
-  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/cSDA_reg[1]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  input external delay                                    0.00       0.00 r
-  wb_rst_i (in)                                           0.00       0.00 r
-  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
-  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/B_1/Z (GTECH_BUF)        0.00       0.00 r
-  byte_controller/bit_controller/C620/Z_1 (*SELECT_OP_2.2_2.1_2)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/cSDA_reg[1]/next_state (**SEQGEN**)
-                                                          0.00       0.00 r
-  data arrival time                                                  0.00
-
-  clock wb_clk_i (rise edge)                             10.00      10.00
-  clock network delay (ideal)                             0.00      10.00
-  byte_controller/bit_controller/cSDA_reg[1]/clocked_on (**SEQGEN**)
-                                                          0.00      10.00 r
-  library setup time                                      0.00      10.00
-  data required time                                                10.00
-  --------------------------------------------------------------------------
-  data required time                                                10.00
-  data arrival time                                                  0.00
-  --------------------------------------------------------------------------
-  slack (MET)                                                       10.00
-
-
-  Startpoint: sda_pad_i (input port clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/cSDA_reg[0]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  input external delay                                    0.00       0.00 r
-  sda_pad_i (in)                                          0.00       0.00 r
-  byte_controller/sda_i (i2c_master_byte_ctrl)            0.00       0.00 r
-  byte_controller/bit_controller/sda_i (i2c_master_bit_ctrl)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/C620/Z_0 (*SELECT_OP_2.2_2.1_2)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/cSDA_reg[0]/next_state (**SEQGEN**)
-                                                          0.00       0.00 r
-  data arrival time                                                  0.00
-
-  clock wb_clk_i (rise edge)                             10.00      10.00
-  clock network delay (ideal)                             0.00      10.00
-  byte_controller/bit_controller/cSDA_reg[0]/clocked_on (**SEQGEN**)
-                                                          0.00      10.00 r
-  library setup time                                      0.00      10.00
-  data required time                                                10.00
-  --------------------------------------------------------------------------
-  data required time                                                10.00
-  data arrival time                                                  0.00
-  --------------------------------------------------------------------------
-  slack (MET)                                                       10.00
-
-
-  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/cSCL_reg[1]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  input external delay                                    0.00       0.00 r
-  wb_rst_i (in)                                           0.00       0.00 r
-  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
-  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/B_1/Z (GTECH_BUF)        0.00       0.00 r
-  byte_controller/bit_controller/C619/Z_1 (*SELECT_OP_2.2_2.1_2)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/cSCL_reg[1]/next_state (**SEQGEN**)
-                                                          0.00       0.00 r
-  data arrival time                                                  0.00
-
-  clock wb_clk_i (rise edge)                             10.00      10.00
-  clock network delay (ideal)                             0.00      10.00
-  byte_controller/bit_controller/cSCL_reg[1]/clocked_on (**SEQGEN**)
-                                                          0.00      10.00 r
-  library setup time                                      0.00      10.00
-  data required time                                                10.00
-  --------------------------------------------------------------------------
-  data required time                                                10.00
-  data arrival time                                                  0.00
-  --------------------------------------------------------------------------
-  slack (MET)                                                       10.00
-
-
-  Startpoint: scl_pad_i (input port clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/cSCL_reg[0]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  input external delay                                    0.00       0.00 r
-  scl_pad_i (in)                                          0.00       0.00 r
-  byte_controller/scl_i (i2c_master_byte_ctrl)            0.00       0.00 r
-  byte_controller/bit_controller/scl_i (i2c_master_bit_ctrl)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/C619/Z_0 (*SELECT_OP_2.2_2.1_2)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/cSCL_reg[0]/next_state (**SEQGEN**)
-                                                          0.00       0.00 r
-  data arrival time                                                  0.00
-
-  clock wb_clk_i (rise edge)                             10.00      10.00
-  clock network delay (ideal)                             0.00      10.00
-  byte_controller/bit_controller/cSCL_reg[0]/clocked_on (**SEQGEN**)
-                                                          0.00      10.00 r
-  library setup time                                      0.00      10.00
-  data required time                                                10.00
-  --------------------------------------------------------------------------
-  data required time                                                10.00
-  data arrival time                                                  0.00
-  --------------------------------------------------------------------------
-  slack (MET)                                                       10.00
-
-
-  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/busy_reg
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  input external delay                                    0.00       0.00 r
-  wb_rst_i (in)                                           0.00       0.00 r
-  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
-  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/B_1/Z (GTECH_BUF)        0.00       0.00 r
-  byte_controller/bit_controller/C631/Z_0 (*SELECT_OP_2.1_2.1_1)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/busy_reg/next_state (**SEQGEN**)
-                                                          0.00       0.00 r
-  data arrival time                                                  0.00
-
-  clock wb_clk_i (rise edge)                             10.00      10.00
-  clock network delay (ideal)                             0.00      10.00
-  byte_controller/bit_controller/busy_reg/clocked_on (**SEQGEN**)
-                                                          0.00      10.00 r
-  library setup time                                      0.00      10.00
-  data required time                                                10.00
-  --------------------------------------------------------------------------
-  data required time                                                10.00
-  data arrival time                                                  0.00
-  --------------------------------------------------------------------------
-  slack (MET)                                                       10.00
-
-
-  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/al_reg
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  input external delay                                    0.00       0.00 r
-  wb_rst_i (in)                                           0.00       0.00 r
-  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
-  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/B_1/Z (GTECH_BUF)        0.00       0.00 r
-  byte_controller/bit_controller/C634/Z_0 (*SELECT_OP_2.1_2.1_1)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/al_reg/next_state (**SEQGEN**)
-                                                          0.00       0.00 r
-  data arrival time                                                  0.00
-
-  clock wb_clk_i (rise edge)                             10.00      10.00
-  clock network delay (ideal)                             0.00      10.00
-  byte_controller/bit_controller/al_reg/clocked_on (**SEQGEN**)
-                                                          0.00      10.00 r
-  library setup time                                      0.00      10.00
-  data required time                                                10.00
-  --------------------------------------------------------------------------
-  data required time                                                10.00
-  data arrival time                                                  0.00
-  --------------------------------------------------------------------------
-  slack (MET)                                                       10.00
-
-
-  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/c_state_reg[0]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  input external delay                                    0.00       0.00 r
-  wb_rst_i (in)                                           0.00       0.00 r
-  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
-  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/C786/Z (GTECH_OR2)       0.00       0.00 r
-  byte_controller/bit_controller/B_27/Z (GTECH_BUF)       0.00       0.00 r
-  byte_controller/bit_controller/C644/Z_0 (*SELECT_OP_2.17_2.1_17)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/c_state_reg[0]/next_state (**SEQGEN**)
-                                                          0.00       0.00 r
-  data arrival time                                                  0.00
-
-  clock wb_clk_i (rise edge)                             10.00      10.00
-  clock network delay (ideal)                             0.00      10.00
-  byte_controller/bit_controller/c_state_reg[0]/clocked_on (**SEQGEN**)
-                                                          0.00      10.00 r
-  library setup time                                      0.00      10.00
-  data required time                                                10.00
-  --------------------------------------------------------------------------
-  data required time                                                10.00
-  data arrival time                                                  0.00
-  --------------------------------------------------------------------------
-  slack (MET)                                                       10.00
-
-
-  Startpoint: byte_controller/bit_controller/dout_reg
+  Startpoint: byte_controller/bit_controller/cnt_reg[0]
               (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Endpoint: byte_controller/ack_out_reg
+  Endpoint: byte_controller/bit_controller/cnt_reg[15]
             (rising edge-triggered flip-flop clocked by wb_clk_i)
   Path Group: wb_clk_i
   Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl
+                     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2
+                     ForQA                 tsl18fs120_typ
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock wb_clk_i (rise edge)                              0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  byte_controller/bit_controller/dout_reg/clocked_on (**SEQGEN**)
+  byte_controller/bit_controller/cnt_reg[0]/CP (dfcrq1)
                                                           0.00       0.00 r
-  byte_controller/bit_controller/dout_reg/Q (**SEQGEN**)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/dout (i2c_master_bit_ctrl)
-                                                          0.00       0.00 r
-  byte_controller/C440/Z_0 (*SELECT_OP_2.1_2.1_1)         0.00       0.00 r
-  byte_controller/ack_out_reg/next_state (**SEQGEN**)     0.00       0.00 r
-  data arrival time                                                  0.00
+  byte_controller/bit_controller/cnt_reg[0]/Q (dfcrq1)
+                                                          0.34       0.34 f
+  byte_controller/bit_controller/sub_228/A[0] (i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2)
+                                                          0.00       0.34 f
+  byte_controller/bit_controller/sub_228/U32/Z (or02d0)
+                                                          0.23       0.57 f
+  byte_controller/bit_controller/sub_228/U31/Z (or02d0)
+                                                          0.23       0.80 f
+  byte_controller/bit_controller/sub_228/U30/Z (or02d0)
+                                                          0.23       1.03 f
+  byte_controller/bit_controller/sub_228/U29/Z (or02d0)
+                                                          0.23       1.25 f
+  byte_controller/bit_controller/sub_228/U28/Z (or02d0)
+                                                          0.23       1.48 f
+  byte_controller/bit_controller/sub_228/U27/Z (or02d0)
+                                                          0.23       1.70 f
+  byte_controller/bit_controller/sub_228/U26/Z (or02d0)
+                                                          0.23       1.93 f
+  byte_controller/bit_controller/sub_228/U25/Z (or02d0)
+                                                          0.23       2.16 f
+  byte_controller/bit_controller/sub_228/U24/ZN (nr02d0)
+                                                          0.34       2.49 r
+  byte_controller/bit_controller/sub_228/U23/ZN (nd02d0)
+                                                          0.25       2.74 f
+  byte_controller/bit_controller/sub_228/U21/Z (or02d0)
+                                                          0.26       3.00 f
+  byte_controller/bit_controller/sub_228/U19/Z (or02d0)
+                                                          0.23       3.23 f
+  byte_controller/bit_controller/sub_228/U17/ZN (nr02d0)
+                                                          0.23       3.46 r
+  byte_controller/bit_controller/sub_228/U1/ZN (inv0d0)
+                                                          0.17       3.63 f
+  byte_controller/bit_controller/sub_228/U14/ZN (nr02d0)
+                                                          0.19       3.82 r
+  byte_controller/bit_controller/sub_228/U13/Z (xr02d1)
+                                                          0.25       4.07 f
+  byte_controller/bit_controller/sub_228/SUM[15] (i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2)
+                                                          0.00       4.07 f
+  byte_controller/bit_controller/U4/Z (aor222d1)          0.30       4.37 f
+  byte_controller/bit_controller/cnt_reg[15]/D (dfcrq1)
+                                                          0.00       4.37 f
+  data arrival time                                                  4.37
 
   clock wb_clk_i (rise edge)                             10.00      10.00
   clock network delay (ideal)                             0.00      10.00
-  byte_controller/ack_out_reg/clocked_on (**SEQGEN**)     0.00      10.00 r
-  library setup time                                      0.00      10.00
-  data required time                                                10.00
+  byte_controller/bit_controller/cnt_reg[15]/CP (dfcrq1)
+                                                          0.00      10.00 r
+  library setup time                                     -0.10       9.90
+  data required time                                                 9.90
   --------------------------------------------------------------------------
-  data required time                                                10.00
-  data arrival time                                                  0.00
+  data required time                                                 9.90
+  data arrival time                                                 -4.37
   --------------------------------------------------------------------------
-  slack (MET)                                                       10.00
+  slack (MET)                                                        5.53
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[14]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl
+                     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2
+                     ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[0]/CP (dfcrq1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[0]/Q (dfcrq1)
+                                                          0.34       0.34 f
+  byte_controller/bit_controller/sub_228/A[0] (i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2)
+                                                          0.00       0.34 f
+  byte_controller/bit_controller/sub_228/U32/Z (or02d0)
+                                                          0.23       0.57 f
+  byte_controller/bit_controller/sub_228/U31/Z (or02d0)
+                                                          0.23       0.80 f
+  byte_controller/bit_controller/sub_228/U30/Z (or02d0)
+                                                          0.23       1.03 f
+  byte_controller/bit_controller/sub_228/U29/Z (or02d0)
+                                                          0.23       1.25 f
+  byte_controller/bit_controller/sub_228/U28/Z (or02d0)
+                                                          0.23       1.48 f
+  byte_controller/bit_controller/sub_228/U27/Z (or02d0)
+                                                          0.23       1.70 f
+  byte_controller/bit_controller/sub_228/U26/Z (or02d0)
+                                                          0.23       1.93 f
+  byte_controller/bit_controller/sub_228/U25/Z (or02d0)
+                                                          0.23       2.16 f
+  byte_controller/bit_controller/sub_228/U24/ZN (nr02d0)
+                                                          0.34       2.49 r
+  byte_controller/bit_controller/sub_228/U23/ZN (nd02d0)
+                                                          0.25       2.74 f
+  byte_controller/bit_controller/sub_228/U21/Z (or02d0)
+                                                          0.26       3.00 f
+  byte_controller/bit_controller/sub_228/U19/Z (or02d0)
+                                                          0.23       3.23 f
+  byte_controller/bit_controller/sub_228/U17/ZN (nr02d0)
+                                                          0.23       3.46 r
+  byte_controller/bit_controller/sub_228/U15/Z (xr02d1)
+                                                          0.26       3.72 f
+  byte_controller/bit_controller/sub_228/SUM[14] (i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2)
+                                                          0.00       3.72 f
+  byte_controller/bit_controller/U5/Z (aor222d1)          0.30       4.02 f
+  byte_controller/bit_controller/cnt_reg[14]/D (dfcrq1)
+                                                          0.00       4.02 f
+  data arrival time                                                  4.02
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/cnt_reg[14]/CP (dfcrq1)
+                                                          0.00      10.00 r
+  library setup time                                     -0.10       9.90
+  data required time                                                 9.90
+  --------------------------------------------------------------------------
+  data required time                                                 9.90
+  data arrival time                                                 -4.02
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.88
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[13]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl
+                     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2
+                     ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[0]/CP (dfcrq1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[0]/Q (dfcrq1)
+                                                          0.34       0.34 f
+  byte_controller/bit_controller/sub_228/A[0] (i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2)
+                                                          0.00       0.34 f
+  byte_controller/bit_controller/sub_228/U32/Z (or02d0)
+                                                          0.23       0.57 f
+  byte_controller/bit_controller/sub_228/U31/Z (or02d0)
+                                                          0.23       0.80 f
+  byte_controller/bit_controller/sub_228/U30/Z (or02d0)
+                                                          0.23       1.03 f
+  byte_controller/bit_controller/sub_228/U29/Z (or02d0)
+                                                          0.23       1.25 f
+  byte_controller/bit_controller/sub_228/U28/Z (or02d0)
+                                                          0.23       1.48 f
+  byte_controller/bit_controller/sub_228/U27/Z (or02d0)
+                                                          0.23       1.70 f
+  byte_controller/bit_controller/sub_228/U26/Z (or02d0)
+                                                          0.23       1.93 f
+  byte_controller/bit_controller/sub_228/U25/Z (or02d0)
+                                                          0.23       2.16 f
+  byte_controller/bit_controller/sub_228/U24/ZN (nr02d0)
+                                                          0.34       2.49 r
+  byte_controller/bit_controller/sub_228/U23/ZN (nd02d0)
+                                                          0.25       2.74 f
+  byte_controller/bit_controller/sub_228/U21/Z (or02d0)
+                                                          0.26       3.00 f
+  byte_controller/bit_controller/sub_228/U19/Z (or02d0)
+                                                          0.23       3.23 f
+  byte_controller/bit_controller/sub_228/U17/ZN (nr02d0)
+                                                          0.23       3.46 r
+  byte_controller/bit_controller/sub_228/U1/ZN (inv0d0)
+                                                          0.17       3.63 f
+  byte_controller/bit_controller/sub_228/U16/ZN (oaim21d1)
+                                                          0.10       3.73 r
+  byte_controller/bit_controller/sub_228/SUM[13] (i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2)
+                                                          0.00       3.73 r
+  byte_controller/bit_controller/U6/Z (aor222d1)          0.15       3.88 r
+  byte_controller/bit_controller/cnt_reg[13]/D (dfcrq1)
+                                                          0.00       3.88 r
+  data arrival time                                                  3.88
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/cnt_reg[13]/CP (dfcrq1)
+                                                          0.00      10.00 r
+  library setup time                                     -0.09       9.91
+  data required time                                                 9.91
+  --------------------------------------------------------------------------
+  data required time                                                 9.91
+  data arrival time                                                 -3.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.02
+
+
+  Startpoint: byte_controller/bit_controller/filter_cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/filter_cnt_reg[13]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl
+                     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1
+                     ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/filter_cnt_reg[0]/CP (dfcrq1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/filter_cnt_reg[0]/Q (dfcrq1)
+                                                          0.33       0.33 f
+  byte_controller/bit_controller/sub_260/A[0] (i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1)
+                                                          0.00       0.33 f
+  byte_controller/bit_controller/sub_260/U28/Z (or02d0)
+                                                          0.23       0.56 f
+  byte_controller/bit_controller/sub_260/U27/Z (or02d0)
+                                                          0.23       0.79 f
+  byte_controller/bit_controller/sub_260/U26/Z (or02d0)
+                                                          0.23       1.01 f
+  byte_controller/bit_controller/sub_260/U25/Z (or02d0)
+                                                          0.23       1.24 f
+  byte_controller/bit_controller/sub_260/U24/Z (or02d0)
+                                                          0.23       1.46 f
+  byte_controller/bit_controller/sub_260/U23/Z (or02d0)
+                                                          0.23       1.69 f
+  byte_controller/bit_controller/sub_260/U22/Z (or02d0)
+                                                          0.23       1.92 f
+  byte_controller/bit_controller/sub_260/U21/Z (or02d0)
+                                                          0.23       2.14 f
+  byte_controller/bit_controller/sub_260/U20/ZN (nr02d0)
+                                                          0.34       2.48 r
+  byte_controller/bit_controller/sub_260/U19/ZN (nd02d0)
+                                                          0.25       2.73 f
+  byte_controller/bit_controller/sub_260/U17/ZN (nr02d0)
+                                                          0.27       3.00 r
+  byte_controller/bit_controller/sub_260/U1/ZN (inv0d0)
+                                                          0.17       3.16 f
+  byte_controller/bit_controller/sub_260/U14/ZN (nr02d0)
+                                                          0.19       3.35 r
+  byte_controller/bit_controller/sub_260/U13/Z (xr02d1)
+                                                          0.25       3.61 f
+  byte_controller/bit_controller/sub_260/SUM[13] (i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1)
+                                                          0.00       3.61 f
+  byte_controller/bit_controller/U142/Z (aor22d1)         0.18       3.79 f
+  byte_controller/bit_controller/filter_cnt_reg[13]/D (dfcrq1)
+                                                          0.00       3.79 f
+  data arrival time                                                  3.79
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/filter_cnt_reg[13]/CP (dfcrq1)
+                                                          0.00      10.00 r
+  library setup time                                     -0.09       9.91
+  data required time                                                 9.91
+  --------------------------------------------------------------------------
+  data required time                                                 9.91
+  data arrival time                                                 -3.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.12
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[12]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl
+                     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2
+                     ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[0]/CP (dfcrq1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[0]/Q (dfcrq1)
+                                                          0.34       0.34 f
+  byte_controller/bit_controller/sub_228/A[0] (i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2)
+                                                          0.00       0.34 f
+  byte_controller/bit_controller/sub_228/U32/Z (or02d0)
+                                                          0.23       0.57 f
+  byte_controller/bit_controller/sub_228/U31/Z (or02d0)
+                                                          0.23       0.80 f
+  byte_controller/bit_controller/sub_228/U30/Z (or02d0)
+                                                          0.23       1.03 f
+  byte_controller/bit_controller/sub_228/U29/Z (or02d0)
+                                                          0.23       1.25 f
+  byte_controller/bit_controller/sub_228/U28/Z (or02d0)
+                                                          0.23       1.48 f
+  byte_controller/bit_controller/sub_228/U27/Z (or02d0)
+                                                          0.23       1.70 f
+  byte_controller/bit_controller/sub_228/U26/Z (or02d0)
+                                                          0.23       1.93 f
+  byte_controller/bit_controller/sub_228/U25/Z (or02d0)
+                                                          0.23       2.16 f
+  byte_controller/bit_controller/sub_228/U24/ZN (nr02d0)
+                                                          0.34       2.49 r
+  byte_controller/bit_controller/sub_228/U23/ZN (nd02d0)
+                                                          0.25       2.74 f
+  byte_controller/bit_controller/sub_228/U21/Z (or02d0)
+                                                          0.26       3.00 f
+  byte_controller/bit_controller/sub_228/U19/Z (or02d0)
+                                                          0.23       3.23 f
+  byte_controller/bit_controller/sub_228/U18/ZN (oaim21d1)
+                                                          0.09       3.32 r
+  byte_controller/bit_controller/sub_228/SUM[12] (i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2)
+                                                          0.00       3.32 r
+  byte_controller/bit_controller/U7/Z (aor222d1)          0.15       3.48 r
+  byte_controller/bit_controller/cnt_reg[12]/D (dfcrq1)
+                                                          0.00       3.48 r
+  data arrival time                                                  3.48
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/cnt_reg[12]/CP (dfcrq1)
+                                                          0.00      10.00 r
+  library setup time                                     -0.09       9.91
+  data required time                                                 9.91
+  --------------------------------------------------------------------------
+  data required time                                                 9.91
+  data arrival time                                                 -3.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.43
+
+
+  Startpoint: byte_controller/bit_controller/filter_cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/filter_cnt_reg[12]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl
+                     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1
+                     ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/filter_cnt_reg[0]/CP (dfcrq1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/filter_cnt_reg[0]/Q (dfcrq1)
+                                                          0.33       0.33 f
+  byte_controller/bit_controller/sub_260/A[0] (i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1)
+                                                          0.00       0.33 f
+  byte_controller/bit_controller/sub_260/U28/Z (or02d0)
+                                                          0.23       0.56 f
+  byte_controller/bit_controller/sub_260/U27/Z (or02d0)
+                                                          0.23       0.79 f
+  byte_controller/bit_controller/sub_260/U26/Z (or02d0)
+                                                          0.23       1.01 f
+  byte_controller/bit_controller/sub_260/U25/Z (or02d0)
+                                                          0.23       1.24 f
+  byte_controller/bit_controller/sub_260/U24/Z (or02d0)
+                                                          0.23       1.46 f
+  byte_controller/bit_controller/sub_260/U23/Z (or02d0)
+                                                          0.23       1.69 f
+  byte_controller/bit_controller/sub_260/U22/Z (or02d0)
+                                                          0.23       1.92 f
+  byte_controller/bit_controller/sub_260/U21/Z (or02d0)
+                                                          0.23       2.14 f
+  byte_controller/bit_controller/sub_260/U20/ZN (nr02d0)
+                                                          0.34       2.48 r
+  byte_controller/bit_controller/sub_260/U19/ZN (nd02d0)
+                                                          0.25       2.73 f
+  byte_controller/bit_controller/sub_260/U17/ZN (nr02d0)
+                                                          0.27       3.00 r
+  byte_controller/bit_controller/sub_260/U15/Z (xr02d1)
+                                                          0.26       3.25 f
+  byte_controller/bit_controller/sub_260/SUM[12] (i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1)
+                                                          0.00       3.25 f
+  byte_controller/bit_controller/U143/Z (aor22d1)         0.18       3.44 f
+  byte_controller/bit_controller/filter_cnt_reg[12]/D (dfcrq1)
+                                                          0.00       3.44 f
+  data arrival time                                                  3.44
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/filter_cnt_reg[12]/CP (dfcrq1)
+                                                          0.00      10.00 r
+  library setup time                                     -0.09       9.91
+  data required time                                                 9.91
+  --------------------------------------------------------------------------
+  data required time                                                 9.91
+  data arrival time                                                 -3.44
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.47
+
+
+  Startpoint: byte_controller/bit_controller/filter_cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/filter_cnt_reg[11]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl
+                     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1
+                     ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/filter_cnt_reg[0]/CP (dfcrq1)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/filter_cnt_reg[0]/Q (dfcrq1)
+                                                          0.33       0.33 f
+  byte_controller/bit_controller/sub_260/A[0] (i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1)
+                                                          0.00       0.33 f
+  byte_controller/bit_controller/sub_260/U28/Z (or02d0)
+                                                          0.23       0.56 f
+  byte_controller/bit_controller/sub_260/U27/Z (or02d0)
+                                                          0.23       0.79 f
+  byte_controller/bit_controller/sub_260/U26/Z (or02d0)
+                                                          0.23       1.01 f
+  byte_controller/bit_controller/sub_260/U25/Z (or02d0)
+                                                          0.23       1.24 f
+  byte_controller/bit_controller/sub_260/U24/Z (or02d0)
+                                                          0.23       1.46 f
+  byte_controller/bit_controller/sub_260/U23/Z (or02d0)
+                                                          0.23       1.69 f
+  byte_controller/bit_controller/sub_260/U22/Z (or02d0)
+                                                          0.23       1.92 f
+  byte_controller/bit_controller/sub_260/U21/Z (or02d0)
+                                                          0.23       2.14 f
+  byte_controller/bit_controller/sub_260/U20/ZN (nr02d0)
+                                                          0.34       2.48 r
+  byte_controller/bit_controller/sub_260/U19/ZN (nd02d0)
+                                                          0.25       2.73 f
+  byte_controller/bit_controller/sub_260/U17/ZN (nr02d0)
+                                                          0.27       3.00 r
+  byte_controller/bit_controller/sub_260/U1/ZN (inv0d0)
+                                                          0.17       3.16 f
+  byte_controller/bit_controller/sub_260/U16/ZN (oaim21d1)
+                                                          0.10       3.27 r
+  byte_controller/bit_controller/sub_260/SUM[11] (i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1)
+                                                          0.00       3.27 r
+  byte_controller/bit_controller/U144/Z (aor22d1)         0.13       3.39 r
+  byte_controller/bit_controller/filter_cnt_reg[11]/D (dfcrq1)
+                                                          0.00       3.39 r
+  data arrival time                                                  3.39
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/filter_cnt_reg[11]/CP (dfcrq1)
+                                                          0.00      10.00 r
+  library setup time                                     -0.09       9.91
+  data required time                                                 9.91
+  --------------------------------------------------------------------------
+  data required time                                                 9.91
+  data arrival time                                                 -3.39
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.51
 
 
   Startpoint: wb_rst_i (input port clocked by wb_clk_i)
-  Endpoint: byte_controller/ack_out_reg
+  Endpoint: byte_controller/bit_controller/cnt_reg[1]
             (rising edge-triggered flip-flop clocked by wb_clk_i)
   Path Group: wb_clk_i
   Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl
+                     4000                  tsl18fs120_typ
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock wb_clk_i (rise edge)                              0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  input external delay                                    0.00       0.00 r
-  wb_rst_i (in)                                           0.00       0.00 r
-  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 r
-  byte_controller/C479/Z (GTECH_OR2)                      0.00       0.00 r
-  byte_controller/B_10/Z (GTECH_BUF)                      0.00       0.00 r
-  byte_controller/C439/Z_0 (*SELECT_OP_2.1_2.1_1)         0.00       0.00 r
-  byte_controller/ack_out_reg/synch_enable (**SEQGEN**)
-                                                          0.00       0.00 r
-  data arrival time                                                  0.00
+  input external delay                                    0.00       0.00 f
+  wb_rst_i (in)                                           0.00       0.00 f
+  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 f
+  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
+                                                          0.00       0.00 f
+  byte_controller/bit_controller/U133/ZN (inv0d1)         0.54       0.54 r
+  byte_controller/bit_controller/U106/ZN (nd03d1)         0.80       1.35 f
+  byte_controller/bit_controller/U52/ZN (nr02d1)          1.17       2.51 r
+  byte_controller/bit_controller/U58/ZN (nr02d1)          0.08       2.59 f
+  byte_controller/bit_controller/U55/Z (buffd1)           0.38       2.97 f
+  byte_controller/bit_controller/U18/Z (aor222d1)         0.35       3.32 f
+  byte_controller/bit_controller/cnt_reg[1]/D (dfcrq1)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
 
   clock wb_clk_i (rise edge)                             10.00      10.00
   clock network delay (ideal)                             0.00      10.00
-  byte_controller/ack_out_reg/clocked_on (**SEQGEN**)     0.00      10.00 r
-  library setup time                                      0.00      10.00
-  data required time                                                10.00
+  byte_controller/bit_controller/cnt_reg[1]/CP (dfcrq1)
+                                                          0.00      10.00 r
+  library setup time                                     -0.10       9.90
+  data required time                                                 9.90
   --------------------------------------------------------------------------
-  data required time                                                10.00
-  data arrival time                                                  0.00
+  data required time                                                 9.90
+  data arrival time                                                 -3.32
   --------------------------------------------------------------------------
-  slack (MET)                                                       10.00
+  slack (MET)                                                        6.58
+
+
+  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[0]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl
+                     4000                  tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 f
+  wb_rst_i (in)                                           0.00       0.00 f
+  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 f
+  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
+                                                          0.00       0.00 f
+  byte_controller/bit_controller/U133/ZN (inv0d1)         0.54       0.54 r
+  byte_controller/bit_controller/U106/ZN (nd03d1)         0.80       1.35 f
+  byte_controller/bit_controller/U52/ZN (nr02d1)          1.17       2.51 r
+  byte_controller/bit_controller/U58/ZN (nr02d1)          0.08       2.59 f
+  byte_controller/bit_controller/U55/Z (buffd1)           0.38       2.97 f
+  byte_controller/bit_controller/U19/Z (aor222d1)         0.35       3.32 f
+  byte_controller/bit_controller/cnt_reg[0]/D (dfcrq1)
+                                                          0.00       3.32 f
+  data arrival time                                                  3.32
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/cnt_reg[0]/CP (dfcrq1)
+                                                          0.00      10.00 r
+  library setup time                                     -0.10       9.90
+  data required time                                                 9.90
+  --------------------------------------------------------------------------
+  data required time                                                 9.90
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.58
+
+
+  Startpoint: wb_rst_i (input port clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[2]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     4000                  tsl18fs120_typ
+  i2c_master_bit_ctrl
+                     4000                  tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 f
+  wb_rst_i (in)                                           0.00       0.00 f
+  byte_controller/rst (i2c_master_byte_ctrl)              0.00       0.00 f
+  byte_controller/bit_controller/rst (i2c_master_bit_ctrl)
+                                                          0.00       0.00 f
+  byte_controller/bit_controller/U133/ZN (inv0d1)         0.54       0.54 r
+  byte_controller/bit_controller/U106/ZN (nd03d1)         0.80       1.35 f
+  byte_controller/bit_controller/U52/ZN (nr02d1)          1.17       2.51 r
+  byte_controller/bit_controller/U58/ZN (nr02d1)          0.08       2.59 f
+  byte_controller/bit_controller/U55/Z (buffd1)           0.38       2.97 f
+  byte_controller/bit_controller/U17/Z (aor222d1)         0.32       3.29 f
+  byte_controller/bit_controller/cnt_reg[2]/D (dfcrq1)
+                                                          0.00       3.29 f
+  data arrival time                                                  3.29
+
+  clock wb_clk_i (rise edge)                             10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  byte_controller/bit_controller/cnt_reg[2]/CP (dfcrq1)
+                                                          0.00      10.00 r
+  library setup time                                     -0.10       9.90
+  data required time                                                 9.90
+  --------------------------------------------------------------------------
+  data required time                                                 9.90
+  data arrival time                                                 -3.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.61
 
 
 1

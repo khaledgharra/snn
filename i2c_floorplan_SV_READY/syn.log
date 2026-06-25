@@ -1,0 +1,775 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version U-2022.12 for linux64 - Nov 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Initializing gui preferences from file  /users/epkgms/.synopsys_dc_gui/preferences.tcl
+#============================================================
+# I2C Master synthesis script - SystemVerilog version
+# Tool       : Synopsys Design Vision / Design Compiler
+# Top module : i2c_master_top
+# Clock port : wb_clk_i
+# Output     : i2c_master_top_syn.v
+#============================================================
+# Clean old data from this Design Vision session
+remove_design -all
+1
+# Variables
+set DESIGN_NAME i2c_master_top
+i2c_master_top
+set CLK_NAME    wb_clk_i
+wb_clk_i
+set CLK_PERIOD  10
+10
+# Make includes searchable from the current folder
+set_app_var search_path [concat [list . [pwd]] $search_path]
+. /users/epkgms/Desktop/khaled/i2c_floorplan_SV_READY . /eda/synopsys/2022-23/RHELx86/SYN_2022.12/libraries/syn /eda/synopsys/2022-23/RHELx86/SYN_2022.12/dw/syn_ver /eda/synopsys/2022-23/RHELx86/SYN_2022.12/dw/sim_ver . /tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models
+# Create WORK library for analyze/elaborate flow
+file mkdir WORK
+define_design_lib WORK -path ./WORK
+1
+# Read SystemVerilog RTL files
+# timescale.sv and i2c_master_defines.sv are included inside the RTL files,
+# so they must stay in this same folder.
+analyze -format sverilog {
+    ./i2c_master_bit_ctrl.sv
+    ./i2c_master_byte_ctrl.sv
+    ./i2c_master_top.sv
+}
+Running PRESTO HDLC
+Compiling source file ./i2c_master_bit_ctrl.sv
+Opening include file i2c_master_defines.sv
+Compiling source file ./i2c_master_byte_ctrl.sv
+Opening include file i2c_master_defines.sv
+Warning:  ./i2c_master_bit_ctrl.sv:196: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:213: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:214: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:218: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:219: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:223: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:224: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:228: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:229: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:240: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:241: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:245: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:246: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:285: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:286: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:288: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:289: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:293: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:294: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:296: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:297: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:301: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:302: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:304: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:305: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:315: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:316: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:320: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:321: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:325: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:326: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:332: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:333: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:334: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:344: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:346: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:348: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:352: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:354: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:356: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:361: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:389: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:390: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:391: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:392: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:393: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:397: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:398: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:399: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:400: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:401: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:405: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:413: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:414: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:415: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:416: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:417: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:420: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:421: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:422: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:428: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:429: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:430: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:431: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:436: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:437: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:438: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:439: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:444: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:445: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:446: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:447: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:452: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:453: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:454: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:455: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:460: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:461: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:462: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:463: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:464: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:470: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:471: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:472: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:473: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:478: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:479: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:480: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:481: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:486: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:487: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:488: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:489: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:494: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:495: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:496: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:497: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:498: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:504: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:505: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:506: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:507: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:512: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:513: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:514: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:515: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:520: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:521: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:522: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:523: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:528: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:529: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:530: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:531: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:532: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:538: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:539: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:540: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:541: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:546: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:547: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:548: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:549: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:555: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:556: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:557: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:558: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:563: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:564: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:565: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:566: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_bit_ctrl.sv:567: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Compiling source file ./i2c_master_top.sv
+Opening include file i2c_master_defines.sv
+Warning:  ./i2c_master_byte_ctrl.sv:178: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:180: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:182: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:184: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:189: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:191: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:193: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:195: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:207: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:208: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:209: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:210: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:211: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:212: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:213: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:217: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:218: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:219: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:220: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:221: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:222: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:223: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:228: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:229: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:230: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:231: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:239: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:240: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:244: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:245: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:249: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:250: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:254: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:255: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:258: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:266: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:267: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:271: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:272: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:275: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:282: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:283: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:287: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:288: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:289: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:297: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:298: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:302: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:303: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:306: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:307: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:315: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:316: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:320: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:321: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:324: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:328: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:330: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:333: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:338: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:339: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_byte_ctrl.sv:342: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:161: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:167: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:168: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:169: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:170: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:171: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:172: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:173: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:174: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:182: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:183: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:184: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:188: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:189: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:190: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:195: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:196: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:197: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:198: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:205: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:207: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:211: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:216: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:218: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:219: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:267: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:268: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:269: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:270: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:274: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:275: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:276: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:277: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:281: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:282: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:283: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:284: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:290: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:292: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  ./i2c_master_top.sv:294: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Presto compilation completed successfully.
+Loading db file '/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db'
+Loading db file '/eda/synopsys/2022-23/RHELx86/SYN_2022.12/libraries/syn/dw_foundation.sldb'
+1
+# Build the top design
+elaborate $DESIGN_NAME
+Loading db file '/eda/synopsys/2022-23/RHELx86/SYN_2022.12/libraries/syn/gtech.db'
+Loading db file '/eda/synopsys/2022-23/RHELx86/SYN_2022.12/libraries/syn/standard.sldb'
+  Loading link library 'tsl18fs120_typ'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 164 in file
+	'./i2c_master_top.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           166            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 179 in file
+	'./i2c_master_top.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           194            |    auto/user     |
+===============================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 160 in file
+		'./i2c_master_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wb_ack_o_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 164 in file
+		'./i2c_master_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wb_dat_o_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 179 in file
+		'./i2c_master_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       txr_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      prer_reg       | Flip-flop |  16   |  Y  | N  | N  | Y  | N  | N  | N  |
+|       ctr_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 203 in file
+		'./i2c_master_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cr_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 264 in file
+		'./i2c_master_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    irq_flag_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       al_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      rxack_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       tip_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 288 in file
+		'./i2c_master_top.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wb_inta_o_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (i2c_master_top)
+Elaborated 1 design.
+Current design is now 'i2c_master_top'.
+Information: Building the design 'i2c_master_byte_ctrl'. (HDL-193)
+Warning:  ./i2c_master_byte_ctrl.sv:233: Case statement is not a full case. (ELAB-909)
+
+Statistics for case statements in always block at line 204 in file
+	'./i2c_master_byte_ctrl.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           233            |    user/user     |
+===============================================
+
+Inferred memory devices in process
+	in routine i2c_master_byte_ctrl line 176 in file
+		'./i2c_master_byte_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       sr_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_byte_ctrl line 187 in file
+		'./i2c_master_byte_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      dcnt_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_byte_ctrl line 204 in file
+		'./i2c_master_byte_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ack_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    core_cmd_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    core_txd_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      shift_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       ld_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     cmd_ack_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     c_state_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (i2c_master_byte_ctrl)
+Information: Building the design 'i2c_master_bit_ctrl'. (HDL-193)
+Warning:  ./i2c_master_bit_ctrl.sv:408: Case statement is not a full case. (ELAB-909)
+
+Statistics for case statements in always block at line 386 in file
+	'./i2c_master_bit_ctrl.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           408            |    user/user     |
+|           412            |    user/user     |
+===============================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 195 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    dscl_oen_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 200 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   slave_wait_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 210 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clk_en_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       cnt_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 237 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      cSDA_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cSCL_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 256 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   filter_cnt_reg    | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 263 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      fSDA_reg       | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      fSCL_reg       | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 282 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      dSDA_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      sSCL_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      sSDA_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      dSCL_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 312 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  sto_condition_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  sta_condition_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 331 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      busy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 342 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cmd_stop_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 350 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       al_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 360 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      dout_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 386 in file
+		'./i2c_master_bit_ctrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     sda_chk_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     c_state_reg     | Flip-flop |  18   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     cmd_ack_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     scl_oen_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     sda_oen_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (i2c_master_bit_ctrl)
+1
+current_design $DESIGN_NAME
+Current design is 'i2c_master_top'.
+{i2c_master_top}
+link
+
+  Linking design 'i2c_master_top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /users/epkgms/Desktop/khaled/i2c_floorplan_SV_READY/i2c_master_top.db, etc
+  tsl18fs120_typ (library)    /tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db
+  dw_foundation.sldb (library) /eda/synopsys/2022-23/RHELx86/SYN_2022.12/libraries/syn/dw_foundation.sldb
+
+1
+uniquify
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Wed Jun 17 21:29:23 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      5
+    Unconnected ports (LINT-28)                                     2
+    Shorted outputs (LINT-31)                                       1
+    Constant outputs (LINT-52)                                      2
+
+Cells                                                               3
+    Cells do not drive (LINT-1)                                     3
+--------------------------------------------------------------------------------
+
+Warning: In design 'i2c_master_byte_ctrl', cell 'C474' does not drive any nets. (LINT-1)
+Warning: In design 'i2c_master_bit_ctrl', cell 'C688' does not drive any nets. (LINT-1)
+Warning: In design 'i2c_master_bit_ctrl', cell 'C714' does not drive any nets. (LINT-1)
+Warning: In design 'i2c_master_bit_ctrl', port 'VDD' is not connected to any nets. (LINT-28)
+Warning: In design 'i2c_master_bit_ctrl', port 'VSS' is not connected to any nets. (LINT-28)
+Warning: In design 'i2c_master_bit_ctrl', output port 'scl_o' is connected directly to output port 'sda_o'. (LINT-31)
+Warning: In design 'i2c_master_bit_ctrl', output port 'scl_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'i2c_master_bit_ctrl', output port 'sda_o' is connected directly to 'logic 0'. (LINT-52)
+1
+# Clock constraint
+create_clock -name $CLK_NAME -period $CLK_PERIOD -waveform {0 5} [get_ports $CLK_NAME]
+1
+# Basic I/O constraints for backend/floorplan exercise
+set_input_delay  0 -clock $CLK_NAME [remove_from_collection [all_inputs] [get_ports $CLK_NAME]]
+1
+set_output_delay 0 -clock $CLK_NAME [all_outputs]
+1
+# Synthesis - same basic idea as the previous backend lab
+compile -exact_map
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.0 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 590                                    |
+| Number of User Hierarchies                              | 2                                      |
+| Sequential Cell Count                                   | 154                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 175                                    |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'i2c_master_bit_ctrl'
+Information: The register 'c_state_reg[17]' is a constant and will be removed. (OPT-1206)
+  Processing 'i2c_master_byte_ctrl'
+  Processing 'i2c_master_top'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1'
+  Processing 'i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    1718.8      0.00       0.0       0.0                          
+    0:00:02    1718.8      0.00       0.0       0.0                          
+    0:00:02    1718.8      0.00       0.0       0.0                          
+    0:00:02    1718.8      0.00       0.0       0.0                          
+    0:00:02    1718.8      0.00       0.0       0.0                          
+    0:00:02    1423.5      0.00       0.0       0.0                          
+    0:00:02    1423.2      0.00       0.0       0.0                          
+    0:00:02    1423.2      0.00       0.0       0.0                          
+    0:00:02    1423.2      0.00       0.0       0.0                          
+    0:00:02    1423.2      0.00       0.0       0.0                          
+    0:00:02    1423.2      0.00       0.0       0.0                          
+    0:00:02    1423.2      0.00       0.0       0.0                          
+    0:00:02    1423.2      0.00       0.0       0.0                          
+    0:00:02    1423.2      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    1423.2      0.00       0.0       0.0                          
+    0:00:02    1423.2      0.00       0.0       0.0                          
+    0:00:02    1423.2      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    1423.2      0.00       0.0       0.0                          
+    0:00:02    1423.2      0.00       0.0       0.0                          
+    0:00:02    1419.8      0.00       0.0       0.0                          
+    0:00:02    1418.0      0.00       0.0       0.0                          
+    0:00:02    1417.8      0.00       0.0       0.0                          
+    0:00:02    1417.8      0.00       0.0       0.0                          
+    0:00:02    1417.8      0.00       0.0       0.0                          
+    0:00:02    1417.8      0.00       0.0       0.0                          
+    0:00:02    1417.8      0.00       0.0       0.0                          
+    0:00:02    1417.8      0.00       0.0       0.0                          
+    0:00:02    1417.8      0.00       0.0       0.0                          
+    0:00:02    1417.8      0.00       0.0       0.0                          
+    0:00:02    1417.8      0.00       0.0       0.0                          
+    0:00:02    1417.8      0.00       0.0       0.0                          
+Loading db file '/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+# Reports
+file mkdir reports
+redirect -file reports/timing.rpt { report_timing -max_paths 10 }
+redirect -file reports/area.rpt   { report_area }
+redirect -file reports/power.rpt  { report_power }
+# Netlist for Innovus / floorplan
+write -hierarchy -format verilog -output i2c_master_top_syn.v
+Writing verilog file '/users/epkgms/Desktop/khaled/i2c_floorplan_SV_READY/i2c_master_top_syn.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+puts "============================================================"
+============================================================
+puts "SYNTHESIS FINISHED SUCCESSFULLY"
+SYNTHESIS FINISHED SUCCESSFULLY
+puts "Generated netlist: i2c_master_top_syn.v"
+Generated netlist: i2c_master_top_syn.v
+puts "Reports folder: reports/"
+Reports folder: reports/
+puts "Top module: i2c_master_top"
+Top module: i2c_master_top
+puts "Clock port: wb_clk_i"
+Clock port: wb_clk_i
+puts "============================================================"
+============================================================
+dc_shell> 
+dc_shell> 

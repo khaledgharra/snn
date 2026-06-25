@@ -1,14 +1,9 @@
-Loading db file '/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db'
-Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-Warning: Design has unannotated primary inputs. (PWR-414)
-Warning: Design has unannotated sequential cell outputs. (PWR-415)
- 
 ****************************************
 Report : power
         -analysis_effort low
 Design : i2c_master_top
 Version: U-2022.12
-Date   : Wed Jun 17 21:31:41 2026
+Date   : Wed Jun 17 21:46:56 2026
 ****************************************
 
 
@@ -45,12 +40,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   1.2630 mW   (93%)
-  Net Switching Power  =  87.9924 uW    (7%)
+  Cell Internal Power  =   2.5243 mW   (93%)
+  Net Switching Power  = 181.8374 uW    (7%)
                          ---------
-Total Dynamic Power    =   1.3510 mW  (100%)
+Total Dynamic Power    =   2.7062 mW  (100%)
 
-Cell Leakage Power     =  29.8368 nW
+Cell Leakage Power     =  29.8067 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -59,10 +54,9 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      1.1875            0.0000            0.0000            1.1875  (  87.90%)  i
-register       4.9077e-02        1.2769e-02        2.0798e+04        6.1867e-02  (   4.58%)
+clock_network      2.3751            0.0000            0.0000            2.3751  (  87.76%)  i
+register       9.5187e-02        2.5249e-02        2.0798e+04            0.1205  (   4.45%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  2.6397e-02        7.5224e-02        9.0393e+03            0.1016  (   7.52%)
+combinational  5.4093e-02            0.1566        9.0091e+03            0.2107  (   7.79%)
 --------------------------------------------------------------------------------------------------
-Total              1.2630 mW     8.7992e-02 mW     2.9837e+04 pW         1.3510 mW
-1
+Total              2.5243 mW         0.1818 mW     2.9807e+04 pW         2.7062 mW

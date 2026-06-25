@@ -1,8 +1,85 @@
 /////////////////////////////////////////////////////////////
-// Created by: Synopsys Design Compiler(R)
+// Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : U-2022.12
-// Date      : Tue Jun 16 10:38:46 2026
+// Date      : Wed Jun 17 21:31:41 2026
 /////////////////////////////////////////////////////////////
+
+
+module i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1 ( A, SUM );
+  input [13:0] A;
+  output [13:0] SUM;
+  wire   n1, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15;
+
+  inv0d0 U1 ( .I(n14), .ZN(n1) );
+  inv0d0 U2 ( .I(A[10]), .ZN(n3) );
+  inv0d0 U3 ( .I(A[0]), .ZN(SUM[0]) );
+  aor21d1 U4 ( .B1(n4), .B2(A[9]), .A(n5), .Z(SUM[9]) );
+  oaim21d1 U5 ( .B1(n6), .B2(A[8]), .A(n4), .ZN(SUM[8]) );
+  oaim21d1 U6 ( .B1(n7), .B2(A[7]), .A(n6), .ZN(SUM[7]) );
+  oaim21d1 U7 ( .B1(n8), .B2(A[6]), .A(n7), .ZN(SUM[6]) );
+  oaim21d1 U8 ( .B1(n9), .B2(A[5]), .A(n8), .ZN(SUM[5]) );
+  oaim21d1 U9 ( .B1(n10), .B2(A[4]), .A(n9), .ZN(SUM[4]) );
+  oaim21d1 U10 ( .B1(n11), .B2(A[3]), .A(n10), .ZN(SUM[3]) );
+  oaim21d1 U11 ( .B1(n12), .B2(A[2]), .A(n11), .ZN(SUM[2]) );
+  oaim21d1 U12 ( .B1(A[0]), .B2(A[1]), .A(n12), .ZN(SUM[1]) );
+  xr02d1 U13 ( .A1(A[13]), .A2(n13), .Z(SUM[13]) );
+  nr02d0 U14 ( .A1(A[12]), .A2(n1), .ZN(n13) );
+  xr02d1 U15 ( .A1(A[12]), .A2(n14), .Z(SUM[12]) );
+  oaim21d1 U16 ( .B1(n15), .B2(A[11]), .A(n1), .ZN(SUM[11]) );
+  nr02d0 U17 ( .A1(n15), .A2(A[11]), .ZN(n14) );
+  oai21d1 U18 ( .B1(n5), .B2(n3), .A(n15), .ZN(SUM[10]) );
+  nd02d0 U19 ( .A1(n5), .A2(n3), .ZN(n15) );
+  nr02d0 U20 ( .A1(n4), .A2(A[9]), .ZN(n5) );
+  or02d0 U21 ( .A1(n6), .A2(A[8]), .Z(n4) );
+  or02d0 U22 ( .A1(n7), .A2(A[7]), .Z(n6) );
+  or02d0 U23 ( .A1(n8), .A2(A[6]), .Z(n7) );
+  or02d0 U24 ( .A1(n9), .A2(A[5]), .Z(n8) );
+  or02d0 U25 ( .A1(n10), .A2(A[4]), .Z(n9) );
+  or02d0 U26 ( .A1(n11), .A2(A[3]), .Z(n10) );
+  or02d0 U27 ( .A1(n12), .A2(A[2]), .Z(n11) );
+  or02d0 U28 ( .A1(A[1]), .A2(A[0]), .Z(n12) );
+endmodule
+
+
+module i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2 ( A, SUM );
+  input [15:0] A;
+  output [15:0] SUM;
+  wire   n1, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16,
+         n17;
+
+  inv0d0 U1 ( .I(n14), .ZN(n1) );
+  inv0d0 U2 ( .I(A[10]), .ZN(n3) );
+  inv0d0 U3 ( .I(A[0]), .ZN(SUM[0]) );
+  aor21d1 U4 ( .B1(n4), .B2(A[9]), .A(n5), .Z(SUM[9]) );
+  oaim21d1 U5 ( .B1(n6), .B2(A[8]), .A(n4), .ZN(SUM[8]) );
+  oaim21d1 U6 ( .B1(n7), .B2(A[7]), .A(n6), .ZN(SUM[7]) );
+  oaim21d1 U7 ( .B1(n8), .B2(A[6]), .A(n7), .ZN(SUM[6]) );
+  oaim21d1 U8 ( .B1(n9), .B2(A[5]), .A(n8), .ZN(SUM[5]) );
+  oaim21d1 U9 ( .B1(n10), .B2(A[4]), .A(n9), .ZN(SUM[4]) );
+  oaim21d1 U10 ( .B1(n11), .B2(A[3]), .A(n10), .ZN(SUM[3]) );
+  oaim21d1 U11 ( .B1(n12), .B2(A[2]), .A(n11), .ZN(SUM[2]) );
+  oaim21d1 U12 ( .B1(A[0]), .B2(A[1]), .A(n12), .ZN(SUM[1]) );
+  xr02d1 U13 ( .A1(A[15]), .A2(n13), .Z(SUM[15]) );
+  nr02d0 U14 ( .A1(A[14]), .A2(n1), .ZN(n13) );
+  xr02d1 U15 ( .A1(A[14]), .A2(n14), .Z(SUM[14]) );
+  oaim21d1 U16 ( .B1(n15), .B2(A[13]), .A(n1), .ZN(SUM[13]) );
+  nr02d0 U17 ( .A1(n15), .A2(A[13]), .ZN(n14) );
+  oaim21d1 U18 ( .B1(n16), .B2(A[12]), .A(n15), .ZN(SUM[12]) );
+  or02d0 U19 ( .A1(n16), .A2(A[12]), .Z(n15) );
+  oaim21d1 U20 ( .B1(n17), .B2(A[11]), .A(n16), .ZN(SUM[11]) );
+  or02d0 U21 ( .A1(n17), .A2(A[11]), .Z(n16) );
+  oai21d1 U22 ( .B1(n5), .B2(n3), .A(n17), .ZN(SUM[10]) );
+  nd02d0 U23 ( .A1(n5), .A2(n3), .ZN(n17) );
+  nr02d0 U24 ( .A1(n4), .A2(A[9]), .ZN(n5) );
+  or02d0 U25 ( .A1(n6), .A2(A[8]), .Z(n4) );
+  or02d0 U26 ( .A1(n7), .A2(A[7]), .Z(n6) );
+  or02d0 U27 ( .A1(n8), .A2(A[6]), .Z(n7) );
+  or02d0 U28 ( .A1(n9), .A2(A[5]), .Z(n8) );
+  or02d0 U29 ( .A1(n10), .A2(A[4]), .Z(n9) );
+  or02d0 U30 ( .A1(n11), .A2(A[3]), .Z(n10) );
+  or02d0 U31 ( .A1(n12), .A2(A[2]), .Z(n11) );
+  or02d0 U32 ( .A1(A[1]), .A2(A[0]), .Z(n12) );
+endmodule
 
 
 module i2c_master_bit_ctrl ( clk, rst, nReset, ena, clk_cnt, cmd, cmd_ack, 
@@ -12,689 +89,323 @@ module i2c_master_bit_ctrl ( clk, rst, nReset, ena, clk_cnt, cmd, cmd_ack,
   input [3:0] cmd;
   input clk, rst, nReset, ena, din, scl_i, sda_i, VDD, VSS;
   output cmd_ack, busy, al, dout, scl_o, scl_oen, sda_o, sda_oen;
-  wire   N0, N1, N2, N3, N4, N5, N6, N7, N8, N9, N10, N11, N12, N13, N14, N15,
-         N16, N17, N18, N19, N20, N21, N22, N23, N24, N25, N26, N27, dscl_oen,
-         N28, slave_wait, sSCL, N29, dSCL, scl_sync, clk_en, N30, N31, N32,
-         N33, N34, N35, N36, N37, N38, N39, N40, N41, N42, N43, N44, N45, N46,
-         N47, N48, N49, N50, N51, N52, N53, N54, N55, N56, N57, N58, N59, N60,
-         N61, N62, N63, N64, N65, N66, N67, N68, N69, N70, N71, N72, N73, N74,
-         N75, N76, N77, N78, N79, N80, N81, N82, N83, N84, N85, N86, N87, N88,
-         N89, N90, N91, N92, N93, N94, N95, N96, N97, N98, N99, N100, N101,
-         N102, N103, N104, N105, N106, N107, N108, N109, N110, N111, N112,
-         N113, N114, N115, N116, N117, N118, N119, sSDA, dSDA, N120, N121,
-         N122, N123, N124, N125, sta_condition, sto_condition, N126, N127,
-         N128, N129, N130, N131, cmd_stop, N132, N133, N134, N135, N136,
-         sda_chk, N137, N138, N139, N140, N141, N142, N143, N144, N145, N146,
-         N147, N148, N149, N150, N151, N152, N153, N154, N155, N156, N157,
-         N158, N159, N160, N161, N162, N163, N164, N165, N166, N167, N168,
-         N169, N170, N171, N172, N173, N174, N175, N176, N177, N178, N179,
-         N180, N181, N182, N183, N184, N185, N186, N187, N188, N189, N190,
-         N191, N192, N193, N194, N195, N196, N197, N198, N199, N200, N201,
-         N202, N203, N204, N205, N206, N207, N208, N209, N210, N211, N212,
-         N213, N214, N215, N216, N217, N218, N219, N220, N221, N222, N223,
-         N224, N225, N226, N227, N228, N229, N230, N231, N232, N233, N234,
-         N235, N236, N237, N238, N239, N240, N241, N242, N243, N244, N245,
-         N246, N247, N248, N249, N250, N251, N252, N253, N254, N255, N256,
-         N257, N258, N259, N260, N261, N262, N263, N264, N265, N266, N267,
-         N268, N269, N270, N271, N272, N273, N274, N275, N276, N277, N278,
-         N279, N280, N281, N282, N283, N284, N285, N286, N287, N288, N289,
-         N290, N291, N292, N293, N294, N295, N296, N297, N298, N299, N300,
-         N301, N302, N303, N304, N305, N306, N307, N308, N309, N310, N311,
-         N312, N313, N314, N315, N316, N317, N318, N319, N320, N321, N322,
-         N323, N324, N325, N326, N327, N328, N329, N330, N331, N332, N333,
-         N334, N335, N336, N337, N338, N339, N340, N341, N342, N343, N344,
-         N345, N346, N347, net178, net179;
+  wire   dscl_oen, slave_wait, sSCL, N29, N34, N35, N36, N37, N38, N39, N40,
+         N41, N42, N43, N44, N45, N46, N47, N48, N49, N66, N70, N71, N72, N73,
+         N78, N79, N80, N81, N82, N83, N84, N85, N86, N87, N88, N89, N90, N91,
+         N92, N93, N94, N95, N96, N97, N98, N99, N100, N101, N102, N103, N104,
+         N105, N122, N123, N124, N125, sta_condition, sto_condition, N128,
+         N129, N131, cmd_stop, N138, N227, n2, n3, n4, n6, n7, n14, n16, n17,
+         n18, n22, n28, n32, n35, n37, n38, n39, n41, n42, n43, n44, n45, n46,
+         n47, n48, n50, n55, n57, n58, n59, n60, n62, n63, n64, n65, n66, n68,
+         n69, n70, n71, n74, n76, n77, n78, n79, n80, n81, n82, n83, n84, n85,
+         n86, n87, n88, n89, n90, n91, n92, n93, n94, n95, n96, n97, n98, n99,
+         n100, n101, n102, n103, n104, n105, n106, n107, n108, n109, n110,
+         n111, n112, n113, n114, n115, n116, n117, n118, n119, n120, n121,
+         n122, n123, n124, n125, n126, n127, n128, n129, n130, n131, n132,
+         n133, n134, n135, n136, n137, n138, n139, n140, n1, n5, n8, n9, n10,
+         n11, n12, n13, n15, n19, n20, n21, n23, n24, n25, n26, n27, n29, n30,
+         n31, n33, n34, n36, n40, n49, n51, n52, n53, n54, n56, n61, n67, n72,
+         n73, n75, n141, n142, n143, n144, n145, n146, n147, n148, n149, n150,
+         n151, n152, n153, n154;
   wire   [15:0] cnt;
   wire   [1:0] cSCL;
   wire   [1:0] cSDA;
   wire   [13:0] filter_cnt;
-  wire   [2:0] fSCL;
-  wire   [2:0] fSDA;
   wire   [17:0] c_state;
   assign sda_o = 1'b0;
   assign scl_o = 1'b0;
 
-  \**SEQGEN**  dscl_oen_reg ( .clear(1'b0), .preset(1'b0), .next_state(scl_oen), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dscl_oen), .synch_clear(
-        1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(1'b1)
+  dfprb1 \fSDA_reg[0]  ( .D(n140), .CP(clk), .SDN(n26), .QN(n91) );
+  dfprb1 \fSDA_reg[1]  ( .D(n139), .CP(clk), .SDN(n26), .QN(n90) );
+  dfprb1 \fSDA_reg[2]  ( .D(n138), .CP(clk), .SDN(n26), .QN(n82) );
+  dfprb1 \fSCL_reg[0]  ( .D(n137), .CP(clk), .SDN(n26), .QN(n93) );
+  dfprb1 \fSCL_reg[1]  ( .D(n136), .CP(clk), .SDN(n26), .QN(n92) );
+  dfprb1 \fSCL_reg[2]  ( .D(n135), .CP(clk), .SDN(n26), .QN(n83) );
+  dfprb1 sSCL_reg ( .D(N122), .CP(clk), .SDN(n26), .Q(sSCL), .QN(n8) );
+  dfprb1 sSDA_reg ( .D(N123), .CP(clk), .SDN(n26), .Q(n86), .QN(n5) );
+  dfprb1 dSDA_reg ( .D(N125), .CP(clk), .SDN(n26), .QN(n84) );
+  dfprb1 dSCL_reg ( .D(N124), .CP(clk), .SDN(n26), .QN(n87) );
+  dfprb1 sda_oen_reg ( .D(n134), .CP(clk), .SDN(n26), .Q(sda_oen), .QN(n10) );
+  dfprb1 scl_oen_reg ( .D(n133), .CP(clk), .SDN(n26), .Q(scl_oen), .QN(n1) );
+  dfprb1 clk_en_reg ( .D(N66), .CP(clk), .SDN(n25), .Q(n9), .QN(n85) );
+  dfcrn1 \c_state_reg[13]  ( .D(n117), .CP(clk), .CDN(n25), .QN(n97) );
+  dfcrn1 \c_state_reg[14]  ( .D(n116), .CP(clk), .CDN(n25), .QN(n96) );
+  dfcrn1 \c_state_reg[15]  ( .D(n115), .CP(clk), .CDN(n25), .QN(n95) );
+  dfcrn1 sda_chk_reg ( .D(n98), .CP(clk), .CDN(n25), .QN(n94) );
+  dfcrn1 \c_state_reg[6]  ( .D(n124), .CP(clk), .CDN(n25), .QN(n88) );
+  oai22d1 U3 ( .A1(n94), .A2(n29), .B1(n95), .B2(n2), .ZN(n98) );
+  aor222d1 U4 ( .A1(n3), .A2(cnt[15]), .B1(n31), .B2(N49), .C1(N66), .C2(
+        clk_cnt[15]), .Z(n99) );
+  aor222d1 U5 ( .A1(n3), .A2(cnt[14]), .B1(n31), .B2(N48), .C1(N66), .C2(
+        clk_cnt[14]), .Z(n100) );
+  aor222d1 U6 ( .A1(n3), .A2(cnt[13]), .B1(n31), .B2(N47), .C1(N66), .C2(
+        clk_cnt[13]), .Z(n101) );
+  aor222d1 U7 ( .A1(n3), .A2(cnt[12]), .B1(n31), .B2(N46), .C1(N66), .C2(
+        clk_cnt[12]), .Z(n102) );
+  aor222d1 U8 ( .A1(n3), .A2(cnt[11]), .B1(n31), .B2(N45), .C1(N66), .C2(
+        clk_cnt[11]), .Z(n103) );
+  aor222d1 U9 ( .A1(n3), .A2(cnt[10]), .B1(n31), .B2(N44), .C1(N66), .C2(
+        clk_cnt[10]), .Z(n104) );
+  aor222d1 U10 ( .A1(n3), .A2(cnt[9]), .B1(n31), .B2(N43), .C1(N66), .C2(
+        clk_cnt[9]), .Z(n105) );
+  aor222d1 U11 ( .A1(n3), .A2(cnt[8]), .B1(n31), .B2(N42), .C1(N66), .C2(
+        clk_cnt[8]), .Z(n106) );
+  aor222d1 U12 ( .A1(n3), .A2(cnt[7]), .B1(n31), .B2(N41), .C1(N66), .C2(
+        clk_cnt[7]), .Z(n107) );
+  aor222d1 U13 ( .A1(n3), .A2(cnt[6]), .B1(n31), .B2(N40), .C1(N66), .C2(
+        clk_cnt[6]), .Z(n108) );
+  aor222d1 U14 ( .A1(n3), .A2(cnt[5]), .B1(n31), .B2(N39), .C1(N66), .C2(
+        clk_cnt[5]), .Z(n109) );
+  aor222d1 U15 ( .A1(n3), .A2(cnt[4]), .B1(n31), .B2(N38), .C1(N66), .C2(
+        clk_cnt[4]), .Z(n110) );
+  aor222d1 U16 ( .A1(n3), .A2(cnt[3]), .B1(n31), .B2(N37), .C1(N66), .C2(
+        clk_cnt[3]), .Z(n111) );
+  aor222d1 U17 ( .A1(n3), .A2(cnt[2]), .B1(n31), .B2(N36), .C1(N66), .C2(
+        clk_cnt[2]), .Z(n112) );
+  aor222d1 U18 ( .A1(cnt[1]), .A2(n3), .B1(N35), .B2(n31), .C1(clk_cnt[1]), 
+        .C2(N66), .Z(n113) );
+  aor222d1 U19 ( .A1(cnt[0]), .A2(n3), .B1(N34), .B2(n31), .C1(clk_cnt[0]), 
+        .C2(N66), .Z(n114) );
+  oai22d1 U22 ( .A1(n95), .A2(n30), .B1(n96), .B2(n2), .ZN(n115) );
+  oai22d1 U23 ( .A1(n96), .A2(n27), .B1(n97), .B2(n2), .ZN(n116) );
+  oai21d1 U24 ( .B1(n97), .B2(n27), .A(n6), .ZN(n117) );
+  oai22d1 U27 ( .A1(n29), .A2(n149), .B1(n2), .B2(n148), .ZN(n118) );
+  oai22d1 U28 ( .A1(n30), .A2(n148), .B1(n2), .B2(n147), .ZN(n119) );
+  oai22d1 U30 ( .A1(n30), .A2(n147), .B1(n2), .B2(n146), .ZN(n120) );
+  oai21d1 U32 ( .B1(n29), .B2(n146), .A(n14), .ZN(n121) );
+  oai22d1 U37 ( .A1(n27), .A2(n73), .B1(n2), .B2(n72), .ZN(n122) );
+  oai22d1 U39 ( .A1(n29), .A2(n72), .B1(n88), .B2(n2), .ZN(n123) );
+  oai22d1 U40 ( .A1(n88), .A2(n27), .B1(n2), .B2(n67), .ZN(n124) );
+  oai21d1 U41 ( .B1(n30), .B2(n67), .A(n22), .ZN(n125) );
+  oai22d1 U44 ( .A1(n29), .A2(n145), .B1(n2), .B2(n144), .ZN(n126) );
+  oai22d1 U46 ( .A1(n30), .A2(n144), .B1(n2), .B2(n143), .ZN(n127) );
+  oai22d1 U47 ( .A1(n27), .A2(n143), .B1(n2), .B2(n142), .ZN(n128) );
+  oai22d1 U48 ( .A1(n27), .A2(n142), .B1(n2), .B2(n141), .ZN(n129) );
+  oai21d1 U49 ( .B1(n30), .B2(n141), .A(n28), .ZN(n130) );
+  oai22d1 U54 ( .A1(n29), .A2(n61), .B1(n95), .B2(n2), .ZN(n131) );
+  oan211d1 U56 ( .C1(n9), .C2(n54), .B(n35), .A(rst), .ZN(n132) );
+  oaim22d1 U61 ( .A1(n37), .A2(n38), .B1(n38), .B2(scl_oen), .ZN(n133) );
+  aon211d1 U62 ( .C1(n39), .C2(n141), .B(n51), .A(n29), .ZN(n38) );
+  oaim22d1 U69 ( .A1(n44), .A2(n45), .B1(n45), .B2(sda_oen), .ZN(n134) );
+  oai21d1 U70 ( .B1(n51), .B2(n56), .A(n27), .ZN(n45) );
+  oai21d1 U73 ( .B1(n47), .B2(n48), .A(n32), .ZN(n46) );
+  oai221d1 U75 ( .B1(n83), .B2(n50), .C1(n92), .C2(n36), .A(n154), .ZN(n135)
          );
-  \**SEQGEN**  slave_wait_reg ( .clear(N28), .preset(1'b0), .next_state(N29), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(slave_wait), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  clk_en_reg ( .clear(1'b0), .preset(N28), .next_state(N66), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(clk_en), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \cnt_reg[15]  ( .clear(N28), .preset(1'b0), .next_state(N65), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[15]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[14]  ( .clear(N28), .preset(1'b0), .next_state(N64), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[14]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[13]  ( .clear(N28), .preset(1'b0), .next_state(N63), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[13]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[12]  ( .clear(N28), .preset(1'b0), .next_state(N62), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[12]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[11]  ( .clear(N28), .preset(1'b0), .next_state(N61), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[11]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[10]  ( .clear(N28), .preset(1'b0), .next_state(N60), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[10]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[9]  ( .clear(N28), .preset(1'b0), .next_state(N59), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[9]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[8]  ( .clear(N28), .preset(1'b0), .next_state(N58), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[8]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[7]  ( .clear(N28), .preset(1'b0), .next_state(N57), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[7]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[6]  ( .clear(N28), .preset(1'b0), .next_state(N56), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[6]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[5]  ( .clear(N28), .preset(1'b0), .next_state(N55), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[5]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[4]  ( .clear(N28), .preset(1'b0), .next_state(N54), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[4]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[3]  ( .clear(N28), .preset(1'b0), .next_state(N53), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[3]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[2]  ( .clear(N28), .preset(1'b0), .next_state(N52), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[1]  ( .clear(N28), .preset(1'b0), .next_state(N51), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cnt_reg[0]  ( .clear(N28), .preset(1'b0), .next_state(N50), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cnt[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N231) );
-  \**SEQGEN**  \cSDA_reg[1]  ( .clear(N28), .preset(1'b0), .next_state(N73), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cSDA[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \cSDA_reg[0]  ( .clear(N28), .preset(1'b0), .next_state(N72), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cSDA[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \cSCL_reg[1]  ( .clear(N28), .preset(1'b0), .next_state(N71), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cSCL[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \cSCL_reg[0]  ( .clear(N28), .preset(1'b0), .next_state(N70), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cSCL[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[13]  ( .clear(N28), .preset(1'b0), .next_state(
-        N105), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[13]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[12]  ( .clear(N28), .preset(1'b0), .next_state(
-        N104), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[12]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[11]  ( .clear(N28), .preset(1'b0), .next_state(
-        N103), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[11]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[10]  ( .clear(N28), .preset(1'b0), .next_state(
-        N102), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[10]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[9]  ( .clear(N28), .preset(1'b0), .next_state(
-        N101), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[9]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[8]  ( .clear(N28), .preset(1'b0), .next_state(
-        N100), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[8]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[7]  ( .clear(N28), .preset(1'b0), .next_state(
-        N99), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[7]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[6]  ( .clear(N28), .preset(1'b0), .next_state(
-        N98), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[6]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[5]  ( .clear(N28), .preset(1'b0), .next_state(
-        N97), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[5]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[4]  ( .clear(N28), .preset(1'b0), .next_state(
-        N96), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[4]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[3]  ( .clear(N28), .preset(1'b0), .next_state(
-        N95), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[3]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[2]  ( .clear(N28), .preset(1'b0), .next_state(
-        N94), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[2]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[1]  ( .clear(N28), .preset(1'b0), .next_state(
-        N93), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[1]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \filter_cnt_reg[0]  ( .clear(N28), .preset(1'b0), .next_state(
-        N92), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        filter_cnt[0]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \fSDA_reg[2]  ( .clear(1'b0), .preset(N28), .next_state(N117), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(fSDA[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N111) );
-  \**SEQGEN**  \fSDA_reg[1]  ( .clear(1'b0), .preset(N28), .next_state(N116), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(fSDA[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N111) );
-  \**SEQGEN**  \fSDA_reg[0]  ( .clear(1'b0), .preset(N28), .next_state(N115), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(fSDA[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N111) );
-  \**SEQGEN**  \fSCL_reg[2]  ( .clear(1'b0), .preset(N28), .next_state(N114), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(fSCL[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N111) );
-  \**SEQGEN**  \fSCL_reg[1]  ( .clear(1'b0), .preset(N28), .next_state(N113), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(fSCL[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N111) );
-  \**SEQGEN**  \fSCL_reg[0]  ( .clear(1'b0), .preset(N28), .next_state(N112), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(fSCL[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N111) );
-  \**SEQGEN**  dSDA_reg ( .clear(1'b0), .preset(N28), .next_state(N125), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dSDA), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  sSCL_reg ( .clear(1'b0), .preset(N28), .next_state(N122), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(sSCL), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  sSDA_reg ( .clear(1'b0), .preset(N28), .next_state(N123), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(sSDA), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  dSCL_reg ( .clear(1'b0), .preset(N28), .next_state(N124), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dSCL), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  sto_condition_reg ( .clear(N28), .preset(1'b0), .next_state(
-        N129), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        sto_condition), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  sta_condition_reg ( .clear(N28), .preset(1'b0), .next_state(
-        N128), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        sta_condition), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  busy_reg ( .clear(N28), .preset(1'b0), .next_state(N131), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(busy), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  cmd_stop_reg ( .clear(N28), .preset(1'b0), .next_state(N135), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cmd_stop), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N134) );
-  \**SEQGEN**  al_reg ( .clear(N28), .preset(1'b0), .next_state(N138), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(al), .synch_clear(
-        1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(1'b1)
+  oai221d1 U76 ( .B1(n92), .B2(n50), .C1(n93), .C2(n36), .A(n154), .ZN(n136)
          );
-  \**SEQGEN**  dout_reg ( .clear(1'b0), .preset(1'b0), .next_state(sSDA), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dout), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N139) );
-  GTECH_NOT I_0 ( .A(c_state[16]), .Z(N143) );
-  GTECH_NOT I_1 ( .A(c_state[15]), .Z(N144) );
-  GTECH_NOT I_2 ( .A(c_state[14]), .Z(N145) );
-  GTECH_NOT I_3 ( .A(c_state[13]), .Z(N146) );
-  GTECH_NOT I_4 ( .A(c_state[12]), .Z(N147) );
-  GTECH_NOT I_5 ( .A(c_state[11]), .Z(N148) );
-  GTECH_NOT I_6 ( .A(c_state[10]), .Z(N149) );
-  GTECH_NOT I_7 ( .A(c_state[9]), .Z(N150) );
-  GTECH_NOT I_8 ( .A(c_state[8]), .Z(N151) );
-  GTECH_NOT I_9 ( .A(c_state[7]), .Z(N152) );
-  GTECH_NOT I_10 ( .A(c_state[6]), .Z(N153) );
-  GTECH_NOT I_11 ( .A(c_state[5]), .Z(N154) );
-  GTECH_NOT I_12 ( .A(c_state[4]), .Z(N155) );
-  GTECH_NOT I_13 ( .A(c_state[3]), .Z(N156) );
-  GTECH_NOT I_14 ( .A(c_state[2]), .Z(N157) );
-  GTECH_NOT I_15 ( .A(c_state[1]), .Z(N158) );
-  GTECH_NOT I_16 ( .A(c_state[0]), .Z(N159) );
-  GTECH_OR2 C361 ( .A(cmd[1]), .B(N161), .Z(N162) );
-  GTECH_OR2 C362 ( .A(N165), .B(N162), .Z(N163) );
-  GTECH_OR2 C365 ( .A(cmd[3]), .B(cmd[2]), .Z(N165) );
-  GTECH_OR2 C366 ( .A(N240), .B(cmd[0]), .Z(N166) );
-  GTECH_OR2 C367 ( .A(N165), .B(N166), .Z(N167) );
-  GTECH_OR2 C370 ( .A(cmd[3]), .B(N169), .Z(N170) );
-  GTECH_OR2 C372 ( .A(N170), .B(N175), .Z(N171) );
-  GTECH_OR2 C375 ( .A(N173), .B(cmd[2]), .Z(N174) );
-  GTECH_OR2 C376 ( .A(cmd[1]), .B(cmd[0]), .Z(N175) );
-  GTECH_OR2 C377 ( .A(N174), .B(N175), .Z(N176) );
-  \**SEQGEN**  sda_chk_reg ( .clear(N28), .preset(1'b0), .next_state(N230), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(sda_chk), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N209) );
-  \**SEQGEN**  \c_state_reg[17]  ( .clear(N28), .preset(1'b0), .next_state(
-        1'b0), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[17]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(
-        N209) );
-  \**SEQGEN**  \c_state_reg[16]  ( .clear(N28), .preset(1'b0), .next_state(
-        N226), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[16]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(
-        N209) );
-  \**SEQGEN**  \c_state_reg[15]  ( .clear(N28), .preset(1'b0), .next_state(
-        N225), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[15]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(
-        N209) );
-  \**SEQGEN**  \c_state_reg[14]  ( .clear(N28), .preset(1'b0), .next_state(
-        N224), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[14]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(
-        N209) );
-  \**SEQGEN**  \c_state_reg[13]  ( .clear(N28), .preset(1'b0), .next_state(
-        N223), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[13]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(
-        N209) );
-  \**SEQGEN**  \c_state_reg[12]  ( .clear(N28), .preset(1'b0), .next_state(
-        N222), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[12]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(
-        N209) );
-  \**SEQGEN**  \c_state_reg[11]  ( .clear(N28), .preset(1'b0), .next_state(
-        N221), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[11]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(
-        N209) );
-  \**SEQGEN**  \c_state_reg[10]  ( .clear(N28), .preset(1'b0), .next_state(
-        N220), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[10]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(
-        N209) );
-  \**SEQGEN**  \c_state_reg[9]  ( .clear(N28), .preset(1'b0), .next_state(N219), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[9]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N209) );
-  \**SEQGEN**  \c_state_reg[8]  ( .clear(N28), .preset(1'b0), .next_state(N218), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[8]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N209) );
-  \**SEQGEN**  \c_state_reg[7]  ( .clear(N28), .preset(1'b0), .next_state(N217), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[7]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N209) );
-  \**SEQGEN**  \c_state_reg[6]  ( .clear(N28), .preset(1'b0), .next_state(N216), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[6]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N209) );
-  \**SEQGEN**  \c_state_reg[5]  ( .clear(N28), .preset(1'b0), .next_state(N215), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[5]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N209) );
-  \**SEQGEN**  \c_state_reg[4]  ( .clear(N28), .preset(1'b0), .next_state(N214), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[4]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N209) );
-  \**SEQGEN**  \c_state_reg[3]  ( .clear(N28), .preset(1'b0), .next_state(N213), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[3]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N209) );
-  \**SEQGEN**  \c_state_reg[2]  ( .clear(N28), .preset(1'b0), .next_state(N212), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N209) );
-  \**SEQGEN**  \c_state_reg[1]  ( .clear(N28), .preset(1'b0), .next_state(N211), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N209) );
-  \**SEQGEN**  \c_state_reg[0]  ( .clear(N28), .preset(1'b0), .next_state(N210), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N209) );
-  \**SEQGEN**  cmd_ack_reg ( .clear(N28), .preset(1'b0), .next_state(N227), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cmd_ack), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  scl_oen_reg ( .clear(1'b0), .preset(N28), .next_state(N228), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(scl_oen), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N237) );
-  \**SEQGEN**  sda_oen_reg ( .clear(1'b0), .preset(N28), .next_state(N229), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(sda_oen), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N239) );
-  GTECH_NOT I_17 ( .A(cmd[1]), .Z(N240) );
-  GTECH_OR2 C595 ( .A(cmd[2]), .B(cmd[3]), .Z(N241) );
-  GTECH_OR2 C596 ( .A(N240), .B(N241), .Z(N242) );
-  GTECH_OR2 C597 ( .A(cmd[0]), .B(N242), .Z(N243) );
-  GTECH_NOT I_18 ( .A(N243), .Z(N244) );
-  SUB_UNS_OP sub_260 ( .A(filter_cnt), .B(1'b1), .Z({N91, N90, N89, N88, N87, 
-        N86, N85, N84, N83, N82, N81, N80, N79, N78}) );
-  SUB_UNS_OP sub_228 ( .A(cnt), .B(1'b1), .Z({N49, N48, N47, N46, N45, N44, 
-        N43, N42, N41, N40, N39, N38, N37, N36, N35, N34}) );
-  SELECT_OP C617 ( .DATA1(clk_cnt), .DATA2({N49, N48, N47, N46, N45, N44, N43, 
-        N42, N41, N40, N39, N38, N37, N36, N35, N34}), .CONTROL1(N0), 
-        .CONTROL2(N33), .Z({N65, N64, N63, N62, N61, N60, N59, N58, N57, N56, 
-        N55, N54, N53, N52, N51, N50}) );
-  GTECH_BUF B_0 ( .A(N31), .Z(N0) );
-  SELECT_OP C618 ( .DATA1(1'b1), .DATA2(1'b0), .DATA3(1'b0), .CONTROL1(N0), 
-        .CONTROL2(N68), .CONTROL3(N33), .Z(N66) );
-  SELECT_OP C619 ( .DATA1({1'b0, 1'b0}), .DATA2({cSCL[0], scl_i}), .CONTROL1(
-        N1), .CONTROL2(N2), .Z({N71, N70}) );
-  GTECH_BUF B_1 ( .A(rst), .Z(N1) );
-  GTECH_BUF B_2 ( .A(N69), .Z(N2) );
-  SELECT_OP C620 ( .DATA1({1'b0, 1'b0}), .DATA2({cSDA[0], sda_i}), .CONTROL1(
-        N1), .CONTROL2(N2), .Z({N73, N72}) );
-  SELECT_OP C621 ( .DATA1({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), .DATA2(clk_cnt[15:2]), .DATA3({
-        N91, N90, N89, N88, N87, N86, N85, N84, N83, N82, N81, N80, N79, N78}), 
-        .CONTROL1(N3), .CONTROL2(N107), .CONTROL3(N77), .Z({N105, N104, N103, 
-        N102, N101, N100, N99, N98, N97, N96, N95, N94, N93, N92}) );
-  GTECH_BUF B_3 ( .A(N74), .Z(N3) );
-  SELECT_OP C622 ( .DATA1(1'b1), .DATA2(1'b1), .DATA3(1'b0), .CONTROL1(N1), 
-        .CONTROL2(N119), .CONTROL3(N110), .Z(N111) );
-  SELECT_OP C623 ( .DATA1({1'b1, 1'b1, 1'b1}), .DATA2({fSCL[1:0], cSCL[1]}), 
-        .CONTROL1(N1), .CONTROL2(N119), .Z({N114, N113, N112}) );
-  SELECT_OP C624 ( .DATA1({1'b1, 1'b1, 1'b1}), .DATA2({fSDA[1:0], cSDA[1]}), 
-        .CONTROL1(N1), .CONTROL2(N119), .Z({N117, N116, N115}) );
-  SELECT_OP C625 ( .DATA1(1'b1), .DATA2(N120), .CONTROL1(N1), .CONTROL2(N2), 
-        .Z(N122) );
-  SELECT_OP C626 ( .DATA1(1'b1), .DATA2(N121), .CONTROL1(N1), .CONTROL2(N2), 
-        .Z(N123) );
-  SELECT_OP C627 ( .DATA1(1'b1), .DATA2(sSCL), .CONTROL1(N1), .CONTROL2(N2), 
-        .Z(N124) );
-  SELECT_OP C628 ( .DATA1(1'b1), .DATA2(sSDA), .CONTROL1(N1), .CONTROL2(N2), 
-        .Z(N125) );
-  SELECT_OP C629 ( .DATA1(1'b0), .DATA2(N126), .CONTROL1(N1), .CONTROL2(N2), 
-        .Z(N128) );
-  SELECT_OP C630 ( .DATA1(1'b0), .DATA2(N127), .CONTROL1(N1), .CONTROL2(N2), 
-        .Z(N129) );
-  SELECT_OP C631 ( .DATA1(1'b0), .DATA2(N130), .CONTROL1(N1), .CONTROL2(N2), 
-        .Z(N131) );
-  SELECT_OP C632 ( .DATA1(1'b1), .DATA2(1'b1), .DATA3(1'b0), .CONTROL1(N1), 
-        .CONTROL2(N136), .CONTROL3(N133), .Z(N134) );
-  SELECT_OP C633 ( .DATA1(1'b0), .DATA2(N244), .CONTROL1(N1), .CONTROL2(N136), 
-        .Z(N135) );
-  SELECT_OP C634 ( .DATA1(1'b0), .DATA2(N137), .CONTROL1(N1), .CONTROL2(N2), 
-        .Z(N138) );
-  SELECT_OP C635 ( .DATA1({1'b0, 1'b0, 1'b0, 1'b1}), .DATA2({1'b0, 1'b0, 1'b1, 
-        1'b0}), .DATA3({1'b1, 1'b0, 1'b0, 1'b0}), .DATA4({1'b0, 1'b1, 1'b0, 
-        1'b0}), .DATA5({1'b0, 1'b0, 1'b0, 1'b0}), .CONTROL1(N4), .CONTROL2(N5), 
-        .CONTROL3(N6), .CONTROL4(N7), .CONTROL5(N181), .Z({N185, N184, N183, 
-        N182}) );
-  GTECH_BUF B_4 ( .A(N164), .Z(N4) );
-  GTECH_BUF B_5 ( .A(N168), .Z(N5) );
-  GTECH_BUF B_6 ( .A(N172), .Z(N6) );
-  GTECH_BUF B_7 ( .A(N177), .Z(N7) );
-  SELECT_OP C636 ( .DATA1({1'b0, 1'b0, 1'b0, N185, 1'b0, 1'b0, 1'b0, N184, 
-        1'b0, 1'b0, 1'b0, N183, 1'b0, 1'b0, 1'b0, 1'b0, N182}), .DATA2({1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b1, 1'b0}), .DATA3({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b1, 1'b0, 1'b0}), 
-        .DATA4({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b1, 1'b0, 1'b0, 1'b0}), .DATA5({1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b1, 1'b0, 1'b0, 
-        1'b0, 1'b0}), .DATA6({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), .DATA7({1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b1, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0}), .DATA8({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b1, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), 
-        .DATA9({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b1, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), .DATA10({1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0}), .DATA11({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b1, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), .DATA12({1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b1, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0}), .DATA13({1'b0, 1'b0, 1'b0, 1'b0, 1'b1, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), 
-        .DATA14({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), .DATA15({1'b0, 1'b0, 1'b1, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0}), .DATA16({1'b0, 1'b1, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), .DATA17({1'b1, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0}), .DATA18({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), 
-        .CONTROL1(N160), .CONTROL2(N8), .CONTROL3(N9), .CONTROL4(N10), 
-        .CONTROL5(N11), .CONTROL6(N12), .CONTROL7(N13), .CONTROL8(N14), 
-        .CONTROL9(N15), .CONTROL10(N16), .CONTROL11(N17), .CONTROL12(N18), 
-        .CONTROL13(N19), .CONTROL14(N20), .CONTROL15(N21), .CONTROL16(N22), 
-        .CONTROL17(N23), .CONTROL18(N24), .Z({N202, N201, N200, N199, N198, 
-        N197, N196, N195, N194, N193, N192, N191, N190, N189, N188, N187, N186}) );
-  GTECH_BUF B_8 ( .A(c_state[0]), .Z(N8) );
-  GTECH_BUF B_9 ( .A(c_state[1]), .Z(N9) );
-  GTECH_BUF B_10 ( .A(c_state[2]), .Z(N10) );
-  GTECH_BUF B_11 ( .A(c_state[3]), .Z(N11) );
-  GTECH_BUF B_12 ( .A(c_state[4]), .Z(N12) );
-  GTECH_BUF B_13 ( .A(c_state[5]), .Z(N13) );
-  GTECH_BUF B_14 ( .A(c_state[6]), .Z(N14) );
-  GTECH_BUF B_15 ( .A(c_state[7]), .Z(N15) );
-  GTECH_BUF B_16 ( .A(c_state[8]), .Z(N16) );
-  GTECH_BUF B_17 ( .A(c_state[9]), .Z(N17) );
-  GTECH_BUF B_18 ( .A(c_state[10]), .Z(N18) );
-  GTECH_BUF B_19 ( .A(c_state[11]), .Z(N19) );
-  GTECH_BUF B_20 ( .A(c_state[12]), .Z(N20) );
-  GTECH_BUF B_21 ( .A(c_state[13]), .Z(N21) );
-  GTECH_BUF B_22 ( .A(c_state[14]), .Z(N22) );
-  GTECH_BUF B_23 ( .A(c_state[15]), .Z(N23) );
-  GTECH_BUF B_24 ( .A(c_state[16]), .Z(N24) );
-  SELECT_OP C637 ( .DATA1(1'b1), .DATA2(1'b1), .DATA3(1'b1), .DATA4(1'b0), 
-        .DATA5(1'b0), .DATA6(1'b1), .DATA7(1'b1), .DATA8(1'b1), .DATA9(1'b0), 
-        .DATA10(1'b1), .DATA11(1'b1), .DATA12(1'b0), .DATA13(1'b0), .DATA14(
-        1'b1), .DATA15(1'b1), .DATA16(1'b0), .CONTROL1(N9), .CONTROL2(N10), 
-        .CONTROL3(N11), .CONTROL4(N12), .CONTROL5(N13), .CONTROL6(N14), 
-        .CONTROL7(N15), .CONTROL8(N16), .CONTROL9(N17), .CONTROL10(N18), 
-        .CONTROL11(N19), .CONTROL12(N20), .CONTROL13(N21), .CONTROL14(N22), 
-        .CONTROL15(N23), .CONTROL16(N24), .Z(N203) );
-  SELECT_OP C638 ( .DATA1(1'b1), .DATA2(1'b1), .DATA3(1'b0), .DATA4(1'b0), 
-        .DATA5(1'b0), .DATA6(1'b0), .DATA7(1'b0), .DATA8(1'b0), .DATA9(1'b1), 
-        .DATA10(1'b1), .DATA11(1'b1), .DATA12(1'b1), .DATA13(1'b1), .DATA14(
-        din), .DATA15(din), .DATA16(din), .DATA17(din), .CONTROL1(N8), 
-        .CONTROL2(N9), .CONTROL3(N10), .CONTROL4(N11), .CONTROL5(N12), 
-        .CONTROL6(N13), .CONTROL7(N14), .CONTROL8(N15), .CONTROL9(N16), 
-        .CONTROL10(N17), .CONTROL11(N18), .CONTROL12(N19), .CONTROL13(N20), 
-        .CONTROL14(N21), .CONTROL15(N22), .CONTROL16(N23), .CONTROL17(N24), 
-        .Z(N204) );
-  SELECT_OP C639 ( .DATA1(1'b0), .DATA2(1'b0), .DATA3(1'b0), .DATA4(1'b0), 
-        .DATA5(1'b0), .DATA6(1'b0), .DATA7(1'b0), .DATA8(1'b0), .DATA9(1'b0), 
-        .DATA10(1'b0), .DATA11(1'b0), .DATA12(1'b0), .DATA13(1'b0), .DATA14(
-        1'b0), .DATA15(1'b0), .DATA16(1'b0), .DATA17(1'b1), .DATA18(1'b0), 
-        .CONTROL1(N160), .CONTROL2(N8), .CONTROL3(N9), .CONTROL4(N10), 
-        .CONTROL5(N11), .CONTROL6(N12), .CONTROL7(N13), .CONTROL8(N14), 
-        .CONTROL9(N15), .CONTROL10(N16), .CONTROL11(N17), .CONTROL12(N18), 
-        .CONTROL13(N19), .CONTROL14(N20), .CONTROL15(N21), .CONTROL16(N22), 
-        .CONTROL17(N23), .CONTROL18(N24), .Z(N205) );
-  SELECT_OP C640 ( .DATA1(1'b0), .DATA2(1'b0), .DATA3(1'b0), .DATA4(1'b0), 
-        .DATA5(1'b0), .DATA6(1'b1), .DATA7(1'b0), .DATA8(1'b0), .DATA9(1'b0), 
-        .DATA10(1'b1), .DATA11(1'b0), .DATA12(1'b0), .DATA13(1'b0), .DATA14(
-        1'b1), .DATA15(1'b0), .DATA16(1'b0), .DATA17(1'b0), .DATA18(1'b1), 
-        .CONTROL1(N160), .CONTROL2(N8), .CONTROL3(N9), .CONTROL4(N10), 
-        .CONTROL5(N11), .CONTROL6(N12), .CONTROL7(N13), .CONTROL8(N14), 
-        .CONTROL9(N15), .CONTROL10(N16), .CONTROL11(N17), .CONTROL12(N18), 
-        .CONTROL13(N19), .CONTROL14(N20), .CONTROL15(N21), .CONTROL16(N22), 
-        .CONTROL17(N23), .CONTROL18(N24), .Z(N206) );
-  SELECT_OP C641 ( .DATA1(1'b1), .DATA2(1'b0), .CONTROL1(N25), .CONTROL2(N26), 
-        .Z(N207) );
-  GTECH_BUF B_25 ( .A(clk_en), .Z(N25) );
-  GTECH_BUF B_26 ( .A(N142), .Z(N26) );
-  SELECT_OP C642 ( .DATA1(N206), .DATA2(1'b0), .CONTROL1(N25), .CONTROL2(N26), 
-        .Z(N208) );
-  SELECT_OP C643 ( .DATA1(1'b1), .DATA2(N207), .CONTROL1(N27), .CONTROL2(N141), 
-        .Z(N209) );
-  GTECH_BUF B_27 ( .A(N140), .Z(N27) );
-  SELECT_OP C644 ( .DATA1({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), .DATA2({N202, 
-        N201, N200, N199, N198, N197, N196, N195, N194, N193, N192, N191, N190, 
-        N189, N188, N187, N186}), .CONTROL1(N27), .CONTROL2(N141), .Z({N226, 
-        N225, N224, N223, N222, N221, N220, N219, N218, N217, N216, N215, N214, 
-        N213, N212, N211, N210}) );
-  SELECT_OP C645 ( .DATA1(1'b0), .DATA2(N208), .CONTROL1(N27), .CONTROL2(N141), 
-        .Z(N227) );
-  SELECT_OP C646 ( .DATA1(1'b1), .DATA2(N203), .CONTROL1(N27), .CONTROL2(N141), 
-        .Z(N228) );
-  SELECT_OP C647 ( .DATA1(1'b1), .DATA2(N204), .CONTROL1(N27), .CONTROL2(N141), 
-        .Z(N229) );
-  SELECT_OP C648 ( .DATA1(1'b0), .DATA2(N205), .CONTROL1(N27), .CONTROL2(N141), 
-        .Z(N230) );
-  GTECH_NOT I_19 ( .A(nReset), .Z(N28) );
-  GTECH_OR2 C652 ( .A(N248), .B(N249), .Z(N29) );
-  GTECH_AND2 C653 ( .A(N246), .B(N247), .Z(N248) );
-  GTECH_AND2 C654 ( .A(scl_oen), .B(N245), .Z(N246) );
-  GTECH_NOT I_20 ( .A(dscl_oen), .Z(N245) );
-  GTECH_NOT I_21 ( .A(sSCL), .Z(N247) );
-  GTECH_AND2 C657 ( .A(slave_wait), .B(N247), .Z(N249) );
-  GTECH_AND2 C659 ( .A(N250), .B(scl_oen), .Z(scl_sync) );
-  GTECH_AND2 C660 ( .A(dSCL), .B(N247), .Z(N250) );
-  GTECH_BUF B_28 ( .A(nReset), .Z(N30) );
-  GTECH_OR2 C664 ( .A(N269), .B(scl_sync), .Z(N31) );
-  GTECH_OR2 C665 ( .A(N267), .B(N268), .Z(N269) );
-  GTECH_OR2 C666 ( .A(rst), .B(N266), .Z(N267) );
-  GTECH_NOT I_22 ( .A(N265), .Z(N266) );
-  GTECH_OR2 C668 ( .A(N264), .B(cnt[0]), .Z(N265) );
-  GTECH_OR2 C669 ( .A(N263), .B(cnt[1]), .Z(N264) );
-  GTECH_OR2 C670 ( .A(N262), .B(cnt[2]), .Z(N263) );
-  GTECH_OR2 C671 ( .A(N261), .B(cnt[3]), .Z(N262) );
-  GTECH_OR2 C672 ( .A(N260), .B(cnt[4]), .Z(N261) );
-  GTECH_OR2 C673 ( .A(N259), .B(cnt[5]), .Z(N260) );
-  GTECH_OR2 C674 ( .A(N258), .B(cnt[6]), .Z(N259) );
-  GTECH_OR2 C675 ( .A(N257), .B(cnt[7]), .Z(N258) );
-  GTECH_OR2 C676 ( .A(N256), .B(cnt[8]), .Z(N257) );
-  GTECH_OR2 C677 ( .A(N255), .B(cnt[9]), .Z(N256) );
-  GTECH_OR2 C678 ( .A(N254), .B(cnt[10]), .Z(N255) );
-  GTECH_OR2 C679 ( .A(N253), .B(cnt[11]), .Z(N254) );
-  GTECH_OR2 C680 ( .A(N252), .B(cnt[12]), .Z(N253) );
-  GTECH_OR2 C681 ( .A(N251), .B(cnt[13]), .Z(N252) );
-  GTECH_OR2 C682 ( .A(cnt[15]), .B(cnt[14]), .Z(N251) );
-  GTECH_NOT I_23 ( .A(ena), .Z(N268) );
-  GTECH_OR2 C686 ( .A(slave_wait), .B(N31), .Z(N32) );
-  GTECH_NOT I_24 ( .A(N32), .Z(N33) );
-  GTECH_AND2 C688 ( .A(N30), .B(N33), .Z(net178) );
-  GTECH_NOT I_25 ( .A(N31), .Z(N67) );
-  GTECH_AND2 C690 ( .A(slave_wait), .B(N67), .Z(N68) );
-  GTECH_NOT I_26 ( .A(rst), .Z(N69) );
-  GTECH_OR2 C694 ( .A(rst), .B(N268), .Z(N74) );
-  GTECH_NOT I_27 ( .A(N282), .Z(N75) );
-  GTECH_OR2 C697 ( .A(N281), .B(filter_cnt[0]), .Z(N282) );
-  GTECH_OR2 C698 ( .A(N280), .B(filter_cnt[1]), .Z(N281) );
-  GTECH_OR2 C699 ( .A(N279), .B(filter_cnt[2]), .Z(N280) );
-  GTECH_OR2 C700 ( .A(N278), .B(filter_cnt[3]), .Z(N279) );
-  GTECH_OR2 C701 ( .A(N277), .B(filter_cnt[4]), .Z(N278) );
-  GTECH_OR2 C702 ( .A(N276), .B(filter_cnt[5]), .Z(N277) );
-  GTECH_OR2 C703 ( .A(N275), .B(filter_cnt[6]), .Z(N276) );
-  GTECH_OR2 C704 ( .A(N274), .B(filter_cnt[7]), .Z(N275) );
-  GTECH_OR2 C705 ( .A(N273), .B(filter_cnt[8]), .Z(N274) );
-  GTECH_OR2 C706 ( .A(N272), .B(filter_cnt[9]), .Z(N273) );
-  GTECH_OR2 C707 ( .A(N271), .B(filter_cnt[10]), .Z(N272) );
-  GTECH_OR2 C708 ( .A(N270), .B(filter_cnt[11]), .Z(N271) );
-  GTECH_OR2 C709 ( .A(filter_cnt[13]), .B(filter_cnt[12]), .Z(N270) );
-  GTECH_OR2 C712 ( .A(N75), .B(N74), .Z(N76) );
-  GTECH_NOT I_28 ( .A(N76), .Z(N77) );
-  GTECH_AND2 C714 ( .A(N30), .B(N77), .Z(net179) );
-  GTECH_NOT I_29 ( .A(N74), .Z(N106) );
-  GTECH_AND2 C716 ( .A(N75), .B(N106), .Z(N107) );
-  GTECH_NOT I_30 ( .A(N295), .Z(N108) );
-  GTECH_OR2 C718 ( .A(N294), .B(filter_cnt[0]), .Z(N295) );
-  GTECH_OR2 C719 ( .A(N293), .B(filter_cnt[1]), .Z(N294) );
-  GTECH_OR2 C720 ( .A(N292), .B(filter_cnt[2]), .Z(N293) );
-  GTECH_OR2 C721 ( .A(N291), .B(filter_cnt[3]), .Z(N292) );
-  GTECH_OR2 C722 ( .A(N290), .B(filter_cnt[4]), .Z(N291) );
-  GTECH_OR2 C723 ( .A(N289), .B(filter_cnt[5]), .Z(N290) );
-  GTECH_OR2 C724 ( .A(N288), .B(filter_cnt[6]), .Z(N289) );
-  GTECH_OR2 C725 ( .A(N287), .B(filter_cnt[7]), .Z(N288) );
-  GTECH_OR2 C726 ( .A(N286), .B(filter_cnt[8]), .Z(N287) );
-  GTECH_OR2 C727 ( .A(N285), .B(filter_cnt[9]), .Z(N286) );
-  GTECH_OR2 C728 ( .A(N284), .B(filter_cnt[10]), .Z(N285) );
-  GTECH_OR2 C729 ( .A(N283), .B(filter_cnt[11]), .Z(N284) );
-  GTECH_OR2 C730 ( .A(filter_cnt[13]), .B(filter_cnt[12]), .Z(N283) );
-  GTECH_OR2 C732 ( .A(N108), .B(rst), .Z(N109) );
-  GTECH_NOT I_31 ( .A(N109), .Z(N110) );
-  GTECH_NOT I_32 ( .A(rst), .Z(N118) );
-  GTECH_AND2 C735 ( .A(N108), .B(N118), .Z(N119) );
-  GTECH_OR2 C736 ( .A(N298), .B(N299), .Z(N120) );
-  GTECH_OR2 C737 ( .A(N296), .B(N297), .Z(N298) );
-  GTECH_AND2 C738 ( .A(fSCL[2]), .B(fSCL[1]), .Z(N296) );
-  GTECH_AND2 C739 ( .A(fSCL[1]), .B(fSCL[0]), .Z(N297) );
-  GTECH_AND2 C740 ( .A(fSCL[2]), .B(fSCL[0]), .Z(N299) );
-  GTECH_OR2 C741 ( .A(N302), .B(N303), .Z(N121) );
-  GTECH_OR2 C742 ( .A(N300), .B(N301), .Z(N302) );
-  GTECH_AND2 C743 ( .A(fSDA[2]), .B(fSDA[1]), .Z(N300) );
-  GTECH_AND2 C744 ( .A(fSDA[1]), .B(fSDA[0]), .Z(N301) );
-  GTECH_AND2 C745 ( .A(fSDA[2]), .B(fSDA[0]), .Z(N303) );
-  GTECH_AND2 C746 ( .A(N305), .B(sSCL), .Z(N126) );
-  GTECH_AND2 C747 ( .A(N304), .B(dSDA), .Z(N305) );
-  GTECH_NOT I_33 ( .A(sSDA), .Z(N304) );
-  GTECH_AND2 C749 ( .A(N307), .B(sSCL), .Z(N127) );
-  GTECH_AND2 C750 ( .A(sSDA), .B(N306), .Z(N307) );
-  GTECH_NOT I_34 ( .A(dSDA), .Z(N306) );
-  GTECH_AND2 C752 ( .A(N308), .B(N309), .Z(N130) );
-  GTECH_OR2 C753 ( .A(sta_condition), .B(busy), .Z(N308) );
-  GTECH_NOT I_35 ( .A(sto_condition), .Z(N309) );
-  GTECH_OR2 C756 ( .A(clk_en), .B(rst), .Z(N132) );
-  GTECH_NOT I_36 ( .A(N132), .Z(N133) );
-  GTECH_AND2 C758 ( .A(clk_en), .B(N118), .Z(N136) );
-  GTECH_OR2 C759 ( .A(N311), .B(N331), .Z(N137) );
-  GTECH_AND2 C760 ( .A(N310), .B(sda_oen), .Z(N311) );
-  GTECH_AND2 C761 ( .A(sda_chk), .B(N304), .Z(N310) );
-  GTECH_AND2 C763 ( .A(N329), .B(N330), .Z(N331) );
-  GTECH_AND2 C764 ( .A(N328), .B(sto_condition), .Z(N329) );
-  GTECH_OR2 C765 ( .A(N327), .B(c_state[0]), .Z(N328) );
-  GTECH_OR2 C766 ( .A(N326), .B(c_state[1]), .Z(N327) );
-  GTECH_OR2 C767 ( .A(N325), .B(c_state[2]), .Z(N326) );
-  GTECH_OR2 C768 ( .A(N324), .B(c_state[3]), .Z(N325) );
-  GTECH_OR2 C769 ( .A(N323), .B(c_state[4]), .Z(N324) );
-  GTECH_OR2 C770 ( .A(N322), .B(c_state[5]), .Z(N323) );
-  GTECH_OR2 C771 ( .A(N321), .B(c_state[6]), .Z(N322) );
-  GTECH_OR2 C772 ( .A(N320), .B(c_state[7]), .Z(N321) );
-  GTECH_OR2 C773 ( .A(N319), .B(c_state[8]), .Z(N320) );
-  GTECH_OR2 C774 ( .A(N318), .B(c_state[9]), .Z(N319) );
-  GTECH_OR2 C775 ( .A(N317), .B(c_state[10]), .Z(N318) );
-  GTECH_OR2 C776 ( .A(N316), .B(c_state[11]), .Z(N317) );
-  GTECH_OR2 C777 ( .A(N315), .B(c_state[12]), .Z(N316) );
-  GTECH_OR2 C778 ( .A(N314), .B(c_state[13]), .Z(N315) );
-  GTECH_OR2 C779 ( .A(N313), .B(c_state[14]), .Z(N314) );
-  GTECH_OR2 C780 ( .A(N312), .B(c_state[15]), .Z(N313) );
-  GTECH_OR2 C781 ( .A(c_state[17]), .B(c_state[16]), .Z(N312) );
-  GTECH_NOT I_37 ( .A(cmd_stop), .Z(N330) );
-  GTECH_AND2 C783 ( .A(sSCL), .B(N332), .Z(N139) );
-  GTECH_NOT I_38 ( .A(dSCL), .Z(N332) );
-  GTECH_OR2 C786 ( .A(rst), .B(al), .Z(N140) );
-  GTECH_NOT I_39 ( .A(N140), .Z(N141) );
-  GTECH_NOT I_40 ( .A(clk_en), .Z(N142) );
-  GTECH_AND2 C792 ( .A(N347), .B(N159), .Z(N160) );
-  GTECH_AND2 C793 ( .A(N346), .B(N158), .Z(N347) );
-  GTECH_AND2 C794 ( .A(N345), .B(N157), .Z(N346) );
-  GTECH_AND2 C795 ( .A(N344), .B(N156), .Z(N345) );
-  GTECH_AND2 C796 ( .A(N343), .B(N155), .Z(N344) );
-  GTECH_AND2 C797 ( .A(N342), .B(N154), .Z(N343) );
-  GTECH_AND2 C798 ( .A(N341), .B(N153), .Z(N342) );
-  GTECH_AND2 C799 ( .A(N340), .B(N152), .Z(N341) );
-  GTECH_AND2 C800 ( .A(N339), .B(N151), .Z(N340) );
-  GTECH_AND2 C801 ( .A(N338), .B(N150), .Z(N339) );
-  GTECH_AND2 C802 ( .A(N337), .B(N149), .Z(N338) );
-  GTECH_AND2 C803 ( .A(N336), .B(N148), .Z(N337) );
-  GTECH_AND2 C804 ( .A(N335), .B(N147), .Z(N336) );
-  GTECH_AND2 C805 ( .A(N334), .B(N146), .Z(N335) );
-  GTECH_AND2 C806 ( .A(N333), .B(N145), .Z(N334) );
-  GTECH_AND2 C807 ( .A(N143), .B(N144), .Z(N333) );
-  GTECH_NOT I_41 ( .A(cmd[0]), .Z(N161) );
-  GTECH_NOT I_42 ( .A(N163), .Z(N164) );
-  GTECH_NOT I_43 ( .A(N167), .Z(N168) );
-  GTECH_NOT I_44 ( .A(cmd[2]), .Z(N169) );
-  GTECH_NOT I_45 ( .A(N171), .Z(N172) );
-  GTECH_NOT I_46 ( .A(cmd[3]), .Z(N173) );
-  GTECH_NOT I_47 ( .A(N176), .Z(N177) );
-  GTECH_OR2 C838 ( .A(N168), .B(N164), .Z(N178) );
-  GTECH_OR2 C839 ( .A(N172), .B(N178), .Z(N179) );
-  GTECH_OR2 C840 ( .A(N177), .B(N179), .Z(N180) );
-  GTECH_NOT I_48 ( .A(N180), .Z(N181) );
-  GTECH_NOT I_49 ( .A(N68), .Z(N231) );
-  GTECH_AND2 C843 ( .A(clk_en), .B(N141), .Z(N232) );
-  GTECH_AND2 C844 ( .A(N160), .B(N232), .Z(N233) );
-  GTECH_AND2 C845 ( .A(c_state[0]), .B(N232), .Z(N234) );
-  GTECH_OR2 C846 ( .A(N233), .B(N234), .Z(N235) );
-  GTECH_NOT I_50 ( .A(N235), .Z(N236) );
-  GTECH_AND2 C848 ( .A(N209), .B(N236), .Z(N237) );
-  GTECH_NOT I_51 ( .A(N233), .Z(N238) );
-  GTECH_AND2 C850 ( .A(N209), .B(N238), .Z(N239) );
+  oai221d1 U77 ( .B1(n50), .B2(n93), .C1(n34), .C2(n36), .A(n154), .ZN(n137)
+         );
+  oai221d1 U79 ( .B1(n82), .B2(n50), .C1(n90), .C2(n36), .A(n154), .ZN(n138)
+         );
+  oai221d1 U80 ( .B1(n90), .B2(n50), .C1(n91), .C2(n36), .A(n154), .ZN(n139)
+         );
+  oai221d1 U81 ( .B1(n50), .B2(n91), .C1(n33), .C2(n36), .A(n154), .ZN(n140)
+         );
+  oaim22d1 U84 ( .A1(n55), .A2(n5), .B1(dout), .B2(n55), .ZN(n89) );
+  aor22d1 U86 ( .A1(clk_cnt[9]), .A2(n57), .B1(N85), .B2(n58), .Z(N99) );
+  aor22d1 U87 ( .A1(clk_cnt[8]), .A2(n57), .B1(N84), .B2(n58), .Z(N98) );
+  aor22d1 U88 ( .A1(clk_cnt[7]), .A2(n57), .B1(N83), .B2(n58), .Z(N97) );
+  aor22d1 U89 ( .A1(clk_cnt[6]), .A2(n57), .B1(N82), .B2(n58), .Z(N96) );
+  aor22d1 U90 ( .A1(clk_cnt[5]), .A2(n57), .B1(N81), .B2(n58), .Z(N95) );
+  aor22d1 U91 ( .A1(clk_cnt[4]), .A2(n57), .B1(N80), .B2(n58), .Z(N94) );
+  aor22d1 U92 ( .A1(clk_cnt[3]), .A2(n57), .B1(N79), .B2(n58), .Z(N93) );
+  aor22d1 U93 ( .A1(clk_cnt[2]), .A2(n57), .B1(N78), .B2(n58), .Z(N92) );
+  ora31d1 U99 ( .B1(n87), .B2(sSCL), .B3(n1), .A(ena), .Z(n60) );
+  oan211d1 U105 ( .C1(dscl_oen), .C2(n1), .B(n53), .A(sSCL), .ZN(N29) );
+  aoi311d1 U108 ( .C1(n149), .C2(n61), .C3(n66), .A(n51), .B(n85), .ZN(N227)
+         );
+  oai31d1 U114 ( .B1(n10), .B2(n94), .B3(N125), .A(n68), .ZN(N138) );
+  aoim211d1 U129 ( .C1(busy), .C2(sta_condition), .A(sto_condition), .B(rst), 
+        .ZN(N131) );
+  oai21d1 U136 ( .B1(n90), .B2(n91), .A(n40), .ZN(N123) );
+  aon211d1 U138 ( .C1(n91), .C2(n90), .B(n82), .A(n154), .ZN(n74) );
+  oai21d1 U139 ( .B1(n92), .B2(n93), .A(n49), .ZN(N122) );
+  aon211d1 U141 ( .C1(n93), .C2(n92), .B(n83), .A(n154), .ZN(n76) );
+  aor22d1 U142 ( .A1(clk_cnt[15]), .A2(n57), .B1(N91), .B2(n58), .Z(N105) );
+  aor22d1 U143 ( .A1(clk_cnt[14]), .A2(n57), .B1(N90), .B2(n58), .Z(N104) );
+  aor22d1 U144 ( .A1(clk_cnt[13]), .A2(n57), .B1(N89), .B2(n58), .Z(N103) );
+  aor22d1 U145 ( .A1(clk_cnt[12]), .A2(n57), .B1(N88), .B2(n58), .Z(N102) );
+  aor22d1 U146 ( .A1(clk_cnt[11]), .A2(n57), .B1(N87), .B2(n58), .Z(N101) );
+  aor22d1 U147 ( .A1(clk_cnt[10]), .A2(n57), .B1(N86), .B2(n58), .Z(N100) );
+  nd04d1 U25 ( .A1(cmd[2]), .A2(n7), .A3(n151), .A4(n150), .ZN(n6) );
+  nd04d1 U33 ( .A1(n52), .A2(n150), .A3(n16), .A4(n17), .ZN(n14) );
+  an02d1 U34 ( .A1(n18), .A2(cmd[3]), .Z(n17) );
+  nd04d1 U50 ( .A1(cmd[0]), .A2(n7), .A3(n150), .A4(n153), .ZN(n28) );
+  nr03d1 U53 ( .A1(n2), .A2(cmd[3]), .A3(n56), .ZN(n7) );
+  nd04d1 U57 ( .A1(cmd[1]), .A2(n18), .A3(n152), .A4(n9), .ZN(n35) );
+  nr04d1 U64 ( .A1(n41), .A2(n42), .A3(c_state[1]), .A4(n51), .ZN(n37) );
+  nd04d1 U68 ( .A1(n88), .A2(n95), .A3(n96), .A4(n43), .ZN(n41) );
+  nr03d1 U72 ( .A1(n46), .A2(c_state[1]), .A3(c_state[0]), .ZN(n44) );
+  nr04d1 U74 ( .A1(din), .A2(c_state[9]), .A3(c_state[12]), .A4(n75), .ZN(n47)
+         );
+  an02d1 U94 ( .A1(cSDA[0]), .A2(n154), .Z(N73) );
+  an02d1 U95 ( .A1(sda_i), .A2(n154), .Z(N72) );
+  an02d1 U96 ( .A1(cSCL[0]), .A2(n154), .Z(N71) );
+  an02d1 U97 ( .A1(scl_i), .A2(n154), .Z(N70) );
+  nd04d1 U100 ( .A1(n62), .A2(n63), .A3(n64), .A4(n65), .ZN(n59) );
+  nr04d1 U101 ( .A1(cnt[9]), .A2(cnt[8]), .A3(cnt[7]), .A4(cnt[6]), .ZN(n65)
+         );
+  nr04d1 U102 ( .A1(cnt[5]), .A2(cnt[4]), .A3(cnt[3]), .A4(cnt[2]), .ZN(n64)
+         );
+  nr04d1 U103 ( .A1(cnt[1]), .A2(cnt[15]), .A3(cnt[14]), .A4(cnt[13]), .ZN(n63) );
+  nr04d1 U104 ( .A1(cnt[12]), .A2(cnt[11]), .A3(cnt[10]), .A4(cnt[0]), .ZN(n62) );
+  nd04d1 U115 ( .A1(sto_condition), .A2(n56), .A3(n54), .A4(n154), .ZN(n68) );
+  nd04d1 U119 ( .A1(n142), .A2(n143), .A3(n69), .A4(n70), .ZN(n39) );
+  nr04d1 U120 ( .A1(c_state[7]), .A2(c_state[5]), .A3(c_state[4]), .A4(
+        c_state[3]), .ZN(n70) );
+  an02d1 U121 ( .A1(n48), .A2(n88), .Z(n69) );
+  an04d1 U122 ( .A1(n96), .A2(n97), .A3(n95), .A4(n71), .Z(n48) );
+  nr04d1 U123 ( .A1(c_state[9]), .A2(c_state[16]), .A3(c_state[12]), .A4(n75), 
+        .ZN(n71) );
+  nr03d1 U125 ( .A1(c_state[11]), .A2(c_state[8]), .A3(c_state[10]), .ZN(n43)
+         );
+  an04d1 U130 ( .A1(n154), .A2(sSCL), .A3(n86), .A4(n84), .Z(N129) );
+  nr03d1 U131 ( .A1(n8), .A2(n84), .A3(N125), .ZN(N128) );
+  nd04d1 U152 ( .A1(n78), .A2(n79), .A3(n80), .A4(n81), .ZN(n77) );
+  nr04d1 U153 ( .A1(filter_cnt[9]), .A2(filter_cnt[8]), .A3(filter_cnt[7]), 
+        .A4(filter_cnt[6]), .ZN(n81) );
+  nr03d1 U154 ( .A1(filter_cnt[3]), .A2(filter_cnt[5]), .A3(filter_cnt[4]), 
+        .ZN(n80) );
+  nr04d1 U155 ( .A1(filter_cnt[2]), .A2(filter_cnt[1]), .A3(filter_cnt[13]), 
+        .A4(filter_cnt[12]), .ZN(n79) );
+  nr03d1 U156 ( .A1(filter_cnt[0]), .A2(filter_cnt[11]), .A3(filter_cnt[10]), 
+        .ZN(n78) );
+  i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1 sub_260 ( .A(filter_cnt), .SUM({
+        N91, N90, N89, N88, N87, N86, N85, N84, N83, N82, N81, N80, N79, N78})
+         );
+  i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2 sub_228 ( .A(cnt), .SUM({N49, N48, 
+        N47, N46, N45, N44, N43, N42, N41, N40, N39, N38, N37, N36, N35, N34})
+         );
+  dfcrq1 \cSDA_reg[0]  ( .D(N72), .CP(clk), .CDN(n19), .Q(cSDA[0]) );
+  dfcrq1 \cSCL_reg[0]  ( .D(N70), .CP(clk), .CDN(n19), .Q(cSCL[0]) );
+  dfcrq1 sto_condition_reg ( .D(N129), .CP(clk), .CDN(n20), .Q(sto_condition)
+         );
+  dfcrq1 sta_condition_reg ( .D(N128), .CP(clk), .CDN(n20), .Q(sta_condition)
+         );
+  dfcrq1 busy_reg ( .D(N131), .CP(clk), .CDN(n21), .Q(busy) );
+  dfcrq1 \cSDA_reg[1]  ( .D(N73), .CP(clk), .CDN(n19), .Q(cSDA[1]) );
+  dfcrq1 \cSCL_reg[1]  ( .D(N71), .CP(clk), .CDN(n19), .Q(cSCL[1]) );
+  dfnrq1 dscl_oen_reg ( .D(scl_oen), .CP(clk), .Q(dscl_oen) );
+  dfnrq1 dout_reg ( .D(n89), .CP(clk), .Q(dout) );
+  dfcrq1 cmd_stop_reg ( .D(n132), .CP(clk), .CDN(n21), .Q(cmd_stop) );
+  dfcrq1 \c_state_reg[0]  ( .D(n130), .CP(clk), .CDN(n21), .Q(c_state[0]) );
+  dfcrq1 slave_wait_reg ( .D(N29), .CP(clk), .CDN(n21), .Q(slave_wait) );
+  dfcrq1 \c_state_reg[2]  ( .D(n128), .CP(clk), .CDN(n23), .Q(c_state[2]) );
+  dfcrq1 \c_state_reg[1]  ( .D(n129), .CP(clk), .CDN(n23), .Q(c_state[1]) );
+  dfcrq1 \filter_cnt_reg[12]  ( .D(N104), .CP(clk), .CDN(n20), .Q(
+        filter_cnt[12]) );
+  dfcrq1 \filter_cnt_reg[11]  ( .D(N103), .CP(clk), .CDN(n20), .Q(
+        filter_cnt[11]) );
+  dfcrq1 \filter_cnt_reg[13]  ( .D(N105), .CP(clk), .CDN(n20), .Q(
+        filter_cnt[13]) );
+  dfcrq1 \c_state_reg[3]  ( .D(n127), .CP(clk), .CDN(n23), .Q(c_state[3]) );
+  dfcrq1 \c_state_reg[4]  ( .D(n126), .CP(clk), .CDN(n23), .Q(c_state[4]) );
+  dfcrq1 \c_state_reg[5]  ( .D(n125), .CP(clk), .CDN(n21), .Q(c_state[5]) );
+  dfcrq1 \c_state_reg[7]  ( .D(n123), .CP(clk), .CDN(n21), .Q(c_state[7]) );
+  dfcrq1 \filter_cnt_reg[10]  ( .D(N102), .CP(clk), .CDN(n20), .Q(
+        filter_cnt[10]) );
+  dfcrq1 cmd_ack_reg ( .D(N227), .CP(clk), .CDN(n25), .Q(cmd_ack) );
+  dfcrq1 \cnt_reg[13]  ( .D(n101), .CP(clk), .CDN(n25), .Q(cnt[13]) );
+  dfcrq1 \cnt_reg[14]  ( .D(n100), .CP(clk), .CDN(n25), .Q(cnt[14]) );
+  dfcrq1 \c_state_reg[12]  ( .D(n118), .CP(clk), .CDN(n23), .Q(c_state[12]) );
+  dfcrq1 \cnt_reg[15]  ( .D(n99), .CP(clk), .CDN(n23), .Q(cnt[15]) );
+  dfcrq1 \c_state_reg[16]  ( .D(n131), .CP(clk), .CDN(n21), .Q(c_state[16]) );
+  dfcrq1 \cnt_reg[12]  ( .D(n102), .CP(clk), .CDN(n25), .Q(cnt[12]) );
+  dfcrq1 \c_state_reg[9]  ( .D(n121), .CP(clk), .CDN(n23), .Q(c_state[9]) );
+  dfcrq1 al_reg ( .D(N138), .CP(clk), .CDN(n21), .Q(al) );
+  dfcrq1 \cnt_reg[11]  ( .D(n103), .CP(clk), .CDN(n24), .Q(cnt[11]) );
+  dfcrq1 \filter_cnt_reg[9]  ( .D(N101), .CP(clk), .CDN(n20), .Q(filter_cnt[9]) );
+  dfcrq1 \c_state_reg[10]  ( .D(n120), .CP(clk), .CDN(n23), .Q(c_state[10]) );
+  dfcrq1 \c_state_reg[11]  ( .D(n119), .CP(clk), .CDN(n23), .Q(c_state[11]) );
+  dfcrq1 \c_state_reg[8]  ( .D(n122), .CP(clk), .CDN(n21), .Q(c_state[8]) );
+  dfcrq1 \cnt_reg[10]  ( .D(n104), .CP(clk), .CDN(n24), .Q(cnt[10]) );
+  dfcrq1 \filter_cnt_reg[8]  ( .D(N100), .CP(clk), .CDN(n19), .Q(filter_cnt[8]) );
+  dfcrq1 \filter_cnt_reg[7]  ( .D(N99), .CP(clk), .CDN(n20), .Q(filter_cnt[7])
+         );
+  dfcrq1 \cnt_reg[9]  ( .D(n105), .CP(clk), .CDN(n24), .Q(cnt[9]) );
+  dfcrq1 \filter_cnt_reg[6]  ( .D(N98), .CP(clk), .CDN(n20), .Q(filter_cnt[6])
+         );
+  dfcrq1 \cnt_reg[8]  ( .D(n106), .CP(clk), .CDN(n24), .Q(cnt[8]) );
+  dfcrq1 \filter_cnt_reg[5]  ( .D(N97), .CP(clk), .CDN(n20), .Q(filter_cnt[5])
+         );
+  dfcrq1 \cnt_reg[7]  ( .D(n107), .CP(clk), .CDN(n24), .Q(cnt[7]) );
+  dfcrq1 \filter_cnt_reg[4]  ( .D(N96), .CP(clk), .CDN(n19), .Q(filter_cnt[4])
+         );
+  dfcrq1 \cnt_reg[6]  ( .D(n108), .CP(clk), .CDN(n24), .Q(cnt[6]) );
+  dfcrq1 \filter_cnt_reg[3]  ( .D(N95), .CP(clk), .CDN(n19), .Q(filter_cnt[3])
+         );
+  dfcrq1 \cnt_reg[5]  ( .D(n109), .CP(clk), .CDN(n24), .Q(cnt[5]) );
+  dfcrq1 \filter_cnt_reg[2]  ( .D(N94), .CP(clk), .CDN(n19), .Q(filter_cnt[2])
+         );
+  dfcrq1 \cnt_reg[4]  ( .D(n110), .CP(clk), .CDN(n24), .Q(cnt[4]) );
+  dfcrq1 \filter_cnt_reg[1]  ( .D(N93), .CP(clk), .CDN(n19), .Q(filter_cnt[1])
+         );
+  dfcrq1 \filter_cnt_reg[0]  ( .D(N92), .CP(clk), .CDN(n19), .Q(filter_cnt[0])
+         );
+  dfcrq1 \cnt_reg[3]  ( .D(n111), .CP(clk), .CDN(n24), .Q(cnt[3]) );
+  dfcrq1 \cnt_reg[2]  ( .D(n112), .CP(clk), .CDN(n24), .Q(cnt[2]) );
+  dfcrq1 \cnt_reg[1]  ( .D(n113), .CP(clk), .CDN(n21), .Q(cnt[1]) );
+  dfcrq1 \cnt_reg[0]  ( .D(n114), .CP(clk), .CDN(n23), .Q(cnt[0]) );
+  buffd1 U20 ( .I(n13), .Z(n24) );
+  buffd1 U21 ( .I(n13), .Z(n23) );
+  buffd1 U26 ( .I(n12), .Z(n21) );
+  buffd1 U29 ( .I(n12), .Z(n20) );
+  buffd1 U31 ( .I(n12), .Z(n19) );
+  buffd1 U35 ( .I(n13), .Z(n25) );
+  buffd1 U36 ( .I(n15), .Z(n26) );
+  buffd1 U38 ( .I(nReset), .Z(n15) );
+  buffd1 U42 ( .I(nReset), .Z(n12) );
+  buffd1 U43 ( .I(nReset), .Z(n13) );
+  inv0d0 U45 ( .I(n43), .ZN(n75) );
+  inv0d0 U51 ( .I(n16), .ZN(n56) );
+  nr02d1 U52 ( .A1(n53), .A2(N66), .ZN(n3) );
+  buffd1 U55 ( .I(n4), .Z(n31) );
+  nr02d1 U58 ( .A1(n3), .A2(N66), .ZN(n4) );
+  nd02d1 U59 ( .A1(n32), .A2(n30), .ZN(n2) );
+  inv0d0 U60 ( .I(n11), .ZN(n30) );
+  inv0d0 U63 ( .I(n50), .ZN(n36) );
+  inv0d0 U65 ( .I(n11), .ZN(n27) );
+  inv0d0 U66 ( .I(n32), .ZN(n51) );
+  inv0d0 U67 ( .I(n11), .ZN(n29) );
+  nd02d1 U71 ( .A1(n154), .A2(n5), .ZN(N125) );
+  nd02d1 U78 ( .A1(n8), .A2(n154), .ZN(N124) );
+  inv0d0 U82 ( .I(cmd[2]), .ZN(n153) );
+  nr02d1 U83 ( .A1(n39), .A2(c_state[0]), .ZN(n16) );
+  inv0d0 U85 ( .I(cmd[0]), .ZN(n151) );
+  nd03d1 U98 ( .A1(n18), .A2(n7), .A3(cmd[1]), .ZN(n22) );
+  nd03d1 U106 ( .A1(n59), .A2(n154), .A3(n60), .ZN(N66) );
+  nd03d1 U107 ( .A1(n144), .A2(n72), .A3(n143), .ZN(n42) );
+  inv0d0 U109 ( .I(n2), .ZN(n52) );
+  nr02d1 U110 ( .A1(rst), .A2(al), .ZN(n32) );
+  an02d1 U111 ( .A1(n85), .A2(n32), .Z(n11) );
+  nr02d1 U112 ( .A1(n77), .A2(rst), .ZN(n50) );
+  an02d1 U113 ( .A1(n50), .A2(ena), .Z(n57) );
+  inv0d0 U116 ( .I(cSCL[1]), .ZN(n34) );
+  inv0d0 U117 ( .I(cSDA[1]), .ZN(n33) );
+  inv0d0 U118 ( .I(c_state[1]), .ZN(n142) );
+  inv0d0 U124 ( .I(c_state[2]), .ZN(n143) );
+  an03d1 U126 ( .A1(n77), .A2(n154), .A3(ena), .Z(n58) );
+  inv0d0 U127 ( .I(slave_wait), .ZN(n53) );
+  inv0d0 U128 ( .I(c_state[4]), .ZN(n145) );
+  inv0d0 U132 ( .I(c_state[8]), .ZN(n73) );
+  inv0d1 U133 ( .I(rst), .ZN(n154) );
+  nr02d1 U134 ( .A1(c_state[8]), .A2(c_state[4]), .ZN(n66) );
+  inv0d0 U135 ( .I(c_state[3]), .ZN(n144) );
+  inv0d0 U137 ( .I(c_state[7]), .ZN(n72) );
+  nr02d1 U140 ( .A1(cmd[0]), .A2(cmd[2]), .ZN(n18) );
+  inv0d0 U148 ( .I(cmd[3]), .ZN(n152) );
+  inv0d0 U149 ( .I(c_state[0]), .ZN(n141) );
+  nd02d1 U150 ( .A1(sSCL), .A2(n87), .ZN(n55) );
+  inv0d0 U151 ( .I(n74), .ZN(n40) );
+  inv0d0 U157 ( .I(n76), .ZN(n49) );
+  inv0d0 U158 ( .I(cmd_stop), .ZN(n54) );
+  inv0d0 U159 ( .I(c_state[16]), .ZN(n61) );
+  inv0d0 U160 ( .I(c_state[12]), .ZN(n149) );
+  inv0d0 U161 ( .I(cmd[1]), .ZN(n150) );
+  inv0d0 U162 ( .I(c_state[9]), .ZN(n146) );
+  inv0d0 U163 ( .I(c_state[11]), .ZN(n148) );
+  inv0d0 U164 ( .I(c_state[10]), .ZN(n147) );
+  inv0d0 U165 ( .I(c_state[5]), .ZN(n67) );
 endmodule
 
 
@@ -707,265 +418,147 @@ module i2c_master_byte_ctrl ( clk, rst, nReset, ena, clk_cnt, start, stop,
   input clk, rst, nReset, ena, start, stop, read, write, ack_in, scl_i, sda_i,
          VDD, VSS;
   output cmd_ack, ack_out, i2c_busy, i2c_al, scl_o, scl_oen, sda_o, sda_oen;
-  wire   N0, N1, N2, N3, N4, N5, N6, N7, N8, N9, N10, core_ack, core_txd,
-         core_rxd, go, N11, ld, shift, N12, N13, N14, N15, N16, N17, N18, N19,
-         N20, N21, N22, N23, N24, N25, N26, N27, N28, N29, N30, N31, N32, N33,
-         N34, N35, N36, N37, N38, N39, N40, N41, N42, N43, N44, N45, N46, N47,
-         N48, cnt_done, N49, N50, N51, N52, N53, N54, N55, N56, N57, N58, N59,
-         N60, N61, N62, N63, N64, N65, N66, N67, N68, N69, N70, N71, N72, N73,
-         N74, N75, N76, N77, N78, N79, N80, N81, N82, N83, N84, N85, N86, N87,
-         N88, N89, N90, N91, N92, N93, N94, N95, N96, N97, N98, N99, N100,
-         N101, N102, N103, N104, N105, N106, N107, N108, N109, N110, N111,
-         N112, N113, N114, N115, N116, N117, N118, N119, N120, N121, N122,
-         N123, N124, N125, N126, N127, N128, N129, N130, N131, N132, net169;
+  wire   core_ack, core_txd, core_rxd, ld, shift, N104, N105, N106, N107, n1,
+         n2, n3, n4, n5, n6, n7, n8, n28, n35, n36, n37, n38, n39, n40, n41,
+         n42, n43, n44, n45, n46, n47, n48, n49, n50, n51, n52, n53, n54, n55,
+         n56, n57, n58, n59, n60, n61, n62, n63, n64, n65, n66, n67, n68, n69,
+         n70, n71, n72, n73, n74, n75, n76, n77, n78, n79, n80, n81, n82, n83,
+         n84, n85, n86, n87, n88, n89, n90, n91, n92, n93, n94, n95, n96, n97,
+         n98, n9, n10, n11, n12, n13, n14, n15, n16, n17, n18, n19, n20, n21,
+         n22, n23, n24, n34, n99;
   wire   [3:0] core_cmd;
   wire   [2:0] dcnt;
   wire   [4:0] c_state;
+  assign scl_o = 1'b0;
+  assign sda_o = 1'b0;
 
-  i2c_master_bit_ctrl bit_controller ( .clk(clk), .rst(rst), .nReset(nReset), 
+  dfcrn1 \c_state_reg[4]  ( .D(n97), .CP(clk), .CDN(n9), .QN(n28) );
+  dfcrn1 \sr_reg[0]  ( .D(n85), .CP(clk), .CDN(n9), .QN(n8) );
+  dfcrn1 \sr_reg[1]  ( .D(n86), .CP(clk), .CDN(n9), .QN(n7) );
+  dfcrn1 \sr_reg[2]  ( .D(n84), .CP(clk), .CDN(n9), .QN(n6) );
+  dfcrn1 \sr_reg[3]  ( .D(n83), .CP(clk), .CDN(n9), .QN(n5) );
+  dfcrn1 \sr_reg[4]  ( .D(n82), .CP(clk), .CDN(n9), .QN(n4) );
+  dfcrn1 \sr_reg[5]  ( .D(n81), .CP(clk), .CDN(n9), .QN(n3) );
+  dfcrn1 \sr_reg[6]  ( .D(n80), .CP(clk), .CDN(n9), .QN(n2) );
+  dfcrn1 \sr_reg[7]  ( .D(n79), .CP(clk), .CDN(n9), .QN(n1) );
+  an02d1 U18 ( .A1(n62), .A2(write), .Z(n61) );
+  nd04d1 U27 ( .A1(n20), .A2(n28), .A3(n22), .A4(n73), .ZN(n69) );
+  nr03d1 U30 ( .A1(dcnt[1]), .A2(dcnt[2]), .A3(dcnt[0]), .ZN(n56) );
+  oan211d1 U59 ( .C1(n35), .C2(n10), .B(n36), .A(n13), .ZN(n78) );
+  oai21d1 U60 ( .B1(n37), .B2(n1), .A(n38), .ZN(n79) );
+  aoi22d1 U61 ( .A1(dout[6]), .A2(n16), .B1(din[7]), .B2(n23), .ZN(n38) );
+  oai21d1 U62 ( .B1(n2), .B2(n37), .A(n39), .ZN(n80) );
+  aoi22d1 U63 ( .A1(dout[5]), .A2(n16), .B1(din[6]), .B2(n23), .ZN(n39) );
+  oai21d1 U64 ( .B1(n37), .B2(n3), .A(n40), .ZN(n81) );
+  aoi22d1 U65 ( .A1(dout[4]), .A2(n16), .B1(din[5]), .B2(n23), .ZN(n40) );
+  oai21d1 U66 ( .B1(n37), .B2(n4), .A(n41), .ZN(n82) );
+  aoi22d1 U67 ( .A1(dout[3]), .A2(n16), .B1(din[4]), .B2(n23), .ZN(n41) );
+  oai21d1 U68 ( .B1(n37), .B2(n5), .A(n42), .ZN(n83) );
+  aoi22d1 U69 ( .A1(dout[2]), .A2(n16), .B1(din[3]), .B2(n23), .ZN(n42) );
+  oai21d1 U70 ( .B1(n37), .B2(n6), .A(n43), .ZN(n84) );
+  aoi22d1 U71 ( .A1(dout[1]), .A2(n16), .B1(din[2]), .B2(n23), .ZN(n43) );
+  oai21d1 U72 ( .B1(n37), .B2(n8), .A(n44), .ZN(n85) );
+  aoi22d1 U73 ( .A1(n16), .A2(core_rxd), .B1(din[0]), .B2(n23), .ZN(n44) );
+  oai21d1 U74 ( .B1(n37), .B2(n7), .A(n45), .ZN(n86) );
+  aoi22d1 U75 ( .A1(dout[0]), .A2(n16), .B1(din[1]), .B2(n23), .ZN(n45) );
+  aoi22d1 U76 ( .A1(n51), .A2(c_state[1]), .B1(core_cmd[3]), .B2(n52), .ZN(n50) );
+  aoi22d1 U77 ( .A1(n51), .A2(c_state[2]), .B1(core_cmd[2]), .B2(n52), .ZN(n55) );
+  oaim22d1 U78 ( .A1(n58), .A2(n57), .B1(core_cmd[1]), .B2(n52), .ZN(n89) );
+  oaim21d1 U79 ( .B1(core_cmd[0]), .B2(n52), .A(n59), .ZN(n90) );
+  oai211d1 U80 ( .C1(n20), .C2(n12), .A(n54), .B(n49), .ZN(n91) );
+  oai21d1 U81 ( .B1(n60), .B2(n22), .A(n53), .ZN(n92) );
+  oai211d1 U82 ( .C1(n61), .C2(c_state[0]), .A(n99), .B(n11), .ZN(n53) );
+  oai21d1 U83 ( .B1(n60), .B2(n21), .A(n48), .ZN(n93) );
+  oai211d1 U84 ( .C1(n62), .C2(c_state[0]), .A(n11), .B(read), .ZN(n48) );
+  aoi21d1 U85 ( .B1(n19), .B2(n63), .A(n52), .ZN(n60) );
+  oai211d1 U86 ( .C1(n47), .C2(n19), .A(n46), .B(n64), .ZN(n94) );
+  aon211d1 U87 ( .C1(dcnt[1]), .C2(n16), .B(n65), .A(dcnt[2]), .ZN(n64) );
+  oai211d1 U88 ( .C1(n24), .C2(n66), .A(n67), .B(n46), .ZN(n95) );
+  oai221d1 U89 ( .B1(dcnt[1]), .B2(n67), .C1(n17), .C2(n18), .A(n46), .ZN(n96)
+         );
+  oai21d1 U90 ( .B1(n47), .B2(n24), .A(n66), .ZN(n65) );
+  nd13d1 U91 ( .A1(ld), .A2(shift), .A3(n34), .ZN(n47) );
+  oai22d1 U92 ( .A1(n12), .A2(n28), .B1(n58), .B2(n57), .ZN(n97) );
+  aoi21d1 U93 ( .B1(c_state[3]), .B2(stop), .A(n68), .ZN(n58) );
+  oai21d1 U94 ( .B1(n12), .B2(n14), .A(n59), .ZN(n98) );
+  aoi221d1 U95 ( .B1(n69), .B2(core_ack), .C1(n15), .C2(n70), .A(n13), .ZN(n52) );
+  oan211d1 U96 ( .C1(stop), .C2(n20), .B(n28), .A(n71), .ZN(N107) );
+  oai21d1 U97 ( .B1(n14), .B2(n71), .A(n72), .ZN(N106) );
+  aoim31d1 U98 ( .B1(stop), .B2(write), .B3(read), .A(cmd_ack), .ZN(n70) );
+  oan211d1 U99 ( .C1(n56), .C2(n22), .B(n21), .A(n71), .ZN(N105) );
+  aoi31d1 U100 ( .B1(n74), .B2(n35), .B3(n75), .A(n13), .ZN(N104) );
+  oai21d1 U101 ( .B1(n76), .B2(n77), .A(dout[7]), .ZN(n75) );
+  oai22d1 U102 ( .A1(core_ack), .A2(n21), .B1(c_state[3]), .B2(c_state[1]), 
+        .ZN(n77) );
+  aon211d1 U103 ( .C1(c_state[1]), .C2(core_ack), .B(c_state[3]), .A(ack_in), 
+        .ZN(n74) );
+  i2c_master_bit_ctrl bit_controller ( .clk(clk), .rst(rst), .nReset(n9), 
         .ena(ena), .clk_cnt(clk_cnt), .cmd(core_cmd), .cmd_ack(core_ack), 
         .busy(i2c_busy), .al(i2c_al), .din(core_txd), .dout(core_rxd), .scl_i(
-        scl_i), .scl_o(scl_o), .scl_oen(scl_oen), .sda_i(sda_i), .sda_o(sda_o), 
-        .sda_oen(sda_oen), .VDD(VDD), .VSS(VSS) );
-  \**SEQGEN**  \sr_reg[7]  ( .clear(N11), .preset(1'b0), .next_state(N24), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dout[7]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N16) );
-  \**SEQGEN**  \sr_reg[6]  ( .clear(N11), .preset(1'b0), .next_state(N23), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dout[6]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N16) );
-  \**SEQGEN**  \sr_reg[5]  ( .clear(N11), .preset(1'b0), .next_state(N22), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dout[5]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N16) );
-  \**SEQGEN**  \sr_reg[4]  ( .clear(N11), .preset(1'b0), .next_state(N21), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dout[4]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N16) );
-  \**SEQGEN**  \sr_reg[3]  ( .clear(N11), .preset(1'b0), .next_state(N20), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dout[3]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N16) );
-  \**SEQGEN**  \sr_reg[2]  ( .clear(N11), .preset(1'b0), .next_state(N19), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dout[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N16) );
-  \**SEQGEN**  \sr_reg[1]  ( .clear(N11), .preset(1'b0), .next_state(N18), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dout[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N16) );
-  \**SEQGEN**  \sr_reg[0]  ( .clear(N11), .preset(1'b0), .next_state(N17), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dout[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N16) );
-  \**SEQGEN**  \dcnt_reg[2]  ( .clear(N30), .preset(1'b0), .next_state(N44), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dcnt[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N41) );
-  \**SEQGEN**  \dcnt_reg[1]  ( .clear(N30), .preset(1'b0), .next_state(N43), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dcnt[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N41) );
-  \**SEQGEN**  \dcnt_reg[0]  ( .clear(N30), .preset(1'b0), .next_state(N42), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(dcnt[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N41) );
-  GTECH_NOT I_0 ( .A(c_state[4]), .Z(N52) );
-  GTECH_NOT I_1 ( .A(c_state[3]), .Z(N53) );
-  GTECH_NOT I_2 ( .A(c_state[2]), .Z(N54) );
-  GTECH_NOT I_3 ( .A(c_state[1]), .Z(N55) );
-  GTECH_NOT I_4 ( .A(c_state[0]), .Z(N56) );
-  \**SEQGEN**  ack_out_reg ( .clear(N49), .preset(1'b0), .next_state(N119), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(ack_out), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N118) );
-  \**SEQGEN**  \core_cmd_reg[3]  ( .clear(N49), .preset(1'b0), .next_state(
-        N103), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(core_cmd[3]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(
-        N102) );
-  \**SEQGEN**  \core_cmd_reg[2]  ( .clear(N49), .preset(1'b0), .next_state(
-        N101), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(core_cmd[2]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(
-        N100) );
-  \**SEQGEN**  \core_cmd_reg[1]  ( .clear(N49), .preset(1'b0), .next_state(N99), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(core_cmd[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N98) );
-  \**SEQGEN**  \core_cmd_reg[0]  ( .clear(N49), .preset(1'b0), .next_state(N97), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(core_cmd[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N96) );
-  \**SEQGEN**  core_txd_reg ( .clear(N49), .preset(1'b0), .next_state(N104), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(core_txd), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  shift_reg ( .clear(N49), .preset(1'b0), .next_state(N105), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(shift), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  ld_reg ( .clear(N49), .preset(1'b0), .next_state(N106), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(ld), .synch_clear(
-        1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(1'b1)
-         );
-  \**SEQGEN**  cmd_ack_reg ( .clear(N49), .preset(1'b0), .next_state(N107), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(cmd_ack), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \c_state_reg[4]  ( .clear(N49), .preset(1'b0), .next_state(N117), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[4]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N116) );
-  \**SEQGEN**  \c_state_reg[3]  ( .clear(N49), .preset(1'b0), .next_state(N115), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[3]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N114) );
-  \**SEQGEN**  \c_state_reg[2]  ( .clear(N49), .preset(1'b0), .next_state(N113), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N112) );
-  \**SEQGEN**  \c_state_reg[1]  ( .clear(N49), .preset(1'b0), .next_state(N111), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N110) );
-  \**SEQGEN**  \c_state_reg[0]  ( .clear(N49), .preset(1'b0), .next_state(N109), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(c_state[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N108) );
-  SUB_UNS_OP sub_195 ( .A(dcnt), .B(1'b1), .Z({N40, N39, N38}) );
-  SELECT_OP C413 ( .DATA1(1'b1), .DATA2(1'b1), .DATA3(1'b1), .DATA4(1'b0), 
-        .CONTROL1(N0), .CONTROL2(N26), .CONTROL3(N29), .CONTROL4(N15), .Z(N16)
-         );
-  GTECH_BUF B_0 ( .A(N12), .Z(N0) );
-  SELECT_OP C414 ( .DATA1({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), 
-        .DATA2(din), .DATA3({dout[6:0], core_rxd}), .CONTROL1(N0), .CONTROL2(
-        N26), .CONTROL3(N29), .Z({N24, N23, N22, N21, N20, N19, N18, N17}) );
-  SELECT_OP C415 ( .DATA1(1'b1), .DATA2(1'b1), .DATA3(1'b1), .DATA4(1'b0), 
-        .CONTROL1(N1), .CONTROL2(N46), .CONTROL3(N48), .CONTROL4(N36), .Z(N41)
-         );
-  GTECH_BUF B_1 ( .A(N33), .Z(N1) );
-  SELECT_OP C416 ( .DATA1({1'b0, 1'b0, 1'b0}), .DATA2({1'b1, 1'b1, 1'b1}), 
-        .DATA3({N40, N39, N38}), .CONTROL1(N1), .CONTROL2(N46), .CONTROL3(N48), 
-        .Z({N44, N43, N42}) );
-  SELECT_OP C417 ( .DATA1({1'b0, 1'b0, 1'b0, 1'b1}), .DATA2({1'b0, 1'b0, 1'b1, 
-        1'b0}), .DATA3({1'b0, 1'b1, 1'b0, 1'b0}), .DATA4({1'b1, 1'b0, 1'b0, 
-        1'b0}), .CONTROL1(N2), .CONTROL2(N121), .CONTROL3(N124), .CONTROL4(N60), .Z({N64, N63, N62, N61}) );
-  GTECH_BUF B_2 ( .A(start), .Z(N2) );
-  SELECT_OP C418 ( .DATA1(N67), .DATA2(1'b0), .CONTROL1(N3), .CONTROL2(N4), 
-        .Z(N68) );
-  GTECH_BUF B_3 ( .A(core_ack), .Z(N3) );
-  GTECH_BUF B_4 ( .A(N66), .Z(N4) );
-  SELECT_OP C419 ( .DATA1(ack_in), .DATA2(dout[7]), .CONTROL1(N3), .CONTROL2(
-        N4), .Z(N69) );
-  SELECT_OP C420 ( .DATA1(N70), .DATA2(1'b0), .CONTROL1(N3), .CONTROL2(N4), 
-        .Z(N71) );
-  SELECT_OP C421 ( .DATA1(1'b1), .DATA2(ack_in), .CONTROL1(N3), .CONTROL2(N4), 
-        .Z(N72) );
-  SELECT_OP C422 ( .DATA1(go), .DATA2(core_ack), .DATA3(1'b0), .DATA4(1'b0), 
-        .DATA5(1'b0), .DATA6(1'b0), .CONTROL1(N57), .CONTROL2(N5), .CONTROL3(
-        N6), .CONTROL4(N7), .CONTROL5(N8), .CONTROL6(N9), .Z(N73) );
-  GTECH_BUF B_5 ( .A(c_state[0]), .Z(N5) );
-  GTECH_BUF B_6 ( .A(c_state[2]), .Z(N6) );
-  GTECH_BUF B_7 ( .A(c_state[1]), .Z(N7) );
-  GTECH_BUF B_8 ( .A(c_state[3]), .Z(N8) );
-  GTECH_BUF B_9 ( .A(c_state[4]), .Z(N9) );
-  SELECT_OP C423 ( .DATA1({go, go, go, go}), .DATA2({core_ack, core_ack, 
-        core_ack, core_ack}), .DATA3({core_ack, core_ack, core_ack, core_ack}), 
-        .DATA4({core_ack, core_ack, core_ack, core_ack}), .DATA5({core_ack, 
-        core_ack, core_ack, core_ack}), .DATA6({core_ack, core_ack, core_ack, 
-        core_ack}), .CONTROL1(N57), .CONTROL2(N5), .CONTROL3(N6), .CONTROL4(N7), .CONTROL5(N8), .CONTROL6(N9), .Z({N80, N78, N76, N74}) );
-  SELECT_OP C424 ( .DATA1({N62, N63, N64, N61}), .DATA2({read, N65, 1'b0, 1'b0}), .DATA3({cnt_done, N67, 1'b0, 1'b0}), .DATA4({N67, cnt_done, 1'b0, 1'b0}), 
-        .DATA5({1'b0, 1'b0, stop, 1'b0}), .DATA6({1'b0, 1'b0, 1'b0, 1'b0}), 
-        .CONTROL1(N57), .CONTROL2(N5), .CONTROL3(N6), .CONTROL4(N7), 
-        .CONTROL5(N8), .CONTROL6(N9), .Z({N81, N79, N77, N75}) );
-  SELECT_OP C425 ( .DATA1({go, go, go, go, go}), .DATA2({core_ack, core_ack, 
-        core_ack, core_ack, core_ack}), .DATA3({core_ack, core_ack, core_ack, 
-        core_ack, core_ack}), .DATA4({core_ack, core_ack, core_ack, core_ack, 
-        core_ack}), .DATA5({core_ack, core_ack, core_ack, core_ack, core_ack}), 
-        .DATA6({core_ack, core_ack, core_ack, core_ack, core_ack}), .CONTROL1(
-        N57), .CONTROL2(N5), .CONTROL3(N6), .CONTROL4(N7), .CONTROL5(N8), 
-        .CONTROL6(N9), .Z({N90, N88, N86, N84, N82}) );
-  SELECT_OP C426 ( .DATA1({N64, 1'b0, N63, N62, N61}), .DATA2({1'b0, 1'b0, N65, 
-        read, 1'b0}), .DATA3({1'b0, cnt_done, N67, 1'b0, 1'b0}), .DATA4({1'b0, 
-        cnt_done, 1'b0, N67, 1'b0}), .DATA5({stop, 1'b0, 1'b0, 1'b0, 1'b0}), 
-        .DATA6({1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), .CONTROL1(N57), .CONTROL2(N5), 
-        .CONTROL3(N6), .CONTROL4(N7), .CONTROL5(N8), .CONTROL6(N9), .Z({N91, 
-        N89, N87, N85, N83}) );
-  SELECT_OP C427 ( .DATA1(1'b0), .DATA2(1'b0), .DATA3(N68), .DATA4(core_ack), 
-        .DATA5(1'b0), .DATA6(1'b0), .CONTROL1(N57), .CONTROL2(N5), .CONTROL3(
-        N6), .CONTROL4(N7), .CONTROL5(N8), .CONTROL6(N9), .Z(N92) );
-  SELECT_OP C428 ( .DATA1(dout[7]), .DATA2(dout[7]), .DATA3(dout[7]), .DATA4(
-        N69), .DATA5(N72), .DATA6(dout[7]), .CONTROL1(N57), .CONTROL2(N5), 
-        .CONTROL3(N6), .CONTROL4(N7), .CONTROL5(N8), .CONTROL6(N9), .Z(N93) );
-  SELECT_OP C429 ( .DATA1(1'b0), .DATA2(1'b0), .DATA3(1'b0), .DATA4(1'b0), 
-        .DATA5(N71), .DATA6(core_ack), .CONTROL1(N57), .CONTROL2(N5), 
-        .CONTROL3(N6), .CONTROL4(N7), .CONTROL5(N8), .CONTROL6(N9), .Z(N94) );
-  SELECT_OP C430 ( .DATA1(1'b0), .DATA2(1'b0), .DATA3(1'b0), .DATA4(1'b0), 
-        .DATA5(core_ack), .DATA6(1'b0), .CONTROL1(N57), .CONTROL2(N5), 
-        .CONTROL3(N6), .CONTROL4(N7), .CONTROL5(N8), .CONTROL6(N9), .Z(N95) );
-  SELECT_OP C431 ( .DATA1({1'b1, 1'b1, 1'b1, 1'b1}), .DATA2({N80, N78, N76, 
-        N74}), .CONTROL1(N10), .CONTROL2(N51), .Z({N102, N100, N98, N96}) );
-  GTECH_BUF B_10 ( .A(N50), .Z(N10) );
-  SELECT_OP C432 ( .DATA1({1'b0, 1'b0, 1'b0, 1'b0}), .DATA2({N81, N79, N77, 
-        N75}), .CONTROL1(N10), .CONTROL2(N51), .Z({N103, N101, N99, N97}) );
-  SELECT_OP C433 ( .DATA1(1'b0), .DATA2(N93), .CONTROL1(N10), .CONTROL2(N51), 
-        .Z(N104) );
-  SELECT_OP C434 ( .DATA1(1'b0), .DATA2(N92), .CONTROL1(N10), .CONTROL2(N51), 
-        .Z(N105) );
-  SELECT_OP C435 ( .DATA1(1'b0), .DATA2(N73), .CONTROL1(N10), .CONTROL2(N51), 
-        .Z(N106) );
-  SELECT_OP C436 ( .DATA1(1'b0), .DATA2(N94), .CONTROL1(N10), .CONTROL2(N51), 
-        .Z(N107) );
-  SELECT_OP C437 ( .DATA1({1'b1, 1'b1, 1'b1, 1'b1, 1'b1}), .DATA2({N90, N88, 
-        N86, N84, N82}), .CONTROL1(N10), .CONTROL2(N51), .Z({N116, N114, N112, 
-        N110, N108}) );
-  SELECT_OP C438 ( .DATA1({1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), .DATA2({N91, N89, 
-        N87, N85, N83}), .CONTROL1(N10), .CONTROL2(N51), .Z({N117, N115, N113, 
-        N111, N109}) );
-  SELECT_OP C439 ( .DATA1(1'b1), .DATA2(N95), .CONTROL1(N10), .CONTROL2(N51), 
-        .Z(N118) );
-  SELECT_OP C440 ( .DATA1(1'b0), .DATA2(core_rxd), .CONTROL1(N10), .CONTROL2(
-        N51), .Z(N119) );
-  GTECH_AND2 C443 ( .A(N126), .B(N127), .Z(go) );
-  GTECH_OR2 C444 ( .A(N125), .B(stop), .Z(N126) );
-  GTECH_OR2 C445 ( .A(read), .B(write), .Z(N125) );
-  GTECH_NOT I_5 ( .A(cmd_ack), .Z(N127) );
-  GTECH_NOT I_6 ( .A(nReset), .Z(N11) );
-  GTECH_BUF B_11 ( .A(rst), .Z(N12) );
-  GTECH_OR2 C451 ( .A(ld), .B(N12), .Z(N13) );
-  GTECH_OR2 C452 ( .A(shift), .B(N13), .Z(N14) );
-  GTECH_NOT I_7 ( .A(N14), .Z(N15) );
-  GTECH_NOT I_8 ( .A(N12), .Z(N25) );
-  GTECH_AND2 C455 ( .A(ld), .B(N25), .Z(N26) );
-  GTECH_NOT I_9 ( .A(ld), .Z(N27) );
-  GTECH_AND2 C457 ( .A(N25), .B(N27), .Z(N28) );
-  GTECH_AND2 C458 ( .A(shift), .B(N28), .Z(N29) );
-  GTECH_NOT I_10 ( .A(nReset), .Z(N30) );
-  GTECH_BUF B_12 ( .A(nReset), .Z(N31) );
-  GTECH_BUF B_13 ( .A(N31), .Z(N32) );
-  GTECH_BUF B_14 ( .A(rst), .Z(N33) );
-  GTECH_OR2 C465 ( .A(ld), .B(N33), .Z(N34) );
-  GTECH_OR2 C466 ( .A(shift), .B(N34), .Z(N35) );
-  GTECH_NOT I_11 ( .A(N35), .Z(N36) );
-  GTECH_AND2 C468 ( .A(N32), .B(N48), .Z(N37) );
-  GTECH_NOT I_12 ( .A(N33), .Z(N45) );
-  GTECH_AND2 C470 ( .A(ld), .B(N45), .Z(N46) );
-  GTECH_AND2 C472 ( .A(N45), .B(N27), .Z(N47) );
-  GTECH_AND2 C473 ( .A(shift), .B(N47), .Z(N48) );
-  GTECH_AND2 C474 ( .A(N37), .B(N47), .Z(net169) );
-  GTECH_NOT I_13 ( .A(N129), .Z(cnt_done) );
-  GTECH_OR2 C476 ( .A(N128), .B(dcnt[0]), .Z(N129) );
-  GTECH_OR2 C477 ( .A(dcnt[2]), .B(dcnt[1]), .Z(N128) );
-  GTECH_NOT I_14 ( .A(nReset), .Z(N49) );
-  GTECH_OR2 C479 ( .A(rst), .B(i2c_al), .Z(N50) );
-  GTECH_NOT I_15 ( .A(N50), .Z(N51) );
-  GTECH_AND2 C482 ( .A(N132), .B(N56), .Z(N57) );
-  GTECH_AND2 C483 ( .A(N131), .B(N55), .Z(N132) );
-  GTECH_AND2 C484 ( .A(N130), .B(N54), .Z(N131) );
-  GTECH_AND2 C485 ( .A(N52), .B(N53), .Z(N130) );
-  GTECH_OR2 C495 ( .A(read), .B(start), .Z(N58) );
-  GTECH_OR2 C496 ( .A(write), .B(N58), .Z(N59) );
-  GTECH_NOT I_16 ( .A(N59), .Z(N60) );
-  GTECH_NOT I_17 ( .A(read), .Z(N65) );
-  GTECH_NOT I_18 ( .A(core_ack), .Z(N66) );
-  GTECH_NOT I_19 ( .A(cnt_done), .Z(N67) );
-  GTECH_NOT I_20 ( .A(stop), .Z(N70) );
-  GTECH_NOT I_21 ( .A(start), .Z(N120) );
-  GTECH_AND2 C522 ( .A(read), .B(N120), .Z(N121) );
-  GTECH_NOT I_22 ( .A(read), .Z(N122) );
-  GTECH_AND2 C524 ( .A(N120), .B(N122), .Z(N123) );
-  GTECH_AND2 C525 ( .A(write), .B(N123), .Z(N124) );
+        scl_i), .scl_oen(scl_oen), .sda_i(sda_i), .sda_oen(sda_oen), .VDD(VDD), 
+        .VSS(VSS) );
+  dfcrq1 ack_out_reg ( .D(n78), .CP(clk), .CDN(n9), .Q(ack_out) );
+  dfcrq1 \core_cmd_reg[1]  ( .D(n89), .CP(clk), .CDN(n9), .Q(core_cmd[1]) );
+  dfcrq1 \core_cmd_reg[0]  ( .D(n90), .CP(clk), .CDN(n9), .Q(core_cmd[0]) );
+  dfcrq1 \core_cmd_reg[2]  ( .D(n88), .CP(clk), .CDN(n9), .Q(core_cmd[2]) );
+  dfcrq1 \core_cmd_reg[3]  ( .D(n87), .CP(clk), .CDN(n9), .Q(core_cmd[3]) );
+  dfcrq1 core_txd_reg ( .D(N104), .CP(clk), .CDN(n9), .Q(core_txd) );
+  dfcrq1 shift_reg ( .D(N105), .CP(clk), .CDN(n9), .Q(shift) );
+  dfcrq1 ld_reg ( .D(N106), .CP(clk), .CDN(n9), .Q(ld) );
+  dfcrq1 \dcnt_reg[0]  ( .D(n95), .CP(clk), .CDN(n9), .Q(dcnt[0]) );
+  dfcrq1 \dcnt_reg[2]  ( .D(n94), .CP(clk), .CDN(n9), .Q(dcnt[2]) );
+  dfcrq1 \dcnt_reg[1]  ( .D(n96), .CP(clk), .CDN(n9), .Q(dcnt[1]) );
+  dfcrq1 cmd_ack_reg ( .D(N107), .CP(clk), .CDN(n9), .Q(cmd_ack) );
+  dfcrq1 \c_state_reg[0]  ( .D(n98), .CP(clk), .CDN(n9), .Q(c_state[0]) );
+  dfcrq1 \c_state_reg[1]  ( .D(n93), .CP(clk), .CDN(n9), .Q(c_state[1]) );
+  dfcrq1 \c_state_reg[2]  ( .D(n92), .CP(clk), .CDN(n9), .Q(c_state[2]) );
+  dfcrq1 \c_state_reg[3]  ( .D(n91), .CP(clk), .CDN(n9), .Q(c_state[3]) );
+  buffd3 U3 ( .I(nReset), .Z(n9) );
+  inv0d0 U4 ( .I(n57), .ZN(n11) );
+  inv0d0 U5 ( .I(n52), .ZN(n12) );
+  nd02d1 U6 ( .A1(n63), .A2(n12), .ZN(n57) );
+  inv0d0 U7 ( .I(n69), .ZN(n15) );
+  nr02d1 U8 ( .A1(n56), .A2(n57), .ZN(n51) );
+  inv0d0 U9 ( .I(n63), .ZN(n13) );
+  inv0d0 U10 ( .I(n56), .ZN(n19) );
+  nd02d1 U11 ( .A1(n47), .A2(n34), .ZN(n66) );
+  nd03d1 U12 ( .A1(n46), .A2(n34), .A3(n47), .ZN(n37) );
+  inv0d0 U13 ( .I(n47), .ZN(n16) );
+  nd02d1 U14 ( .A1(n16), .A2(n24), .ZN(n67) );
+  nd03d1 U15 ( .A1(n15), .A2(n63), .A3(n70), .ZN(n72) );
+  inv0d0 U16 ( .I(n46), .ZN(n23) );
+  nr02d1 U17 ( .A1(c_state[1]), .A2(c_state[0]), .ZN(n73) );
+  inv0d0 U19 ( .I(read), .ZN(n99) );
+  inv0d0 U20 ( .I(c_state[3]), .ZN(n20) );
+  inv0d0 U21 ( .I(c_state[2]), .ZN(n22) );
+  nd03d1 U22 ( .A1(n53), .A2(n54), .A3(n55), .ZN(n88) );
+  nd03d1 U23 ( .A1(n48), .A2(n49), .A3(n50), .ZN(n87) );
+  nd03d1 U24 ( .A1(n11), .A2(n56), .A3(c_state[2]), .ZN(n49) );
+  nd03d1 U25 ( .A1(n11), .A2(n56), .A3(c_state[1]), .ZN(n54) );
+  nd03d1 U26 ( .A1(n11), .A2(n15), .A3(start), .ZN(n59) );
+  nr02d1 U28 ( .A1(i2c_al), .A2(rst), .ZN(n63) );
+  inv0d0 U29 ( .I(dcnt[1]), .ZN(n18) );
+  inv0d0 U31 ( .I(n65), .ZN(n17) );
+  nr02d1 U32 ( .A1(n69), .A2(start), .ZN(n62) );
+  nr13d1 U33 ( .A1(n62), .A2(read), .A3(write), .ZN(n68) );
+  inv0d0 U34 ( .I(rst), .ZN(n34) );
+  inv0d0 U35 ( .I(dcnt[0]), .ZN(n24) );
+  nd02d1 U36 ( .A1(n63), .A2(core_ack), .ZN(n71) );
+  inv0d0 U37 ( .I(core_rxd), .ZN(n10) );
+  nd02d1 U38 ( .A1(ack_out), .A2(n35), .ZN(n36) );
+  nd03d1 U39 ( .A1(n22), .A2(n28), .A3(n14), .ZN(n76) );
+  nd02d1 U40 ( .A1(ld), .A2(n34), .ZN(n46) );
+  inv0d0 U41 ( .I(c_state[1]), .ZN(n21) );
+  inv0d0 U42 ( .I(c_state[0]), .ZN(n14) );
+  nd02d1 U43 ( .A1(core_ack), .A2(c_state[3]), .ZN(n35) );
+  inv0d0 U44 ( .I(n6), .ZN(dout[2]) );
+  inv0d0 U45 ( .I(n5), .ZN(dout[3]) );
+  inv0d0 U46 ( .I(n4), .ZN(dout[4]) );
+  inv0d0 U47 ( .I(n1), .ZN(dout[7]) );
+  inv0d0 U48 ( .I(n7), .ZN(dout[1]) );
+  inv0d0 U49 ( .I(n3), .ZN(dout[5]) );
+  inv0d0 U50 ( .I(n8), .ZN(dout[0]) );
+  inv0d0 U51 ( .I(n2), .ZN(dout[6]) );
 endmodule
 
 
@@ -979,363 +572,224 @@ module i2c_master_top ( wb_clk_i, wb_rst_i, arst_i, wb_adr_i, wb_dat_i,
   input wb_clk_i, wb_rst_i, arst_i, wb_we_i, wb_stb_i, wb_cyc_i, scl_pad_i,
          sda_pad_i, VDD, VSS;
   output wb_ack_o, wb_inta_o, scl_pad_o, scl_padoen_o, sda_pad_o, sda_padoen_o;
-  wire   N0, N1, N2, N3, N4, N5, N6, N7, N8, N9, N10, N11, N12, N13, N14,
-         wb_wacc, N15, N16, N17, N18, N19, N20, N21, N22, N23, N24, N25, N26,
-         N27, N28, N29, N30, N31, N32, N33, N34, N35, N36, N37, sr_1, sr_0,
-         N38, N39, N40, N41, N42, N43, N44, N45, N46, N47, N48, N49, N50, N51,
-         N52, N53, N54, N55, N56, N57, N58, N59, N60, N61, N62, N63, N64, N65,
-         N66, N67, N68, N69, N70, N71, N72, N73, N74, N75, N76, N77, N78, N79,
-         done, i2c_al, N80, N81, N82, N83, N84, N85, N86, N87, N88, N89, N90,
-         N91, N92, N93, irxack, N94, N95, N96, N97, N98, N99, N100, N101, N102,
-         N103, N104, N105, N106, N107, N108, N109, N110, N111, N112, N113,
-         N114, N115, N116, N117;
+  wire   N15, sr_1, sr_0, N38, N39, N40, N41, N42, N43, N44, N45, N54, N55,
+         N56, N57, N58, N59, N60, N61, N62, N63, N64, N73, done, i2c_al, N87,
+         irxack, N100, N101, N102, N106, n22, n23, n24, n25, n26, n27, n28,
+         n29, n30, n31, n32, n33, n34, n35, n36, n37, n38, n39, n40, n41, n42,
+         n43, n44, n45, n46, n47, n48, n49, n50, n51, n52, n53, n54, n55, n56,
+         n57, n58, n59, n60, n61, n62, n63, n65, n66, n67, n68, n69, n70, n71,
+         n72, n73, n74, n75, n76, n77, n78, n79, n80, n81, n82, n83, n84, n85,
+         n86, n87;
   wire   [15:0] prer;
   wire   [7:0] ctr;
   wire   [7:0] rxr;
   wire   [7:5] sr;
   wire   [7:0] txr;
   wire   [7:0] cr;
+  assign scl_pad_o = 1'b0;
+  assign sda_pad_o = 1'b0;
 
-  \**SEQGEN**  wb_ack_o_reg ( .clear(1'b0), .preset(1'b0), .next_state(N15), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(wb_ack_o), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  GTECH_AND2 C9 ( .A(N107), .B(N16), .Z(N18) );
-  GTECH_AND2 C10 ( .A(N18), .B(N17), .Z(N19) );
-  GTECH_OR2 C12 ( .A(wb_adr_i[2]), .B(wb_adr_i[1]), .Z(N20) );
-  GTECH_OR2 C13 ( .A(N20), .B(N17), .Z(N21) );
-  GTECH_OR2 C16 ( .A(wb_adr_i[2]), .B(N16), .Z(N23) );
-  GTECH_OR2 C17 ( .A(N23), .B(wb_adr_i[0]), .Z(N24) );
-  GTECH_OR2 C22 ( .A(N23), .B(N17), .Z(N26) );
-  GTECH_OR2 C25 ( .A(N107), .B(wb_adr_i[1]), .Z(N28) );
-  GTECH_OR2 C26 ( .A(N28), .B(wb_adr_i[0]), .Z(N29) );
-  GTECH_OR2 C31 ( .A(N28), .B(N17), .Z(N31) );
-  GTECH_OR2 C35 ( .A(N107), .B(N16), .Z(N33) );
-  GTECH_OR2 C36 ( .A(N33), .B(wb_adr_i[0]), .Z(N34) );
-  GTECH_AND2 C38 ( .A(wb_adr_i[2]), .B(wb_adr_i[1]), .Z(N36) );
-  GTECH_AND2 C39 ( .A(N36), .B(wb_adr_i[0]), .Z(N37) );
-  \**SEQGEN**  \wb_dat_o_reg[7]  ( .clear(1'b0), .preset(1'b0), .next_state(
-        N45), .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(
-        wb_dat_o[7]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(
-        1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \wb_dat_o_reg[6]  ( .clear(1'b0), .preset(1'b0), .next_state(
-        N44), .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(
-        wb_dat_o[6]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(
-        1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \wb_dat_o_reg[5]  ( .clear(1'b0), .preset(1'b0), .next_state(
-        N43), .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(
-        wb_dat_o[5]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(
-        1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \wb_dat_o_reg[4]  ( .clear(1'b0), .preset(1'b0), .next_state(
-        N42), .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(
-        wb_dat_o[4]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(
-        1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \wb_dat_o_reg[3]  ( .clear(1'b0), .preset(1'b0), .next_state(
-        N41), .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(
-        wb_dat_o[3]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(
-        1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \wb_dat_o_reg[2]  ( .clear(1'b0), .preset(1'b0), .next_state(
-        N40), .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(
-        wb_dat_o[2]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(
-        1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \wb_dat_o_reg[1]  ( .clear(1'b0), .preset(1'b0), .next_state(
-        N39), .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(
-        wb_dat_o[1]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(
-        1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \wb_dat_o_reg[0]  ( .clear(1'b0), .preset(1'b0), .next_state(
-        N38), .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(
-        wb_dat_o[0]), .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(
-        1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \txr_reg[7]  ( .clear(N46), .preset(1'b0), .next_state(N72), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(txr[7]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N73) );
-  \**SEQGEN**  \txr_reg[6]  ( .clear(N46), .preset(1'b0), .next_state(N71), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(txr[6]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N73) );
-  \**SEQGEN**  \txr_reg[5]  ( .clear(N46), .preset(1'b0), .next_state(N70), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(txr[5]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N73) );
-  \**SEQGEN**  \txr_reg[4]  ( .clear(N46), .preset(1'b0), .next_state(N69), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(txr[4]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N73) );
-  \**SEQGEN**  \txr_reg[3]  ( .clear(N46), .preset(1'b0), .next_state(N68), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(txr[3]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N73) );
-  \**SEQGEN**  \txr_reg[2]  ( .clear(N46), .preset(1'b0), .next_state(N67), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(txr[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N73) );
-  \**SEQGEN**  \txr_reg[1]  ( .clear(N46), .preset(1'b0), .next_state(N66), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(txr[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N73) );
-  \**SEQGEN**  \txr_reg[0]  ( .clear(N46), .preset(1'b0), .next_state(N65), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(txr[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N73) );
-  \**SEQGEN**  \prer_reg[15]  ( .clear(1'b0), .preset(N46), .next_state(N62), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[15]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N63) );
-  \**SEQGEN**  \prer_reg[14]  ( .clear(1'b0), .preset(N46), .next_state(N61), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[14]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N63) );
-  \**SEQGEN**  \prer_reg[13]  ( .clear(1'b0), .preset(N46), .next_state(N60), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[13]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N63) );
-  \**SEQGEN**  \prer_reg[12]  ( .clear(1'b0), .preset(N46), .next_state(N59), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[12]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N63) );
-  \**SEQGEN**  \prer_reg[11]  ( .clear(1'b0), .preset(N46), .next_state(N58), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[11]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N63) );
-  \**SEQGEN**  \prer_reg[10]  ( .clear(1'b0), .preset(N46), .next_state(N57), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[10]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N63) );
-  \**SEQGEN**  \prer_reg[9]  ( .clear(1'b0), .preset(N46), .next_state(N56), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[9]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N63) );
-  \**SEQGEN**  \prer_reg[8]  ( .clear(1'b0), .preset(N46), .next_state(N55), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[8]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N63) );
-  \**SEQGEN**  \prer_reg[7]  ( .clear(1'b0), .preset(N46), .next_state(N62), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[7]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N54) );
-  \**SEQGEN**  \prer_reg[6]  ( .clear(1'b0), .preset(N46), .next_state(N61), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[6]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N54) );
-  \**SEQGEN**  \prer_reg[5]  ( .clear(1'b0), .preset(N46), .next_state(N60), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[5]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N54) );
-  \**SEQGEN**  \prer_reg[4]  ( .clear(1'b0), .preset(N46), .next_state(N59), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[4]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N54) );
-  \**SEQGEN**  \prer_reg[3]  ( .clear(1'b0), .preset(N46), .next_state(N58), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[3]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N54) );
-  \**SEQGEN**  \prer_reg[2]  ( .clear(1'b0), .preset(N46), .next_state(N57), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N54) );
-  \**SEQGEN**  \prer_reg[1]  ( .clear(1'b0), .preset(N46), .next_state(N56), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N54) );
-  \**SEQGEN**  \prer_reg[0]  ( .clear(1'b0), .preset(N46), .next_state(N55), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(prer[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N54) );
-  \**SEQGEN**  \ctr_reg[7]  ( .clear(N46), .preset(1'b0), .next_state(N72), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(ctr[7]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N64) );
-  \**SEQGEN**  \ctr_reg[6]  ( .clear(N46), .preset(1'b0), .next_state(N71), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(ctr[6]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N64) );
-  \**SEQGEN**  \ctr_reg[5]  ( .clear(N46), .preset(1'b0), .next_state(N70), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(ctr[5]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N64) );
-  \**SEQGEN**  \ctr_reg[4]  ( .clear(N46), .preset(1'b0), .next_state(N69), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(ctr[4]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N64) );
-  \**SEQGEN**  \ctr_reg[3]  ( .clear(N46), .preset(1'b0), .next_state(N68), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(ctr[3]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N64) );
-  \**SEQGEN**  \ctr_reg[2]  ( .clear(N46), .preset(1'b0), .next_state(N67), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(ctr[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N64) );
-  \**SEQGEN**  \ctr_reg[1]  ( .clear(N46), .preset(1'b0), .next_state(N66), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(ctr[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N64) );
-  \**SEQGEN**  \ctr_reg[0]  ( .clear(N46), .preset(1'b0), .next_state(N65), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(ctr[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N64) );
-  \**SEQGEN**  \cr_reg[7]  ( .clear(N46), .preset(1'b0), .next_state(N91), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(cr[7]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N87) );
-  \**SEQGEN**  \cr_reg[6]  ( .clear(N46), .preset(1'b0), .next_state(N90), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(cr[6]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N87) );
-  \**SEQGEN**  \cr_reg[5]  ( .clear(N46), .preset(1'b0), .next_state(N89), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(cr[5]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N87) );
-  \**SEQGEN**  \cr_reg[4]  ( .clear(N46), .preset(1'b0), .next_state(N88), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(cr[4]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N87) );
-  \**SEQGEN**  \cr_reg[3]  ( .clear(N46), .preset(1'b0), .next_state(N86), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(cr[3]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N85) );
-  \**SEQGEN**  \cr_reg[2]  ( .clear(N46), .preset(1'b0), .next_state(N84), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(cr[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N81) );
-  \**SEQGEN**  \cr_reg[1]  ( .clear(N46), .preset(1'b0), .next_state(N83), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(cr[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N81) );
-  \**SEQGEN**  \cr_reg[0]  ( .clear(N46), .preset(1'b0), .next_state(N82), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(cr[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(N81) );
-  i2c_master_byte_ctrl byte_controller ( .clk(wb_clk_i), .rst(wb_rst_i), 
-        .nReset(arst_i), .ena(ctr[7]), .clk_cnt(prer), .start(cr[7]), .stop(
-        cr[6]), .read(cr[5]), .write(cr[4]), .ack_in(cr[3]), .din(txr), 
-        .cmd_ack(done), .ack_out(irxack), .dout(rxr), .i2c_busy(sr[6]), 
-        .i2c_al(i2c_al), .scl_i(scl_pad_i), .scl_o(scl_pad_o), .scl_oen(
-        scl_padoen_o), .sda_i(sda_pad_i), .sda_o(sda_pad_o), .sda_oen(
-        sda_padoen_o), .VDD(VDD), .VSS(VSS) );
-  \**SEQGEN**  irq_flag_reg ( .clear(N46), .preset(1'b0), .next_state(N102), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(sr_0), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  al_reg ( .clear(N46), .preset(1'b0), .next_state(N99), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(sr[5]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  rxack_reg ( .clear(N46), .preset(1'b0), .next_state(N100), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(sr[7]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  tip_reg ( .clear(N46), .preset(1'b0), .next_state(N101), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(sr_1), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  wb_inta_o_reg ( .clear(N46), .preset(1'b0), .next_state(N106), 
-        .clocked_on(wb_clk_i), .data_in(1'b0), .enable(1'b0), .Q(wb_inta_o), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  GTECH_NOT I_0 ( .A(wb_adr_i[2]), .Z(N107) );
-  GTECH_OR2 C428 ( .A(wb_adr_i[1]), .B(N107), .Z(N108) );
-  GTECH_OR2 C429 ( .A(wb_adr_i[0]), .B(N108), .Z(N109) );
-  GTECH_NOT I_1 ( .A(N109), .Z(N110) );
-  SELECT_OP C431 ( .DATA1(prer[7:0]), .DATA2(prer[15:8]), .DATA3(ctr), .DATA4(
-        rxr), .DATA5({sr, 1'b0, 1'b0, 1'b0, sr_1, sr_0}), .DATA6(txr), .DATA7(
-        cr), .DATA8({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), 
-        .CONTROL1(N0), .CONTROL2(N1), .CONTROL3(N2), .CONTROL4(N3), .CONTROL5(
-        N4), .CONTROL6(N5), .CONTROL7(N6), .CONTROL8(N7), .Z({N45, N44, N43, 
-        N42, N41, N40, N39, N38}) );
-  GTECH_BUF B_0 ( .A(N19), .Z(N0) );
-  GTECH_BUF B_1 ( .A(N22), .Z(N1) );
-  GTECH_BUF B_2 ( .A(N25), .Z(N2) );
-  GTECH_BUF B_3 ( .A(N27), .Z(N3) );
-  GTECH_BUF B_4 ( .A(N30), .Z(N4) );
-  GTECH_BUF B_5 ( .A(N32), .Z(N5) );
-  GTECH_BUF B_6 ( .A(N35), .Z(N6) );
-  GTECH_BUF B_7 ( .A(N37), .Z(N7) );
-  SELECT_OP C432 ( .DATA1({1'b0, 1'b1}), .DATA2({1'b1, 1'b0}), .DATA3({1'b0, 
-        1'b0}), .DATA4({1'b0, 1'b0}), .DATA5({1'b0, 1'b0}), .CONTROL1(N0), 
-        .CONTROL2(N1), .CONTROL3(N2), .CONTROL4(N3), .CONTROL5(N8), .Z({N51, 
-        N50}) );
-  GTECH_BUF B_8 ( .A(wb_adr_i[2]), .Z(N8) );
-  SELECT_OP C433 ( .DATA1(1'b0), .DATA2(1'b0), .DATA3(1'b1), .DATA4(1'b0), 
-        .DATA5(1'b0), .CONTROL1(N0), .CONTROL2(N1), .CONTROL3(N2), .CONTROL4(
-        N3), .CONTROL5(N8), .Z(N52) );
-  SELECT_OP C434 ( .DATA1(1'b0), .DATA2(1'b0), .DATA3(1'b0), .DATA4(1'b1), 
-        .DATA5(1'b0), .CONTROL1(N0), .CONTROL2(N1), .CONTROL3(N2), .CONTROL4(
-        N3), .CONTROL5(N8), .Z(N53) );
-  SELECT_OP C435 ( .DATA1({1'b1, 1'b1}), .DATA2({N51, N50}), .DATA3({1'b0, 
-        1'b0}), .CONTROL1(N9), .CONTROL2(N75), .CONTROL3(N49), .Z({N63, N54})
+  decrq1 \txr_reg[7]  ( .D(n81), .ENN(n73), .CP(wb_clk_i), .CDN(arst_i), .Q(
+        txr[7]) );
+  decrq1 \txr_reg[6]  ( .D(n80), .ENN(n73), .CP(wb_clk_i), .CDN(n66), .Q(
+        txr[6]) );
+  decrq1 \txr_reg[5]  ( .D(n79), .ENN(n73), .CP(wb_clk_i), .CDN(arst_i), .Q(
+        txr[5]) );
+  decrq1 \txr_reg[4]  ( .D(n78), .ENN(n73), .CP(wb_clk_i), .CDN(n66), .Q(
+        txr[4]) );
+  decrq1 \txr_reg[3]  ( .D(n77), .ENN(n73), .CP(wb_clk_i), .CDN(arst_i), .Q(
+        txr[3]) );
+  decrq1 \txr_reg[2]  ( .D(n76), .ENN(n73), .CP(wb_clk_i), .CDN(n66), .Q(
+        txr[2]) );
+  decrq1 \txr_reg[1]  ( .D(n75), .ENN(n73), .CP(wb_clk_i), .CDN(arst_i), .Q(
+        txr[1]) );
+  decrq1 \txr_reg[0]  ( .D(n74), .ENN(n73), .CP(wb_clk_i), .CDN(n66), .Q(
+        txr[0]) );
+  deprq1 \prer_reg[15]  ( .D(N62), .ENN(n71), .CP(wb_clk_i), .SDN(arst_i), .Q(
+        prer[15]) );
+  deprq1 \prer_reg[14]  ( .D(N61), .ENN(n71), .CP(wb_clk_i), .SDN(n66), .Q(
+        prer[14]) );
+  deprq1 \prer_reg[13]  ( .D(N60), .ENN(n71), .CP(wb_clk_i), .SDN(arst_i), .Q(
+        prer[13]) );
+  deprq1 \prer_reg[12]  ( .D(N59), .ENN(n71), .CP(wb_clk_i), .SDN(arst_i), .Q(
+        prer[12]) );
+  deprq1 \prer_reg[11]  ( .D(N58), .ENN(n71), .CP(wb_clk_i), .SDN(n66), .Q(
+        prer[11]) );
+  deprq1 \prer_reg[10]  ( .D(N57), .ENN(n71), .CP(wb_clk_i), .SDN(n66), .Q(
+        prer[10]) );
+  deprq1 \prer_reg[9]  ( .D(N56), .ENN(n71), .CP(wb_clk_i), .SDN(n66), .Q(
+        prer[9]) );
+  deprq1 \prer_reg[8]  ( .D(N55), .ENN(n71), .CP(wb_clk_i), .SDN(arst_i), .Q(
+        prer[8]) );
+  deprq1 \prer_reg[7]  ( .D(N62), .ENN(n70), .CP(wb_clk_i), .SDN(arst_i), .Q(
+        prer[7]) );
+  deprq1 \prer_reg[6]  ( .D(N61), .ENN(n70), .CP(wb_clk_i), .SDN(n66), .Q(
+        prer[6]) );
+  deprq1 \prer_reg[5]  ( .D(N60), .ENN(n70), .CP(wb_clk_i), .SDN(n66), .Q(
+        prer[5]) );
+  deprq1 \prer_reg[4]  ( .D(N59), .ENN(n70), .CP(wb_clk_i), .SDN(n66), .Q(
+        prer[4]) );
+  deprq1 \prer_reg[3]  ( .D(N58), .ENN(n70), .CP(wb_clk_i), .SDN(arst_i), .Q(
+        prer[3]) );
+  deprq1 \prer_reg[2]  ( .D(N57), .ENN(n70), .CP(wb_clk_i), .SDN(arst_i), .Q(
+        prer[2]) );
+  deprq1 \prer_reg[1]  ( .D(N56), .ENN(n70), .CP(wb_clk_i), .SDN(arst_i), .Q(
+        prer[1]) );
+  deprq1 \prer_reg[0]  ( .D(N55), .ENN(n70), .CP(wb_clk_i), .SDN(n66), .Q(
+        prer[0]) );
+  decrq1 \ctr_reg[7]  ( .D(n81), .ENN(n72), .CP(wb_clk_i), .CDN(n66), .Q(
+        ctr[7]) );
+  decrq1 \ctr_reg[6]  ( .D(n80), .ENN(n72), .CP(wb_clk_i), .CDN(arst_i), .Q(
+        ctr[6]) );
+  decrq1 \ctr_reg[5]  ( .D(n79), .ENN(n72), .CP(wb_clk_i), .CDN(arst_i), .Q(
+        ctr[5]) );
+  decrq1 \ctr_reg[4]  ( .D(n78), .ENN(n72), .CP(wb_clk_i), .CDN(n66), .Q(
+        ctr[4]) );
+  decrq1 \ctr_reg[3]  ( .D(n77), .ENN(n72), .CP(wb_clk_i), .CDN(n65), .Q(
+        ctr[3]) );
+  decrq1 \ctr_reg[2]  ( .D(n76), .ENN(n72), .CP(wb_clk_i), .CDN(n66), .Q(
+        ctr[2]) );
+  decrq1 \ctr_reg[1]  ( .D(n75), .ENN(n72), .CP(wb_clk_i), .CDN(n65), .Q(
+        ctr[1]) );
+  decrq1 \ctr_reg[0]  ( .D(n74), .ENN(n72), .CP(wb_clk_i), .CDN(arst_i), .Q(
+        ctr[0]) );
+  decrq1 \cr_reg[3]  ( .D(n77), .ENN(n25), .CP(wb_clk_i), .CDN(arst_i), .Q(
+        cr[3]) );
+  decrq1 \cr_reg[4]  ( .D(n78), .ENN(n68), .CP(wb_clk_i), .CDN(n66), .Q(cr[4])
          );
-  GTECH_BUF B_9 ( .A(N47), .Z(N9) );
-  SELECT_OP C436 ( .DATA1({1'b1, 1'b1, 1'b1, 1'b1, 1'b1, 1'b1, 1'b1, 1'b1}), 
-        .DATA2(wb_dat_i), .CONTROL1(N9), .CONTROL2(N75), .Z({N62, N61, N60, 
-        N59, N58, N57, N56, N55}) );
-  SELECT_OP C437 ( .DATA1(1'b1), .DATA2(N52), .DATA3(1'b0), .CONTROL1(N9), 
-        .CONTROL2(N75), .CONTROL3(N49), .Z(N64) );
-  SELECT_OP C438 ( .DATA1({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), 
-        .DATA2(wb_dat_i), .CONTROL1(N9), .CONTROL2(N75), .Z({N72, N71, N70, 
-        N69, N68, N67, N66, N65}) );
-  SELECT_OP C439 ( .DATA1(1'b1), .DATA2(N53), .DATA3(1'b0), .CONTROL1(N9), 
-        .CONTROL2(N75), .CONTROL3(N49), .Z(N73) );
-  SELECT_OP C440 ( .DATA1({1'b1, 1'b1, 1'b1}), .DATA2({N79, N79, N79}), 
-        .DATA3({N80, 1'b0, 1'b1}), .CONTROL1(N10), .CONTROL2(N93), .CONTROL3(
-        N78), .Z({N87, N85, N81}) );
-  GTECH_BUF B_10 ( .A(N76), .Z(N10) );
-  SELECT_OP C441 ( .DATA1({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}), .DATA2(
-        {wb_dat_i[7:4], wb_dat_i[2:0]}), .DATA3({1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 
-        1'b0, 1'b0}), .CONTROL1(N10), .CONTROL2(N93), .CONTROL3(N78), .Z({N91, 
-        N90, N89, N88, N84, N83, N82}) );
-  SELECT_OP C442 ( .DATA1(1'b0), .DATA2(wb_dat_i[3]), .CONTROL1(N10), 
-        .CONTROL2(N93), .Z(N86) );
-  SELECT_OP C443 ( .DATA1(1'b0), .DATA2(N96), .CONTROL1(N11), .CONTROL2(N12), 
-        .Z(N99) );
-  GTECH_BUF B_11 ( .A(N95), .Z(N11) );
-  GTECH_BUF B_12 ( .A(N94), .Z(N12) );
-  SELECT_OP C444 ( .DATA1(1'b0), .DATA2(irxack), .CONTROL1(N11), .CONTROL2(N12), .Z(N100) );
-  SELECT_OP C445 ( .DATA1(1'b0), .DATA2(N97), .CONTROL1(N11), .CONTROL2(N12), 
-        .Z(N101) );
-  SELECT_OP C446 ( .DATA1(1'b0), .DATA2(N98), .CONTROL1(N11), .CONTROL2(N12), 
-        .Z(N102) );
-  SELECT_OP C447 ( .DATA1(1'b0), .DATA2(N105), .CONTROL1(N13), .CONTROL2(N14), 
-        .Z(N106) );
-  GTECH_BUF B_13 ( .A(N104), .Z(N13) );
-  GTECH_BUF B_14 ( .A(N103), .Z(N14) );
-  GTECH_AND2 C450 ( .A(wb_we_i), .B(wb_ack_o), .Z(wb_wacc) );
-  GTECH_AND2 C451 ( .A(N111), .B(N112), .Z(N15) );
-  GTECH_AND2 C452 ( .A(wb_cyc_i), .B(wb_stb_i), .Z(N111) );
-  GTECH_NOT I_2 ( .A(wb_ack_o), .Z(N112) );
-  GTECH_NOT I_3 ( .A(wb_adr_i[1]), .Z(N16) );
-  GTECH_NOT I_4 ( .A(wb_adr_i[0]), .Z(N17) );
-  GTECH_NOT I_5 ( .A(N21), .Z(N22) );
-  GTECH_NOT I_6 ( .A(N24), .Z(N25) );
-  GTECH_NOT I_7 ( .A(N26), .Z(N27) );
-  GTECH_NOT I_8 ( .A(N29), .Z(N30) );
-  GTECH_NOT I_9 ( .A(N31), .Z(N32) );
-  GTECH_NOT I_10 ( .A(N34), .Z(N35) );
-  GTECH_NOT I_11 ( .A(arst_i), .Z(N46) );
-  GTECH_BUF B_15 ( .A(wb_rst_i), .Z(N47) );
-  GTECH_OR2 C474 ( .A(wb_wacc), .B(N47), .Z(N48) );
-  GTECH_NOT I_12 ( .A(N48), .Z(N49) );
-  GTECH_NOT I_13 ( .A(N47), .Z(N74) );
-  GTECH_AND2 C478 ( .A(wb_wacc), .B(N74), .Z(N75) );
-  GTECH_BUF B_16 ( .A(wb_rst_i), .Z(N76) );
-  GTECH_OR2 C481 ( .A(wb_wacc), .B(N76), .Z(N77) );
-  GTECH_NOT I_14 ( .A(N77), .Z(N78) );
-  GTECH_AND2 C483 ( .A(ctr[7]), .B(N110), .Z(N79) );
-  GTECH_OR2 C485 ( .A(done), .B(i2c_al), .Z(N80) );
-  GTECH_NOT I_15 ( .A(N76), .Z(N92) );
-  GTECH_AND2 C488 ( .A(wb_wacc), .B(N92), .Z(N93) );
-  GTECH_NOT I_16 ( .A(wb_rst_i), .Z(N94) );
-  GTECH_BUF B_17 ( .A(wb_rst_i), .Z(N95) );
-  GTECH_OR2 C492 ( .A(i2c_al), .B(N114), .Z(N96) );
-  GTECH_AND2 C493 ( .A(sr[5]), .B(N113), .Z(N114) );
-  GTECH_NOT I_17 ( .A(cr[7]), .Z(N113) );
-  GTECH_OR2 C495 ( .A(cr[5]), .B(cr[4]), .Z(N97) );
-  GTECH_AND2 C496 ( .A(N116), .B(N117), .Z(N98) );
-  GTECH_OR2 C497 ( .A(N115), .B(sr_0), .Z(N116) );
-  GTECH_OR2 C498 ( .A(done), .B(i2c_al), .Z(N115) );
-  GTECH_NOT I_18 ( .A(cr[0]), .Z(N117) );
-  GTECH_NOT I_19 ( .A(wb_rst_i), .Z(N103) );
-  GTECH_BUF B_18 ( .A(wb_rst_i), .Z(N104) );
-  GTECH_AND2 C503 ( .A(sr_0), .B(ctr[6]), .Z(N105) );
+  decrq1 \cr_reg[5]  ( .D(n79), .ENN(n68), .CP(wb_clk_i), .CDN(n65), .Q(cr[5])
+         );
+  decrq1 \cr_reg[6]  ( .D(n80), .ENN(n68), .CP(wb_clk_i), .CDN(arst_i), .Q(
+        cr[6]) );
+  decrq1 \cr_reg[7]  ( .D(n81), .ENN(n68), .CP(wb_clk_i), .CDN(n65), .Q(cr[7])
+         );
+  decrq1 \cr_reg[2]  ( .D(n76), .ENN(n63), .CP(wb_clk_i), .CDN(n66), .Q(cr[2])
+         );
+  decrq1 \cr_reg[1]  ( .D(n75), .ENN(n63), .CP(wb_clk_i), .CDN(n66), .Q(cr[1])
+         );
+  decrq1 \cr_reg[0]  ( .D(n74), .ENN(n63), .CP(wb_clk_i), .CDN(arst_i), .Q(
+        cr[0]) );
+  an02d1 U10 ( .A1(wb_we_i), .A2(wb_ack_o), .Z(n23) );
+  nr03d1 U39 ( .A1(n83), .A2(wb_adr_i[1]), .A3(n85), .ZN(n44) );
+  nr03d1 U40 ( .A1(n83), .A2(wb_adr_i[0]), .A3(n84), .ZN(n43) );
+  nr03d1 U42 ( .A1(wb_adr_i[0]), .A2(wb_adr_i[1]), .A3(n83), .ZN(n26) );
+  an03d1 U44 ( .A1(sr_0), .A2(n82), .A3(ctr[6]), .Z(N106) );
+  an02d1 U46 ( .A1(irxack), .A2(n82), .Z(N100) );
+  aon211d1 U62 ( .C1(n86), .C2(sr[5]), .B(i2c_al), .A(n82), .ZN(n22) );
+  oai21d1 U63 ( .B1(n23), .B2(n24), .A(n25), .ZN(N87) );
+  aoi31d1 U64 ( .B1(n26), .B2(n27), .B3(ctr[7]), .A(wb_rst_i), .ZN(n25) );
+  oaim21d1 U65 ( .B1(n27), .B2(n28), .A(n82), .ZN(N73) );
+  oaim21d1 U66 ( .B1(n27), .B2(n37), .A(n82), .ZN(N64) );
+  oaim21d1 U67 ( .B1(n27), .B2(n38), .A(n82), .ZN(N63) );
+  oaim21d1 U68 ( .B1(n27), .B2(n39), .A(n82), .ZN(N54) );
+  aoi222d1 U69 ( .A1(prer[7]), .A2(n39), .B1(n37), .B2(ctr[7]), .C1(prer[15]), 
+        .C2(n38), .ZN(n42) );
+  aoi22d1 U70 ( .A1(cr[7]), .A2(n43), .B1(txr[7]), .B2(n44), .ZN(n41) );
+  aoi22d1 U71 ( .A1(sr[7]), .A2(n26), .B1(rxr[7]), .B2(n28), .ZN(n40) );
+  aoi222d1 U72 ( .A1(prer[6]), .A2(n39), .B1(ctr[6]), .B2(n37), .C1(prer[14]), 
+        .C2(n38), .ZN(n47) );
+  aoi22d1 U73 ( .A1(cr[6]), .A2(n43), .B1(txr[6]), .B2(n44), .ZN(n46) );
+  aoi22d1 U74 ( .A1(sr[6]), .A2(n26), .B1(rxr[6]), .B2(n28), .ZN(n45) );
+  aoi222d1 U75 ( .A1(prer[5]), .A2(n39), .B1(ctr[5]), .B2(n37), .C1(prer[13]), 
+        .C2(n38), .ZN(n50) );
+  aoi22d1 U76 ( .A1(cr[5]), .A2(n43), .B1(txr[5]), .B2(n44), .ZN(n49) );
+  aoi22d1 U77 ( .A1(n26), .A2(sr[5]), .B1(rxr[5]), .B2(n28), .ZN(n48) );
+  aoi222d1 U78 ( .A1(rxr[4]), .A2(n28), .B1(cr[4]), .B2(n43), .C1(txr[4]), 
+        .C2(n44), .ZN(n52) );
+  aoi222d1 U79 ( .A1(prer[4]), .A2(n39), .B1(ctr[4]), .B2(n37), .C1(prer[12]), 
+        .C2(n38), .ZN(n51) );
+  aoi222d1 U80 ( .A1(rxr[3]), .A2(n28), .B1(cr[3]), .B2(n43), .C1(txr[3]), 
+        .C2(n44), .ZN(n54) );
+  aoi222d1 U81 ( .A1(prer[3]), .A2(n39), .B1(ctr[3]), .B2(n37), .C1(prer[11]), 
+        .C2(n38), .ZN(n53) );
+  aoi222d1 U82 ( .A1(rxr[2]), .A2(n28), .B1(cr[2]), .B2(n43), .C1(txr[2]), 
+        .C2(n44), .ZN(n56) );
+  aoi222d1 U83 ( .A1(prer[2]), .A2(n39), .B1(ctr[2]), .B2(n37), .C1(prer[10]), 
+        .C2(n38), .ZN(n55) );
+  aoi222d1 U84 ( .A1(prer[1]), .A2(n39), .B1(ctr[1]), .B2(n37), .C1(prer[9]), 
+        .C2(n38), .ZN(n59) );
+  aoi22d1 U85 ( .A1(cr[1]), .A2(n43), .B1(txr[1]), .B2(n44), .ZN(n58) );
+  aoi22d1 U86 ( .A1(sr_1), .A2(n26), .B1(rxr[1]), .B2(n28), .ZN(n57) );
+  aoi222d1 U87 ( .A1(prer[0]), .A2(n39), .B1(ctr[0]), .B2(n37), .C1(prer[8]), 
+        .C2(n38), .ZN(n62) );
+  aoi22d1 U88 ( .A1(cr[0]), .A2(n43), .B1(txr[0]), .B2(n44), .ZN(n61) );
+  aoi22d1 U89 ( .A1(sr_0), .A2(n26), .B1(rxr[0]), .B2(n28), .ZN(n60) );
+  aoi211d1 U90 ( .C1(n24), .C2(n87), .A(wb_rst_i), .B(cr[0]), .ZN(N102) );
+  aoim21d1 U91 ( .B1(cr[5]), .B2(cr[4]), .A(wb_rst_i), .ZN(N101) );
+  i2c_master_byte_ctrl byte_controller ( .clk(wb_clk_i), .rst(wb_rst_i), 
+        .nReset(n65), .ena(ctr[7]), .clk_cnt(prer), .start(cr[7]), .stop(cr[6]), .read(cr[5]), .write(cr[4]), .ack_in(cr[3]), .din(txr), .cmd_ack(done), 
+        .ack_out(irxack), .dout(rxr), .i2c_busy(sr[6]), .i2c_al(i2c_al), 
+        .scl_i(scl_pad_i), .scl_oen(scl_padoen_o), .sda_i(sda_pad_i), 
+        .sda_oen(sda_padoen_o), .VDD(VDD), .VSS(VSS) );
+  dfcrq1 rxack_reg ( .D(N100), .CP(wb_clk_i), .CDN(n65), .Q(sr[7]) );
+  dfcrq1 tip_reg ( .D(N101), .CP(wb_clk_i), .CDN(n65), .Q(sr_1) );
+  dfcrq1 al_reg ( .D(n69), .CP(wb_clk_i), .CDN(n65), .Q(sr[5]) );
+  dfcrq1 irq_flag_reg ( .D(N102), .CP(wb_clk_i), .CDN(n65), .Q(sr_0) );
+  dfnrq1 wb_ack_o_reg ( .D(N15), .CP(wb_clk_i), .Q(wb_ack_o) );
+  dfnrq1 \wb_dat_o_reg[4]  ( .D(N42), .CP(wb_clk_i), .Q(wb_dat_o[4]) );
+  dfnrq1 \wb_dat_o_reg[6]  ( .D(N44), .CP(wb_clk_i), .Q(wb_dat_o[6]) );
+  dfnrq1 \wb_dat_o_reg[3]  ( .D(N41), .CP(wb_clk_i), .Q(wb_dat_o[3]) );
+  dfnrq1 \wb_dat_o_reg[2]  ( .D(N40), .CP(wb_clk_i), .Q(wb_dat_o[2]) );
+  dfnrq1 \wb_dat_o_reg[0]  ( .D(N38), .CP(wb_clk_i), .Q(wb_dat_o[0]) );
+  dfnrq1 \wb_dat_o_reg[5]  ( .D(N43), .CP(wb_clk_i), .Q(wb_dat_o[5]) );
+  dfnrq1 \wb_dat_o_reg[7]  ( .D(N45), .CP(wb_clk_i), .Q(wb_dat_o[7]) );
+  dfnrq1 \wb_dat_o_reg[1]  ( .D(N39), .CP(wb_clk_i), .Q(wb_dat_o[1]) );
+  dfcrq1 wb_inta_o_reg ( .D(N106), .CP(wb_clk_i), .CDN(n65), .Q(wb_inta_o) );
+  inv0d0 U92 ( .I(N87), .ZN(n68) );
+  an02d1 U93 ( .A1(n23), .A2(n25), .Z(n63) );
+  inv0d0 U94 ( .I(N54), .ZN(n70) );
+  inv0d0 U95 ( .I(N63), .ZN(n71) );
+  inv0d0 U96 ( .I(N64), .ZN(n72) );
+  inv0d0 U97 ( .I(N73), .ZN(n73) );
+  nd02d1 U98 ( .A1(n82), .A2(n36), .ZN(N55) );
+  nd02d1 U99 ( .A1(n82), .A2(n35), .ZN(N56) );
+  nd02d1 U100 ( .A1(n82), .A2(n34), .ZN(N57) );
+  nd02d1 U101 ( .A1(n82), .A2(n33), .ZN(N58) );
+  nd02d1 U102 ( .A1(n82), .A2(n32), .ZN(N59) );
+  nd02d1 U103 ( .A1(n82), .A2(n31), .ZN(N60) );
+  nd02d1 U104 ( .A1(n82), .A2(n30), .ZN(N61) );
+  nd02d1 U105 ( .A1(n82), .A2(n29), .ZN(N62) );
+  inv0d0 U106 ( .I(n36), .ZN(n74) );
+  inv0d0 U107 ( .I(n35), .ZN(n75) );
+  inv0d0 U108 ( .I(n34), .ZN(n76) );
+  inv0d0 U109 ( .I(n33), .ZN(n77) );
+  inv0d0 U110 ( .I(n32), .ZN(n78) );
+  inv0d0 U111 ( .I(n31), .ZN(n79) );
+  inv0d0 U112 ( .I(n30), .ZN(n80) );
+  inv0d0 U113 ( .I(n29), .ZN(n81) );
+  inv0d1 U114 ( .I(n67), .ZN(n66) );
+  inv0d1 U115 ( .I(n67), .ZN(n65) );
+  nd02d1 U116 ( .A1(n55), .A2(n56), .ZN(N40) );
+  nd02d1 U117 ( .A1(n53), .A2(n54), .ZN(N41) );
+  nd02d1 U118 ( .A1(n51), .A2(n52), .ZN(N42) );
+  inv0d0 U119 ( .I(wb_adr_i[2]), .ZN(n83) );
+  inv0d0 U120 ( .I(wb_adr_i[0]), .ZN(n85) );
+  nd03d1 U121 ( .A1(n48), .A2(n49), .A3(n50), .ZN(N43) );
+  nd03d1 U122 ( .A1(n57), .A2(n58), .A3(n59), .ZN(N39) );
+  nd03d1 U123 ( .A1(n40), .A2(n41), .A3(n42), .ZN(N45) );
+  nd03d1 U124 ( .A1(n60), .A2(n61), .A3(n62), .ZN(N38) );
+  nd03d1 U125 ( .A1(n45), .A2(n46), .A3(n47), .ZN(N44) );
+  inv0d0 U126 ( .I(wb_adr_i[1]), .ZN(n84) );
+  an03d1 U127 ( .A1(wb_ack_o), .A2(n82), .A3(wb_we_i), .Z(n27) );
+  inv0d1 U128 ( .I(wb_rst_i), .ZN(n82) );
+  nr02d1 U129 ( .A1(done), .A2(i2c_al), .ZN(n24) );
+  nr03d1 U130 ( .A1(wb_adr_i[1]), .A2(wb_adr_i[2]), .A3(n85), .ZN(n38) );
+  nr03d1 U131 ( .A1(wb_adr_i[0]), .A2(wb_adr_i[2]), .A3(n84), .ZN(n37) );
+  nr03d1 U132 ( .A1(n85), .A2(wb_adr_i[2]), .A3(n84), .ZN(n28) );
+  nd02d1 U133 ( .A1(wb_dat_i[0]), .A2(n27), .ZN(n36) );
+  nd02d1 U134 ( .A1(wb_dat_i[1]), .A2(n27), .ZN(n35) );
+  nd02d1 U135 ( .A1(wb_dat_i[2]), .A2(n27), .ZN(n34) );
+  nd02d1 U136 ( .A1(wb_dat_i[3]), .A2(n27), .ZN(n33) );
+  nd02d1 U137 ( .A1(wb_dat_i[4]), .A2(n27), .ZN(n32) );
+  nd02d1 U138 ( .A1(wb_dat_i[5]), .A2(n27), .ZN(n31) );
+  nd02d1 U139 ( .A1(wb_dat_i[6]), .A2(n27), .ZN(n30) );
+  nd02d1 U140 ( .A1(wb_dat_i[7]), .A2(n27), .ZN(n29) );
+  nr03d1 U141 ( .A1(wb_adr_i[1]), .A2(wb_adr_i[2]), .A3(wb_adr_i[0]), .ZN(n39)
+         );
+  inv0d0 U142 ( .I(n22), .ZN(n69) );
+  inv0d0 U143 ( .I(cr[7]), .ZN(n86) );
+  inv0d0 U144 ( .I(sr_0), .ZN(n87) );
+  nr23d1 U145 ( .A1(wb_cyc_i), .A2(wb_stb_i), .A3(wb_ack_o), .ZN(N15) );
+  inv0d0 U146 ( .I(arst_i), .ZN(n67) );
 endmodule
 

@@ -1,0 +1,937 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.33-s082_1, built Wed Nov 13 14:07:39 PST 2024
+Options:	
+Date:		Wed Jun 17 22:49:18 2026
+Host:		vlsi-ria87 (x86_64 w/Linux 3.10.0-1160.62.1.el7.x86_64) (8cores*8cpus*Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz 12288KB)
+OS:		RHEL
+
+License:
+		[22:49:18.069593] Configured Lic search path (23.02-s006): /etc/local/cadence/license_8x.3868dd0560aa:5280@132.68.59.69:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.64:/etc/local/cadence/license_8x.0894ef683fc3:5280@132.68.59.79:5280@132.68.59.61:27019@132.68.59.69:27019@132.68.59.79
+
+		invs	Innovus Implementation System	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
+Info: Process UID = 14700 / 6adb09f3-1637-4721-b954-96785c1f8dcc / uU6MsFuecl
+source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_attr_defs.tcl
+Loading attribute definitions from mini dummy db...
+Info: Defined 23820 Synthesis attributes
+Info: Skipped defining 357 Synthesis attributes already defined in Innovus
+source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_msg_defs.tcl
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> getVersion
+<CMD> getVersion
+[INFO] Loading PVS 24.10 fill procedures
+<CMD> win
+error copying "datain/top.sdc" to "./top.sdc": file already exists
+<CMD> set init_lef_file {/tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/tech/lef/6M1L/tsl180l6.lef /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/lef/tsl18fs190svt.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+<CMD> set init_verilog datain/top_before_pads.v
+<CMD> set init_mmmc_file datain/mmmc.view
+<CMD> set init_top_cell i2c_master_top
+<CMD> set init_io_file datain/top.io
+<CMD> init_design
+#% Begin Load MMMC data ... (date=06/17 22:49:44, mem=1703.9M)
+#% End Load MMMC data ... (date=06/17 22:49:44, total cpu=0:00:00.0, real=0:00:00.0, peak res=1705.1M, current mem=1705.1M)
+SlowRC FastRC
+
+Loading LEF file /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/tech/lef/6M1L/tsl180l6.lef ...
+
+Loading LEF file /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/lef/tsl18fs190svt.lef ...
+Set DBUPerIGU to M2 pitch 560.
+
+Loading LEF file /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef ...
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PVPP_33_NA' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PVPP_33_NA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PADR' in macro 'PVPP_33_NA' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PADR' in macro 'PVPP_33_NA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PVDC_NA_NA_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PVDC_NA_NA_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PVDC_NA_NA_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PVDC_NA_NA_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PVDC_NA_NA_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PVDC_NA_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PVDC_NA_NA_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PVDC_NA_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_33_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_33_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_18_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_18_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_18_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_18_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_18_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_18_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_18_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_18_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_33_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_33_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPLF-200):	Pin 'DRIVE_STR' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'EN' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'PULL_ON' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'PULL_UP_DOWN' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from datain/mmmc.view
+Reading Max timing library '/tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/liberty/1.8V-Only/PIO320SL_ss_1p62v_1p62v_125c.lib' ...
+Read 13 cells in library 'PIO320SL_ss_1p62v_1p62v_125c' 
+Reading Max timing library '/tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ss_1p62v_125c.lib' ...
+Read 591 cells in library 'tsl18fs190svt_ss_1p62v_125c' 
+Reading Min timing library '/tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/liberty/1.8V-Only/PIO320SL_ff_1p98v_1p98v_m40c.lib' ...
+Read 13 cells in library 'PIO320SL_ff_1p98v_1p98v_m40c' 
+Reading Min timing library '/tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib' ...
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNTSCA_X2_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 31960)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNTSCA_X3_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 42492)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNCA_X3_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 67918)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNCA_X6_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 76085)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNCA_X8_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 129647)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNCA_X12_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 149850)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNTSCA_X12_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 158442)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNTSCA_X4_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 166620)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNCA_X20_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 230627)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNTSCA_X20_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 230992)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNCA_X16_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 243662)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNTSCA_X6_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 295004)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNTSCA_X8_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 340954)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNTSCA_X16_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 359576)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNCA_X2_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 475186)
+**WARN: (TECHLIB-9122):	Multiple statetables found in cell TLATNCA_X4_18_SVT. Only the last statetable definition will be preserved. (File /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib, Line 577967)
+Read 591 cells in library 'tsl18fs190svt_ff_1p98v_m40c' 
+*** End library_loading (cpu=0.04min, real=0.03min, mem=27.0M, fe_cpu=0.38min, fe_real=0.48min, fe_mem=1896.8M) ***
+#% Begin Load netlist data ... (date=06/17 22:49:47, mem=1726.0M)
+*** Begin netlist parsing (mem=1896.8M) ***
+Pin 'VDD' of cell 'PVDI_NA_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+**WARN: (IMPVL-159):	Pin 'VDDO' of cell 'PVDI_NA_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'PVDI_NA_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSSO' of cell 'PVDI_NA_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+Pin 'VDDO' of cell 'PVDF_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'PVDF_18_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSSO' of cell 'PVDF_18_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'PVDC_NA_NA_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDDO' of cell 'PVDC_NA_NA_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'PVDC_NA_NA_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSSO' of cell 'PVDC_NA_NA_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+Pin 'VDDO' of cell 'PVDA_18_NA' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'PVDA_18_NA' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'PVDA_18_NA' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSSO' of cell 'PVDA_18_NA' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+Pin 'VSS' of cell 'PV0I_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'PV0I_18_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDDO' of cell 'PV0I_18_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSSO' of cell 'PV0I_18_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+Pin 'VSSO' of cell 'PV0F_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'PV0F_18_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDDO' of cell 'PV0F_18_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'PV0C_18_18_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDDO' of cell 'PV0C_18_18_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'PV0C_18_18_18' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Pin 'VSSO' of cell 'PV0A_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+Created 604 new cells from 4 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'datain/top_before_pads.v'
+**WARN: (IMPVL-346):	Module 'pv0c' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'pvdc' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'pc3d01' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'pt3o01' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'pfrelr' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'inv0d0' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'aor21d1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'oaim21d1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'xr02d1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'nr02d0' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'oai21d1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'nd02d0' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'or02d0' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'dfprb1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'dfcrn1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'oai22d1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'aor222d1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'oan211d1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'oaim22d1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'aon211d1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (EMS-27):	Message (IMPVL-346) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+*** Memory Usage v#2 (Current mem = 1896.762M, initial mem = 839.188M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1896.8M) ***
+#% End Load netlist data ... (date=06/17 22:49:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=1741.2M, current mem=1741.2M)
+Set top cell to i2c_master_top.
+Hooked 1208 DB cells to tlib cells.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'oai21d1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'nr02d0' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'xr02d1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'oaim21d1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'aor21d1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'inv0d0' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'pt3o01' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'pc3d01' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'pvdc' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'pv0c' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'nr23d1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'aoim21d1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'aoi211d1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'aoi222d1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'deprq1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'decrq1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'nr13d1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'buffd3' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'aoi31d1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'aoim31d1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (EMS-27):	Message (IMPDB-2504) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+54 empty module found.
+Starting recursive module instantiation check.
+No recursion found.
+Term dir updated for 0 vinsts of 54 cells.
+Building hierarchical netlist for Cell i2c_master_top ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 1322 modules.
+** info: there are 0 stdCell insts.
+** info: there are 0 stdCell insts with at least one signal pin.
+
+*** Memory Usage v#2 (Current mem = 1955.188M, initial mem = 839.188M) ***
+Reading IO assignment file "datain/top.io" ...
+**Warn: ignored IO file "datain/top.io" line 10: Pad: I1/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 11: Pad: I2/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 12: Pad: I3/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 13: Pad: PAD_G1/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 14: Pad: PAD_I1/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 15: Pad: I4/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 16: Pad: I5/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 17: Pad: I6/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 18: Pad: I7/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 19: Pad: PAD_G2/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 20: Pad: PAD_I2/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 21: Pad: I8/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 22: Pad: I9/I1   N
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 24: Pad: Pcornerur/I1 SE
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 25: Pad: I10/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 26: Pad: I11/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 27: Pad: I12/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 28: Pad: PAD_G3/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 29: Pad: PAD_I3/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 30: Pad: I13/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 31: Pad: I14/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 32: Pad: I15/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 33: Pad: PAD_G4/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 34: Pad: PAD_I4/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 35: Pad: I16/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 36: Pad: I17/I1   E
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 38: Pad: Pcornerlr/I1 NE
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 39: Pad: I18/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 40: Pad: I19/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 41: Pad: I20/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 42: Pad: I21/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 43: Pad: PAD_G5/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 44: Pad: PAD_I5/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 45: Pad: I22/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 46: Pad: I23/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 47: Pad: I24/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 48: Pad: I25/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 49: Pad: PAD_G6/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 50: Pad: PAD_I6/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 51: Pad: I26/I1   S
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 53: Pad: Pcornerll/I1 NW
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 54: Pad: I27/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 55: Pad: I28/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 56: Pad: I29/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 57: Pad: I30/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 58: Pad: PAD_G7/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 59: Pad: PAD_I7/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 60: Pad: I31/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 61: Pad: I32/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 62: Pad: I33/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 63: Pad: I34/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 64: Pad: PAD_G8/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 65: Pad: PAD_I8/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 66: Pad: I35/I1   W
+  Reason: unable to determine object from name.
+**Warn: ignored IO file "datain/top.io" line 68: Pad: Pcornerul/I1 SW
+  Reason: unable to determine object from name.
+Start create_tracks
+Generated pitch 0.56 in M5 is different from 0.66 defined in technology file in preferred direction.
+Extraction setup Started for TopCell i2c_master_top 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+**WARN: (IMPEXT-6202):	In addition to the technology file, the capacitance table file is specified for all the RC corners. If the technology file  is already specified for all the RC corners, the capacitance table file is not required for preRoute and postRoute extraction. In a new session, the capacitance table files can be removed from the create_rc_corner command to enable the technology file to be used for preRoute and postRoute (effort level medium/high/signoff) extraction engines.
+Type 'man IMPEXT-6202' for more detail.
+Reading Capacitance Table File /tools/kits/tower/TS18SL_6_01/iit/TSL601_6M1L.capTbl ...
+Process name: TSL_0.18SL_6LM.
+Reading Capacitance Table File /tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl ...
+Cap table was created using Encounter 09.12-s159_1.
+Process name: TSL_0.18SL_6LM.
+**WARN: (IMPEXT-2760):	Layer M7 specified in the cap table is ignored because it is greater than the maximum number of layers, 6, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+**WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M2 and M3 is not defined in the capacitance table file. The via resistance of 6 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M3 and M4 is not defined in the capacitance table file. The via resistance of 6 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M4 and M5 is not defined in the capacitance table file. The via resistance of 6 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M5 and M6 is not defined in the capacitance table file. The via resistance of 2.5 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2710):	Basic Cap table for layer M7 is ignored because the layer is not specified in the technology LEF file.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: SlowView
+    RC-Corner Name        : SlowRC
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : '/tools/kits/tower/TS18SL_6_01/iit/TSL601_6M1L.capTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/tools/kits/tower/TS18SL_6_01/HOTCODE/techs/ts18sl_6M1L/assura/t.00_00_01_scr/RCE_TS18SL_QRC_6M1L_USG/qrcTechFile'
+ 
+ Analysis View: FastView
+    RC-Corner Name        : FastRC
+    RC-Corner Index       : 1
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : '/tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/tools/kits/tower/PDK_TS18SL/iit/qrcTechFile'
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+*Info: initialize multi-corner CTS.
+Reading timing constraints file 'top.sdc' ...
+Current (total cpu=0:00:23.4, real=0:00:30.0, peak res=2177.0M, current mem=2177.0M)
+**ERROR: (TCLNL-312):	create_clock: Invalid list of pins: 'I9/I1/PAD' (File top.sdc, Line 1).
+
+------------------------------------------------------------------------------------
+CONSTRAINT READING SUMMARY                                                          
+------------------------------------------------------------------------------------
+Constraint                                        | Success        | Fail           
+------------------------------------------------------------------------------------
+create_clock                                      | 0              | 1              
+------------------------------------------------------------------------------------
+INFO (CTE): Reading of timing constraints file top.sdc completed, with 0 Warnings and 1 Errors.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2178.0M, current mem=2178.0M)
+Current (total cpu=0:00:23.4, real=0:00:30.0, peak res=2178.0M, current mem=2178.0M)
+Total number of combinational cells: 491
+Total number of sequential cells: 90
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUF_X8_18_SVT BUF_X2_18_SVT CLKBUF_X3_18_SVT CLKBUF_X8_18_SVT BUF_X16_18_SVT CLKBUF_X20_18_SVT BUF_X4_18_SVT CLKBUF_X6_18_SVT CLKBUF_X40_18_SVT BUF_X10_18_SVT BUF_X12_18_SVT BUF_X32_18_SVT CLKBUF_X4_18_SVT BUF_X6_18_SVT BUF_X18_18_SVT CLKBUF_X24_18_SVT CLKBUF_X16_18_SVT CLKBUF_X2_18_SVT CLKBUF_X32_18_SVT BUF_X5_18_SVT CLKBUF_X12_18_SVT BUF_X20_18_SVT BUF_X3_18_SVT BUF_X14_18_SVT BUF_X24_18_SVT
+Total number of usable buffers: 25
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INVP2_X24_18_SVT CLKINV_X2_18_SVT INV_X8_18_SVT INV_X14_18_SVT INVP2_X10_18_SVT INV_X20_18_SVT INVP2_X16_18_SVT INV_X32_18_SVT INVP2_X2_18_SVT INVP2_X3_18_SVT INVP2_X4_18_SVT INV_X16_18_SVT INV_X1_18_SVT INVP2_X1_18_SVT INVP2_X6_18_SVT INV_X12_18_SVT INV_X6_18_SVT INV_X0_18_SVT CLKINV_X3_18_SVT INVP2_X12_18_SVT CLKINV_X1_18_SVT INV_X3_18_SVT CLKINV_X40_18_SVT INV_X2_18_SVT CLKINV_X8_18_SVT CLKINV_X24_18_SVT CLKINV_X20_18_SVT CLKINV_X12_18_SVT INV_X4_18_SVT CLKINV_X4_18_SVT CLKINV_X32_18_SVT INV_X10_18_SVT CLKINV_X16_18_SVT INV_X18_18_SVT INV_X24_18_SVT INV_X5_18_SVT INVP2_X5_18_SVT INVP2_X14_18_SVT INVP2_X20_18_SVT CLKINV_X6_18_SVT INVP2_X8_18_SVT
+Total number of usable inverters: 41
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1_X1_18_SVT DLY4_X1_18_SVT DLY2_X4_18_SVT DLY4_X4_18_SVT DLY2_X1_18_SVT DLY3_X4_18_SVT DLY1_X4_18_SVT DLY3_X1_18_SVT
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+#% Begin Load MMMC data post ... (date=06/17 22:49:48, mem=2206.6M)
+#% End Load MMMC data post ... (date=06/17 22:49:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=2206.6M, current mem=2206.6M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-200           88  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201           40  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+WARNING   IMPEXT-2710          1  Basic Cap table for layer M%d is ignored...
+WARNING   IMPEXT-2760          1  Layer M%d specified in the cap table is ...
+WARNING   IMPEXT-2773          1  The via resistance between layers %s and...
+WARNING   IMPEXT-2776          4  The via resistance between layers %s and...
+WARNING   IMPVL-346           54  Module '%s' is instantiated in the netli...
+WARNING   IMPVL-159         1226  Pin '%s' of cell '%s' is defined in LEF ...
+WARNING   IMPDB-2504          53  Unable to find netlist cell in the desig...
+ERROR     TCLNL-312            1  %s: Invalid list of pins: '%s'           
+WARNING   TECHLIB-9122        16  Multiple statetables found in cell %s. O...
+*** Message Summary: 1485 warning(s), 1 error(s)
+
+<CMD> create_clock -name wb_clk_i -period 10 -waveform {0 5} [get_ports wb_clk_i]
+**ERROR: (TCLCMD-1048):	constraints are specified but no constraint mode is enabled interactively.Use man TCLCMD-1048 to check the correct usage example.
+
+<CMD> set_analysis_view -setup {SlowView} -hold {FastView}
+Extraction setup Started for TopCell i2c_master_top 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+**WARN: (IMPEXT-6202):	In addition to the technology file, the capacitance table file is specified for all the RC corners. If the technology file  is already specified for all the RC corners, the capacitance table file is not required for preRoute and postRoute extraction. In a new session, the capacitance table files can be removed from the create_rc_corner command to enable the technology file to be used for preRoute and postRoute (effort level medium/high/signoff) extraction engines.
+Type 'man IMPEXT-6202' for more detail.
+Reading Capacitance Table File /tools/kits/tower/TS18SL_6_01/iit/TSL601_6M1L.capTbl ...
+Process name: TSL_0.18SL_6LM.
+Reading Capacitance Table File /tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl ...
+Cap table was created using Encounter 09.12-s159_1.
+Process name: TSL_0.18SL_6LM.
+**WARN: (IMPEXT-2760):	Layer M7 specified in the cap table is ignored because it is greater than the maximum number of layers, 6, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+**WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M2 and M3 is not defined in the capacitance table file. The via resistance of 6 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M3 and M4 is not defined in the capacitance table file. The via resistance of 6 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M4 and M5 is not defined in the capacitance table file. The via resistance of 6 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M5 and M6 is not defined in the capacitance table file. The via resistance of 2.5 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2710):	Basic Cap table for layer M7 is ignored because the layer is not specified in the technology LEF file.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: SlowView
+    RC-Corner Name        : SlowRC
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : '/tools/kits/tower/TS18SL_6_01/iit/TSL601_6M1L.capTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/tools/kits/tower/TS18SL_6_01/HOTCODE/techs/ts18sl_6M1L/assura/t.00_00_01_scr/RCE_TS18SL_QRC_6M1L_USG/qrcTechFile'
+ 
+ Analysis View: FastView
+    RC-Corner Name        : FastRC
+    RC-Corner Index       : 1
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : '/tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/tools/kits/tower/PDK_TS18SL/iit/qrcTechFile'
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Reading timing constraints file 'top.sdc' ...
+Current (total cpu=0:00:39.8, real=0:03:52, peak res=2212.2M, current mem=2193.3M)
+**ERROR: (TCLNL-312):	create_clock: Invalid list of pins: 'I9/I1/PAD' (File top.sdc, Line 1).
+
+------------------------------------------------------------------------------------
+CONSTRAINT READING SUMMARY                                                          
+------------------------------------------------------------------------------------
+Constraint                                        | Success        | Fail           
+------------------------------------------------------------------------------------
+create_clock                                      | 0              | 1              
+------------------------------------------------------------------------------------
+INFO (CTE): Reading of timing constraints file top.sdc completed, with 0 Warnings and 1 Errors.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2193.7M, current mem=2193.7M)
+Current (total cpu=0:00:39.9, real=0:03:52, peak res=2212.2M, current mem=2193.7M)
+Total number of combinational cells: 491
+Total number of sequential cells: 90
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUF_X8_18_SVT BUF_X2_18_SVT CLKBUF_X3_18_SVT CLKBUF_X8_18_SVT BUF_X16_18_SVT CLKBUF_X20_18_SVT BUF_X4_18_SVT CLKBUF_X6_18_SVT CLKBUF_X40_18_SVT BUF_X10_18_SVT BUF_X12_18_SVT BUF_X32_18_SVT CLKBUF_X4_18_SVT BUF_X6_18_SVT BUF_X18_18_SVT CLKBUF_X24_18_SVT CLKBUF_X16_18_SVT CLKBUF_X2_18_SVT CLKBUF_X32_18_SVT BUF_X5_18_SVT CLKBUF_X12_18_SVT BUF_X20_18_SVT BUF_X3_18_SVT BUF_X14_18_SVT BUF_X24_18_SVT
+Total number of usable buffers: 25
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INVP2_X24_18_SVT CLKINV_X2_18_SVT INV_X8_18_SVT INV_X14_18_SVT INVP2_X10_18_SVT INV_X20_18_SVT INVP2_X16_18_SVT INV_X32_18_SVT INVP2_X2_18_SVT INVP2_X3_18_SVT INVP2_X4_18_SVT INV_X16_18_SVT INV_X1_18_SVT INVP2_X1_18_SVT INVP2_X6_18_SVT INV_X12_18_SVT INV_X6_18_SVT INV_X0_18_SVT CLKINV_X3_18_SVT INVP2_X12_18_SVT CLKINV_X1_18_SVT INV_X3_18_SVT CLKINV_X40_18_SVT INV_X2_18_SVT CLKINV_X8_18_SVT CLKINV_X24_18_SVT CLKINV_X20_18_SVT CLKINV_X12_18_SVT INV_X4_18_SVT CLKINV_X4_18_SVT CLKINV_X32_18_SVT INV_X10_18_SVT CLKINV_X16_18_SVT INV_X18_18_SVT INV_X24_18_SVT INV_X5_18_SVT INVP2_X5_18_SVT INVP2_X14_18_SVT INVP2_X20_18_SVT CLKINV_X6_18_SVT INVP2_X8_18_SVT
+Total number of usable inverters: 41
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1_X1_18_SVT DLY4_X1_18_SVT DLY2_X4_18_SVT DLY4_X4_18_SVT DLY2_X1_18_SVT DLY3_X4_18_SVT DLY1_X4_18_SVT DLY3_X1_18_SVT
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+<CMD> create_clock -name wb_clk_i -period 10 -waveform {0 5} [get_ports wb_clk_i]
+**ERROR: (TCLCMD-1048):	constraints are specified but no constraint mode is enabled interactively.Use man TCLCMD-1048 to check the correct usage example.
+
+<CMD> gui_select -rect {0.03400 2.66400 -0.50800 0.35200}
+<CMD> gui_select -rect {-0.82600 1.46200 0.55100 -0.20800}
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (EMS-27):	Message (IMPEMAN-14) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+<CMD> floorPlan -site CoreSite -d 4980.08 4980.08 120.5 120.5 120.5 120.5
+**WARN: (IMPFP-4026):	Adjusting core to 'Left' to 120.400000 due to track/row misalignment. To force the value, specify the -noSnapToGrid option or use fpiSetSnapRule command to specify the die/core to different grid.
+**WARN: (IMPFP-4026):	Adjusting core to 'Bottom' to 120.400000 due to track/row misalignment. To force the value, specify the -noSnapToGrid option or use fpiSetSnapRule command to specify the die/core to different grid.
+**WARN: (IMPFP-4026):	Adjusting core to 'Right' to 120.400000 due to track/row misalignment. To force the value, specify the -noSnapToGrid option or use fpiSetSnapRule command to specify the die/core to different grid.
+**WARN: (IMPFP-4026):	Adjusting core to 'Top' to 120.400000 due to track/row misalignment. To force the value, specify the -noSnapToGrid option or use fpiSetSnapRule command to specify the die/core to different grid.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+Generated pitch 0.56 in M5 is different from 0.66 defined in technology file in preferred direction.
+<CMD> specifyScanChain scan_in1 -start I40/I1/CIN -stop I77/I1/I
+**WARN: (IMPSYC-1703):	I40/I1 is neither an instance nor an FTerm in DB.
+**WARN: (IMPSYC-1703):	I77/I1 is neither an instance nor an FTerm in DB.
+**WARN: (IMPSYC-1705):	Failed to create scan group scan_in1 due to incorrect start-pin I40/I1/CIN.
+<CMD> specifyScanChain scan_in2 -start I41/I1/CIN -stop I78/I1/I
+**WARN: (IMPSYC-1703):	I41/I1 is neither an instance nor an FTerm in DB.
+**WARN: (IMPSYC-1703):	I78/I1 is neither an instance nor an FTerm in DB.
+**WARN: (IMPSYC-1705):	Failed to create scan group scan_in2 due to incorrect start-pin I41/I1/CIN.
+<CMD> specifyScanChain scan_in3 -start I42/I1/CIN -stop I79/I1/I
+**WARN: (IMPSYC-1703):	I42/I1 is neither an instance nor an FTerm in DB.
+**WARN: (IMPSYC-1703):	I79/I1 is neither an instance nor an FTerm in DB.
+**WARN: (IMPSYC-1705):	Failed to create scan group scan_in3 due to incorrect start-pin I42/I1/CIN.
+<CMD> specifyScanChain scan_in4 -start I43/I1/CIN -stop I80/I1/I
+**WARN: (IMPSYC-1703):	I43/I1 is neither an instance nor an FTerm in DB.
+**WARN: (IMPSYC-1703):	I80/I1 is neither an instance nor an FTerm in DB.
+**WARN: (IMPSYC-1705):	Failed to create scan group scan_in4 due to incorrect start-pin I43/I1/CIN.
+<CMD> specifyScanChain scan_in5 -start I44/I1/CIN -stop I81/I1/I
+**WARN: (IMPSYC-1703):	I44/I1 is neither an instance nor an FTerm in DB.
+**WARN: (IMPSYC-1703):	I81/I1 is neither an instance nor an FTerm in DB.
+**WARN: (IMPSYC-1705):	Failed to create scan group scan_in5 due to incorrect start-pin I44/I1/CIN.
+<CMD> setScanReorderMode -compLogic true
+<CMD> scanTrace
+*info: no scan chain specified!
+couldn't read file "../scripts/glnets.src": no such file or directory
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (IMPEMAN-14):	Cannot write to DRCTEMPDIR /tmp/epkgmsdrc.
+**WARN: (EMS-27):	Message (IMPEMAN-14) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+<CMD> update_constraint_mode -name TypCM -sdc_files {top.sdc}
+Reading timing constraints file 'top.sdc' ...
+Current (total cpu=0:01:20, real=0:12:02, peak res=2239.5M, current mem=2212.4M)
+------------------------------------------------------------------------------------
+CONSTRAINT READING SUMMARY                                                          
+------------------------------------------------------------------------------------
+Constraint                                        | Success        | Fail           
+------------------------------------------------------------------------------------
+create_clock                                      | 1              | 0              
+get_ports                                         | 1              | 0              
+------------------------------------------------------------------------------------
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2213.1M, current mem=2213.1M)
+Current (total cpu=0:01:20, real=0:12:02, peak res=2239.5M, current mem=2213.1M)
+<CMD> set_analysis_view -setup {SlowView} -hold {FastView}
+Extraction setup Started for TopCell i2c_master_top 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+**WARN: (IMPEXT-6202):	In addition to the technology file, the capacitance table file is specified for all the RC corners. If the technology file  is already specified for all the RC corners, the capacitance table file is not required for preRoute and postRoute extraction. In a new session, the capacitance table files can be removed from the create_rc_corner command to enable the technology file to be used for preRoute and postRoute (effort level medium/high/signoff) extraction engines.
+Type 'man IMPEXT-6202' for more detail.
+Reading Capacitance Table File /tools/kits/tower/TS18SL_6_01/iit/TSL601_6M1L.capTbl ...
+Process name: TSL_0.18SL_6LM.
+Reading Capacitance Table File /tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl ...
+Cap table was created using Encounter 09.12-s159_1.
+Process name: TSL_0.18SL_6LM.
+**WARN: (IMPEXT-2760):	Layer M7 specified in the cap table is ignored because it is greater than the maximum number of layers, 6, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+**WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M2 and M3 is not defined in the capacitance table file. The via resistance of 6 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M3 and M4 is not defined in the capacitance table file. The via resistance of 6 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M4 and M5 is not defined in the capacitance table file. The via resistance of 6 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M5 and M6 is not defined in the capacitance table file. The via resistance of 2.5 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2710):	Basic Cap table for layer M7 is ignored because the layer is not specified in the technology LEF file.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: SlowView
+    RC-Corner Name        : SlowRC
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : '/tools/kits/tower/TS18SL_6_01/iit/TSL601_6M1L.capTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/tools/kits/tower/TS18SL_6_01/HOTCODE/techs/ts18sl_6M1L/assura/t.00_00_01_scr/RCE_TS18SL_QRC_6M1L_USG/qrcTechFile'
+ 
+ Analysis View: FastView
+    RC-Corner Name        : FastRC
+    RC-Corner Index       : 1
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : '/tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/tools/kits/tower/PDK_TS18SL/iit/qrcTechFile'
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Reading timing constraints file 'top.sdc' ...
+Current (total cpu=0:01:20, real=0:12:02, peak res=2239.5M, current mem=2209.5M)
+------------------------------------------------------------------------------------
+CONSTRAINT READING SUMMARY                                                          
+------------------------------------------------------------------------------------
+Constraint                                        | Success        | Fail           
+------------------------------------------------------------------------------------
+create_clock                                      | 1              | 0              
+get_ports                                         | 1              | 0              
+------------------------------------------------------------------------------------
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2210.1M, current mem=2210.1M)
+Current (total cpu=0:01:20, real=0:12:02, peak res=2239.5M, current mem=2210.1M)
+Total number of combinational cells: 491
+Total number of sequential cells: 90
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUF_X8_18_SVT BUF_X2_18_SVT CLKBUF_X3_18_SVT CLKBUF_X8_18_SVT BUF_X16_18_SVT CLKBUF_X20_18_SVT BUF_X4_18_SVT CLKBUF_X6_18_SVT CLKBUF_X40_18_SVT BUF_X10_18_SVT BUF_X12_18_SVT BUF_X32_18_SVT CLKBUF_X4_18_SVT BUF_X6_18_SVT BUF_X18_18_SVT CLKBUF_X24_18_SVT CLKBUF_X16_18_SVT CLKBUF_X2_18_SVT CLKBUF_X32_18_SVT BUF_X5_18_SVT CLKBUF_X12_18_SVT BUF_X20_18_SVT BUF_X3_18_SVT BUF_X14_18_SVT BUF_X24_18_SVT
+Total number of usable buffers: 25
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INVP2_X24_18_SVT CLKINV_X2_18_SVT INV_X8_18_SVT INV_X14_18_SVT INVP2_X10_18_SVT INV_X20_18_SVT INVP2_X16_18_SVT INV_X32_18_SVT INVP2_X2_18_SVT INVP2_X3_18_SVT INVP2_X4_18_SVT INV_X16_18_SVT INV_X1_18_SVT INVP2_X1_18_SVT INVP2_X6_18_SVT INV_X12_18_SVT INV_X6_18_SVT INV_X0_18_SVT CLKINV_X3_18_SVT INVP2_X12_18_SVT CLKINV_X1_18_SVT INV_X3_18_SVT CLKINV_X40_18_SVT INV_X2_18_SVT CLKINV_X8_18_SVT CLKINV_X24_18_SVT CLKINV_X20_18_SVT CLKINV_X12_18_SVT INV_X4_18_SVT CLKINV_X4_18_SVT CLKINV_X32_18_SVT INV_X10_18_SVT CLKINV_X16_18_SVT INV_X18_18_SVT INV_X24_18_SVT INV_X5_18_SVT INVP2_X5_18_SVT INVP2_X14_18_SVT INVP2_X20_18_SVT CLKINV_X6_18_SVT INVP2_X8_18_SVT
+Total number of usable inverters: 41
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1_X1_18_SVT DLY4_X1_18_SVT DLY2_X4_18_SVT DLY4_X4_18_SVT DLY2_X1_18_SVT DLY3_X4_18_SVT DLY1_X4_18_SVT DLY3_X1_18_SVT
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+<CMD> setPlaceMode -place_global_place_io_pins true
+<CMD> place_design
+*** placeDesign #1 [begin] () : totSession cpu/real = 0:01:26.8/0:13:25.3 (0.1), mem = 2413.3M
+*** Starting placeDesign default flow ***
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+
+*summary: 0 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:00.1) ***
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+Set Default Input Pin Transition as 1 ps.
+**INFO: Analyzing IO path groups for slack adjustment
+AAE_INFO: opIsDesignInPostRouteState() is 0
+AAE DB initialization (MEM=2211.945312 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: i2c_master_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+**WARN: (IMPDC-1151):	No instances found in the design. Check if your design has instances other than filler cells.
+Type 'man IMPDC-1151' for more detail.
+Start delay calculation (fullDC) (1 T). (MEM=2219.25)
+Total number of fetched objects 0
+End delay calculation. (MEM=2209.61 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2202.12 CPU=0:00:00.1 REAL=0:00:00.0)
+**INFO: Disable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Input Pin Transition as 0.1 ps.
+Set Default Net Load as 0.5 pF. 
+**INFO: Pre-place timing setting for timing analysis already disabled
+Warning: No placeable instances.
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+**INFO: Analyzing IO path groups for slack adjustment
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: i2c_master_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+**WARN: (IMPDC-1151):	No instances found in the design. Check if your design has instances other than filler cells.
+Type 'man IMPDC-1151' for more detail.
+Start delay calculation (fullDC) (1 T). (MEM=2227.69)
+Total number of fetched objects 0
+End delay calculation. (MEM=2240.38 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2240.38 CPU=0:00:00.0 REAL=0:00:00.0)
+**INFO: Disable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Warning: No placeable instances. Skip congRepair.
+*** Finishing placeDesign default flow ***
+**placeDesign ... cpu = 0: 0: 1, real = 0: 0: 2, mem = 2489.2M **
+Tdgp not enabled or already been cleared! skip clearing
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDC-1629           2  The default delay limit was set to %d. T...
+WARNING   IMPDC-1151           2  No instances found in the design. Check ...
+*** Message Summary: 4 warning(s), 0 error(s)
+
+*** placeDesign #1 [finish] () : cpu/real = 0:00:01.3/0:00:01.5 (0.9), totSession cpu/real = 0:01:28.2/0:13:26.9 (0.1), mem = 2489.2M
+invalid command name "Then"
+<CMD> set init_lef_file {/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/cds/lef/tsl18_6lm_tech.lef /tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/cds/lef/tsl18fs120.lef}
+<CMD> set init_verilog datain/top_before_pads.v
+<CMD> set init_mmmc_file datain/mmmc_120.view
+<CMD> set init_top_cell i2c_master_top
+<CMD> set init_io_file {}
+<CMD> init_design
+**ERROR: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+
+
+*** Memory Usage v#2 (Current mem = 2490.895M, initial mem = 839.188M) ***
+*** Message Summary: 1595 warning(s), 5 error(s)
+
+--- Ending "Innovus" (totcpu=0:01:45, real=0:17:21, mem=2490.9M) ---
