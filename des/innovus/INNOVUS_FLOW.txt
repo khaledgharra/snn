@@ -1,6 +1,6 @@
 ============================================================
   I2C Master Top — Innovus Place & Route Flow
-  Tower TS18SL 0.18um, Die: 1588.08 x 1588.08 um
+  Tower TS18SL 0.18um, Die: 1799.84 x 1799.84 um
 ============================================================
 
 --- ON THE REMOTE SERVER (vlsi-ria87) ---
@@ -27,28 +27,32 @@
 6. Place standard cells:
    placeDesign
 
-7. Route all nets:
+7. Clock Tree Synthesis (CTS):
+   source cts.tcl
+   (inserts clock buffers, balances clock skew, then runs post-CTS timing opt)
+
+8. Route all nets:
    routeDesign
    (runs ~15-40 DRC iterations until 0 violations — let it finish)
 
-8. (Optional) Fix remaining timing/DRC:
+9. (Optional) Fix remaining timing/DRC:
    optDesign -postRoute
 
-9. Run final verification:
-   verify_drc
-   verify_connectivity
+10. Run final verification:
+    verify_drc
+    verify_connectivity
 
-10. Save the design database:
+11. Save the design database:
     saveDesign ./results/i2c_top_final.enc
 
-11. Export GDSII:
+12. Export GDSII:
     streamOut ./results/i2c_top.gds \
         -mapFile /users/iit/cadence/tsl018b/gds/tsl18_6lm.layermap \
         -libName tsl18fs120 \
         -units 1000 \
         -mode ALL
 
-12. Export final netlist:
+13. Export final netlist:
     saveNetlist ./results/i2c_top_final.v
 
 ============================================================
