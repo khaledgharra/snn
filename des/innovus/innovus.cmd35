@@ -1,0 +1,211 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Jun 25 23:17:15 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v23.33-s082_1 (64bit) 11/13/2024 14:07 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 23.33-s082_1 NR241029-2256/23_13-UB (database version 18.20.652_1) {superthreading v2.20}
+#@(#)CDS: AAE 23.13-s019 (64bit) 11/13/2024 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 23.13-s028_1 () Nov 11 2024 03:58:52 ( )
+#@(#)CDS: SYNTECH 23.13-s009_1 () Oct 30 2024 09:17:13 ( )
+#@(#)CDS: CPE v23.13-s062
+#@(#)CDS: IQuantus/TQuantus 23.1.1-s235 (64bit) Fri Sep 27 22:21:33 PDT 2024 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+getVersion
+getVersion
+win
+floorPlan -site CoreSite -d 1799.84 1799.84 75.6 75.6 75.04 75.04
+set defHierChar /
+set init_verilog top.v
+set init_top_cell top
+set init_io_file top.io
+set init_mmmc_file mmmc.view
+set init_pwr_net {VDD VDDC VDDO}
+set init_gnd_net {VSS VSSC VSSO}
+set init_assign_buffer 1
+setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+set delaycal_input_transition_delay 120ps
+set conf_in_tran_delay 120.0ps
+set conf_ioOri R0
+set init_abstract_view abstract
+set init_layout_view layout
+set init_lef_file {/users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef /users/iit/cadence/tsl018b/lef/tsl18fs120.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+set init_design_uniquify 1
+set load_netlist_ignore_undefined_cell 1
+set init_verilog_tolerate_port_mismatch 0
+set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+set timing_enable_default_delay_arc 1
+init_design
+floorPlan -site CoreSite -d 1799.84 1799.84 75.6 75.6 75.04 75.04
+setPreference ConstraintUserYGrid 0.01
+setPreference ConstraintUserXGrid 0.01
+globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+globalNetConnect VSSC -type pgpin -pin VSSC -inst * -module {}
+globalNetConnect VDDC -type pgpin -pin VDDC -inst * -module {}
+globalNetConnect VDD -type tiehi -module {}
+globalNetConnect VSS -type tielo -module {}
+deselectAll
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+addRing -nets {VDD VSS} -around default_power_domain -follow io -layer {top TOP_M bottom TOP_M left M5 right M5} -width 6 -spacing 1.8 -center 1 -jog_distance 0.56 -threshold 0.56
+addStripe -nets {VDD VSS} -layer M4 -direction horizontal -width 6 -spacing 1.8 -set_to_set_distance 100 -extend_to first_padring -start_from bottom -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1
+addStripe -nets {VDD VSS} -layer M4 -direction vertical -width 6 -spacing 1.8 -set_to_set_distance 100 -extend_to first_padring -start_from left -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1
+createRouteBlk -name blk_io_south -layer {M3 M4 M5 TOP_M} -box {0 0 1799.84 320.0}
+createRouteBlk -name blk_io_north -layer {M3 M4 M5 TOP_M} -box {0 1479.84 1799.84 1799.84}
+createRouteBlk -name blk_io_west -layer {M3 M4 M5 TOP_M} -box {0 320.0 320.0 1479.84}
+createRouteBlk -name blk_io_east -layer {M3 M4 M5 TOP_M} -box {1479.84 320.0 1799.84 1479.84}
+sroute -connect { corePin padPin padRing } -layerChangeRange { M1 TOP_M } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort } -nets { VDD VSS }
+selectRouteBlk -box 0 0 1799.84 320 blk_io_south -layer TOP_M
+editPowerVia -skip_via_on_pin Standardcell -bottom_layer M1 -delete_vias 1 -top_layer TOP_M
+set sprEpvLayers {}
+editPowerVia -skip_via_on_pin Standardcell -bottom_layer M1 -delete_vias 1 -top_layer TOP_M
+set sprEpvLayers {}
+editPowerVia -skip_via_on_pin Standardcell -bottom_layer M1 -delete_vias 1 -top_layer TOP_M
+set sprEpvLayers {}
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -timingDebugReport -prePlace -pathReports -drvReports -slackReports -numPaths 50 -prefix top_prePlace -outDir timingReports
+deselectAll
+selectRouteBlk -box 0 0 1799.84 320 blk_io_south -layer TOP_M
+zoomBox 717.82100 87.27900 1782.62900 1040.50900
+zoomBox 1164.24100 176.16600 1720.07800 673.75900
+zoomBox 1435.44700 230.16700 1682.07600 450.95300
+zoomBox 1555.78400 254.12700 1665.21500 352.09100
+zoomBox 1609.17800 264.75800 1657.73300 308.22500
+zoomBox 1635.70300 270.03800 1654.01600 286.43200
+zoomBox 1645.70700 272.03100 1652.61400 278.21400
+zoomBox 1649.47900 272.78000 1652.08600 275.11400
+zoomBox 1650.90200 273.06200 1651.88600 273.94300
+zoomBox 1651.43900 273.16800 1651.81200 273.50200
+zoomBox 1651.64100 273.20800 1651.78300 273.33500
+zoomBox 1651.70900 273.22100 1651.77400 273.27900
+zoomBox 1651.74200 273.22700 1651.76800 273.25000
+zoomBox 1651.75600 273.22700 1651.76800 273.23800
+zoomBox 1651.76000 273.22700 1651.76800 273.23400
+deselectAll
+selectRouteBlk -box 0 0 1799.84 320 blk_io_south -layer TOP_M
+deselectAll
+selectRouteBlk -box 0 0 1799.84 320 blk_io_south -layer TOP_M
+deselectAll
+selectRouteBlk -box 0 0 1799.84 320 blk_io_south -layer TOP_M
+zoomBox 1651.75000 273.22400 1651.77000 273.24200
+zoomBox 1651.73500 273.21900 1651.77400 273.25400
+zoomBox 1651.70500 273.21100 1651.78100 273.27900
+zoomBox 1651.62500 273.18800 1651.80000 273.34500
+zoomBox 1651.32100 273.10500 1651.87300 273.59900
+zoomBox 1650.38000 272.85300 1652.10300 274.39500
+zoomBox 1648.09300 272.23900 1652.66300 276.33000
+zoomBox 1642.02600 270.61600 1654.14900 281.46900
+zoomBox 1638.28500 269.61600 1655.06500 284.63800
+zoomOut
+zoomOut
+zoomOut
+zoomOut
+viewLast
+fit
+zoomBox 210.34200 315.17400 1568.52100 1531.03400
+zoomBox 394.15800 494.11300 1375.44200 1372.57200
+zoomBox 465.94500 563.99600 1300.03700 1310.68600
+zoomBox 719.31600 810.64600 1033.89500 1092.26100
+zoomBox 814.87400 903.66900 933.51900 1009.88200
+zoomBox 850.91300 938.75200 895.66300 978.81300
+zoomBox 842.53100 930.59100 904.46900 986.03900
+zoomBox 823.55000 912.11400 924.40600 1002.40200
+zoomBox 742.31500 833.03400 1009.73400 1072.43100
+zoomBox 719.29900 810.62800 1033.91000 1092.27200
+zoomBox 622.88800 716.77500 1135.17900 1175.38500
+zoomBox 526.92400 623.35700 1235.97800 1258.11200
+zoomBox 394.10100 494.05900 1375.49200 1372.61300
+zoomBox -44.17800 67.40400 1835.86000 1750.43900
+zoomBox -205.98600 -90.11200 2005.82300 1889.92900
+zoomBox 394.10000 494.05800 1375.49200 1372.61300
+zoomBox 660.36200 753.25600 1095.81200 1143.07700
+zoomBox 742.31100 833.03100 1009.73300 1072.43100
+zoomBox 660.36000 753.25400 1095.81300 1143.07700
+zoomBox 526.91700 623.35000 1235.98100 1258.11400
+zoomBox 394.09300 494.05000 1375.49700 1372.61600
+zoomBox 210.25500 315.08700 1568.60000 1531.09600
+zoomBox 93.34600 201.28000 1691.40000 1631.87900
+zoomBox -44.19300 67.38800 1835.87100 1750.44700
+zoomBox -206.00500 -90.13100 2005.83600 1889.93900
+getIoFlowFlag
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set defHierChar /
+set init_verilog top.v
+set init_top_cell top
+set init_io_file top.io
+set init_mmmc_file mmmc.view
+set init_pwr_net {VDD VDDC VDDO}
+set init_gnd_net {VSS VSSC VSSO}
+set init_assign_buffer 1
+setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+set delaycal_input_transition_delay 120ps
+set conf_in_tran_delay 120.0ps
+set conf_ioOri R0
+set init_abstract_view abstract
+set init_layout_view layout
+set init_lef_file {/users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef /users/iit/cadence/tsl018b/lef/tsl18fs120.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+set init_design_uniquify 1
+set load_netlist_ignore_undefined_cell 1
+set init_verilog_tolerate_port_mismatch 0
+set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+set timing_enable_default_delay_arc 1
+init_design
+zoomBox 488.49300 285.27400 1846.84100 1501.28500
+zoomBox 968.56900 577.52300 1802.76600 1324.30700
+zoomBox 833.73600 495.44200 1815.14500 1374.01300
+zoomBox 675.10800 398.87700 1829.70800 1432.49000
+zoomBox 488.48800 285.27000 1846.84100 1501.28600
+zoomBox 268.93500 151.61600 1866.99800 1582.22300
+zoomBox 488.48800 285.27000 1846.84100 1501.28600
+zoomBox 968.56600 577.52100 1802.76600 1324.30800
+zoomBox 1263.39400 757.00000 1775.69800 1215.62100
+zoomBox 1333.77800 799.84600 1769.23600 1189.67400
+zoomBox 1393.60400 836.26600 1763.74300 1167.61900
+zoomBox 1432.28400 925.98600 1625.50000 1098.95600
+zoomBox 1462.03100 970.55100 1562.89300 1060.84400
+zoomBox 1479.16000 998.93200 1523.91400 1038.99600
+zoomBox 1484.43300 1007.66600 1511.91800 1032.27100
+zoomBox 1485.69100 1009.75100 1509.05400 1030.66600
+zoomBox 1489.10000 1015.39800 1501.29700 1026.31700
+zoomBox 1489.65800 1016.32300 1500.02600 1025.60500
+zoomBox 1485.68700 1009.74600 1509.05600 1030.66600
+zoomBox 1476.74100 994.92600 1529.40900 1042.07500
+zoomBox 1462.01500 970.52900 1562.91300 1060.85400
+zoomBox 1411.14000 886.24100 1678.67100 1125.73800
+fit

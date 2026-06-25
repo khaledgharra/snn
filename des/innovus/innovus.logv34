@@ -1,0 +1,1475 @@
+[06/25 23:08:24      0s] 
+[06/25 23:08:24      0s] Cadence Innovus(TM) Implementation System.
+[06/25 23:08:24      0s] Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+[06/25 23:08:24      0s] 
+[06/25 23:08:24      0s] Version:	v23.33-s082_1, built Wed Nov 13 14:07:39 PST 2024
+[06/25 23:08:24      0s] Options:	
+[06/25 23:08:24      0s] Date:		Thu Jun 25 23:08:24 2026
+[06/25 23:08:24      0s] Host:		vlsi-ria87 (x86_64 w/Linux 3.10.0-1160.62.1.el7.x86_64) (8cores*8cpus*Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz 12288KB)
+[06/25 23:08:24      0s] OS:		RHEL
+[06/25 23:08:24      0s] 
+[06/25 23:08:24      0s] License:
+[06/25 23:08:24      0s] 		[23:08:24.069537] Configured Lic search path (23.02-s006): /etc/local/cadence/license_8x.3868dd0560aa:5280@132.68.59.69:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.64:/etc/local/cadence/license_8x.0894ef683fc3:5280@132.68.59.79:5280@132.68.59.61:27019@132.68.59.69:27019@132.68.59.79
+
+[06/25 23:08:24      0s] 		invs	Innovus Implementation System	23.1	checkout succeeded
+[06/25 23:08:24      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[06/25 23:08:45     19s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v23.33-s082_1 (64bit) 11/13/2024 14:07 (Linux 3.10.0-693.el7.x86_64)
+[06/25 23:08:49     22s] @(#)CDS: NanoRoute 23.33-s082_1 NR241029-2256/23_13-UB (database version 18.20.652_1) {superthreading v2.20}
+[06/25 23:08:49     22s] @(#)CDS: AAE 23.13-s019 (64bit) 11/13/2024 (Linux 3.10.0-693.el7.x86_64)
+[06/25 23:08:49     22s] @(#)CDS: CTE 23.13-s028_1 () Nov 11 2024 03:58:52 ( )
+[06/25 23:08:49     22s] @(#)CDS: SYNTECH 23.13-s009_1 () Oct 30 2024 09:17:13 ( )
+[06/25 23:08:49     22s] @(#)CDS: CPE v23.13-s062
+[06/25 23:08:49     22s] @(#)CDS: IQuantus/TQuantus 23.1.1-s235 (64bit) Fri Sep 27 22:21:33 PDT 2024 (Linux 3.10.0-693.el7.x86_64)
+[06/25 23:08:49     22s] @(#)CDS: OA 22.61-p018 Fri Oct 18 10:45:49 2024
+[06/25 23:08:49     22s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[06/25 23:08:49     22s] @(#)CDS: RCDB 11.15.0
+[06/25 23:08:49     22s] @(#)CDS: STYLUS 23.14-s002_1 (09/11/2024 13:54 PDT)
+[06/25 23:08:49     22s] @(#)CDS: IntegrityPlanner-23.13-16927 (23.13) (2024-10-14 10:21:59+0800)
+[06/25 23:08:49     22s] @(#)CDS: SYNTHESIS_ENGINE 23.13-s072
+[06/25 23:08:49     22s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_9543_23ab7616-bfa5-4cfb-ae1f-fa1df0be84e5_vlsi-ria87_epkgms_c93cCp.
+
+[06/25 23:08:49     22s] Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
+[06/25 23:08:51     24s] Info: Process UID = 9543 / 23ab7616-bfa5-4cfb-ae1f-fa1df0be84e5 / 5rh4qmTTjO
+[06/25 23:08:51     24s] source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_attr_defs.tcl
+[06/25 23:08:51     24s] Loading attribute definitions from mini dummy db...
+[06/25 23:08:52     25s] Info: Defined 23820 Synthesis attributes
+[06/25 23:08:52     25s] Info: Skipped defining 357 Synthesis attributes already defined in Innovus
+[06/25 23:08:52     25s] source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_msg_defs.tcl
+[06/25 23:08:54     27s] 
+[06/25 23:08:54     27s] **INFO:  MMMC transition support version v31-84 
+[06/25 23:08:54     27s] 
+[06/25 23:08:54     27s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[06/25 23:08:54     27s] <CMD> suppressMessage ENCEXT-2799
+[06/25 23:08:54     27s] <CMD> getVersion
+[06/25 23:08:54     27s] <CMD> getVersion
+[06/25 23:08:55     27s] <CMD> getVersion
+[06/25 23:08:55     27s] [INFO] Loading PVS 24.10 fill procedures
+[06/25 23:08:55     27s] <CMD> win
+[06/25 23:08:56     27s] <CMD> zoomBox 0.00500 0.00900 0.10000 0.09400
+[06/25 23:09:49     31s] <CMD> set defHierChar /
+[06/25 23:09:49     31s] <CMD> set init_verilog top.v
+[06/25 23:09:49     31s] <CMD> set init_top_cell top
+[06/25 23:09:49     31s] <CMD> set init_io_file top.io
+[06/25 23:09:49     31s] <CMD> set init_mmmc_file mmmc.view
+[06/25 23:09:49     31s] <CMD> set init_pwr_net {VDD VDDC VDDO}
+[06/25 23:09:49     31s] <CMD> set init_gnd_net {VSS VSSC VSSO}
+[06/25 23:09:49     31s] <CMD> set init_assign_buffer 1
+[06/25 23:09:49     31s] <CMD> setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+[06/25 23:09:49     31s] <CMD> set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+[06/25 23:09:49     31s] Set Default Input Pin Transition as 120 ps.
+[06/25 23:09:49     31s] <CMD> set delaycal_input_transition_delay 120ps
+[06/25 23:09:49     31s] <CMD> set conf_in_tran_delay 120.0ps
+[06/25 23:09:49     31s] <CMD> set conf_ioOri R0
+[06/25 23:09:49     31s] <CMD> set init_abstract_view abstract
+[06/25 23:09:49     31s] <CMD> set init_layout_view layout
+[06/25 23:09:49     31s] <CMD> set init_lef_file {/users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef /users/iit/cadence/tsl018b/lef/tsl18fs120.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+[06/25 23:09:49     31s] <CMD> set init_design_uniquify 1
+[06/25 23:09:49     31s] <CMD> set load_netlist_ignore_undefined_cell 1
+[06/25 23:09:49     31s] <CMD> set init_verilog_tolerate_port_mismatch 0
+[06/25 23:09:49     31s] <CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+[06/25 23:09:49     31s] **WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+[06/25 23:09:49     31s] <CMD> get_message -id GLOBAL-100 -suppress
+[06/25 23:09:49     31s] <CMD> suppressMessage -silent GLOBAL-100
+[06/25 23:09:49     31s] <CMD> unsuppressMessage -silent GLOBAL-100
+[06/25 23:09:49     31s] **WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+[06/25 23:09:49     31s] <CMD> get_message -id GLOBAL-100 -suppress
+[06/25 23:09:49     31s] <CMD> suppressMessage -silent GLOBAL-100
+[06/25 23:09:49     31s] <CMD> unsuppressMessage -silent GLOBAL-100
+[06/25 23:09:49     31s] <CMD> set timing_enable_default_delay_arc 1
+[06/25 23:10:03     32s] <CMD> init_design
+[06/25 23:10:03     32s] #% Begin Load MMMC data ... (date=06/25 23:10:03, mem=1635.2M)
+[06/25 23:10:03     32s] #% End Load MMMC data ... (date=06/25 23:10:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=1636.3M, current mem=1636.3M)
+[06/25 23:10:03     32s] 
+[06/25 23:10:03     32s] Loading LEF file /users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef ...
+[06/25 23:10:03     32s] WARNING (LEFPARS-2027): MINFEATURE statement is obsolete in version 5.4 and later.
+[06/25 23:10:03     32s] The LEF parser will ignore this statement.
+[06/25 23:10:03     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file /users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef at line 17.
+[06/25 23:10:03     32s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement in LEF files with version 5.5 and earlier.
+[06/25 23:10:03     32s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[06/25 23:10:03     32s] Refer to the LEF/DEF 5.5 or earlier Language Reference manual on how to define this statement. See file /users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef at line 669.
+[06/25 23:10:03     32s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statement in LEF files with version 5.5 and earlier.
+[06/25 23:10:03     32s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[06/25 23:10:03     32s] Refer to the LEF/DEF 5.5 or earlier Language Reference manual on how to define this statement. See file /users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef at line 669.
+[06/25 23:10:03     32s] 
+[06/25 23:10:03     32s] Loading LEF file /users/iit/cadence/tsl018b/lef/tsl18fs120.lef ...
+[06/25 23:10:03     32s] Set DBUPerIGU to M2 pitch 560.
+[06/25 23:10:03     32s] 
+[06/25 23:10:03     32s] Loading LEF file /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef ...
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'PAD' in macro 'PVPP_33_NA' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'PAD' in macro 'PVPP_33_NA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'PADR' in macro 'PVPP_33_NA' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'PADR' in macro 'PVPP_33_NA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PVDC_NA_NA_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PVDC_NA_NA_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PVDC_NA_NA_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PVDC_NA_NA_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PVDC_NA_NA_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PVDC_NA_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PVDC_NA_NA_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PVDC_NA_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_33_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_33_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_18_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_18_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_18_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_18_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_18_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_18_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_18_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_18_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_33_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_33_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-201' for more detail.
+[06/25 23:10:03     33s] **WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+[06/25 23:10:03     33s] To increase the message display limit, refer to the product command reference manual.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'DRIVE_STR' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'EN' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'I' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'PAD' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'PULL_ON' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (IMPLF-200):	Pin 'PULL_UP_DOWN' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[06/25 23:10:03     33s] Type 'man IMPLF-200' for more detail.
+[06/25 23:10:03     33s] **WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+[06/25 23:10:03     33s] To increase the message display limit, refer to the product command reference manual.
+[06/25 23:10:03     33s] 
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[06/25 23:10:03     33s] Loading view definition file from mmmc.view
+[06/25 23:10:03     33s] Reading Max timing library '/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_max.lib' ...
+[06/25 23:10:06     35s] Read 537 cells in library 'tsl18fs120_max' 
+[06/25 23:10:06     35s] Reading Max timing library '/tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/liberty/1.8V-Only/PIO320SL_ss_1p62v_1p62v_125c.lib' ...
+[06/25 23:10:06     35s] Read 13 cells in library 'PIO320SL_ss_1p62v_1p62v_125c' 
+[06/25 23:10:06     35s] Reading Min timing library '/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_min.lib' ...
+[06/25 23:10:08     38s] Read 537 cells in library 'tsl18fs120_min' 
+[06/25 23:10:08     38s] Reading Min timing library '/tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/liberty/1.8V-Only/PIO320SL_ff_1p98v_1p98v_m40c.lib' ...
+[06/25 23:10:08     38s] Read 13 cells in library 'PIO320SL_ff_1p98v_1p98v_m40c' 
+[06/25 23:10:08     38s] Ending "PreSetAnalysisView" (total cpu=0:00:05.1, real=0:00:05.0, peak res=1818.3M, current mem=1659.7M)
+[06/25 23:10:08     38s] *** End library_loading (cpu=0.08min, real=0.08min, mem=28.0M, fe_cpu=0.64min, fe_real=1.73min, fe_mem=1898.3M) ***
+[06/25 23:10:08     38s] #% Begin Load netlist data ... (date=06/25 23:10:08, mem=1659.1M)
+[06/25 23:10:08     38s] *** Begin netlist parsing (mem=1898.3M) ***
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'adiode' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'adiode' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'cload1' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'cload1' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'bh01d1' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'bh01d1' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr03da' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr03da' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr03d7' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr03d7' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr03d4' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr03d4' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr03d2' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr03d2' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr03d1' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr03d1' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr02da' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr02da' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr02d7' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr02d7' is defined in LEF but not in the timing library.
+[06/25 23:10:08     38s] Type 'man IMPVL-159' for more detail.
+[06/25 23:10:08     38s] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[06/25 23:10:08     38s] To increase the message display limit, refer to the product command reference manual.
+[06/25 23:10:08     38s] Pin 'VDD' of cell 'PVDI_NA_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+[06/25 23:10:08     38s] Pin 'VDDO' of cell 'PVDF_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+[06/25 23:10:08     38s] Pin 'VDDO' of cell 'PVDA_18_NA' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+[06/25 23:10:08     38s] Pin 'VSS' of cell 'PV0I_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+[06/25 23:10:08     38s] Pin 'VSSO' of cell 'PV0F_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+[06/25 23:10:08     38s] Pin 'VSSO' of cell 'PV0A_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+[06/25 23:10:08     38s] Created 550 new cells from 4 timing libraries.
+[06/25 23:10:08     38s] Reading netlist ...
+[06/25 23:10:08     38s] Backslashed names will retain backslash and a trailing blank character.
+[06/25 23:10:08     38s] Reading verilog netlist 'top.v'
+[06/25 23:10:08     38s] 
+[06/25 23:10:08     38s] *** Memory Usage v#2 (Current mem = 1898.262M, initial mem = 839.188M) ***
+[06/25 23:10:08     38s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1898.3M) ***
+[06/25 23:10:08     38s] #% End Load netlist data ... (date=06/25 23:10:08, total cpu=0:00:00.1, real=0:00:00.0, peak res=1671.0M, current mem=1671.0M)
+[06/25 23:10:08     38s] Set top cell to top.
+[06/25 23:10:09     38s] **WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht4' in timing library 'tsl18fs120_max'.
+[06/25 23:10:09     38s] Type 'man IMPTS-124' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht2' in timing library 'tsl18fs120_max'.
+[06/25 23:10:09     38s] Type 'man IMPTS-124' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht1' in timing library 'tsl18fs120_max'.
+[06/25 23:10:09     38s] Type 'man IMPTS-124' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht4' in timing library 'tsl18fs120_min'.
+[06/25 23:10:09     38s] Type 'man IMPTS-124' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht2' in timing library 'tsl18fs120_min'.
+[06/25 23:10:09     38s] Type 'man IMPTS-124' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht1' in timing library 'tsl18fs120_min'.
+[06/25 23:10:09     38s] Type 'man IMPTS-124' for more detail.
+[06/25 23:10:09     38s] Hooked 1100 DB cells to tlib cells.
+[06/25 23:10:09     38s] Ending "BindLib:" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1699.7M, current mem=1699.7M)
+[06/25 23:10:09     38s] Starting recursive module instantiation check.
+[06/25 23:10:09     38s] No recursion found.
+[06/25 23:10:09     38s] Building hierarchical netlist for Cell top ...
+[06/25 23:10:09     38s] ***** UseNewTieNetMode *****.
+[06/25 23:10:09     38s] *** Netlist is NOT unique.
+[06/25 23:10:09     38s] Setting Std. cell height to 5600 DBU (smallest netlist inst).
+[06/25 23:10:09     38s] ** info: there are 1156 modules.
+[06/25 23:10:09     38s] ** info: there are 561 stdCell insts.
+[06/25 23:10:09     38s] ** info: there are 561 stdCell insts with at least one signal pin.
+[06/25 23:10:09     38s] ** info: there are 45 Pad insts.
+[06/25 23:10:09     38s] 
+[06/25 23:10:09     38s] *** Memory Usage v#2 (Current mem = 1955.688M, initial mem = 839.188M) ***
+[06/25 23:10:09     38s] *info: set bottom ioPad orient R0
+[06/25 23:10:09     38s] Reading IO assignment file "top.io" ...
+[06/25 23:10:09     38s] Adjusting Core to Left to: 0.2000. Core to Bottom to: 0.2000.
+[06/25 23:10:09     38s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:09     38s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:09     38s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:09     38s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:09     38s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPFP-3961):	The techSite 'IOSite_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:09     38s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPFP-3961):	The techSite 'IOSite_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:09     38s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPFP-3961):	The techSite 'IOSite_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:09     38s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:09     38s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:09     38s] Horizontal Layer M1 offset = 0 (derived)
+[06/25 23:10:09     38s] Vertical Layer M2 offset = 280 (derived)
+[06/25 23:10:09     38s] Start create_tracks
+[06/25 23:10:09     38s] Set Default Input Pin Transition as 120 ps.
+[06/25 23:10:09     38s] Pre-connect netlist-defined P/G connections...
+[06/25 23:10:09     38s] Extraction setup Started for TopCell top 
+[06/25 23:10:09     38s] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[06/25 23:10:09     38s] **WARN: (IMPEXT-6202):	In addition to the technology file, the capacitance table file is specified for all the RC corners. If the technology file  is already specified for all the RC corners, the capacitance table file is not required for preRoute and postRoute extraction. In a new session, the capacitance table files can be removed from the create_rc_corner command to enable the technology file to be used for preRoute and postRoute (effort level medium/high/signoff) extraction engines.
+[06/25 23:10:09     38s] Type 'man IMPEXT-6202' for more detail.
+[06/25 23:10:09     38s] Reading Capacitance Table File /tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl ...
+[06/25 23:10:09     38s] Cap table was created using Encounter 09.12-s159_1.
+[06/25 23:10:09     38s] Process name: TSL_0.18SL_6LM.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2760):	Layer M7 specified in the cap table is ignored because it is greater than the maximum number of layers, 6, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[06/25 23:10:09     38s] Type 'man IMPEXT-2773' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2776):	The via resistance between layers M2 and M3 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+[06/25 23:10:09     38s] Type 'man IMPEXT-2776' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2776):	The via resistance between layers M3 and M4 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+[06/25 23:10:09     38s] Type 'man IMPEXT-2776' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2776):	The via resistance between layers M4 and M5 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+[06/25 23:10:09     38s] Type 'man IMPEXT-2776' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2776):	The via resistance between layers M5 and M6 is not defined in the capacitance table file. The via resistance of 13 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+[06/25 23:10:09     38s] Type 'man IMPEXT-2776' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2710):	Basic Cap table for layer M7 is ignored because the layer is not specified in the technology LEF file.
+[06/25 23:10:09     38s] Reading Capacitance Table File /tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl ...
+[06/25 23:10:09     38s] Cap table was created using Encounter 09.12-s159_1.
+[06/25 23:10:09     38s] Process name: TSL_0.18SL_6LM.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2760):	Layer M7 specified in the cap table is ignored because it is greater than the maximum number of layers, 6, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[06/25 23:10:09     38s] Type 'man IMPEXT-2773' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2776):	The via resistance between layers M2 and M3 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+[06/25 23:10:09     38s] Type 'man IMPEXT-2776' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2776):	The via resistance between layers M3 and M4 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+[06/25 23:10:09     38s] Type 'man IMPEXT-2776' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2776):	The via resistance between layers M4 and M5 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+[06/25 23:10:09     38s] Type 'man IMPEXT-2776' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2776):	The via resistance between layers M5 and M6 is not defined in the capacitance table file. The via resistance of 13 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+[06/25 23:10:09     38s] Type 'man IMPEXT-2776' for more detail.
+[06/25 23:10:09     38s] **WARN: (IMPEXT-2710):	Basic Cap table for layer M7 is ignored because the layer is not specified in the technology LEF file.
+[06/25 23:10:09     38s] Importing multi-corner RC tables ... 
+[06/25 23:10:09     38s] Summary of Active RC-Corners : 
+[06/25 23:10:09     38s]  
+[06/25 23:10:09     38s]  Analysis View: SlowView
+[06/25 23:10:09     38s]     RC-Corner Name        : SlowRC
+[06/25 23:10:09     38s]     RC-Corner Index       : 0
+[06/25 23:10:09     38s]     RC-Corner Temperature : 125 Celsius
+[06/25 23:10:09     38s]     RC-Corner Cap Table   : '/tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl'
+[06/25 23:10:09     38s]     RC-Corner PreRoute Res Factor         : 1
+[06/25 23:10:09     38s]     RC-Corner PreRoute Cap Factor         : 1
+[06/25 23:10:09     38s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[06/25 23:10:09     38s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[06/25 23:10:09     38s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[06/25 23:10:09     38s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[06/25 23:10:09     38s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[06/25 23:10:09     38s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[06/25 23:10:09     38s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[06/25 23:10:09     38s]     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+[06/25 23:10:09     38s]     RC-Corner Technology file: '/tools/kits/tower/PDK_TS18SL/iit/qrcTechFile'
+[06/25 23:10:09     38s]  
+[06/25 23:10:09     38s]  Analysis View: FastView
+[06/25 23:10:09     38s]     RC-Corner Name        : FastRC
+[06/25 23:10:09     38s]     RC-Corner Index       : 1
+[06/25 23:10:09     38s]     RC-Corner Temperature : -40 Celsius
+[06/25 23:10:09     38s]     RC-Corner Cap Table   : '/tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl'
+[06/25 23:10:09     38s]     RC-Corner PreRoute Res Factor         : 1
+[06/25 23:10:09     38s]     RC-Corner PreRoute Cap Factor         : 1
+[06/25 23:10:09     38s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[06/25 23:10:09     38s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[06/25 23:10:09     38s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[06/25 23:10:09     38s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[06/25 23:10:09     38s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[06/25 23:10:09     38s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[06/25 23:10:09     38s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[06/25 23:10:09     38s]     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+[06/25 23:10:09     38s]     RC-Corner Technology file: '/tools/kits/tower/PDK_TS18SL/iit/qrcTechFile'
+[06/25 23:10:09     38s] Technology file '/tools/kits/tower/PDK_TS18SL/iit/qrcTechFile' associated with first view 'SlowView' will be used as the primary corner for the multi-corner extraction.
+[06/25 23:10:09     38s] eee: RC Grid memory allocated = 73656 (33 X 31 X 6 X 12b)
+[06/25 23:10:09     38s] Updating RC Grid density data for preRoute extraction ...
+[06/25 23:10:09     38s] eee: pegSigSF=1.070000
+[06/25 23:10:09     38s] Initializing multi-corner capacitance tables ... 
+[06/25 23:10:09     38s] Initializing multi-corner resistance tables ...
+[06/25 23:10:09     38s] eee: Grid unit RC data computation started
+[06/25 23:10:09     38s] eee: Grid unit RC data computation completed
+[06/25 23:10:09     38s] eee: l=1 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[06/25 23:10:09     38s] eee: l=2 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[06/25 23:10:09     38s] eee: l=3 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[06/25 23:10:09     38s] eee: l=4 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[06/25 23:10:09     38s] eee: l=5 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[06/25 23:10:09     38s] eee: l=6 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[06/25 23:10:09     38s] {RT SlowRC 0 2 6  {5 0} 1}
+[06/25 23:10:09     38s] eee: LAM-FP: thresh=1 ; dimX=3151.928571 ; dimY=2964.428571 ; multX=1.000000 ; multY=1.000000 ; minP=560 ; fpMult=1.000000 ;
+[06/25 23:10:09     38s] eee: LAM: n=40 LLS=2-3 HLS=3-5 rDens=0.000000 uaWl=0.000000 uaWlH=0.000000 aWlH=0.000000 lMod=0 pMax=0.850000 pMod=82 pModAss=50 wcR=0.520000 crit=0.000000 siPrev=0 newSi=0.000000 wHLS=1.300000 viaL=0.000000 shortMod=0.000000 fModUnas=0.000000 fModAs=0.000000 pDens=0.500000 
+[06/25 23:10:09     38s] eee: NetCapCache creation started. (Current Mem: 2133.383M) 
+[06/25 23:10:09     38s] eee: NetCapCache completed. (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  Curr Mem: 2133.383M) 
+[06/25 23:10:09     38s] eee: dbu = 1000, Design = [ll(0.000000, 0.000000) ur(1765.080000, 1660.080000)], Layers = [f(6) b(0)], Grid size = 56.000000 um, Grid Dim = (32 X 30)
+[06/25 23:10:09     38s] eee: Metal Layers Info:
+[06/25 23:10:09     38s] eee: +----------+-----+---------+---------+---------+--------+--------+---+---+----+
+[06/25 23:10:09     38s] eee: |   Layer  |  Id |    W    |    S    |    P    |   uC   |   uR   | D | T | wS |
+[06/25 23:10:09     38s] eee: +----------+-----+---------+---------+---------+--------+--------+---+---+----+
+[06/25 23:10:09     38s] eee: |       M1 |   1 |   0.230 |   0.230 |   0.560 |  0.175 |  26.09 | H | 0 |  4 |
+[06/25 23:10:09     38s] eee: |       M2 |   2 |   0.280 |   0.280 |   0.560 |  0.265 |   0.29 | V | 0 |  4 |
+[06/25 23:10:09     38s] eee: |       M3 |   3 |   0.280 |   0.280 |   0.560 |  0.256 |   0.29 | H | 0 |  4 |
+[06/25 23:10:09     38s] eee: |       M4 |   4 |   0.280 |   0.280 |   0.560 |  0.257 |   0.29 | V | 0 |  4 |
+[06/25 23:10:09     38s] eee: |       M5 |   5 |   0.280 |   0.280 |   0.840 |  0.169 |   0.29 | H | 0 |  4 |
+[06/25 23:10:09     38s] eee: |    TOP_M |   6 |   0.440 |   0.460 |   1.120 |  0.161 |   0.18 | V | 0 |  4 |
+[06/25 23:10:09     38s] eee: +----------+-----+---------+---------+---------+--------+--------+---+---+----+
+[06/25 23:10:09     38s] eee: uC/uR for corner SlowRC, min-width/min-spacing, 30 perc over/under densities.
+[06/25 23:10:09     38s] eee: +-----------------------NDR Info-----------------------+
+[06/25 23:10:09     38s] eee: NDR Count = 0, Fake NDR = 0
+[06/25 23:10:09     38s] *Info: initialize multi-corner CTS.
+[06/25 23:10:09     38s] Ending "SetAnalysisView" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1976.5M, current mem=1727.9M)
+[06/25 23:10:10     39s] Reading timing constraints file 'top.sdc' ...
+[06/25 23:10:10     39s] Current (total cpu=0:00:39.3, real=0:01:46, peak res=2094.4M, current mem=2094.3M)
+[06/25 23:10:10     39s] INFO (CTE): Constraints read successfully.
+[06/25 23:10:10     39s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2113.3M, current mem=2113.3M)
+[06/25 23:10:10     39s] Current (total cpu=0:00:39.3, real=0:01:46, peak res=2113.3M, current mem=2113.3M)
+[06/25 23:10:10     39s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[06/25 23:10:10     39s] 
+[06/25 23:10:10     39s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) Begin ...
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlq4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlq2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlq1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnln4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnln2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnln1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlb4 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlb2 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlb1 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnht4 complicate code: 32.2
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnht2 complicate code: 32.2
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnht1 complicate code: 32.2
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhq4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhq2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhq1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhn4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhn2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhn1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhb4 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhb2 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhb1 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slclq4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slclq2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slclq1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slchq4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slchq2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slchq1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slbhb4 complicate code: 32
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slbhb2 complicate code: 32
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slbhb1 complicate code: 32
+[06/25 23:10:10     39s] SBFF Setting to complicate: skbrb4 complicate code: 30.05
+[06/25 23:10:10     39s] SBFF Setting to complicate: skbrb2 complicate code: 30.05
+[06/25 23:10:10     39s] SBFF Setting to complicate: skbrb1 complicate code: 30.05
+[06/25 23:10:10     39s] SB Latch Setting to complicate: lanht4 complicate code: 9
+[06/25 23:10:10     39s] SB Latch Setting to complicate: lanht2 complicate code: 9
+[06/25 23:10:10     39s] SB Latch Setting to complicate: lanht1 complicate code: 9
+[06/25 23:10:10     39s] SBFF Setting to complicate: jkbrb4 complicate code: 30.05
+[06/25 23:10:10     39s] SBFF Setting to complicate: jkbrb2 complicate code: 30.05
+[06/25 23:10:10     39s] SBFF Setting to complicate: jkbrb1 complicate code: 30.05
+[06/25 23:10:10     39s] Summary for sequential cells identification: 
+[06/25 23:10:10     39s]   Identified SBFF number: 114
+[06/25 23:10:10     39s]   Identified MBFF number: 0
+[06/25 23:10:10     39s]   Identified SB Latch number: 27
+[06/25 23:10:10     39s]   Identified MB Latch number: 0
+[06/25 23:10:10     39s]   Not identified SBFF number: 6
+[06/25 23:10:10     39s]   Not identified MBFF number: 0
+[06/25 23:10:10     39s]   Not identified SB Latch number: 3
+[06/25 23:10:10     39s]   Not identified MB Latch number: 30
+[06/25 23:10:10     39s]   Number of sequential cells which are not FFs: 23
+[06/25 23:10:10     39s] Total number of combinational cells: 324
+[06/25 23:10:10     39s] Total number of sequential cells: 203
+[06/25 23:10:10     39s] Total number of tristate cells: 10
+[06/25 23:10:10     39s] Total number of level shifter cells: 0
+[06/25 23:10:10     39s] Total number of power gating cells: 0
+[06/25 23:10:10     39s] Total number of isolation cells: 0
+[06/25 23:10:10     39s] Total number of power switch cells: 0
+[06/25 23:10:10     39s] Total number of pulse generator cells: 0
+[06/25 23:10:10     39s] Total number of always on buffers: 0
+[06/25 23:10:10     39s] Total number of retention cells: 0
+[06/25 23:10:10     39s] Total number of physical cells: 0
+[06/25 23:10:10     39s] List of usable buffers: bufbd1 bufbd2 bufbd4 bufbd3 bufbd7 bufbda bufbdf buffd1 buffd3 buffd2 buffd4 buffd7 buffda
+[06/25 23:10:10     39s] Total number of usable buffers: 13
+[06/25 23:10:10     39s] List of unusable buffers:
+[06/25 23:10:10     39s] Total number of unusable buffers: 0
+[06/25 23:10:10     39s] List of usable inverters: inv0d0 inv0d1 inv0d2 inv0d4 inv0d7 inv0da invbd2 invbd4 invbd7 invbda invbdf invbdk
+[06/25 23:10:10     39s] Total number of usable inverters: 12
+[06/25 23:10:10     39s] List of unusable inverters:
+[06/25 23:10:10     39s] Total number of unusable inverters: 0
+[06/25 23:10:10     39s] List of identified usable delay cells: bufbdk dl01d1 dl01d2 dl01d4 dl02d1 dl03d1 dl02d2 dl02d4 dl04d1 dl03d2 dl03d4 dl04d2 dl04d4
+[06/25 23:10:10     39s] Total number of identified usable delay cells: 13
+[06/25 23:10:10     39s] List of identified unusable delay cells:
+[06/25 23:10:10     39s] Total number of identified unusable delay cells: 0
+[06/25 23:10:10     39s] 
+[06/25 23:10:10     39s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) End ...
+[06/25 23:10:10     39s] 
+[06/25 23:10:10     39s] TimeStamp Deleting Cell Server Begin ...
+[06/25 23:10:10     39s] 
+[06/25 23:10:10     39s] TimeStamp Deleting Cell Server End ...
+[06/25 23:10:10     39s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2141.6M, current mem=2141.5M)
+[06/25 23:10:10     39s] 
+[06/25 23:10:10     39s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) Begin ...
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlq4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlq2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlq1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnln4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnln2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnln1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlb4 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlb2 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnlb1 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnht4 complicate code: 32.2
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnht2 complicate code: 32.2
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnht1 complicate code: 32.2
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhq4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhq2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhq1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhn4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhn2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhn1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhb4 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhb2 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slnhb1 complicate code: 34
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slclq4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slclq2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slclq1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slchq4 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slchq2 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slchq1 complicate code: 36
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slbhb4 complicate code: 32
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slbhb2 complicate code: 32
+[06/25 23:10:10     39s] MB Latch Setting to complicate: slbhb1 complicate code: 32
+[06/25 23:10:10     39s] SBFF Setting to complicate: skbrb4 complicate code: 30.05
+[06/25 23:10:10     39s] SBFF Setting to complicate: skbrb2 complicate code: 30.05
+[06/25 23:10:10     39s] SBFF Setting to complicate: skbrb1 complicate code: 30.05
+[06/25 23:10:10     39s] SB Latch Setting to complicate: lanht4 complicate code: 9
+[06/25 23:10:10     39s] SB Latch Setting to complicate: lanht2 complicate code: 9
+[06/25 23:10:10     39s] SB Latch Setting to complicate: lanht1 complicate code: 9
+[06/25 23:10:10     39s] SBFF Setting to complicate: jkbrb4 complicate code: 30.05
+[06/25 23:10:10     39s] SBFF Setting to complicate: jkbrb2 complicate code: 30.05
+[06/25 23:10:10     39s] SBFF Setting to complicate: jkbrb1 complicate code: 30.05
+[06/25 23:10:10     39s] Summary for sequential cells identification: 
+[06/25 23:10:10     39s]   Identified SBFF number: 114
+[06/25 23:10:10     39s]   Identified MBFF number: 0
+[06/25 23:10:10     39s]   Identified SB Latch number: 27
+[06/25 23:10:10     39s]   Identified MB Latch number: 0
+[06/25 23:10:10     39s]   Not identified SBFF number: 6
+[06/25 23:10:10     39s]   Not identified MBFF number: 0
+[06/25 23:10:10     39s]   Not identified SB Latch number: 3
+[06/25 23:10:10     39s]   Not identified MB Latch number: 30
+[06/25 23:10:10     39s]   Number of sequential cells which are not FFs: 23
+[06/25 23:10:10     39s]  Visiting view : SlowView
+[06/25 23:10:10     39s]    : PowerDomain = none : Weighted F : unweighted  = 41.30 (1.000) with rcCorner = 0
+[06/25 23:10:10     39s]    : PowerDomain = none : Weighted F : unweighted  = 37.70 (1.000) with rcCorner = -1
+[06/25 23:10:10     39s]  Visiting view : FastView
+[06/25 23:10:10     39s]    : PowerDomain = none : Weighted F : unweighted  = 21.70 (1.000) with rcCorner = 1
+[06/25 23:10:10     39s]    : PowerDomain = none : Weighted F : unweighted  = 19.90 (1.000) with rcCorner = -1
+[06/25 23:10:10     39s] TLC MultiMap info (StdDelay):
+[06/25 23:10:10     39s]   : FastDC + Min + 1 + no RcCorner := 19.9ps
+[06/25 23:10:10     39s]   : FastDC + Min + 1 + FastRC := 21.7ps
+[06/25 23:10:10     39s]   : SlowDC + Max + 1 + no RcCorner := 37.7ps
+[06/25 23:10:10     39s]   : SlowDC + Max + 1 + SlowRC := 41.3ps
+[06/25 23:10:10     39s]  Setting StdDelay to: 41.3ps
+[06/25 23:10:10     39s] 
+[06/25 23:10:10     39s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) End ...
+[06/25 23:10:10     39s] 
+[06/25 23:10:10     39s] TimeStamp Deleting Cell Server Begin ...
+[06/25 23:10:10     39s] 
+[06/25 23:10:10     39s] TimeStamp Deleting Cell Server End ...
+[06/25 23:10:10     39s] **WARN: (IMPSYC-2):	Timing information is not defined for cell PCORNER_NA_NA; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[06/25 23:10:10     39s] Type 'man IMPSYC-2' for more detail.
+[06/25 23:10:10     39s] 
+[06/25 23:10:10     39s] *** Summary of all messages that are not suppressed in this session:
+[06/25 23:10:10     39s] Severity  ID               Count  Summary                                  
+[06/25 23:10:10     39s] WARNING   IMPLF-200           88  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[06/25 23:10:10     39s] WARNING   IMPLF-201           40  Pin '%s' in macro '%s' has no ANTENNADIF...
+[06/25 23:10:10     39s] WARNING   IMPFP-3961           8  The techSite '%s' has no related standar...
+[06/25 23:10:10     39s] WARNING   IMPTS-124            6  Timing library description of pin '%s' i...
+[06/25 23:10:10     39s] WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+[06/25 23:10:10     39s] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[06/25 23:10:10     39s] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[06/25 23:10:10     39s] WARNING   IMPEXT-2773          2  The via resistance between layers %s and...
+[06/25 23:10:10     39s] WARNING   IMPEXT-2776          8  The via resistance between layers %s and...
+[06/25 23:10:10     39s] WARNING   IMPSYC-2             1  Timing information is not defined for ce...
+[06/25 23:10:10     39s] WARNING   IMPVL-159         1121  Pin '%s' of cell '%s' is defined in LEF ...
+[06/25 23:10:10     39s] *** Message Summary: 1279 warning(s), 0 error(s)
+[06/25 23:10:10     39s] 
+[06/25 23:10:20     40s] <CMD> getIoFlowFlag
+[06/25 23:10:26     40s] <CMD> floorPlan -site CoreSite -d 1799.84 1799.84 75.6 75.6 75.04 75.04
+[06/25 23:10:26     40s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:26     40s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:26     40s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:26     40s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:26     40s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPFP-3961):	The techSite 'IOSite_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:26     40s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPFP-3961):	The techSite 'IOSite_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:26     40s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPFP-3961):	The techSite 'IOSite_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:26     40s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:10:26     40s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:10:26     40s] Horizontal Layer M1 offset = 0 (derived)
+[06/25 23:10:26     40s] Vertical Layer M2 offset = 280 (derived)
+[06/25 23:10:26     40s] Start create_tracks
+[06/25 23:10:26     40s] **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+[06/25 23:10:26     40s] <CMD> setPreference ConstraintUserYGrid 0.01
+[06/25 23:10:26     40s] **WARN: (IMPSYT-3004):	Option ConstraintUserYGrid is obsolete and will be removed in future release.  Use 'setFPlanMode -user_define_grid' instead. To avoid this warning and to ensure compatibility with  future releases, please remove the obsolete preference from your script.
+[06/25 23:10:26     40s] <CMD> setPreference ConstraintUserXGrid 0.01
+[06/25 23:10:26     40s] **WARN: (IMPSYT-3004):	Option ConstraintUserXGrid is obsolete and will be removed in future release.  Use 'setFPlanMode -user_define_grid' instead. To avoid this warning and to ensure compatibility with  future releases, please remove the obsolete preference from your script.
+[06/25 23:10:26     40s] <CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+[06/25 23:10:26     40s] <CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+[06/25 23:10:26     40s] <CMD> globalNetConnect VSSC -type pgpin -pin VSSC -inst * -module {}
+[06/25 23:10:26     40s] **ERROR: (IMPDB-1221):	A Global Net Connection (GNC) is specified to connect the ground pins with the 'VSSC' name pattern to a global net.  Unable to establish connection because the 'ground' pin with the name pattern doesn't match in any cell.  Check the pin name in the Lef file or liberty and ensure it is correct.
+<CMD> globalNetConnect VDDC -type pgpin -pin VDDC -inst * -module {}
+[06/25 23:10:26     40s] **ERROR: (IMPDB-1221):	A Global Net Connection (GNC) is specified to connect the power pins with the 'VDDC' name pattern to a global net.  Unable to establish connection because the 'power' pin with the name pattern doesn't match in any cell.  Check the pin name in the Lef file or liberty and ensure it is correct.
+<CMD> globalNetConnect VDD -type tiehi -module {}
+[06/25 23:10:26     40s] <CMD> globalNetConnect VSS -type tielo -module {}
+[06/25 23:10:26     40s] <CMD> deselectAll
+[06/25 23:10:26     40s] <CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+[06/25 23:10:26     40s] The ring targets are set to core/block ring wires.
+[06/25 23:10:26     40s] addRing command will consider rows while creating rings.
+[06/25 23:10:26     40s] addRing command will disallow rings to go over rows.
+[06/25 23:10:26     40s] addRing command will ignore shorts while creating rings.
+[06/25 23:10:26     40s] <CMD> addRing -nets {VDD VSS} -around default_power_domain -follow io -layer {top TOP_M bottom TOP_M left M5 right M5} -width 6 -spacing 1.8 -center 1 -jog_distance 0.56 -threshold 0.56
+[06/25 23:10:26     40s] #% Begin addRing (date=06/25 23:10:26, mem=2173.3M)
+[06/25 23:10:26     40s] 
+[06/25 23:10:26     40s] 
+[06/25 23:10:26     40s] viaInitial starts at Thu Jun 25 23:10:26 2026
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM1 GENERATE.
+[06/25 23:10:26     40s] Type 'man IMPPP-557' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM2 GENERATE.
+[06/25 23:10:26     40s] Type 'man IMPPP-557' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM3 GENERATE.
+[06/25 23:10:26     40s] Type 'man IMPPP-557' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM4 GENERATE.
+[06/25 23:10:26     40s] Type 'man IMPPP-557' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM5 GENERATE.
+[06/25 23:10:26     40s] Type 'man IMPPP-557' for more detail.
+[06/25 23:10:26     40s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM6 GENERATE.
+[06/25 23:10:26     40s] Type 'man IMPPP-557' for more detail.
+[06/25 23:10:26     40s] viaInitial ends at Thu Jun 25 23:10:26 2026
+The power planner will calculate offsets from I/O rows.
+[06/25 23:10:26     40s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2462.8M)
+[06/25 23:10:26     40s] Ring generation is complete.
+[06/25 23:10:26     40s] vias are now being generated.
+[06/25 23:10:26     40s] addRing created 8 wires.
+[06/25 23:10:26     40s] ViaGen created 8 vias, deleted 0 via to avoid violation.
+[06/25 23:10:26     40s] +--------+----------------+----------------+
+[06/25 23:10:26     40s] |  Layer |     Created    |     Deleted    |
+[06/25 23:10:26     40s] +--------+----------------+----------------+
+[06/25 23:10:26     40s] |   M5   |        4       |       NA       |
+[06/25 23:10:26     40s] |  TOP_V |        8       |        0       |
+[06/25 23:10:26     40s] |  TOP_M |        4       |       NA       |
+[06/25 23:10:26     40s] +--------+----------------+----------------+
+[06/25 23:10:26     40s] #% End addRing (date=06/25 23:10:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=2177.6M, current mem=2177.4M)
+[06/25 23:10:26     40s] <CMD> addStripe -nets {VDD VSS} -layer M4 -direction horizontal -width 6 -spacing 1.8 -set_to_set_distance 100 -stop_at first_last_and_ring -start_from bottom -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1
+[06/25 23:10:26     40s] #% Begin addStripe (date=06/25 23:10:26, mem=2177.4M)
+[06/25 23:10:26     40s] 
+[06/25 23:10:26     40s] Usage: addStripe [-help] [-all_blocks <0|1>] [-area <x1 y1 x2 y2 ...>]
+[06/25 23:10:26     40s]                  [-area_blockage < {x1 y1 x2 y2}... {x1 y1 x2 y2 x3 y3 x4 y4 ...} ...>]
+[06/25 23:10:26     40s]                  [-between_bumps <0|1>] [-block_ring_bottom_layer_limit <layer>]
+[06/25 23:10:26     40s]                  [-block_ring_top_layer_limit <layer>] [-create_pins <0|1>]
+[06/25 23:10:26     40s]                  [-direction {horizontal vertical}]
+[06/25 23:10:26     40s]                  [-extend_to {design_boundary first_padring last_padring all_domains}]
+[06/25 23:10:26     40s]                  [-insts <instance_name>] -layer <layer> [-master <master_cell>]
+[06/25 23:10:26     40s]                  [-max_same_layer_jog_length <real_value>]
+[06/25 23:10:26     40s]                  [-merge_stripes_value <auto|value>] [-narrow_channel <0|1>]
+[06/25 23:10:26     40s]                  -nets <list_of_nets> [-number_of_sets <integer_value>]
+[06/25 23:10:26     40s]                  [-over_bumps <0|1>] [-over_physical_pins <0|1>]
+[06/25 23:10:26     40s]                  [-over_pins <0|1>] [-over_power_domain <0|1>]
+[06/25 23:10:26     40s]                  [-padcore_ring_bottom_layer_limit <layer>]
+[06/25 23:10:26     40s]                  [-padcore_ring_top_layer_limit <layer>] [-pin_layer <layer>]
+[06/25 23:10:26     40s]                  [-pin_offset <real_value>] [-pin_width <min_value max_value>]
+[06/25 23:10:26     40s]                  [-power_domains <domain_name>] [-report_cut_stripe <log name>]
+[06/25 23:10:26     40s]                  [-same_layer_target_only <0|1>]
+[06/25 23:10:26     40s]                  [-set_to_set_distance <real_value>] [-spacing <name_or_value>]
+[06/25 23:10:26     40s]                  [-stapling <stripe_length>|auto {<ref_offeset ref_pitch:pitch_num> | <ref_layer1>} [ref_layer2]>]
+[06/25 23:10:26     40s]                  [-start <real_value>] [-start_from {left right bottom top}]
+[06/25 23:10:26     40s]                  [-start_offset <real_value>] [-stop <real_value>]
+[06/25 23:10:26     40s]                  [-stop_offset <real_value>] [-switch_layer_over_obs <0|1>]
+[06/25 23:10:26     40s]                  [-uda <subclass_string>] [-use_interleaving_wire_group <0|1>]
+[06/25 23:10:26     40s]                  [-use_wire_group {-1 0 1}]
+[06/25 23:10:26     40s]                  [-use_wire_group_bits <integer_value>] [-via_columns <integer>]
+[06/25 23:10:26     40s]                  [-via_rows <integer>] -width <name_or_value> [-snap_wire_center_to_grid {None Grid Mask1_Grid Mask2_Grid Half_Grid Either} [-allow_snapping_override_custom_spacing <0|1>]]
+[06/25 23:10:26     40s] 
+[06/25 23:10:26     40s] **ERROR: (IMPTCM-48):	"-stop_at" is not a legal option for command "addStripe". Either the current option or an option prior to it is not specified correctly.
+#% End addStripe (date=06/25 23:10:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=2177.4M, current mem=2177.4M)
+[06/25 23:10:26     40s] 
+[06/25 23:10:35     41s] <CMD> zoomBox 508.53300 441.06400 1413.62000 1251.31000
+[06/25 23:10:35     41s] <CMD> zoomBox 754.78600 640.86600 1227.24900 1063.82100
+[06/25 23:10:36     41s] <CMD> zoomBox 904.39000 762.24900 1114.02600 949.91800
+[06/25 23:10:36     41s] <CMD> zoomBox 961.42700 808.52500 1070.86000 906.49100
+[06/25 23:10:37     41s] <CMD> zoomBox 991.20200 832.68300 1048.32600 883.82100
+[06/25 23:10:39     42s] <CMD> zoomBox 960.95400 808.18700 1070.38600 906.15200
+[06/25 23:10:39     42s] <CMD> zoomBox 856.44400 723.55100 1146.60300 983.30500
+[06/25 23:10:40     42s] <CMD> zoomBox 751.01600 638.17000 1223.49300 1061.13800
+[06/25 23:10:40     42s] <CMD> zoomBox 408.46700 360.75900 1473.31400 1314.02400
+[06/25 23:10:41     42s] <CMD> zoomBox 171.96200 169.22600 1645.79900 1488.62500
+[06/25 23:11:13     44s] <CMD> zoomOut
+[06/25 23:11:14     44s] <CMD> fit
+[06/25 23:13:01     52s] <CMD> floorPlan -site CoreSite -d 1799.84 1799.84 75.6 75.6 75.04 75.04
+[06/25 23:13:01     52s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:13:01     52s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:13:01     52s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:13:01     52s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:13:01     52s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:13:01     52s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:13:01     52s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:13:01     52s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:13:01     52s] **WARN: (IMPFP-3961):	The techSite 'IOSite_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:13:01     52s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:13:01     52s] **WARN: (IMPFP-3961):	The techSite 'IOSite_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:13:01     52s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:13:01     52s] **WARN: (IMPFP-3961):	The techSite 'IOSite_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:13:01     52s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:13:01     52s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:13:01     52s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:13:01     52s] Horizontal Layer M1 offset = 0 (derived)
+[06/25 23:13:01     52s] Vertical Layer M2 offset = 280 (derived)
+[06/25 23:13:01     52s] Start create_tracks
+[06/25 23:13:01     52s] <CMD> setPreference ConstraintUserYGrid 0.01
+[06/25 23:13:01     52s] **WARN: (IMPSYT-3004):	Option ConstraintUserYGrid is obsolete and will be removed in future release.  Use 'setFPlanMode -user_define_grid' instead. To avoid this warning and to ensure compatibility with  future releases, please remove the obsolete preference from your script.
+[06/25 23:13:01     52s] <CMD> setPreference ConstraintUserXGrid 0.01
+[06/25 23:13:01     52s] **WARN: (IMPSYT-3004):	Option ConstraintUserXGrid is obsolete and will be removed in future release.  Use 'setFPlanMode -user_define_grid' instead. To avoid this warning and to ensure compatibility with  future releases, please remove the obsolete preference from your script.
+[06/25 23:13:01     52s] <CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+[06/25 23:13:01     52s] <CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+[06/25 23:13:01     52s] <CMD> globalNetConnect VSSC -type pgpin -pin VSSC -inst * -module {}
+[06/25 23:13:01     52s] **ERROR: (IMPDB-1221):	A Global Net Connection (GNC) is specified to connect the ground pins with the 'VSSC' name pattern to a global net.  Unable to establish connection because the 'ground' pin with the name pattern doesn't match in any cell.  Check the pin name in the Lef file or liberty and ensure it is correct.
+<CMD> globalNetConnect VDDC -type pgpin -pin VDDC -inst * -module {}
+[06/25 23:13:01     52s] **ERROR: (IMPDB-1221):	A Global Net Connection (GNC) is specified to connect the power pins with the 'VDDC' name pattern to a global net.  Unable to establish connection because the 'power' pin with the name pattern doesn't match in any cell.  Check the pin name in the Lef file or liberty and ensure it is correct.
+<CMD> globalNetConnect VDD -type tiehi -module {}
+[06/25 23:13:01     52s] <CMD> globalNetConnect VSS -type tielo -module {}
+[06/25 23:13:01     52s] <CMD> deselectAll
+[06/25 23:13:01     52s] <CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+[06/25 23:13:01     52s] The ring targets are set to core/block ring wires.
+[06/25 23:13:01     52s] addRing command will consider rows while creating rings.
+[06/25 23:13:01     52s] addRing command will disallow rings to go over rows.
+[06/25 23:13:01     52s] addRing command will ignore shorts while creating rings.
+[06/25 23:13:01     52s] <CMD> addRing -nets {VDD VSS} -around default_power_domain -follow io -layer {top TOP_M bottom TOP_M left M5 right M5} -width 6 -spacing 1.8 -center 1 -jog_distance 0.56 -threshold 0.56
+[06/25 23:13:01     52s] #% Begin addRing (date=06/25 23:13:01, mem=2177.8M)
+[06/25 23:13:01     52s] 
+[06/25 23:13:01     52s] The power planner will calculate offsets from I/O rows.
+[06/25 23:13:01     52s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2462.9M)
+[06/25 23:13:01     52s] Ring generation is complete.
+[06/25 23:13:01     52s] #% End addRing (date=06/25 23:13:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=2177.9M, current mem=2177.9M)
+[06/25 23:13:01     52s] <CMD> addStripe -nets {VDD VSS} -layer M4 -direction horizontal -width 6 -spacing 1.8 -set_to_set_distance 100 -start_from bottom -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1
+[06/25 23:13:01     52s] #% Begin addStripe (date=06/25 23:13:01, mem=2177.9M)
+[06/25 23:13:01     52s] **WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+[06/25 23:13:01     52s] **WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+[06/25 23:13:01     52s] 
+[06/25 23:13:01     52s] Initialize fgc environment(mem: 2462.9M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2462.9M)
+[06/25 23:13:01     52s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2462.9M)
+[06/25 23:13:01     52s] Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2462.9M)
+[06/25 23:13:01     52s] Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2462.9M)
+[06/25 23:13:01     52s] Starting stripe generation ...
+[06/25 23:13:01     52s] Non-Default Mode Option Settings :
+[06/25 23:13:01     52s]   NONE
+[06/25 23:13:01     52s] **WARN: (IMPPP-354):	The power planner did not generate the horizontal stripe at 311.040009 313.640015 1482.800049 313.640015 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:13:01     52s] Type 'man IMPPP-354' for more detail.
+[06/25 23:13:01     52s] **WARN: (IMPPP-354):	The power planner did not generate the horizontal stripe at 318.839996 321.440002 1475.000000 321.440002 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:13:01     52s] Type 'man IMPPP-354' for more detail.
+[06/25 23:13:01     52s] Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Stripe generation is complete.
+[06/25 23:13:01     52s] vias are now being generated.
+[06/25 23:13:01     52s] addStripe created 22 wires.
+[06/25 23:13:01     52s] ViaGen created 44 vias, deleted 0 via to avoid violation.
+[06/25 23:13:01     52s] +--------+----------------+----------------+
+[06/25 23:13:01     52s] |  Layer |     Created    |     Deleted    |
+[06/25 23:13:01     52s] +--------+----------------+----------------+
+[06/25 23:13:01     52s] |   M4   |       22       |       NA       |
+[06/25 23:13:01     52s] |   V5   |       44       |        0       |
+[06/25 23:13:01     52s] +--------+----------------+----------------+
+[06/25 23:13:01     52s] #% End addStripe (date=06/25 23:13:01, total cpu=0:00:00.1, real=0:00:00.0, peak res=2180.2M, current mem=2180.2M)
+[06/25 23:13:01     52s] <CMD> addStripe -nets {VDD VSS} -layer M4 -direction vertical -width 6 -spacing 1.8 -set_to_set_distance 100 -start_from left -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1
+[06/25 23:13:01     52s] #% Begin addStripe (date=06/25 23:13:01, mem=2180.2M)
+[06/25 23:13:01     52s] **WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+[06/25 23:13:01     52s] **WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+[06/25 23:13:01     52s] 
+[06/25 23:13:01     52s] Initialize fgc environment(mem: 2463.9M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Starting stripe generation ...
+[06/25 23:13:01     52s] Non-Default Mode Option Settings :
+[06/25 23:13:01     52s]   NONE
+[06/25 23:13:01     52s] **WARN: (IMPPP-354):	The power planner did not generate the vertical stripe at 313.640015 311.040009 313.640015 1482.800049 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:13:01     52s] Type 'man IMPPP-354' for more detail.
+[06/25 23:13:01     52s] **WARN: (IMPPP-354):	The power planner did not generate the vertical stripe at 321.440002 318.839996 321.440002 1475.000000 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:13:01     52s] Type 'man IMPPP-354' for more detail.
+[06/25 23:13:01     52s] Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2463.9M)
+[06/25 23:13:01     52s] Stripe generation is complete.
+[06/25 23:13:01     52s] vias are now being generated.
+[06/25 23:13:01     52s] addStripe created 264 wires.
+[06/25 23:13:01     52s] ViaGen created 88 vias, deleted 0 via to avoid violation.
+[06/25 23:13:01     52s] +--------+----------------+----------------+
+[06/25 23:13:01     52s] |  Layer |     Created    |     Deleted    |
+[06/25 23:13:01     52s] +--------+----------------+----------------+
+[06/25 23:13:01     52s] |   M4   |       264      |       NA       |
+[06/25 23:13:01     52s] |   V5   |       44       |        0       |
+[06/25 23:13:01     52s] |  TOP_V |       44       |        0       |
+[06/25 23:13:01     52s] +--------+----------------+----------------+
+[06/25 23:13:01     52s] #% End addStripe (date=06/25 23:13:01, total cpu=0:00:00.1, real=0:00:00.0, peak res=2180.3M, current mem=2180.3M)
+[06/25 23:13:01     52s] <CMD> createRouteBlk -name blk_io_south -layer {M3 M4 M5 TOP_M} -box {0 0 1799.84 320.0}
+[06/25 23:13:01     52s] <CMD> createRouteBlk -name blk_io_north -layer {M3 M4 M5 TOP_M} -box {0 1479.84 1799.84 1799.84}
+[06/25 23:13:01     52s] <CMD> createRouteBlk -name blk_io_west -layer {M3 M4 M5 TOP_M} -box {0 320.0 320.0 1479.84}
+[06/25 23:13:01     52s] <CMD> createRouteBlk -name blk_io_east -layer {M3 M4 M5 TOP_M} -box {1479.84 320.0 1799.84 1479.84}
+[06/25 23:13:01     52s] <CMD> sroute -connect { corePin padPin padRing } -layerChangeRange { M1 TOP_M } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort } -nets { VDD VSS }
+[06/25 23:13:01     52s] #% Begin sroute (date=06/25 23:13:01, mem=2180.4M)
+[06/25 23:13:01     52s] **WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+[06/25 23:13:01     52s] *** Begin SPECIAL ROUTE on Thu Jun 25 23:13:01 2026 ***
+[06/25 23:13:01     52s] SPECIAL ROUTE ran on directory: /users/epkgms/Desktop/khaled/des/innovus
+[06/25 23:13:01     52s] SPECIAL ROUTE ran on machine: vlsi-ria87 (Linux 3.10.0-1160.62.1.el7.x86_64 x86_64 4.00Ghz)
+[06/25 23:13:01     52s] 
+[06/25 23:13:01     52s] Begin option processing ...
+[06/25 23:13:01     52s] srouteConnectPowerBump set to false
+[06/25 23:13:01     52s] routeSelectNet set to "VDD VSS"
+[06/25 23:13:01     52s] routeSpecial set to true
+[06/25 23:13:01     52s] srouteBottomLayerLimit set to 1
+[06/25 23:13:01     52s] srouteConnectBlockPin set to false
+[06/25 23:13:01     52s] srouteConnectConverterPin set to false
+[06/25 23:13:01     52s] srouteConnectStripe set to false
+[06/25 23:13:01     52s] srouteFollowCorePinEnd set to 3
+[06/25 23:13:01     52s] srouteJogControl set to "preferWithChanges differentLayer"
+[06/25 23:13:01     52s] sroutePadPinAllPorts set to true
+[06/25 23:13:01     52s] sroutePreserveExistingRoutes set to true
+[06/25 23:13:01     52s] srouteRoutePowerBarPortOnBothDir set to true
+[06/25 23:13:01     52s] srouteStopBlockPin set to "nearestTarget"
+[06/25 23:13:01     52s] srouteTopLayerLimit set to 6
+[06/25 23:13:01     52s] End option processing: cpu: 0:00:00, real: 0:00:00, peak: 157.00 megs.
+[06/25 23:13:01     52s] 
+[06/25 23:13:01     52s] Reading DB technology information...
+[06/25 23:13:01     52s] Finished reading DB technology information.
+[06/25 23:13:01     52s] Reading floorplan and netlist information...
+[06/25 23:13:01     52s] Finished reading floorplan and netlist information.
+[06/25 23:13:01     52s] Read in 12 layers, 6 routing layers, 1 overlap layer
+[06/25 23:13:01     52s] Read in 544 macros, 53 used
+[06/25 23:13:01     52s] Read in 94 components
+[06/25 23:13:01     52s]   49 core components: 49 unplaced, 0 placed, 0 fixed
+[06/25 23:13:01     52s]   45 pad components: 0 unplaced, 0 placed, 45 fixed
+[06/25 23:13:01     52s] Read in 4 blockages
+[06/25 23:13:01     52s] Read in 88 special nets, 2 routed
+[06/25 23:13:01     52s] Read in 270 terminals
+[06/25 23:13:01     52s] 2 nets selected.
+[06/25 23:13:01     52s] 
+[06/25 23:13:01     52s] Begin power routing ...
+[06/25 23:13:01     52s] ### import design signature (1): route=1 fixed_route=1 flt_obj=0 vio=1905142130 swire=1 shield_wire=1 net_attr=1 dirty_area=0 del_dirty_area=0 cell=0 placement=0 pin_access=1 inst_pattern=1 inst_orient=1 via=1619643128 routing_via=1 timing=1 sns=1 ppa_info=1
+[06/25 23:13:01     52s] #WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+[06/25 23:13:01     52s] #WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+[06/25 23:13:01     53s] **WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDD net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+[06/25 23:13:01     53s] Type 'man IMPSR-1256' for more detail.
+[06/25 23:13:01     53s] Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[06/25 23:13:01     53s] **WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSS net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+[06/25 23:13:01     53s] Type 'man IMPSR-1256' for more detail.
+[06/25 23:13:01     53s] Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[06/25 23:13:01     53s] ### info: trigger incremental cell import ( 595 new cells ).
+[06/25 23:13:02     53s] ### import design signature (2): route=1 fixed_route=1 flt_obj=0 vio=1905142130 swire=1 shield_wire=1 net_attr=1 dirty_area=0 del_dirty_area=0 cell=0 placement=0 pin_access=1 inst_pattern=1 inst_orient=1 via=1619643128 routing_via=1 timing=1 sns=1 ppa_info=1
+[06/25 23:13:02     53s] CPU time for VDD FollowPin 0 seconds
+[06/25 23:13:02     53s] CPU time for VSS FollowPin 0 seconds
+[06/25 23:13:03     54s]   Number of IO ports routed: 0
+[06/25 23:13:03     54s]   Number of Core ports routed: 0  open: 422
+[06/25 23:13:03     54s]   Number of Pad ports routed: 0
+[06/25 23:13:03     54s]   Number of Followpin connections: 211
+[06/25 23:13:03     54s] End power routing: cpu: 0:00:02, real: 0:00:02, peak: 237.00 megs.
+[06/25 23:13:03     54s] 
+[06/25 23:13:03     54s] 
+[06/25 23:13:03     54s] 
+[06/25 23:13:03     54s]  Begin updating DB with routing results ...
+[06/25 23:13:03     54s]  Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
+[06/25 23:13:03     54s] Pin and blockage extraction finished
+[06/25 23:13:03     54s] 
+[06/25 23:13:03     54s] sroute created 211 wires.
+[06/25 23:13:03     54s] ViaGen created 7281 vias, deleted 0 via to avoid violation.
+[06/25 23:13:03     54s] +--------+----------------+----------------+
+[06/25 23:13:03     54s] |  Layer |     Created    |     Deleted    |
+[06/25 23:13:03     54s] +--------+----------------+----------------+
+[06/25 23:13:03     54s] |   M1   |       211      |       NA       |
+[06/25 23:13:03     54s] |   V2   |      2365      |        0       |
+[06/25 23:13:03     54s] |   V3   |      2365      |        0       |
+[06/25 23:13:03     54s] |   V4   |      2365      |        0       |
+[06/25 23:13:03     54s] |   V5   |       186      |        0       |
+[06/25 23:13:03     54s] +--------+----------------+----------------+
+[06/25 23:13:03     54s] #% End sroute (date=06/25 23:13:03, total cpu=0:00:01.8, real=0:00:02.0, peak res=2260.6M, current mem=2226.1M)
+[06/25 23:13:30     56s] <CMD> selectInst I8/I1
+[06/25 23:16:12     68s] <CMD> floorPlan -site CoreSite -d 1799.84 1799.84 75.6 75.6 75.04 75.04
+[06/25 23:16:12     68s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:12     68s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:12     68s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:12     68s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:12     68s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:12     68s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:12     68s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:12     68s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:12     68s] **WARN: (IMPFP-3961):	The techSite 'IOSite_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:12     68s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:12     68s] **WARN: (IMPFP-3961):	The techSite 'IOSite_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:12     68s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:12     68s] **WARN: (IMPFP-3961):	The techSite 'IOSite_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:12     68s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:12     68s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:12     68s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:12     68s] Horizontal Layer M1 offset = 0 (derived)
+[06/25 23:16:12     68s] Vertical Layer M2 offset = 280 (derived)
+[06/25 23:16:12     68s] Start create_tracks
+[06/25 23:16:12     68s] <CMD> setPreference ConstraintUserYGrid 0.01
+[06/25 23:16:12     68s] **WARN: (IMPSYT-3004):	Option ConstraintUserYGrid is obsolete and will be removed in future release.  Use 'setFPlanMode -user_define_grid' instead. To avoid this warning and to ensure compatibility with  future releases, please remove the obsolete preference from your script.
+[06/25 23:16:12     68s] <CMD> setPreference ConstraintUserXGrid 0.01
+[06/25 23:16:12     68s] **WARN: (IMPSYT-3004):	Option ConstraintUserXGrid is obsolete and will be removed in future release.  Use 'setFPlanMode -user_define_grid' instead. To avoid this warning and to ensure compatibility with  future releases, please remove the obsolete preference from your script.
+[06/25 23:16:12     68s] <CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+[06/25 23:16:12     68s] <CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+[06/25 23:16:12     68s] <CMD> globalNetConnect VSSC -type pgpin -pin VSSC -inst * -module {}
+[06/25 23:16:12     68s] **ERROR: (IMPDB-1221):	A Global Net Connection (GNC) is specified to connect the ground pins with the 'VSSC' name pattern to a global net.  Unable to establish connection because the 'ground' pin with the name pattern doesn't match in any cell.  Check the pin name in the Lef file or liberty and ensure it is correct.
+<CMD> globalNetConnect VDDC -type pgpin -pin VDDC -inst * -module {}
+[06/25 23:16:12     68s] **ERROR: (IMPDB-1221):	A Global Net Connection (GNC) is specified to connect the power pins with the 'VDDC' name pattern to a global net.  Unable to establish connection because the 'power' pin with the name pattern doesn't match in any cell.  Check the pin name in the Lef file or liberty and ensure it is correct.
+<CMD> globalNetConnect VDD -type tiehi -module {}
+[06/25 23:16:12     68s] <CMD> globalNetConnect VSS -type tielo -module {}
+[06/25 23:16:12     68s] <CMD> deselectAll
+[06/25 23:16:12     68s] <CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+[06/25 23:16:12     68s] The ring targets are set to core/block ring wires.
+[06/25 23:16:12     68s] addRing command will consider rows while creating rings.
+[06/25 23:16:12     68s] addRing command will disallow rings to go over rows.
+[06/25 23:16:12     68s] addRing command will ignore shorts while creating rings.
+[06/25 23:16:12     68s] <CMD> addRing -nets {VDD VSS} -around default_power_domain -follow io -layer {top TOP_M bottom TOP_M left M5 right M5} -width 6 -spacing 1.8 -center 1 -jog_distance 0.56 -threshold 0.56
+[06/25 23:16:12     68s] #% Begin addRing (date=06/25 23:16:12, mem=2224.8M)
+[06/25 23:16:12     68s] 
+[06/25 23:16:12     68s] The power planner will calculate offsets from I/O rows.
+[06/25 23:16:12     68s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2525.8M)
+[06/25 23:16:12     68s] Ring generation is complete.
+[06/25 23:16:12     68s] #% End addRing (date=06/25 23:16:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=2224.8M, current mem=2223.3M)
+[06/25 23:16:12     68s] <CMD> addStripe -nets {VDD VSS} -layer M4 -direction horizontal -width 6 -spacing 1.8 -set_to_set_distance 100 -extend_to first_padring -start_from bottom -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1
+[06/25 23:16:12     68s] #% Begin addStripe (date=06/25 23:16:12, mem=2223.3M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+[06/25 23:16:12     68s] **WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+[06/25 23:16:12     68s] 
+[06/25 23:16:12     68s] Initialize fgc environment(mem: 2526.9M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] Starting stripe generation ...
+[06/25 23:16:12     68s] Non-Default Mode Option Settings :
+[06/25 23:16:12     68s]   NONE
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 313.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & TOP_M at (311.04, 311.04) (317.04, 316.64).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & TOP_M at (1482.80, 311.04) (1488.80, 316.64).
+[06/25 23:16:12     68s] **WARN: (IMPPP-354):	The power planner did not generate the horizontal stripe at 2147483.750000 313.640015 -2147483.750000 313.640015 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:16:12     68s] Type 'man IMPPP-354' for more detail.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 321.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & TOP_M at (318.84, 318.84) (324.84, 324.44).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & TOP_M at (1475.00, 318.84) (1481.00, 324.44).
+[06/25 23:16:12     68s] **WARN: (IMPPP-354):	The power planner did not generate the horizontal stripe at 2147483.750000 321.440002 -2147483.750000 321.440002 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:16:12     68s] Type 'man IMPPP-354' for more detail.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 413.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 421.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 513.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 521.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 613.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 621.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 713.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 721.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 813.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 821.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 913.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 921.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1013.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1021.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1113.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1121.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1213.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1221.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (EMS-27):	Message (IMPPP-361) has exceeded the current message display limit of 20.
+[06/25 23:16:12     68s] To increase the message display limit, refer to the product command reference manual.
+[06/25 23:16:12     68s] Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] Stripe generation is complete.
+[06/25 23:16:12     68s] vias are now being generated.
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.90, 410.70) (1478.94, 412.18).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.90, 511.50) (1478.94, 512.98).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.90, 612.30) (1478.94, 613.78).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.90, 713.10) (1478.94, 714.58).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.90, 813.90) (1478.94, 815.38).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.90, 914.70) (1478.94, 916.18).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.90, 1015.50) (1478.94, 1016.64).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.90, 1116.30) (1478.94, 1116.64).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.28, 518.44) (1479.56, 518.58).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.28, 618.44) (1479.56, 619.38).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.28, 718.70) (1478.94, 720.18).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.90, 819.50) (1479.56, 820.98).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.28, 920.30) (1479.56, 921.78).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.28, 1021.10) (1479.56, 1022.58).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.28, 1121.90) (1479.56, 1123.38).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M1 at (320.28, 1222.70) (1479.56, 1224.18).
+[06/25 23:16:12     68s] **WARN: (EMS-27):	Message (IMPPP-532) has exceeded the current message display limit of 20.
+[06/25 23:16:12     68s] To increase the message display limit, refer to the product command reference manual.
+[06/25 23:16:12     68s] addStripe created 22 wires.
+[06/25 23:16:12     68s] ViaGen created 0 via, deleted 0 via to avoid violation.
+[06/25 23:16:12     68s] +--------+----------------+----------------+
+[06/25 23:16:12     68s] |  Layer |     Created    |     Deleted    |
+[06/25 23:16:12     68s] +--------+----------------+----------------+
+[06/25 23:16:12     68s] |   M4   |       22       |       NA       |
+[06/25 23:16:12     68s] +--------+----------------+----------------+
+[06/25 23:16:12     68s] #% End addStripe (date=06/25 23:16:12, total cpu=0:00:00.1, real=0:00:00.0, peak res=2225.7M, current mem=2225.7M)
+[06/25 23:16:12     68s] <CMD> addStripe -nets {VDD VSS} -layer M4 -direction vertical -width 6 -spacing 1.8 -set_to_set_distance 100 -extend_to first_padring -start_from left -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1
+[06/25 23:16:12     68s] #% Begin addStripe (date=06/25 23:16:12, mem=2225.7M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+[06/25 23:16:12     68s] **WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+[06/25 23:16:12     68s] 
+[06/25 23:16:12     68s] Initialize fgc environment(mem: 2526.9M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] Starting stripe generation ...
+[06/25 23:16:12     68s] Non-Default Mode Option Settings :
+[06/25 23:16:12     68s]   NONE
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 313.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M5 at (311.04, 311.04) (316.64, 317.04).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M5 at (311.04, 1482.80) (316.64, 1488.80).
+[06/25 23:16:12     68s] **WARN: (IMPPP-354):	The power planner did not generate the vertical stripe at 313.640015 2147483.750000 313.640015 -2147483.750000 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:16:12     68s] Type 'man IMPPP-354' for more detail.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 321.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M5 at (318.84, 318.84) (324.44, 324.84).
+[06/25 23:16:12     68s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M5 at (318.84, 1475.00) (324.44, 1481.00).
+[06/25 23:16:12     68s] **WARN: (IMPPP-354):	The power planner did not generate the vertical stripe at 321.440002 2147483.750000 321.440002 -2147483.750000 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:16:12     68s] Type 'man IMPPP-354' for more detail.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 413.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 421.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 513.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 521.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 613.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 621.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 713.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 721.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 813.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 821.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 913.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 921.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1013.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1021.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1113.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1121.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1213.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1221.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:12     68s] Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (EMS-27):	Message (IMPPP-361) has exceeded the current message display limit of 20.
+[06/25 23:16:12     68s] To increase the message display limit, refer to the product command reference manual.
+[06/25 23:16:12     68s] Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2526.9M)
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 425.339996) (413.640015, 517.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 525.340027) (413.640015, 617.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 625.340027) (413.640015, 717.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 725.340027) (413.640015, 817.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 825.340027) (413.640015, 917.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 925.340027) (413.640015, 1017.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 1025.339966) (413.640015, 1117.540039) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 1125.339966) (413.640015, 1217.540039) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 1225.339966) (413.640015, 1317.540039) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 1325.339966) (413.640015, 1417.540039) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 425.339996) (513.640015, 517.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 525.340027) (513.640015, 617.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 625.340027) (513.640015, 717.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 725.340027) (513.640015, 817.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 825.340027) (513.640015, 917.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 925.340027) (513.640015, 1017.539978) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 1025.339966) (513.640015, 1117.540039) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 1125.339966) (513.640015, 1217.540039) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 1225.339966) (513.640015, 1317.540039) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 1325.339966) (513.640015, 1417.540039) because same wire already exists.
+[06/25 23:16:12     68s] **WARN: (EMS-27):	Message (IMPPP-170) has exceeded the current message display limit of 20.
+[06/25 23:16:12     68s] To increase the message display limit, refer to the product command reference manual.
+[06/25 23:16:12     68s] Stripe generation is complete.
+[06/25 23:16:12     68s] vias are now being generated.
+[06/25 23:16:12     68s] addStripe created 44 wires.
+[06/25 23:16:12     68s] ViaGen created 0 via, deleted 0 via to avoid violation.
+[06/25 23:16:12     68s] +--------+----------------+----------------+
+[06/25 23:16:12     68s] |  Layer |     Created    |     Deleted    |
+[06/25 23:16:12     68s] +--------+----------------+----------------+
+[06/25 23:16:12     68s] |   M4   |       44       |       NA       |
+[06/25 23:16:12     68s] +--------+----------------+----------------+
+[06/25 23:16:12     68s] #% End addStripe (date=06/25 23:16:12, total cpu=0:00:00.1, real=0:00:00.0, peak res=2225.7M, current mem=2225.2M)
+[06/25 23:16:13     68s] <CMD> createRouteBlk -name blk_io_south -layer {M3 M4 M5 TOP_M} -box {0 0 1799.84 320.0}
+[06/25 23:16:13     68s] <CMD> createRouteBlk -name blk_io_north -layer {M3 M4 M5 TOP_M} -box {0 1479.84 1799.84 1799.84}
+[06/25 23:16:13     68s] <CMD> createRouteBlk -name blk_io_west -layer {M3 M4 M5 TOP_M} -box {0 320.0 320.0 1479.84}
+[06/25 23:16:13     68s] <CMD> createRouteBlk -name blk_io_east -layer {M3 M4 M5 TOP_M} -box {1479.84 320.0 1799.84 1479.84}
+[06/25 23:16:13     68s] <CMD> sroute -connect { corePin padPin padRing } -layerChangeRange { M1 TOP_M } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort } -nets { VDD VSS }
+[06/25 23:16:13     68s] #% Begin sroute (date=06/25 23:16:13, mem=2225.2M)
+[06/25 23:16:13     68s] **WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+[06/25 23:16:13     68s] *** Begin SPECIAL ROUTE on Thu Jun 25 23:16:13 2026 ***
+[06/25 23:16:13     68s] SPECIAL ROUTE ran on directory: /users/epkgms/Desktop/khaled/des/innovus
+[06/25 23:16:13     68s] SPECIAL ROUTE ran on machine: vlsi-ria87 (Linux 3.10.0-1160.62.1.el7.x86_64 x86_64 3.90Ghz)
+[06/25 23:16:13     68s] 
+[06/25 23:16:13     68s] Begin option processing ...
+[06/25 23:16:13     68s] srouteConnectPowerBump set to false
+[06/25 23:16:13     68s] routeSelectNet set to "VDD VSS"
+[06/25 23:16:13     68s] routeSpecial set to true
+[06/25 23:16:13     68s] srouteBottomLayerLimit set to 1
+[06/25 23:16:13     68s] srouteConnectBlockPin set to false
+[06/25 23:16:13     68s] srouteConnectConverterPin set to false
+[06/25 23:16:13     68s] srouteConnectStripe set to false
+[06/25 23:16:13     68s] srouteFollowCorePinEnd set to 3
+[06/25 23:16:13     68s] srouteJogControl set to "preferWithChanges differentLayer"
+[06/25 23:16:13     68s] sroutePadPinAllPorts set to true
+[06/25 23:16:13     68s] sroutePreserveExistingRoutes set to true
+[06/25 23:16:13     68s] srouteRoutePowerBarPortOnBothDir set to true
+[06/25 23:16:13     68s] srouteStopBlockPin set to "nearestTarget"
+[06/25 23:16:13     68s] srouteTopLayerLimit set to 6
+[06/25 23:16:13     68s] End option processing: cpu: 0:00:00, real: 0:00:00, peak: 237.00 megs.
+[06/25 23:16:13     68s] 
+[06/25 23:16:13     68s] Reading DB technology information...
+[06/25 23:16:13     68s] Finished reading DB technology information.
+[06/25 23:16:13     68s] Reading floorplan and netlist information...
+[06/25 23:16:13     68s] Finished reading floorplan and netlist information.
+[06/25 23:16:13     68s] Read in 12 layers, 6 routing layers, 1 overlap layer
+[06/25 23:16:13     68s] Read in 544 macros, 53 used
+[06/25 23:16:13     68s] Read in 94 components
+[06/25 23:16:13     68s]   49 core components: 49 unplaced, 0 placed, 0 fixed
+[06/25 23:16:13     68s]   45 pad components: 0 unplaced, 0 placed, 45 fixed
+[06/25 23:16:13     68s] Read in 4 blockages
+[06/25 23:16:13     68s] Read in 88 special nets, 2 routed
+[06/25 23:16:13     68s] Read in 270 terminals
+[06/25 23:16:13     68s] 2 nets selected.
+[06/25 23:16:13     68s] 
+[06/25 23:16:13     68s] Begin power routing ...
+[06/25 23:16:13     68s] ### import design signature (3): route=1 fixed_route=1 flt_obj=0 vio=1905142130 swire=1 shield_wire=1 net_attr=1 dirty_area=0 del_dirty_area=0 cell=0 placement=0 pin_access=1 inst_pattern=1 inst_orient=1 via=1619643128 routing_via=1 timing=1 sns=1 ppa_info=1
+[06/25 23:16:13     68s] #WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+[06/25 23:16:13     68s] #WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+[06/25 23:16:13     68s] **WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDD net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+[06/25 23:16:13     68s] Type 'man IMPSR-1256' for more detail.
+[06/25 23:16:13     68s] Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[06/25 23:16:13     68s] **WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSS net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+[06/25 23:16:13     68s] Type 'man IMPSR-1256' for more detail.
+[06/25 23:16:13     68s] Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[06/25 23:16:13     68s] CPU time for VDD FollowPin 0 seconds
+[06/25 23:16:13     68s] CPU time for VSS FollowPin 0 seconds
+[06/25 23:16:13     69s]   Number of IO ports routed: 0
+[06/25 23:16:13     69s]   Number of Core ports routed: 0  open: 422
+[06/25 23:16:13     69s]   Number of Pad ports routed: 0
+[06/25 23:16:13     69s] End power routing: cpu: 0:00:01, real: 0:00:00, peak: 242.00 megs.
+[06/25 23:16:13     69s] 
+[06/25 23:16:13     69s] 
+[06/25 23:16:13     69s] 
+[06/25 23:16:13     69s]  Begin updating DB with routing results ...
+[06/25 23:16:13     69s]  Updating DB with 0 via definition ...
+[06/25 23:16:13     69s] sroute created 0 wire.
+[06/25 23:16:13     69s] ViaGen created 0 via, deleted 0 via to avoid violation.
+[06/25 23:16:14     69s] #% End sroute (date=06/25 23:16:13, total cpu=0:00:00.9, real=0:00:01.0, peak res=2267.5M, current mem=2233.1M)
+[06/25 23:16:17     69s] <CMD> floorPlan -site CoreSite -d 1799.84 1799.84 75.6 75.6 75.04 75.04
+[06/25 23:16:17     69s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:17     69s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:17     69s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:17     69s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:17     69s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:17     69s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:17     69s] **WARN: (IMPFP-3961):	The techSite 'CO_MSTR' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:17     69s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:17     69s] **WARN: (IMPFP-3961):	The techSite 'IOSite_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:17     69s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:17     69s] **WARN: (IMPFP-3961):	The techSite 'IOSite_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:17     69s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:17     69s] **WARN: (IMPFP-3961):	The techSite 'IOSite_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:17     69s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:17     69s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[06/25 23:16:17     69s] Type 'man IMPFP-3961' for more detail.
+[06/25 23:16:17     69s] Horizontal Layer M1 offset = 0 (derived)
+[06/25 23:16:17     69s] Vertical Layer M2 offset = 280 (derived)
+[06/25 23:16:17     69s] Start create_tracks
+[06/25 23:16:17     69s] <CMD> setPreference ConstraintUserYGrid 0.01
+[06/25 23:16:17     69s] **WARN: (IMPSYT-3004):	Option ConstraintUserYGrid is obsolete and will be removed in future release.  Use 'setFPlanMode -user_define_grid' instead. To avoid this warning and to ensure compatibility with  future releases, please remove the obsolete preference from your script.
+[06/25 23:16:17     69s] <CMD> setPreference ConstraintUserXGrid 0.01
+[06/25 23:16:17     69s] **WARN: (IMPSYT-3004):	Option ConstraintUserXGrid is obsolete and will be removed in future release.  Use 'setFPlanMode -user_define_grid' instead. To avoid this warning and to ensure compatibility with  future releases, please remove the obsolete preference from your script.
+[06/25 23:16:17     69s] <CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+[06/25 23:16:17     69s] <CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+[06/25 23:16:17     69s] <CMD> globalNetConnect VSSC -type pgpin -pin VSSC -inst * -module {}
+[06/25 23:16:17     69s] **ERROR: (IMPDB-1221):	A Global Net Connection (GNC) is specified to connect the ground pins with the 'VSSC' name pattern to a global net.  Unable to establish connection because the 'ground' pin with the name pattern doesn't match in any cell.  Check the pin name in the Lef file or liberty and ensure it is correct.
+<CMD> globalNetConnect VDDC -type pgpin -pin VDDC -inst * -module {}
+[06/25 23:16:17     69s] **ERROR: (IMPDB-1221):	A Global Net Connection (GNC) is specified to connect the power pins with the 'VDDC' name pattern to a global net.  Unable to establish connection because the 'power' pin with the name pattern doesn't match in any cell.  Check the pin name in the Lef file or liberty and ensure it is correct.
+<CMD> globalNetConnect VDD -type tiehi -module {}
+[06/25 23:16:17     69s] <CMD> globalNetConnect VSS -type tielo -module {}
+[06/25 23:16:17     69s] <CMD> deselectAll
+[06/25 23:16:17     69s] <CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+[06/25 23:16:17     69s] The ring targets are set to core/block ring wires.
+[06/25 23:16:17     69s] addRing command will consider rows while creating rings.
+[06/25 23:16:17     69s] addRing command will disallow rings to go over rows.
+[06/25 23:16:17     69s] addRing command will ignore shorts while creating rings.
+[06/25 23:16:17     69s] <CMD> addRing -nets {VDD VSS} -around default_power_domain -follow io -layer {top TOP_M bottom TOP_M left M5 right M5} -width 6 -spacing 1.8 -center 1 -jog_distance 0.56 -threshold 0.56
+[06/25 23:16:17     69s] #% Begin addRing (date=06/25 23:16:17, mem=2233.2M)
+[06/25 23:16:17     69s] 
+[06/25 23:16:17     69s] The power planner will calculate offsets from I/O rows.
+[06/25 23:16:17     69s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] Ring generation is complete.
+[06/25 23:16:17     69s] #% End addRing (date=06/25 23:16:17, total cpu=0:00:00.0, real=0:00:00.0, peak res=2233.2M, current mem=2227.9M)
+[06/25 23:16:17     69s] <CMD> addStripe -nets {VDD VSS} -layer M4 -direction horizontal -width 6 -spacing 1.8 -set_to_set_distance 100 -extend_to first_padring -start_from bottom -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1
+[06/25 23:16:17     69s] #% Begin addStripe (date=06/25 23:16:17, mem=2227.9M)
+[06/25 23:16:17     69s] **WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+[06/25 23:16:17     69s] **WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+[06/25 23:16:17     69s] 
+[06/25 23:16:17     69s] Initialize fgc environment(mem: 2537.6M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] Starting stripe generation ...
+[06/25 23:16:17     69s] Non-Default Mode Option Settings :
+[06/25 23:16:17     69s]   NONE
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 313.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & TOP_M at (311.04, 311.04) (317.04, 316.64).
+[06/25 23:16:17     69s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & TOP_M at (1482.80, 311.04) (1488.80, 316.64).
+[06/25 23:16:17     69s] **WARN: (IMPPP-354):	The power planner did not generate the horizontal stripe at 2147483.750000 313.640015 -2147483.750000 313.640015 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:16:17     69s] Type 'man IMPPP-354' for more detail.
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 321.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & TOP_M at (318.84, 318.84) (324.84, 324.44).
+[06/25 23:16:17     69s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & TOP_M at (1475.00, 318.84) (1481.00, 324.44).
+[06/25 23:16:17     69s] **WARN: (IMPPP-354):	The power planner did not generate the horizontal stripe at 2147483.750000 321.440002 -2147483.750000 321.440002 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:16:17     69s] Type 'man IMPPP-354' for more detail.
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 413.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 421.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 513.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 521.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 613.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 621.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 713.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 721.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 813.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 821.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 913.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 921.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1013.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1021.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1113.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1121.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1213.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1221.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     69s] Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] **WARN: (EMS-27):	Message (IMPPP-361) has exceeded the current message display limit of 20.
+[06/25 23:16:17     69s] To increase the message display limit, refer to the product command reference manual.
+[06/25 23:16:17     69s] Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 413.640015) (1478.939941, 413.640015) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 513.640015) (1478.939941, 513.640015) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 613.640015) (1478.939941, 613.640015) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 713.640015) (1478.939941, 713.640015) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 813.640015) (1478.939941, 813.640015) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 913.640015) (1478.939941, 913.640015) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 1013.640015) (1478.939941, 1013.640015) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 1113.640015) (1478.939941, 1113.640015) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 1213.640015) (1478.939941, 1213.640015) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 1313.640015) (1478.939941, 1313.640015) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 1413.640015) (1478.939941, 1413.640015) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.279999, 421.440002) (1479.560059, 421.440002) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.279999, 521.440002) (1479.560059, 521.440002) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.279999, 621.440002) (1479.560059, 621.440002) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.279999, 721.440002) (1478.939941, 721.440002) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.899994, 821.440002) (1479.560059, 821.440002) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.279999, 921.440002) (1479.560059, 921.440002) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.279999, 1021.440002) (1479.560059, 1021.440002) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.279999, 1121.439941) (1479.560059, 1121.439941) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (320.279999, 1221.439941) (1479.560059, 1221.439941) because same wire already exists.
+[06/25 23:16:17     69s] **WARN: (EMS-27):	Message (IMPPP-170) has exceeded the current message display limit of 20.
+[06/25 23:16:17     69s] To increase the message display limit, refer to the product command reference manual.
+[06/25 23:16:17     69s] Stripe generation is complete.
+[06/25 23:16:17     69s] #% End addStripe (date=06/25 23:16:17, total cpu=0:00:00.1, real=0:00:00.0, peak res=2227.9M, current mem=2226.8M)
+[06/25 23:16:17     69s] <CMD> addStripe -nets {VDD VSS} -layer M4 -direction vertical -width 6 -spacing 1.8 -set_to_set_distance 100 -extend_to first_padring -start_from left -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1
+[06/25 23:16:17     70s] #% Begin addStripe (date=06/25 23:16:17, mem=2226.8M)
+[06/25 23:16:17     70s] **WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+[06/25 23:16:17     70s] **WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+[06/25 23:16:17     70s] 
+[06/25 23:16:17     70s] Initialize fgc environment(mem: 2537.6M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] Starting stripe generation ...
+[06/25 23:16:17     70s] Non-Default Mode Option Settings :
+[06/25 23:16:17     70s]   NONE
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 313.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M5 at (311.04, 311.04) (316.64, 317.04).
+[06/25 23:16:17     70s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M5 at (311.04, 1482.80) (316.64, 1488.80).
+[06/25 23:16:17     70s] **WARN: (IMPPP-354):	The power planner did not generate the vertical stripe at 313.640015 2147483.750000 313.640015 -2147483.750000 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:16:17     70s] Type 'man IMPPP-354' for more detail.
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 321.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M5 at (318.84, 318.84) (324.44, 324.84).
+[06/25 23:16:17     70s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M5 at (318.84, 1475.00) (324.44, 1481.00).
+[06/25 23:16:17     70s] **WARN: (IMPPP-354):	The power planner did not generate the vertical stripe at 321.440002 2147483.750000 321.440002 -2147483.750000 with width 6.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+[06/25 23:16:17     70s] Type 'man IMPPP-354' for more detail.
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 413.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 421.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 513.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 521.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 613.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 621.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 713.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 721.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 813.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 821.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 913.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 921.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1013.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1021.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1113.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1121.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1213.640000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] **WARN: (IMPPP-361):	The power planner could find neither a pad ring, nor pad feedthrough pins or pad ring pins, at either end for the stripe at 1221.440000. Therefore, the power planner is using the core area.
+[06/25 23:16:17     70s] Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] **WARN: (EMS-27):	Message (IMPPP-361) has exceeded the current message display limit of 20.
+[06/25 23:16:17     70s] To increase the message display limit, refer to the product command reference manual.
+[06/25 23:16:17     70s] Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2537.6M)
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 320.899994) (413.640015, 417.540009) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 425.339996) (413.640015, 517.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 525.340027) (413.640015, 617.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 625.340027) (413.640015, 717.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 725.340027) (413.640015, 817.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 825.340027) (413.640015, 917.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 925.340027) (413.640015, 1017.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 1025.339966) (413.640015, 1117.540039) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 1125.339966) (413.640015, 1217.540039) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 1225.339966) (413.640015, 1317.540039) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 1325.339966) (413.640015, 1417.540039) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (413.640015, 1425.339966) (413.640015, 1478.939941) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 320.899994) (513.640015, 417.540009) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 425.339996) (513.640015, 517.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 525.340027) (513.640015, 617.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 625.340027) (513.640015, 717.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 725.340027) (513.640015, 817.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 825.340027) (513.640015, 917.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 925.340027) (513.640015, 1017.539978) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (513.640015, 1025.339966) (513.640015, 1117.540039) because same wire already exists.
+[06/25 23:16:17     70s] **WARN: (EMS-27):	Message (IMPPP-170) has exceeded the current message display limit of 20.
+[06/25 23:16:17     70s] To increase the message display limit, refer to the product command reference manual.
+[06/25 23:16:17     70s] Stripe generation is complete.
+[06/25 23:16:17     70s] #% End addStripe (date=06/25 23:16:17, total cpu=0:00:00.1, real=0:00:00.0, peak res=2226.9M, current mem=2226.9M)
+[06/25 23:16:17     70s] <CMD> createRouteBlk -name blk_io_south -layer {M3 M4 M5 TOP_M} -box {0 0 1799.84 320.0}
+[06/25 23:16:17     70s] <CMD> createRouteBlk -name blk_io_north -layer {M3 M4 M5 TOP_M} -box {0 1479.84 1799.84 1799.84}
+[06/25 23:16:17     70s] <CMD> createRouteBlk -name blk_io_west -layer {M3 M4 M5 TOP_M} -box {0 320.0 320.0 1479.84}
+[06/25 23:16:17     70s] <CMD> createRouteBlk -name blk_io_east -layer {M3 M4 M5 TOP_M} -box {1479.84 320.0 1799.84 1479.84}
+[06/25 23:16:17     70s] <CMD> sroute -connect { corePin padPin padRing } -layerChangeRange { M1 TOP_M } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort } -nets { VDD VSS }
+[06/25 23:16:17     70s] #% Begin sroute (date=06/25 23:16:17, mem=2226.9M)
+[06/25 23:16:17     70s] **WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+[06/25 23:16:17     70s] *** Begin SPECIAL ROUTE on Thu Jun 25 23:16:17 2026 ***
+[06/25 23:16:17     70s] SPECIAL ROUTE ran on directory: /users/epkgms/Desktop/khaled/des/innovus
+[06/25 23:16:17     70s] SPECIAL ROUTE ran on machine: vlsi-ria87 (Linux 3.10.0-1160.62.1.el7.x86_64 x86_64 3.90Ghz)
+[06/25 23:16:17     70s] 
+[06/25 23:16:17     70s] Begin option processing ...
+[06/25 23:16:17     70s] srouteConnectPowerBump set to false
+[06/25 23:16:17     70s] routeSelectNet set to "VDD VSS"
+[06/25 23:16:17     70s] routeSpecial set to true
+[06/25 23:16:17     70s] srouteBottomLayerLimit set to 1
+[06/25 23:16:17     70s] srouteConnectBlockPin set to false
+[06/25 23:16:17     70s] srouteConnectConverterPin set to false
+[06/25 23:16:17     70s] srouteConnectStripe set to false
+[06/25 23:16:17     70s] srouteFollowCorePinEnd set to 3
+[06/25 23:16:17     70s] srouteJogControl set to "preferWithChanges differentLayer"
+[06/25 23:16:17     70s] sroutePadPinAllPorts set to true
+[06/25 23:16:17     70s] sroutePreserveExistingRoutes set to true
+[06/25 23:16:17     70s] srouteRoutePowerBarPortOnBothDir set to true
+[06/25 23:16:17     70s] srouteStopBlockPin set to "nearestTarget"
+[06/25 23:16:17     70s] srouteTopLayerLimit set to 6
+[06/25 23:16:17     70s] End option processing: cpu: 0:00:00, real: 0:00:00, peak: 242.00 megs.
+[06/25 23:16:17     70s] 
+[06/25 23:16:17     70s] Reading DB technology information...
+[06/25 23:16:17     70s] Finished reading DB technology information.
+[06/25 23:16:17     70s] Reading floorplan and netlist information...
+[06/25 23:16:17     70s] Finished reading floorplan and netlist information.
+[06/25 23:16:18     70s] Read in 12 layers, 6 routing layers, 1 overlap layer
+[06/25 23:16:18     70s] Read in 544 macros, 53 used
+[06/25 23:16:18     70s] Read in 94 components
+[06/25 23:16:18     70s]   49 core components: 49 unplaced, 0 placed, 0 fixed
+[06/25 23:16:18     70s]   45 pad components: 0 unplaced, 0 placed, 45 fixed
+[06/25 23:16:18     70s] Read in 4 blockages
+[06/25 23:16:18     70s] Read in 88 special nets, 2 routed
+[06/25 23:16:18     70s] Read in 270 terminals
+[06/25 23:16:18     70s] 2 nets selected.
+[06/25 23:16:18     70s] 
+[06/25 23:16:18     70s] Begin power routing ...
+[06/25 23:16:18     70s] ### import design signature (4): route=1 fixed_route=1 flt_obj=0 vio=1905142130 swire=1 shield_wire=1 net_attr=1 dirty_area=0 del_dirty_area=0 cell=0 placement=0 pin_access=1 inst_pattern=1 inst_orient=1 via=1619643128 routing_via=1 timing=1 sns=1 ppa_info=1
+[06/25 23:16:18     70s] #WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+[06/25 23:16:18     70s] #WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+[06/25 23:16:18     70s] **WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDD net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+[06/25 23:16:18     70s] Type 'man IMPSR-1256' for more detail.
+[06/25 23:16:18     70s] Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[06/25 23:16:18     70s] **WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSS net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+[06/25 23:16:18     70s] Type 'man IMPSR-1256' for more detail.
+[06/25 23:16:18     70s] Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[06/25 23:16:18     70s] CPU time for VDD FollowPin 0 seconds
+[06/25 23:16:18     70s] CPU time for VSS FollowPin 0 seconds
+[06/25 23:16:18     71s]   Number of IO ports routed: 0
+[06/25 23:16:18     71s]   Number of Core ports routed: 0  open: 422
+[06/25 23:16:18     71s]   Number of Pad ports routed: 0
+[06/25 23:16:18     71s] End power routing: cpu: 0:00:01, real: 0:00:00, peak: 243.00 megs.
+[06/25 23:16:18     71s] 
+[06/25 23:16:18     71s] 
+[06/25 23:16:18     71s] 
+[06/25 23:16:18     71s]  Begin updating DB with routing results ...
+[06/25 23:16:18     71s]  Updating DB with 0 via definition ...
+[06/25 23:16:18     71s] sroute created 0 wire.
+[06/25 23:16:18     71s] ViaGen created 0 via, deleted 0 via to avoid violation.
+[06/25 23:16:18     71s] #% End sroute (date=06/25 23:16:18, total cpu=0:00:00.9, real=0:00:01.0, peak res=2267.7M, current mem=2234.0M)
+[06/25 23:16:35     72s] <CMD> setEditMode -type regular
+[06/25 23:16:39     72s] 
+[06/25 23:16:39     72s] *** Memory Usage v#2 (Current mem = 2539.355M, initial mem = 839.188M) ***
+[06/25 23:16:39     72s] 
+[06/25 23:16:39     72s] *** Summary of all messages that are not suppressed in this session:
+[06/25 23:16:39     72s] Severity  ID               Count  Summary                                  
+[06/25 23:16:39     72s] WARNING   IMPLF-200           88  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[06/25 23:16:39     72s] WARNING   IMPLF-201           40  Pin '%s' in macro '%s' has no ANTENNADIF...
+[06/25 23:16:39     72s] WARNING   IMPFP-325            1  Floorplan of the design is resized. All ...
+[06/25 23:16:39     72s] WARNING   IMPFP-3961          40  The techSite '%s' has no related standar...
+[06/25 23:16:39     72s] WARNING   IMPTS-124            6  Timing library description of pin '%s' i...
+[06/25 23:16:39     72s] WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+[06/25 23:16:39     72s] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[06/25 23:16:39     72s] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[06/25 23:16:39     72s] WARNING   IMPEXT-2773          2  The via resistance between layers %s and...
+[06/25 23:16:39     72s] WARNING   IMPEXT-2776          8  The via resistance between layers %s and...
+[06/25 23:16:39     72s] WARNING   IMPSYT-3004          8  %s                                       
+[06/25 23:16:39     72s] WARNING   IMPSYC-2             1  Timing information is not defined for ce...
+[06/25 23:16:39     72s] WARNING   IMPVL-159         1121  Pin '%s' of cell '%s' is defined in LEF ...
+[06/25 23:16:39     72s] ERROR     IMPDB-1221           8  A Global Net Connection (GNC) is specifi...
+[06/25 23:16:39     72s] WARNING   IMPPP-532           34  ViaGen Warning: The top layer and bottom...
+[06/25 23:16:39     72s] WARNING   IMPPP-557            6  A single-layer VIARULE GENERATE for turn...
+[06/25 23:16:39     72s] WARNING   IMPPP-354           12  The power planner did not generate the %...
+[06/25 23:16:39     72s] WARNING   IMPPP-361           96  The power planner could find neither a p...
+[06/25 23:16:39     72s] WARNING   IMPPP-170          506  The power planner failed to create a wir...
+[06/25 23:16:39     72s] WARNING   IMPPP-4022          12  Option "-%s" is obsolete and has been re...
+[06/25 23:16:39     72s] WARNING   IMPSR-4058           3  Sroute option: %s should be used in conj...
+[06/25 23:16:39     72s] WARNING   IMPSR-1256           6  Unable to find any CORE class pad pin of...
+[06/25 23:16:39     72s] WARNING   NRIF-95              6  Option setNanoRouteMode -routeTopRouting...
+[06/25 23:16:39     72s] ERROR     IMPTCM-48            1  "%s" is not a legal option for command "...
+[06/25 23:16:39     72s] WARNING   IMPUDM-33            2  Global variable "%s" is obsolete and wil...
+[06/25 23:16:39     72s] *** Message Summary: 2003 warning(s), 9 error(s)
+[06/25 23:16:39     72s] 
+[06/25 23:16:39     72s] --- Ending "Innovus" (totcpu=0:01:13, real=0:08:15, mem=2539.4M) ---

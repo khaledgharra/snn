@@ -1,0 +1,67 @@
+#============================================================
+# i2c_master_top — Floorplan + Power Planning
+# Follows ExecBE.pdf lab instructions exactly
+# Usage:  source floorplan.tcl
+#============================================================
+
+puts "=== STEP 1: Floorplan ==="
+# 2500x2500 um die — gives ~1800um core after 320um IO pads each side
+# Small core (~40x40um cells) has plenty of routing space
+floorPlan -site CoreSite -d 1600.08 1600.08 50 50 50 50
+
+puts "=== STEP 2: Connect global power/ground nets ==="
+source glnets.src
+deselectAll
+
+puts "=== STEP 3: Add power ring (along IO boundary) ==="
+# Per ExecBE.pdf:
+#   TOP_M = top, bottom   (horizontal segments)
+#   M5    = left, right   (vertical segments)
+#   Width = 6, Spacing = 1.8, Centre of Channel
+setAddRingMode \
+    -ring_target default \
+    -extend_over_row 0 \
+    -ignore_rows 0 \
+    -avoid_short 0 \
+    -skip_crossing_trunks none \
+    -stacked_via_top_layer TOP_M \
+    -stacked_via_bottom_layer M1 \
+    -orthogonal_only true \
+    -skip_via_on_pin { standardcell } \
+    -skip_via_on_wire_shape { noshape }
+
+addRing \
+    -nets {VSS VDD} \
+    -around default_power_domain \
+    -follow io \
+    -layer {top TOP_M bottom TOP_M left M5 right M5} \
+    -width 6 \
+    -spacing 1.8 \
+    -center 1 \
+    -jog_distance 0.56 \
+    -threshold 0.56
+
+puts "=== STEP 4: Add power stripes (M5 sparse — small core adaptation) ==="
+# PDF says width=6 set_to_set=100 but that fills 70% of M5 for this tiny core.
+# Using width=2 set_to_set=300 to keep M5 available for signal routing.
+addStripe \
+    -nets {VSS VDD} \
+    -layer M5 \
+    -direction horizontal \
+    -width 2 \
+    -spacing 1.8 \
+    -set_to_set_distance 300 \
+    -stacked_via_top_layer TOP_M \
+    -stacked_via_bottom_layer M1 \
+    -stop_at first_last_and_ring
+
+puts "=== STEP 5: Route power to standard cell pins and pad pins ==="
+sroute \
+    -connect { corePin padPin padRing } \
+    -layerChangeRange { M1 TOP_M } \
+    -blockPinTarget { nearestTarget } \
+    -padPinPortConnect { allPort } \
+    -nets { VDD VSS }
+
+puts "=== Floorplan + Power Planning DONE ==="
+puts "Next: placeDesign, then routeDesign"
