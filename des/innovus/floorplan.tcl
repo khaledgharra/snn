@@ -26,7 +26,7 @@ setAddRingMode \
 
 addRing \
     -nets {VDD VSS} \
-    -around default_power_domain \
+    -around core \
     -layer {top TOP_M bottom TOP_M left M5 right M5} \
     -width 6 \
     -spacing 1.8 \
@@ -58,10 +58,12 @@ addStripe \
     -stacked_via_top_layer TOP_M \
     -stacked_via_bottom_layer M1
 
-puts "=== STEP 6: Route power to standard cell pins and pad pins ==="
+puts "=== STEP 6: Route power to standard cell pins ==="
+# padPin removed — IO pad cells get power through pad ring bus, not sroute
+# layerChangeRange stops at M5 to avoid routing TOP_M inside IO pad bodies
 sroute \
-    -connect { corePin padPin padRing } \
-    -layerChangeRange { M1 TOP_M } \
+    -connect { corePin padRing } \
+    -layerChangeRange { M1 M5 } \
     -blockPinTarget { nearestTarget } \
     -padPinPortConnect { allPort } \
     -nets { VDD VSS }
