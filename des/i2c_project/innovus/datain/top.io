@@ -9,15 +9,12 @@ Version: 2
 
 Pad: I1/I1   N
 Pad: I2/I1   N
-Pad: I3/I1   N
 Pad: PAD_G1/I1   N
 Pad: PAD_I1/I1   N
 Pad: I4/I1   N
 Pad: I5/I1   N
 Pad: I6/I1   N
 Pad: I7/I1   N
-Pad: PAD_G2/I1   N
-Pad: PAD_I2/I1   N
 Pad: I8/I1   N
 Pad: I9/I1   N
 Orient: R0
@@ -30,8 +27,6 @@ Pad: PAD_I3/I1   E
 Pad: I13/I1   E
 Pad: I14/I1   E
 Pad: I15/I1   E
-Pad: PAD_G4/I1   E
-Pad: PAD_I4/I1   E
 Pad: I16/I1   E
 Pad: I17/I1   E
 Orient: R90
@@ -46,8 +41,6 @@ Pad: I22/I1   S
 Pad: I23/I1   S
 Pad: I24/I1   S
 Pad: I25/I1   S
-Pad: PAD_G6/I1   S
-Pad: PAD_I6/I1   S
 Pad: I26/I1   S
 Orient: R180
 Pad: Pcornerll/I1 NW
@@ -61,8 +54,5 @@ Pad: I31/I1   W
 Pad: I32/I1   W
 Pad: I33/I1   W
 Pad: I34/I1   W
-Pad: PAD_G8/I1   W
-Pad: PAD_I8/I1   W
-Pad: I35/I1   W
 Orient: R270
 Pad: Pcornerul/I1 SW

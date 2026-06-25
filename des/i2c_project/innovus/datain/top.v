@@ -36,7 +36,6 @@ endmodule
 module top();
 wire wire_VDD;
 wire wire_VSS;
-wire wire_arst_i;
 wire wire_scl_pad_i;
 wire wire_sda_pad_i;
 wire [2:0] wire_wb_adr_i;
@@ -52,7 +51,6 @@ wire wire_sda_pad_o;
 wire wire_sda_padoen_o;
 wire wire_wb_ack_o;
 wire [7:0] wire_wb_dat_o;
-wire wire_wb_inta_o;
 wire   net1000;
 wire   net1001;
 
@@ -65,7 +63,7 @@ endspecify
 
 i2c_master_top I0(.VDD(wire_VDD)
 ,.VSS(wire_VSS)
-,.arst_i(wire_arst_i)
+,.arst_i(1'b0)
 ,.scl_pad_i(wire_scl_pad_i)
 ,.sda_pad_i(wire_sda_pad_i)
 ,.wb_adr_i(wire_wb_adr_i[2:0])
@@ -81,36 +79,22 @@ i2c_master_top I0(.VDD(wire_VDD)
 ,.sda_padoen_o(wire_sda_padoen_o)
 ,.wb_ack_o(wire_wb_ack_o)
 ,.wb_dat_o(wire_wb_dat_o[7:0])
-,.wb_inta_o(wire_wb_inta_o)
 );
 
 pv0c PAD_G1 (.VSS(VSS));
 pvdc PAD_I1 (.VDD(VDD));
 
-pv0c PAD_G2 (.VSS(VSS));
-pvdc PAD_I2 (.VDD(VDD));
-
 pv0c PAD_G3 (.VSS(VSS));
 pvdc PAD_I3 (.VDD(VDD));
-
-pv0c PAD_G4 (.VSS(VSS));
-pvdc PAD_I4 (.VDD(VDD));
 
 pv0c PAD_G5 (.VSS(VSS));
 pvdc PAD_I5 (.VDD(VDD));
 
-pv0c PAD_G6 (.VSS(VSS));
-pvdc PAD_I6 (.VDD(VDD));
-
 pv0c PAD_G7 (.VSS(VSS));
 pvdc PAD_I7 (.VDD(VDD));
 
-pv0c PAD_G8 (.VSS(VSS));
-pvdc PAD_I8 (.VDD(VDD));
-
 pc3d01 I1 ( .CIN(wire_VDD), .PAD(net100));
 pc3d01 I2 ( .CIN(wire_VSS), .PAD(net101));
-pc3d01 I3 ( .CIN(wire_arst_i), .PAD(net102));
 pc3d01 I4 ( .CIN(wire_scl_pad_i), .PAD(net103));
 pc3d01 I5 ( .CIN(wire_sda_pad_i), .PAD(net104));
 pc3d01 I6 ( .CIN(wire_wb_adr_i[2]), .PAD(net105));
@@ -143,8 +127,6 @@ pt3o01 I31 ( .PAD(net130), .I(wire_wb_dat_o[3]));
 pt3o01 I32 ( .PAD(net131), .I(wire_wb_dat_o[2]));
 pt3o01 I33 ( .PAD(net132), .I(wire_wb_dat_o[1]));
 pt3o01 I34 ( .PAD(net133), .I(wire_wb_dat_o[0]));
-pt3o01 I35 ( .PAD(net134), .I(wire_wb_inta_o));
-
 pfrelr Pcornerlr();
 pfrelr Pcornerll();
 pfrelr Pcornerur();

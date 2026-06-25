@@ -5,9 +5,9 @@
 #============================================================
 
 puts "=== STEP 1: Floorplan ==="
-# Die = 4980.08 x 4980.08 um, margins = 120.5 um on all sides
-# This gives enough room for the pad ring + core area
-floorPlan -site CoreSite -d 4980.08 4980.08 120.5 120.5 120.5 120.5
+# Die = 1588.08 x 1588.08 um, margins = 10 um on all sides
+# Reduced from 4980 um: now 10 pads per side (removed I3, I35, 4 decap pairs)
+floorPlan -site CoreSite -d 1588.08 1588.08 10 10 10 10
 
 puts "=== STEP 2: Connect global power/ground nets ==="
 source glnets.src
