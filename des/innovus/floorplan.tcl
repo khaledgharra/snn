@@ -34,31 +34,10 @@ addRing \
     -jog_distance 0.56 \
     -threshold 0.56
 
-puts "=== STEP 4: Add horizontal power stripes (M3) ==="
-addStripe \
-    -nets {VDD VSS} \
-    -layer M3 \
-    -direction horizontal \
-    -width 6 \
-    -spacing 1.8 \
-    -set_to_set_distance 100 \
-    -start_from bottom \
-    -stacked_via_top_layer TOP_M \
-    -stacked_via_bottom_layer M1
-
-puts "=== STEP 5: Add vertical power stripes (M4) ==="
-addStripe \
-    -nets {VDD VSS} \
-    -layer M4 \
-    -direction vertical \
-    -width 6 \
-    -spacing 1.8 \
-    -set_to_set_distance 100 \
-    -start_from left \
-    -stacked_via_top_layer TOP_M \
-    -stacked_via_bottom_layer M1
-
-puts "=== STEP 6: Route power to standard cell pins ==="
+puts "=== STEP 4: Route power to standard cell pins ==="
+# No addStripe — 527 cells in 1800x1800um is too sparse to need stripes.
+# Via stacks from stripes were blocking M3/M4 signal routing causing ~60 unresolvable DRC violations.
+# Power ring + sroute is sufficient for IR drop at this cell density and frequency.
 # padPin removed — IO pad cells get power through pad ring bus, not sroute
 # layerChangeRange stops at M5 to avoid routing TOP_M inside IO pad bodies
 sroute \
