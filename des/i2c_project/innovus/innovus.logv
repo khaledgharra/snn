@@ -1,0 +1,121 @@
+[06/16 15:26:02      0s] 
+[06/16 15:26:02      0s] Cadence Innovus(TM) Implementation System.
+[06/16 15:26:02      0s] Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+[06/16 15:26:02      0s] 
+[06/16 15:26:02      0s] Version:	v23.33-s082_1, built Wed Nov 13 14:07:39 PST 2024
+[06/16 15:26:02      0s] Options:	
+[06/16 15:26:02      0s] Date:		Tue Jun 16 15:26:02 2026
+[06/16 15:26:02      0s] Host:		vlsi-ria84 (x86_64 w/Linux 3.10.0-1160.62.1.el7.x86_64) (8cores*8cpus*Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz 12288KB)
+[06/16 15:26:02      0s] OS:		RHEL
+[06/16 15:26:02      0s] 
+[06/16 15:26:02      0s] License:
+[06/16 15:26:02      0s] 		[15:26:02.069513] Configured Lic search path (23.02-s006): /etc/local/cadence/license_8x.3868dd0560aa:5280@132.68.59.69:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.64:/etc/local/cadence/license_8x.0894ef683fc3:5280@132.68.59.79:5280@132.68.59.61:27019@132.68.59.69:27019@132.68.59.79
+
+[06/16 15:26:02      0s] 		invs	Innovus Implementation System	23.1	checkout succeeded
+[06/16 15:26:02      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[06/16 15:26:18     13s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v23.33-s082_1 (64bit) 11/13/2024 14:07 (Linux 3.10.0-693.el7.x86_64)
+[06/16 15:26:22     16s] @(#)CDS: NanoRoute 23.33-s082_1 NR241029-2256/23_13-UB (database version 18.20.652_1) {superthreading v2.20}
+[06/16 15:26:22     16s] @(#)CDS: AAE 23.13-s019 (64bit) 11/13/2024 (Linux 3.10.0-693.el7.x86_64)
+[06/16 15:26:22     16s] @(#)CDS: CTE 23.13-s028_1 () Nov 11 2024 03:58:52 ( )
+[06/16 15:26:22     16s] @(#)CDS: SYNTECH 23.13-s009_1 () Oct 30 2024 09:17:13 ( )
+[06/16 15:26:22     16s] @(#)CDS: CPE v23.13-s062
+[06/16 15:26:22     16s] @(#)CDS: IQuantus/TQuantus 23.1.1-s235 (64bit) Fri Sep 27 22:21:33 PDT 2024 (Linux 3.10.0-693.el7.x86_64)
+[06/16 15:26:22     16s] @(#)CDS: OA 22.61-p018 Fri Oct 18 10:45:49 2024
+[06/16 15:26:22     16s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[06/16 15:26:22     16s] @(#)CDS: RCDB 11.15.0
+[06/16 15:26:22     16s] @(#)CDS: STYLUS 23.14-s002_1 (09/11/2024 13:54 PDT)
+[06/16 15:26:22     16s] @(#)CDS: IntegrityPlanner-23.13-16927 (23.13) (2024-10-14 10:21:59+0800)
+[06/16 15:26:22     16s] @(#)CDS: SYNTHESIS_ENGINE 23.13-s072
+[06/16 15:26:22     16s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_16491_15b90ee6-56ce-4b4f-9be7-25eff4f29a24_vlsi-ria84_epkgms_ThQTnj.
+
+[06/16 15:26:22     16s] Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
+[06/16 15:26:24     17s] Info: Process UID = 16491 / 15b90ee6-56ce-4b4f-9be7-25eff4f29a24 / WTvDQI9kXu
+[06/16 15:26:24     17s] source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_attr_defs.tcl
+[06/16 15:26:24     17s] Loading attribute definitions from mini dummy db...
+[06/16 15:26:25     18s] Info: Defined 23820 Synthesis attributes
+[06/16 15:26:25     18s] Info: Skipped defining 357 Synthesis attributes already defined in Innovus
+[06/16 15:26:25     18s] source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_msg_defs.tcl
+[06/16 15:26:26     19s] 
+[06/16 15:26:26     19s] **INFO:  MMMC transition support version v31-84 
+[06/16 15:26:26     19s] 
+[06/16 15:26:26     19s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[06/16 15:26:26     19s] <CMD> suppressMessage ENCEXT-2799
+[06/16 15:26:26     19s] <CMD> getVersion
+[06/16 15:26:26     19s] <CMD> getVersion
+[06/16 15:26:26     19s] <CMD> getVersion
+[06/16 15:26:27     20s] [INFO] Loading PVS 24.10 fill procedures
+[06/16 15:26:27     20s] <CMD> win
+[06/16 15:26:50     22s] <CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+[06/16 15:26:50     22s] <CMD> set conf_in_tran_delay 120.0ps
+[06/16 15:26:50     22s] <CMD> set conf_ioOri R0
+[06/16 15:26:50     22s] <CMD> set conf_qxconf_file NULL
+[06/16 15:26:50     22s] <CMD> set conf_qxlib_file NULL
+[06/16 15:26:50     22s] <CMD> set conf_row_height 5.6
+[06/16 15:26:50     22s] <CMD> set dbgDualViewAwareXTree 1
+[06/16 15:26:50     22s] <CMD> set defHierChar /
+[06/16 15:26:50     22s] Set Default Input Pin Transition as 120 ps.
+[06/16 15:26:50     22s] <CMD> set delaycal_input_transition_delay 120ps
+[06/16 15:26:50     22s] <CMD> set distributed_client_message_echo 1
+[06/16 15:26:50     22s] <CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+[06/16 15:26:50     22s] <CMD> set enable_ilm_dual_view_gui_and_attribute 1
+[06/16 15:26:50     22s] <CMD> set enc_enable_print_mode_command_reset_options 1
+[06/16 15:26:50     22s] <CMD> set fpIsMaxIoHeight 0
+[06/16 15:26:50     22s] <CMD> set fp_core_height 257.6
+[06/16 15:26:50     22s] <CMD> set fp_core_to_bottom 30
+[06/16 15:26:50     22s] <CMD> set fp_core_to_left 30
+[06/16 15:26:50     22s] <CMD> set fp_core_to_right 30
+[06/16 15:26:50     22s] <CMD> set fp_core_to_top 30
+[06/16 15:26:50     22s] <CMD> set fp_core_width 389.7
+[06/16 15:26:50     22s] <CMD> set init_abstract_view abstract
+[06/16 15:26:50     22s] <CMD> set init_assign_buffer 1
+[06/16 15:26:50     22s] <CMD> set init_gnd_net {VSS VSSC VSSO}
+[06/16 15:26:50     22s] <CMD> setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+[06/16 15:26:50     22s] <CMD> set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+[06/16 15:26:50     22s] <CMD> set init_layout_view layout
+[06/16 15:26:50     22s] <CMD> set init_lef_file {/tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/tech/lef/6M1L/tsl180l6.lef /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/lef/tsl18fs190svt.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+[06/16 15:26:50     22s] <CMD> set init_mmmc_file mmmc.view
+[06/16 15:26:50     22s] <CMD> set init_oa_search_lib {}
+[06/16 15:26:50     22s] <CMD> set init_pwr_net {VDD VDDC VDDO}
+[06/16 15:26:50     22s] <CMD> set init_top_cell top
+[06/16 15:26:50     22s] <CMD> set init_verilog top.v
+[06/16 15:26:50     22s] <CMD> set pegDefaultResScaleFactor 1
+[06/16 15:26:50     22s] <CMD> set pegDetailResScaleFactor 1
+[06/16 15:26:50     22s] <CMD> set pegEnableDualViewForTQuantus 1
+[06/16 15:26:50     22s] <CMD> get_message -id GLOBAL-100 -suppress
+[06/16 15:26:50     22s] <CMD> get_message -id GLOBAL-100 -suppress
+[06/16 15:26:50     22s] <CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+[06/16 15:26:50     22s] <CMD> set spgUnflattenIlmInCheckPlace 2
+[06/16 15:26:50     22s] **WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+[06/16 15:26:50     22s] <CMD> get_message -id GLOBAL-100 -suppress
+[06/16 15:26:50     22s] <CMD> suppressMessage -silent GLOBAL-100
+[06/16 15:26:50     22s] <CMD> unsuppressMessage -silent GLOBAL-100
+[06/16 15:26:50     22s] **WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+[06/16 15:26:50     22s] <CMD> get_message -id GLOBAL-100 -suppress
+[06/16 15:26:50     22s] <CMD> suppressMessage -silent GLOBAL-100
+[06/16 15:26:50     22s] <CMD> unsuppressMessage -silent GLOBAL-100
+[06/16 15:26:50     22s] <CMD> set timing_enable_default_delay_arc 1
+[06/16 15:26:50     22s] <CMD> set init_verilog_tolerate_port_mismatch 0
+[06/16 15:26:50     22s] <CMD> set load_netlist_ignore_undefined_cell 1
+[06/16 15:26:50     22s] <CMD> set init_io_file top.io
+[06/16 15:26:50     22s] <CMD> set fp_core_to_left 120.000000
+[06/16 15:26:50     22s] <CMD> set fp_core_to_right 120.000000
+[06/16 15:26:50     22s] <CMD> set fp_core_to_top 120.000000
+[06/16 15:26:50     22s] <CMD> set fp_core_to_bottom 120.000000
+[06/16 15:26:50     22s] **ERROR: (IMPSYT-16005):	Failed to open io file top.io.
+[06/16 15:27:25     25s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Tue Jun 16 15:27:25 2026
+  Total CPU time:     0:00:26
+  Total real time:    0:01:25
+  Peak memory (main): 1720.23MB
+
+[06/16 15:27:25     25s] 
+[06/16 15:27:25     25s] *** Memory Usage v#2 (Current mem = 1819.555M, initial mem = 839.188M) ***
+[06/16 15:27:25     25s] 
+[06/16 15:27:25     25s] *** Summary of all messages that are not suppressed in this session:
+[06/16 15:27:25     25s] Severity  ID               Count  Summary                                  
+[06/16 15:27:25     25s] ERROR     IMPSYT-16005         2  Failed to open io file %s.               
+[06/16 15:27:25     25s] WARNING   IMPUDM-33            2  Global variable "%s" is obsolete and wil...
+[06/16 15:27:25     25s] *** Message Summary: 2 warning(s), 2 error(s)
+[06/16 15:27:25     25s] 
+[06/16 15:27:25     25s] --- Ending "Innovus" (totcpu=0:00:25.1, real=0:01:23, mem=1819.6M) ---

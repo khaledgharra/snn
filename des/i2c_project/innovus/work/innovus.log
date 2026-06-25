@@ -1,0 +1,465 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.33-s082_1, built Wed Nov 13 14:07:39 PST 2024
+Options:	
+Date:		Tue Jun 16 14:34:11 2026
+Host:		vlsi-ria84 (x86_64 w/Linux 3.10.0-1160.62.1.el7.x86_64) (8cores*8cpus*Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz 12288KB)
+OS:		RHEL
+
+License:
+		[14:34:11.069497] Configured Lic search path (23.02-s006): /etc/local/cadence/license_8x.3868dd0560aa:5280@132.68.59.69:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.64:/etc/local/cadence/license_8x.0894ef683fc3:5280@132.68.59.79:5280@132.68.59.61:27019@132.68.59.69:27019@132.68.59.79
+
+		invs	Innovus Implementation System	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
+Info: Process UID = 10220 / cf6f2825-1ede-4e3d-9b82-8d78501e065f / qTHlS8mKKk
+source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_attr_defs.tcl
+Loading attribute definitions from mini dummy db...
+Info: Defined 23820 Synthesis attributes
+Info: Skipped defining 357 Synthesis attributes already defined in Innovus
+source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_msg_defs.tcl
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> getVersion
+<CMD> getVersion
+[INFO] Loading PVS 24.10 fill procedures
+<CMD> win
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set conf_in_tran_delay 120.0ps
+<CMD> set conf_ioOri R0
+<CMD> set conf_qxconf_file NULL
+<CMD> set conf_qxlib_file NULL
+<CMD> set conf_row_height 5.6
+<CMD> set dbgDualViewAwareXTree 1
+<CMD> set defHierChar /
+Set Default Input Pin Transition as 120 ps.
+<CMD> set delaycal_input_transition_delay 120ps
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set enable_ilm_dual_view_gui_and_attribute 1
+<CMD> set enc_enable_print_mode_command_reset_options 1
+<CMD> set fpIsMaxIoHeight 0
+<CMD> set fp_core_height 257.6
+<CMD> set fp_core_to_bottom 30
+<CMD> set fp_core_to_left 30
+<CMD> set fp_core_to_right 30
+<CMD> set fp_core_to_top 30
+<CMD> set fp_core_width 389.7
+<CMD> set init_abstract_view abstract
+<CMD> set init_assign_buffer 1
+<CMD> set init_gnd_net {VSS VSSC VSSO}
+<CMD> setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+<CMD> set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+<CMD> set init_layout_view layout
+<CMD> set init_lef_file {/tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/tech/lef/6M1L/tsl180l6.lef /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/lef/tsl18fs190svt.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+<CMD> set init_mmmc_file mmmc.view
+<CMD> set init_oa_search_lib {}
+<CMD> set init_pwr_net {VDD VDDC VDDO}
+<CMD> set init_top_cell top
+<CMD> set init_verilog top.v
+<CMD> set pegDefaultResScaleFactor 1
+<CMD> set pegDetailResScaleFactor 1
+<CMD> set pegEnableDualViewForTQuantus 1
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set spgUnflattenIlmInCheckPlace 2
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+<CMD> set timing_enable_default_delay_arc 1
+<CMD> set init_verilog_tolerate_port_mismatch 0
+<CMD> set load_netlist_ignore_undefined_cell 1
+<CMD> set init_io_file top.io
+<CMD> set fp_core_to_left 120.000000
+<CMD> set fp_core_to_right 120.000000
+<CMD> set fp_core_to_top 120.000000
+<CMD> set fp_core_to_bottom 120.000000
+**ERROR: (IMPSYT-16005):	Failed to open io file top.io.
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set conf_in_tran_delay 120.0ps
+<CMD> set conf_ioOri R0
+<CMD> set conf_qxconf_file NULL
+<CMD> set conf_qxlib_file NULL
+<CMD> set conf_row_height 5.6
+<CMD> set dbgDualViewAwareXTree 1
+<CMD> set defHierChar /
+Set Default Input Pin Transition as 120 ps.
+<CMD> set delaycal_input_transition_delay 120ps
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set enable_ilm_dual_view_gui_and_attribute 1
+<CMD> set enc_enable_print_mode_command_reset_options 1
+<CMD> set fpIsMaxIoHeight 0
+<CMD> set fp_core_height 257.6
+<CMD> set fp_core_to_bottom 30
+<CMD> set fp_core_to_left 30
+<CMD> set fp_core_to_right 30
+<CMD> set fp_core_to_top 30
+<CMD> set fp_core_width 389.7
+<CMD> set init_abstract_view abstract
+<CMD> set init_assign_buffer 1
+<CMD> set init_gnd_net {VSS VSSC VSSO}
+<CMD> setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+<CMD> set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+<CMD> set init_layout_view layout
+<CMD> set init_lef_file {/tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/tech/lef/6M1L/tsl180l6.lef /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/lef/tsl18fs190svt.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+<CMD> set init_mmmc_file mmmc.view
+<CMD> set init_oa_search_lib {}
+<CMD> set init_pwr_net {VDD VDDC VDDO}
+<CMD> set init_top_cell top
+<CMD> set init_verilog top.v
+<CMD> set pegDefaultResScaleFactor 1
+<CMD> set pegDetailResScaleFactor 1
+<CMD> set pegEnableDualViewForTQuantus 1
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set spgUnflattenIlmInCheckPlace 2
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+<CMD> set timing_enable_default_delay_arc 1
+<CMD> set init_verilog_tolerate_port_mismatch 0
+<CMD> set load_netlist_ignore_undefined_cell 1
+<CMD> set init_io_file top.io
+<CMD> set fp_core_to_left 120.000000
+<CMD> set fp_core_to_right 120.000000
+<CMD> set fp_core_to_top 120.000000
+<CMD> set fp_core_to_bottom 120.000000
+**ERROR: (IMPSYT-16005):	Failed to open io file top.io.
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+#% Begin Load MMMC data ... (date=06/16 14:40:14, mem=1727.9M)
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:40:37, mem=1728.0M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:40:39, mem=1731.1M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:40:48, mem=1731.1M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:40:49, mem=1731.1M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:07, mem=1731.1M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:08, mem=1731.1M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:08, mem=1731.1M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:08, mem=1731.1M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:11, mem=1731.2M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:12, mem=1731.2M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:12, mem=1731.2M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:13, mem=1731.2M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:13, mem=1731.2M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:13, mem=1731.2M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:13, mem=1731.2M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:13, mem=1731.2M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:14, mem=1731.2M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:14, mem=1731.2M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+<CMD> set init_verilog ../datain/top.v
+<CMD> set init_mmmc_file ../datain/mmmc.view
+<CMD> set init_io_file ../datain/top.io
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/16 14:41:14, mem=1731.2M)
+Extraction setup Started 
+Extraction setup Started 
+**ERROR: (TCLCMD-989):	cannot open SDC file 'top.sdc' for mode 'TypCM'
+sed: -e expression #1, char 1: unknown command: `''
+<CMD> set init_design_uniquify 1
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set conf_in_tran_delay 120.0ps
+<CMD> set conf_ioOri R0
+<CMD> set conf_qxconf_file NULL
+<CMD> set conf_qxlib_file NULL
+<CMD> set conf_row_height 5.6
+<CMD> set dbgDualViewAwareXTree 1
+<CMD> set defHierChar /
+Set Default Input Pin Transition as 120 ps.
+<CMD> set delaycal_input_transition_delay 120ps
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set enable_ilm_dual_view_gui_and_attribute 1
+<CMD> set enc_enable_print_mode_command_reset_options 1
+<CMD> set fpIsMaxIoHeight 0
+<CMD> set fp_core_height 257.6
+<CMD> set fp_core_to_bottom 30
+<CMD> set fp_core_to_left 30
+<CMD> set fp_core_to_right 30
+<CMD> set fp_core_to_top 30
+<CMD> set fp_core_width 389.7
+<CMD> set init_abstract_view abstract
+<CMD> set init_assign_buffer 1
+<CMD> set init_gnd_net {VSS VSSC VSSO}
+<CMD> setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+<CMD> set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+<CMD> set init_layout_view layout
+<CMD> set init_lef_file {/tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/tech/lef/6M1L/tsl180l6.lef /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/lef/tsl18fs190svt.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+<CMD> set init_mmmc_file mmmc.view
+<CMD> set init_oa_search_lib {}
+<CMD> set init_pwr_net {VDD VDDC VDDO}
+<CMD> set init_top_cell top
+<CMD> set init_verilog top.v
+<CMD> set pegDefaultResScaleFactor 1
+<CMD> set pegDetailResScaleFactor 1
+<CMD> set pegEnableDualViewForTQuantus 1
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set spgUnflattenIlmInCheckPlace 2
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+<CMD> set timing_enable_default_delay_arc 1
+<CMD> set init_verilog_tolerate_port_mismatch 0
+<CMD> set load_netlist_ignore_undefined_cell 1
+<CMD> set init_io_file top.io
+<CMD> set fp_core_to_left 120.000000
+<CMD> set fp_core_to_right 120.000000
+<CMD> set fp_core_to_top 120.000000
+<CMD> set fp_core_to_bottom 120.000000
+<CMD> init_design
+**ERROR: (IMPSYT-6284):	Failed to open file mmmc.view for read.
+SlowRC FastRC
+
+Loading LEF file /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/tech/lef/6M1L/tsl180l6.lef ...
+
+Loading LEF file /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/lef/tsl18fs190svt.lef ...
+Set DBUPerIGU to M2 pitch 560.
+
+Loading LEF file /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef ...
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PVPP_33_NA' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PVPP_33_NA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PADR' in macro 'PVPP_33_NA' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PADR' in macro 'PVPP_33_NA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PVDC_NA_NA_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PVDC_NA_NA_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PVDC_NA_NA_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PVDC_NA_NA_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PVDC_NA_NA_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PVDC_NA_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PVDC_NA_NA_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PVDC_NA_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_33_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_33_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_18_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_18_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_18_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_18_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_18_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_18_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_18_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_18_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_33_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_33_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPLF-200):	Pin 'DRIVE_STR' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'EN' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'PULL_ON' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'PULL_UP_DOWN' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from mmmc.view
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=3.78min, fe_real=44.40min, fe_mem=1838.1M) ***
+**ERROR: (IMPSYT-16038):	The specified file 'top.v' could not be found. Check your file system, correct the file name.
+**ERROR: (IMPIMEX-7008):	No netlist files are found.
+

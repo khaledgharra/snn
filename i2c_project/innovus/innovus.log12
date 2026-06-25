@@ -30,3 +30,8 @@ source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.l
 <CMD> getVersion
 [INFO] Loading PVS 24.10 fill procedures
 <CMD> win
+
+*** Memory Usage v#2 (Current mem = 1864.773M, initial mem = 831.188M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:01:23, real=0:13:09, mem=1864.8M) ---

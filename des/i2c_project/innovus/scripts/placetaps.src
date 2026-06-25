@@ -1,0 +1,4 @@
+addWellTap -cell FILLTIE_18_SVT -cellInterval 60 -prefix wtap_odd -skipRow 3 -startRowNum 1
+addWellTap -cell FILLTIE_18_SVT -cellInterval 60 -prefix wtap_odd -skipRow 3 -startRowNum 2
+addWellTap -cell FILLTIE_18_SVT -cellInterval 60 -prefix wtap_even -startRowNum 3 -inRowOffset 30 -skipRow 3
+addWellTap -cell FILLTIE_18_SVT -cellInterval 60 -prefix wtap_even -startRowNum 4 -inRowOffset 30 -skipRow 3

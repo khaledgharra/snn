@@ -45,3 +45,8 @@
 [06/25 20:12:12     24s] <CMD> getVersion
 [06/25 20:12:13     24s] [INFO] Loading PVS 24.10 fill procedures
 [06/25 20:12:14     24s] <CMD> win
+[06/25 20:24:52     82s] 
+[06/25 20:24:52     82s] *** Memory Usage v#2 (Current mem = 1864.773M, initial mem = 831.188M) ***
+[06/25 20:24:52     82s] *** Message Summary: 0 warning(s), 0 error(s)
+[06/25 20:24:52     82s] 
+[06/25 20:24:52     82s] --- Ending "Innovus" (totcpu=0:01:23, real=0:13:09, mem=1864.8M) ---

@@ -1,0 +1,9 @@
+setPreference ConstraintUserYGrid 0.01
+setPreference ConstraintUserXGrid 0.01
+fpiSetSnapRule -for IOP -grid UG -force
+globalNetConnect VDD  -type pgpin -pin VDD  -inst * -module {}
+globalNetConnect VSS  -type pgpin -pin VSS  -inst * -module {}
+globalNetConnect VSSC -type pgpin -pin VSSC -inst * -module {}
+globalNetConnect VDDC -type pgpin -pin VDDC -inst * -module {}
+globalNetConnect VDD  -type tiehi -module {}
+globalNetConnect VSS  -type tielo -module {}

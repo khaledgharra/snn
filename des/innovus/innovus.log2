@@ -1,0 +1,26 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.33-s082_1, built Wed Nov 13 14:07:39 PST 2024
+Options:	
+Date:		Thu Jun 18 13:05:31 2026
+Host:		vlsi-ria87 (x86_64 w/Linux 3.10.0-1160.62.1.el7.x86_64) (8cores*8cpus*Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz 12288KB)
+OS:		RHEL
+
+License:
+		[13:05:31.069489] Configured Lic search path (23.02-s006): /etc/local/cadence/license_8x.3868dd0560aa:5280@132.68.59.69:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.64:/etc/local/cadence/license_8x.0894ef683fc3:5280@132.68.59.79:5280@132.68.59.61:27019@132.68.59.69:27019@132.68.59.79
+
+		invs	Innovus Implementation System	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+**WARN: (IMPSYT-1507):	The display is invalid and will start in no window mode
+Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
+Info: Process UID = 31146 / 9444a58e-82f1-4231-bd37-529ad78ab161 / R59wfOrSO3
+source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_attr_defs.tcl
+Loading attribute definitions from mini dummy db...
+Innovus terminated by external (TERM) signal.
+
+*** Memory Usage v#2 (Current mem = 1653.957M, initial mem = 839.188M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:16.8, real=0:22:18, mem=1654.0M) ---

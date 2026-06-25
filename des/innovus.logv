@@ -1,0 +1,16 @@
+[06/18 13:32:01      0s] 
+[06/18 13:32:01      0s] Cadence Innovus(TM) Implementation System.
+[06/18 13:32:01      0s] Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+[06/18 13:32:01      0s] 
+[06/18 13:32:01      0s] Version:	v23.33-s082_1, built Wed Nov 13 14:07:39 PST 2024
+[06/18 13:32:01      0s] Options:	
+[06/18 13:32:01      0s] Date:		Thu Jun 18 13:32:01 2026
+[06/18 13:32:01      0s] Host:		vlsi-ria87 (x86_64 w/Linux 3.10.0-1160.62.1.el7.x86_64) (8cores*8cpus*Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz 12288KB)
+[06/18 13:32:01      0s] OS:		RHEL
+[06/18 13:32:01      0s] 
+[06/18 13:32:01      0s] License:
+[06/18 13:32:01      0s] 		[13:32:01.069465] Configured Lic search path (23.02-s006): /etc/local/cadence/license_8x.3868dd0560aa:5280@132.68.59.69:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.64:/etc/local/cadence/license_8x.0894ef683fc3:5280@132.68.59.79:5280@132.68.59.61:27019@132.68.59.69:27019@132.68.59.79
+
+[06/18 13:32:01      0s] 		invs	Innovus Implementation System	23.1	checkout succeeded
+[06/18 13:32:01      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[06/18 13:32:01      0s] **WARN: (IMPSYT-1507):	The display is invalid and will start in no window mode

@@ -1,0 +1,15 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+create_rc_corner -name SlowRC -cap_table {/tools/kits/tower/TS18SL_6_01/iit/TSL601_6M1L.capTbl} -T {125} -preRoute_res {1} -preRoute_cap {1} -preRoute_clkres {0} -preRoute_clkcap {0} -postRoute_res {1} -postRoute_cap {1} -postRoute_xcap {1} -postRoute_clkres {0} -postRoute_clkcap {0} -qx_tech_file {/tools/kits/tower/TS18SL_6_01/HOTCODE/techs/ts18sl_6M1L/assura/t.00_00_01_scr/RCE_TS18SL_QRC_6M1L_USG/qrcTechFile}
+create_rc_corner -name FastRC -cap_table {/tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl} -T {-40} -preRoute_res {1} -preRoute_cap {1} -preRoute_clkres {0} -preRoute_clkcap {0} -postRoute_res {1} -postRoute_cap {1} -postRoute_xcap {1} -postRoute_clkres {0} -postRoute_clkcap {0} -qx_tech_file {/tools/kits/tower/PDK_TS18SL/iit/qrcTechFile}
+create_library_set -name Typ -timing {/tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/liberty/1.8V-Only/PIO320SL_tt_1p8v_1p8v_25c.lib /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_tt_1p8v_25c.lib}
+create_library_set -name Min -timing {/tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/liberty/1.8V-Only/PIO320SL_ff_1p98v_1p98v_m40c.lib /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ff_1p98v_m40c.lib}
+create_library_set -name Max -timing {/tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/liberty/1.8V-Only/PIO320SL_ss_1p62v_1p62v_125c.lib /tools/kits/tower/TS18SL_6_01/tsl18fs190svt_Rev_2019.09/lib/liberty/tsl18fs190svt_ss_1p62v_125c.lib}
+create_constraint_mode -name TypCM -sdc_files {top.sdc} 
+create_delay_corner -name SlowDC -library_set {Max}  -rc_corner {SlowRC}
+create_delay_corner -name FastDC -library_set {Min}  -rc_corner {FastRC}
+create_analysis_view -name FastView -constraint_mode {TypCM} -delay_corner {FastDC}
+create_analysis_view -name SlowView -constraint_mode {TypCM} -delay_corner {SlowDC}
+set_analysis_view -setup {SlowView} -hold {FastView}
+
+

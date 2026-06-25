@@ -1,0 +1,68 @@
+Loading db file '/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : i2c_master_top
+Version: U-2022.12
+Date   : Tue Jun 16 12:02:08 2026
+****************************************
+
+
+Library(s) Used:
+
+    tsl18fs120_typ (File: /tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db)
+
+
+Operating Conditions: tsl18fs120_typ   Library: tsl18fs120_typ
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+i2c_master_top         4000              tsl18fs120_typ
+i2c_master_byte_ctrl   4000              tsl18fs120_typ
+i2c_master_bit_ctrl    4000              tsl18fs120_typ
+i2c_master_bit_ctrl_DW01_dec_0_DW01_dec_1
+                       ForQA             tsl18fs120_typ
+i2c_master_bit_ctrl_DW01_dec_1_DW01_dec_2
+                       ForQA             tsl18fs120_typ
+
+
+Global Operating Voltage = 1.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   1.2630 mW   (93%)
+  Net Switching Power  =  87.9924 uW    (7%)
+                         ---------
+Total Dynamic Power    =   1.3510 mW  (100%)
+
+Cell Leakage Power     =  29.8368 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      1.1875            0.0000            0.0000            1.1875  (  87.90%)  i
+register       4.9077e-02        1.2769e-02        2.0798e+04        6.1867e-02  (   4.58%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.6397e-02        7.5224e-02        9.0393e+03            0.1016  (   7.52%)
+--------------------------------------------------------------------------------------------------
+Total              1.2630 mW     8.7992e-02 mW     2.9837e+04 pW         1.3510 mW
+1

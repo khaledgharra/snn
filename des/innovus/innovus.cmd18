@@ -1,0 +1,54 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Jun 18 18:00:45 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v23.33-s082_1 (64bit) 11/13/2024 14:07 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 23.33-s082_1 NR241029-2256/23_13-UB (database version 18.20.652_1) {superthreading v2.20}
+#@(#)CDS: AAE 23.13-s019 (64bit) 11/13/2024 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 23.13-s028_1 () Nov 11 2024 03:58:52 ( )
+#@(#)CDS: SYNTECH 23.13-s009_1 () Oct 30 2024 09:17:13 ( )
+#@(#)CDS: CPE v23.13-s062
+#@(#)CDS: IQuantus/TQuantus 23.1.1-s235 (64bit) Fri Sep 27 22:21:33 PDT 2024 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+getVersion
+getVersion
+win
+set defHierChar /
+set init_verilog top.v
+set init_top_cell top
+set init_io_file top.io
+set init_mmmc_file mmmc.view
+set init_pwr_net {VDD VDDC VDDO}
+set init_gnd_net {VSS VSSC VSSO}
+set init_assign_buffer 1
+setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+set delaycal_input_transition_delay 120ps
+set conf_in_tran_delay 120.0ps
+set conf_ioOri R0
+set init_abstract_view abstract
+set init_layout_view layout
+set init_lef_file {/users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef /users/iit/cadence/tsl018b/lef/tsl18fs120.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+set init_design_uniquify 1
+set load_netlist_ignore_undefined_cell 1
+set init_verilog_tolerate_port_mismatch 0
+set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+set timing_enable_default_delay_arc 1
+init_design
+getIoFlowFlag
+selectInst I17/I1
+uiSetTool ruler
+getIoFlowFlag
+getIoFlowFlag
