@@ -35,10 +35,10 @@
    routeDesign
    (runs ~15-40 DRC iterations until 0 violations — let it finish)
 
-9. (Optional) Fix remaining timing/DRC:
-   optDesign -postRoute
+   !! DO NOT run optDesign -postRoute — it re-introduces 192 TOP_M SHORT violations
+   !! by re-routing power through IO pad cell bodies on TOP_M layer
 
-10. Run final verification:
+9. Run final verification:
     verify_drc
     verify_connectivity
 

@@ -34,10 +34,10 @@ addRing \
     -jog_distance 0.56 \
     -threshold 0.56
 
-puts "=== STEP 4: Add horizontal power stripes (M4) ==="
+puts "=== STEP 4: Add horizontal power stripes (M3) ==="
 addStripe \
     -nets {VDD VSS} \
-    -layer M4 \
+    -layer M3 \
     -direction horizontal \
     -width 6 \
     -spacing 1.8 \
