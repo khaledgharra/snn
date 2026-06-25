@@ -43,7 +43,7 @@ addStripe \
     -spacing 1.8 \
     -set_to_set_distance 100 \
     -start_from bottom \
-    -stacked_via_top_layer TOP_M \
+    -stacked_via_top_layer M5 \
     -stacked_via_bottom_layer M1
 
 puts "=== STEP 5: Add vertical power stripes (M4) ==="
@@ -55,7 +55,7 @@ addStripe \
     -spacing 1.8 \
     -set_to_set_distance 100 \
     -start_from left \
-    -stacked_via_top_layer TOP_M \
+    -stacked_via_top_layer M5 \
     -stacked_via_bottom_layer M1
 
 puts "=== STEP 6: Route power to standard cell pins ==="
