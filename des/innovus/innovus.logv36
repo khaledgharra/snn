@@ -8265,3 +8265,87 @@ Routing Overflow: 0.00% H and 0.00% V
 [06/25 23:33:16    125s] ---------------------------------------------------------------------------------------------
 [06/25 23:33:16    125s]  timeDesign #4 TOTAL                0:00:01.3  ( 100.0 % )     0:00:01.3 /  0:00:00.2    0.1
 [06/25 23:33:16    125s] ---------------------------------------------------------------------------------------------
+[06/25 23:37:16    142s] <CMD> zoomBox 118.18900 149.86100 1591.97000 1469.21000
+[06/25 23:37:17    142s] <CMD> zoomBox 488.34200 487.13600 1142.26800 1072.53900
+[06/25 23:37:17    142s] <CMD> zoomBox 532.62800 527.48800 1088.46500 1025.08100
+[06/25 23:37:17    142s] <CMD> zoomBox 570.27000 561.78700 1042.73300 984.74200
+[06/25 23:37:17    142s] <CMD> zoomBox 602.26700 590.94200 1003.86000 950.45300
+[06/25 23:37:19    142s] <CMD> zoomBox 629.46400 615.72300 970.81800 921.30800
+[06/25 23:37:20    142s] <CMD> zoomBox 672.23100 654.69200 918.85900 875.47700
+[06/25 23:37:20    142s] <CMD> zoomBox 688.93300 669.91100 898.56700 857.57800
+[06/25 23:37:21    142s] <CMD> zoomBox 570.26800 561.78700 1042.73300 984.74400
+[06/25 23:37:21    142s] <CMD> zoomBox 374.93800 383.80800 1280.03600 1194.06400
+[06/25 23:37:22    142s] <CMD> zoomBox 302.82400 318.10000 1367.64600 1271.34300
+[06/25 23:37:22    143s] <CMD> zoomBox 217.98500 240.79600 1470.71700 1362.25900
+[06/25 23:37:22    143s] <CMD> zoomBox 118.17300 149.85000 1591.97700 1469.21900
+[06/25 23:37:22    143s] <CMD> zoomBox 0.74900 42.85600 1734.63600 1595.05500
+[06/25 23:37:24    143s] <CMD> zoomBox 118.17300 149.85000 1591.97700 1469.21900
+[06/25 23:37:24    143s] <CMD> zoomBox 217.98300 240.79500 1470.71700 1362.25900
+[06/25 23:37:24    143s] <CMD> zoomBox 302.82200 318.09800 1367.64600 1271.34300
+[06/25 23:37:26    143s] <CMD> zoomBox 436.23100 439.65700 1205.56700 1128.37700
+[06/25 23:37:27    143s] <CMD> zoomBox 629.45900 615.72100 970.81700 921.30900
+[06/25 23:37:27    143s] <CMD> zoomBox 715.19500 693.84100 866.65700 829.43200
+[06/25 23:37:27    143s] <CMD> zoomBox 753.23500 728.50300 820.44000 788.66600
+[06/25 23:37:28    143s] <CMD> zoomBox 761.65500 736.17500 810.21100 779.64300
+[06/25 23:37:29    143s] <CMD> zoomBox 757.78600 732.65000 814.91100 783.78900
+[06/25 23:37:29    143s] <CMD> zoomBox 753.23500 728.50200 820.44100 788.66600
+[06/25 23:37:29    143s] <CMD> zoomBox 747.88000 723.62300 826.94600 794.40400
+[06/25 23:37:29    143s] <CMD> zoomBox 741.58000 717.88300 834.59900 801.15500
+[06/25 23:37:30    143s] <CMD> zoomBox 734.16900 711.13000 843.60300 809.09700
+[06/25 23:37:30    143s] <CMD> zoomBox 725.44900 703.18500 854.19600 818.44100
+[06/25 23:37:31    143s] <CMD> zoomBox 630.58600 635.92600 877.22500 856.72100
+[06/25 23:37:32    143s] <CMD> zoomBox 595.56300 611.09500 885.72700 870.85400
+[06/25 23:38:08    146s] <CMD> zoomBox 618.70400 635.08100 865.34500 855.87700
+[06/25 23:38:08    146s] <CMD> zoomBox 681.38600 700.05100 810.13500 815.30900
+[06/25 23:38:09    146s] <CMD> zoomBox 691.65400 710.69400 801.09100 808.66300
+[06/25 23:38:09    146s] <CMD> zoomBox 700.38200 719.73900 793.40400 803.01400
+[06/25 23:38:10    146s] <CMD> zoomBox 714.10500 733.96400 781.31600 794.13200
+[06/25 23:38:11    146s] <CMD> zoomBox 719.46500 739.51900 776.59500 790.66300
+[06/25 23:38:12    146s] <CMD> zoomBox 714.10400 733.96300 781.31600 794.13200
+[06/25 23:38:14    147s] <CMD> zoomBox 707.79800 727.42700 786.87100 798.21400
+[06/25 23:38:17    147s] <CMD> zoomBox 714.10400 733.96300 781.31700 794.13300
+[06/25 23:38:50    149s] <CMD> zoomBox 707.44500 728.07100 786.51900 798.85900
+[06/25 23:38:51    149s] <CMD> zoomBox 699.61000 721.13800 792.63900 804.41900
+[06/25 23:38:51    149s] <CMD> zoomBox 690.39300 712.98200 799.83900 810.96000
+[06/25 23:38:51    149s] <CMD> zoomBox 679.54800 703.38700 808.30900 818.65600
+[06/25 23:38:52    149s] <CMD> zoomBox 666.78900 692.09900 818.27400 827.71000
+[06/25 23:38:52    149s] <CMD> zoomBox 651.78000 678.81900 829.99800 838.36200
+[06/25 23:38:53    149s] <CMD> zoomBox 634.12200 663.19500 843.79100 850.89400
+[06/25 23:38:53    149s] <CMD> zoomBox 613.34700 644.81400 860.01800 865.63700
+[06/25 23:38:54    149s] <CMD> zoomBox 588.90700 623.18900 879.10800 882.98100
+[06/25 23:39:01    150s] 
+[06/25 23:39:01    150s] *** Memory Usage v#2 (Current mem = 2994.207M, initial mem = 839.188M) ***
+[06/25 23:39:01    150s] 
+[06/25 23:39:01    150s] *** Summary of all messages that are not suppressed in this session:
+[06/25 23:39:01    150s] Severity  ID               Count  Summary                                  
+[06/25 23:39:01    150s] WARNING   IMPLF-200           88  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[06/25 23:39:01    150s] WARNING   IMPLF-201           40  Pin '%s' in macro '%s' has no ANTENNADIF...
+[06/25 23:39:01    150s] ERROR     IMPSE-25             1  You are using a Limited Access feature t...
+[06/25 23:39:01    150s] WARNING   IMPFP-325            1  Floorplan of the design is resized. All ...
+[06/25 23:39:01    150s] WARNING   IMPFP-3961          16  The techSite '%s' has no related standar...
+[06/25 23:39:01    150s] WARNING   IMPTS-124            6  Timing library description of pin '%s' i...
+[06/25 23:39:01    150s] WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+[06/25 23:39:01    150s] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[06/25 23:39:01    150s] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[06/25 23:39:01    150s] WARNING   IMPEXT-2773          2  The via resistance between layers %s and...
+[06/25 23:39:01    150s] WARNING   IMPEXT-2776          8  The via resistance between layers %s and...
+[06/25 23:39:01    150s] WARNING   IMPSYT-3004          2  %s                                       
+[06/25 23:39:01    150s] WARNING   IMPSYC-2             1  Timing information is not defined for ce...
+[06/25 23:39:01    150s] WARNING   IMPVL-159         1121  Pin '%s' of cell '%s' is defined in LEF ...
+[06/25 23:39:01    150s] ERROR     IMPDB-1221           2  A Global Net Connection (GNC) is specifi...
+[06/25 23:39:01    150s] WARNING   IMPDC-1629           2  The default delay limit was set to %d. T...
+[06/25 23:39:01    150s] WARNING   IMPPP-557            6  A single-layer VIARULE GENERATE for turn...
+[06/25 23:39:01    150s] WARNING   IMPPP-354            4  The power planner did not generate the %...
+[06/25 23:39:01    150s] WARNING   IMPPP-4022           4  Option "-%s" is obsolete and has been re...
+[06/25 23:39:01    150s] WARNING   IMPSR-4058           1  Sroute option: %s should be used in conj...
+[06/25 23:39:01    150s] WARNING   IMPSR-1256           2  Unable to find any CORE class pad pin of...
+[06/25 23:39:01    150s] WARNING   IMPSP-9025           1  No scan chain specified/traced.          
+[06/25 23:39:01    150s] WARNING   NRIG-1303            1  The congestion map does not match the GC...
+[06/25 23:39:01    150s] WARNING   NRIF-38              1  Option %s%s is not a Boolean option.     
+[06/25 23:39:01    150s] WARNING   NRIF-95             53  Option setNanoRouteMode -routeTopRouting...
+[06/25 23:39:01    150s] WARNING   IMPUDM-33            2  Global variable "%s" is obsolete and wil...
+[06/25 23:39:01    150s] WARNING   TCLCMD-513           8  The software could not find a matching o...
+[06/25 23:39:01    150s] WARNING   TCLCMD-1403          1  '%s'                                     
+[06/25 23:39:01    150s] *** Message Summary: 1376 warning(s), 3 error(s)
+[06/25 23:39:01    150s] 
+[06/25 23:39:01    150s] --- Ending "Innovus" (totcpu=0:02:30, real=0:14:55, mem=2994.2M) ---

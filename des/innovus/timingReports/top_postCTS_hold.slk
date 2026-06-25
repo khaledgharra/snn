@@ -1,0 +1,12 @@
+# Format: clock  timeReq  slackR/slackF  holdR/holdF  instName/pinName   # cycle(s)
+I9/I1/PAD(R)->I9/I1/PAD(R)	-0.005   */0.236         */0.005         I0/byte_controller/bit_controller/dout_reg/D    1
+I9/I1/PAD(R)->I9/I1/PAD(R)	-0.018   0.282/*         0.018/*         I0/wb_dat_o_reg[1]/D    1
+I9/I1/PAD(R)->I9/I1/PAD(R)	-0.017   0.282/*         0.017/*         I0/wb_dat_o_reg[2]/D    1
+I9/I1/PAD(R)->I9/I1/PAD(R)	-0.017   0.288/*         0.017/*         I0/wb_dat_o_reg[3]/D    1
+I9/I1/PAD(R)->I9/I1/PAD(R)	-0.021   0.308/*         0.021/*         I0/wb_dat_o_reg[7]/D    1
+I9/I1/PAD(R)->I9/I1/PAD(R)	-0.021   0.329/*         0.021/*         I0/wb_dat_o_reg[4]/D    1
+I9/I1/PAD(R)->I9/I1/PAD(R)	-0.023   0.330/*         0.023/*         I0/wb_dat_o_reg[0]/D    1
+I9/I1/PAD(R)->I9/I1/PAD(R)	-0.022   0.344/*         0.022/*         I0/wb_dat_o_reg[6]/D    1
+I9/I1/PAD(R)->I9/I1/PAD(R)	-0.022   0.346/*         0.022/*         I0/wb_dat_o_reg[5]/D    1
+I9/I1/PAD(R)->I9/I1/PAD(R)	-0.068   */0.446         */0.068         I0/byte_controller/bit_controller/dscl_oen_reg/D    1
+I9/I1/PAD(R)->I9/I1/PAD(R)	-0.028   */0.791         */0.028         I0/wb_ack_o_reg/D    1
