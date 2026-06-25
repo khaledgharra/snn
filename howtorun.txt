@@ -1,0 +1,9 @@
+source i2c.globals
+init_design
+
+After import, first run the diagnostic:
+dbGet head.sites.name
+
+If it shows CoreSite, run:
+source floorplan.tcl
+placeDesign
