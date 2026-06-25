@@ -1,6 +1,6 @@
 #============================================================
 # i2c_master_top — Floorplan + Power Planning
-# Follows ExecBE.pdf lab instructions (TS18SL 0.18um)
+# Follows ExecBE.pdf lab instructions exactly
 # Usage:  source floorplan.tcl
 #============================================================
 
@@ -11,9 +11,11 @@ puts "=== STEP 2: Connect global power/ground nets ==="
 source glnets.src
 deselectAll
 
-puts "=== STEP 3: Add power ring around core ==="
-# Per ExecBE.pdf: TOP_M (vertical) for left/right, M5 (horizontal) for top/bottom
-# Width=8, spacing=1.8, offset=1.8, stacked vias M1-TOP_M
+puts "=== STEP 3: Add power ring (along IO boundary) ==="
+# Per ExecBE.pdf:
+#   TOP_M = top, bottom   (horizontal segments)
+#   M5    = left, right   (vertical segments)
+#   Width = 6, Spacing = 1.8, Centre of Channel
 setAddRingMode \
     -ring_target default \
     -extend_over_row 0 \
@@ -29,29 +31,33 @@ setAddRingMode \
 addRing \
     -nets {VSS VDD} \
     -around default_power_domain \
-    -layer {top M5 bottom M5 left TOP_M right TOP_M} \
-    -width 8 \
+    -follow io \
+    -layer {top TOP_M bottom TOP_M left M5 right M5} \
+    -width 6 \
     -spacing 1.8 \
-    -offset 1.8 \
     -center 1 \
     -jog_distance 0.56 \
     -threshold 0.56
 
-puts "=== STEP 4: Add power stripes (M5 horizontal) ==="
-# Per ExecBE.pdf: M5 stripes, width=1, set-to-set distance=100
+puts "=== STEP 4: Add power stripes (M5, per ExecBE.pdf) ==="
+# Per ExecBE.pdf:
+#   Layer=M5, Width=6, Spacing=1.8
+#   Set-to-set distance=100
+#   Absolute: Start=330, Stop=1000
 addStripe \
     -nets {VSS VDD} \
     -layer M5 \
     -direction horizontal \
-    -width 1 \
+    -width 6 \
     -spacing 1.8 \
     -set_to_set_distance 100 \
     -start_from bottom \
-    -stop_at first_last_and_ring \
+    -start_offset 330 \
+    -stop_offset 1000 \
     -stacked_via_top_layer TOP_M \
     -stacked_via_bottom_layer M1
 
-puts "=== STEP 5: Route special nets (power to std cell pins) ==="
+puts "=== STEP 5: Route power to standard cell pins and pad pins ==="
 sroute \
     -connect { corePin padPin padRing } \
     -layerChangeRange { M1 TOP_M } \
