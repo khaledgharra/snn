@@ -54,57 +54,20 @@ addRing \
     -stacked_via_bottom_layer M1 \
     -layer_left TOP_M
 
-puts "=== STEP 4: Add vertical power stripes (TOP_M / M6) ==="
-# TOP_M vertical stripes, 8 um wide, 1.8 um spacing, every 70 um
-addStripe \
-    -block_ring_top_layer_limit TOP_M \
-    -max_same_layer_jog_length 0.88 \
-    -padcore_ring_bottom_layer_limit M5 \
-    -set_to_set_distance 70 \
-    -stacked_via_top_layer TOP_M \
-    -padcore_ring_top_layer_limit TOP_M \
-    -spacing 1.8 \
-    -merge_stripes_value 0.56 \
-    -layer TOP_M \
-    -block_ring_bottom_layer_limit M5 \
-    -width 8 \
-    -nets {VSS VDD} \
-    -stacked_via_bottom_layer M4
-
-puts "=== STEP 5: Add horizontal power stripes (M5) ==="
-# M5 horizontal stripes, connects to TOP_M vertical
+puts "=== STEP 4: Add M5 vertical power stripes (sparse, 200um pitch) ==="
+# Sparse stripes — core is tiny, dense stripes caused routing congestion
 addStripe \
     -block_ring_top_layer_limit TOP_M \
     -max_same_layer_jog_length 0.88 \
     -padcore_ring_bottom_layer_limit M4 \
-    -set_to_set_distance 70 \
+    -set_to_set_distance 200 \
     -stacked_via_top_layer TOP_M \
     -padcore_ring_top_layer_limit TOP_M \
     -spacing 1.8 \
     -merge_stripes_value 0.56 \
-    -direction horizontal \
     -layer M5 \
     -block_ring_bottom_layer_limit M4 \
-    -width 8 \
-    -nets {VSS VDD} \
-    -stacked_via_bottom_layer M4
-
-puts "=== STEP 6: Add vertical power stripes (M4) ==="
-# M4 vertical stripes, connects M5 down to M3 level
-addStripe \
-    -block_ring_top_layer_limit M5 \
-    -max_same_layer_jog_length 0.88 \
-    -padcore_ring_bottom_layer_limit M3 \
-    -set_to_set_distance 70 \
-    -stacked_via_top_layer TOP_M \
-    -padcore_ring_top_layer_limit M5 \
-    -spacing 1.8 \
-    -xleft_offset 3 \
-    -xright_offset 3 \
-    -merge_stripes_value 0.56 \
-    -layer M4 \
-    -block_ring_bottom_layer_limit M3 \
-    -width 5 \
+    -width 4 \
     -nets {VSS VDD} \
     -stacked_via_bottom_layer M4
 

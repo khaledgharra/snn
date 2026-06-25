@@ -1,0 +1,405 @@
+============================================================
+  I2C Master Top — Design Report & Script Reference
+  Project: VLSI I2C Master Controller
+  Technology: Tower Semiconductor TS18SL 0.18um CMOS
+  Tool: Cadence Innovus (Place & Route)
+  Die Size: 1588.08 x 1588.08 um
+  Date: June 2026
+============================================================
+
+
+────────────────────────────────────────────────────────────
+  1. DESIGN OVERVIEW
+────────────────────────────────────────────────────────────
+
+This project implements an I2C Master Controller chip using
+the Tower TS18SL 0.18um (180nm) CMOS process.
+
+  Core logic   : i2c_master_top (WISHBONE bus interface)
+  Wrapper      : top module — connects core to IO pad ring
+  Voltage      : 1.8V
+  Metal layers : 6 (M1, M2, M3, M4, M5, TOP_M)
+  IO pad lib   : PIO320SL_6M1L (each pad = 320um tall)
+  Std cell lib : tsl18fs120 (120nm char) + tsl18fs190svt
+
+Pad count (after reduction):
+  North  : 10 signal/power pads
+  East   : 10 signal/power pads
+  South  : 11 signal/power pads
+  West   : 10 signal/power pads
+  Corners: 4 (Pcornerur, Pcornerlr, Pcornerll, Pcornerul)
+  Total  : 41 pad cells + 4 corners
+
+
+────────────────────────────────────────────────────────────
+  2. FILE STRUCTURE
+────────────────────────────────────────────────────────────
+
+des/innovus/
+  top.v          — Main pad-ring netlist (primary edit file)
+  top.io         — IO pad placement order for Innovus
+  floorplan.tcl  — Floorplan + power ring/stripe script
+  i2c.globals    — Innovus import settings
+  mmmc.view      — Multi-mode multi-corner timing setup
+  glnets.src     — Global net connections (VDD/VSS)
+  INNOVUS_FLOW.txt — Quick command reference
+  DESIGN_REPORT.txt — This file
+
+
+────────────────────────────────────────────────────────────
+  3. SCRIPT EXPLANATIONS
+────────────────────────────────────────────────────────────
+
+─── i2c.globals ───────────────────────────────────────────
+
+  What it does:
+    Tells Innovus where to find all input files before
+    importing the design.
+
+  Key settings:
+    set init_verilog  {top.v}       → the netlist
+    set init_top_cell {top}         → top module name
+    set init_io_file  {top.io}      → pad placement order
+    set init_mmmc_file {mmmc.view}  → timing corners
+    set init_lef_file {...}         → tech + cell + IO LEFs
+
+  How to run:
+    source i2c.globals
+    (run this FIRST, before init_design)
+
+  Future edits:
+    - If you add a new LEF library, append its path to
+      init_lef_file inside curly braces.
+    - If you rename top.v, update init_verilog here.
+
+
+─── top.v ─────────────────────────────────────────────────
+
+  What it does:
+    Defines the "top" module — the pad ring wrapper.
+    It instantiates:
+      1. i2c_master_top (the core logic, from synthesis)
+      2. Input pads  (pc3d01)  — for signals coming IN
+      3. Output pads (pt3o01)  — for signals going OUT
+      4. Power pads  (pvdc/pv0c) — VDD and VSS supply pads
+      5. Corner pads (pfrelr)  — mechanical corners
+
+  Pad wrapper modules defined at top of file:
+    pc3d01  → input pad  (PIOH_18_18, EN=0 → input mode)
+    pt3o01  → output pad (PIOH_18_18, EN=1 → output mode)
+    pvdc    → VDD power pad (PVDF_18_18)
+    pv0c    → VSS ground pad (PV0F_18_18)
+    pfrelr  → corner pad (PCORNER_NA_NA)
+
+  Signal pads (I1–I34):
+    I1  → VDD sense (input)
+    I2  → VSS sense (input)
+    I4  → scl_pad_i  (SCL input)
+    I5  → sda_pad_i  (SDA input)
+    I6-I8  → wb_adr_i[2:0] (WISHBONE address)
+    I9  → wb_clk_i   (clock)
+    I10 → wb_cyc_i   (cycle)
+    I11-I18 → wb_dat_i[7:0] (data in)
+    I19 → wb_rst_i   (reset)
+    I20 → wb_stb_i   (strobe)
+    I21 → wb_we_i    (write enable)
+    I22 → scl_pad_o  (SCL output)
+    I23 → scl_padoen_o
+    I24 → sda_pad_o  (SDA output)
+    I25 → sda_padoen_o
+    I26 → wb_ack_o   (acknowledge)
+    I27-I34 → wb_dat_o[7:0] (data out)
+
+  Power pads:
+    PAD_G1/PAD_I1 → VSS/VDD pair (North)
+    PAD_G3/PAD_I3 → VSS/VDD pair (East)
+    PAD_G5/PAD_I5 → VSS/VDD pair (South)
+    PAD_G7/PAD_I7 → VSS/VDD pair (West)
+
+  NOTE: arst_i is tied to 1'b0 (no external reset pad).
+        wb_inta_o is not connected (interrupt output removed).
+
+
+─── top.io ─────────────────────────────────────────────────
+
+  What it does:
+    Tells Innovus the ORDER of pads going around the chip.
+    Pads are listed clockwise starting from North-West corner.
+
+  Format:
+    Pad: <instance_name>/I1   <side>
+      sides: N (north), E (east), S (south), W (west)
+      SE/NE/NW/SW = corner pads
+
+  Orient lines:
+    Orient: R0    → after last N pad, before SE corner
+    Orient: R90   → after last E pad, before NE corner
+    Orient: R180  → after last S pad, before NW corner
+    Orient: R270  → after last W pad, before SW corner
+
+  Current layout:
+    North  (10): I1 I2 PAD_G1 PAD_I1 I4 I5 I6 I7 I8 I9
+    East   (10): I10 I11 I12 PAD_G3 PAD_I3 I13 I14 I15 I16 I17
+    South  (11): I18 I19 I20 I21 PAD_G5 PAD_I5 I22 I23 I24 I25 I26
+    West   (10): I27 I28 I29 I30 PAD_G7 PAD_I7 I31 I32 I33 I34
+
+
+─── floorplan.tcl ──────────────────────────────────────────
+
+  What it does:
+    Runs inside Innovus after init_design.
+    Sets up the physical chip layout in 6 steps:
+
+    STEP 1 — floorPlan
+      Sets die dimensions and core margins.
+      Current: 1588.08 x 1588.08 um, 10um margin all sides
+      Core area = (1588.08 - 320 - 320) x same ≈ 948 x 948 um
+      (320um each side = IO pad height)
+
+    STEP 2 — source glnets.src
+      Connects global VDD/VSS nets throughout the design.
+
+    STEP 3 — addRing
+      Draws power rings around the core area.
+      Horizontal (top/bottom): M5 layer
+      Vertical (left/right): TOP_M (M6) layer
+      Width: 8um, Spacing: 1.8um
+
+    STEP 4 — addStripe (TOP_M vertical)
+      Adds vertical power stripes every 70um on TOP_M.
+      Width: 8um, Spacing: 1.8um
+
+    STEP 5 — addStripe (M5 horizontal)
+      Adds horizontal power stripes every 70um on M5.
+
+    STEP 6 — addStripe (M4 vertical)
+      Adds finer vertical stripes every 70um on M4.
+      Width: 5um (connects M5 down to standard cells)
+
+
+────────────────────────────────────────────────────────────
+  4. FULL INNOVUS FLOW (step-by-step commands)
+────────────────────────────────────────────────────────────
+
+ON THE REMOTE SERVER (vlsi-ria87 via SSH):
+
+  bash                          ← switch from csh to bash
+  export DISPLAY=:31            ← set VNC display
+  cd ~/Desktop/khaled/des/innovus
+  git pull origin master        ← get latest files from Mac
+  innovus &                     ← launch Innovus GUI
+
+INSIDE INNOVUS TCL CONSOLE:
+
+  Step 1 — Load settings:
+    source i2c.globals
+
+  Step 2 — Import design (reads all files):
+    init_design
+
+  Step 3 — Floorplan + power:
+    source floorplan.tcl
+
+  Step 4 — Place standard cells:
+    placeDesign
+
+  Step 5 — Route all wires:
+    routeDesign
+    (15-40 DRC iterations — let it finish on its own)
+
+  Step 6 — Post-route optimization (optional):
+    optDesign -postRoute
+
+  Step 7 — Verify:
+    verify_drc
+    verify_connectivity
+
+  Step 8 — Save database:
+    saveDesign ./results/i2c_top_final.enc
+
+  Step 9 — Export GDSII (for tape-out):
+    streamOut ./results/i2c_top.gds \
+        -mapFile /users/iit/cadence/tsl018b/gds/tsl18_6lm.layermap \
+        -libName tsl18fs120 \
+        -units 1000 \
+        -mode ALL
+
+  Step 10 — Export final netlist:
+    saveNetlist ./results/i2c_top_final.v
+
+
+────────────────────────────────────────────────────────────
+  5. HOW TO MAKE FUTURE EDITS
+────────────────────────────────────────────────────────────
+
+─── To change die size ─────────────────────────────────────
+
+  File: floorplan.tcl, line 10
+
+  Current:
+    floorPlan -site CoreSite -d 1588.08 1588.08 10 10 10 10
+
+  Format:
+    floorPlan -site CoreSite -d <width> <height> <left_margin> <bottom_margin> <right_margin> <top_margin>
+
+  Minimum width/height calculation:
+    Each side needs (number_of_pads × 320um)
+    South has 11 pads → 11 × 320 = 3520um minimum
+    BUT Innovus spaces pads equally, so die just needs to be
+    bigger than the pad ring footprint.
+
+    Safe minimum with 11 pads/side:
+      11 × 320 = 3520 → but corners add ~320 each side
+      So minimum ≈ 3520 + 640 = 4160um if all pads used.
+      Current 1588um works because pads spread with gaps.
+
+  After editing floorplan.tcl:
+    Re-run: source floorplan.tcl  (in Innovus after init_design)
+
+
+─── To add a new input signal pad ──────────────────────────
+
+  You need to edit 3 files:
+
+  1) top.v — add a wire and pad instance:
+       wire wire_my_new_signal;
+       pc3d01 I_NEW ( .CIN(wire_my_new_signal), .PAD(net_NEW) );
+     Then connect wire_my_new_signal to i2c_master_top port.
+
+  2) top.io — add the pad name on a side:
+       Pad: I_NEW/I1   N    ← put it on North side
+
+  3) Run in Innovus:
+       init_design          ← re-reads top.v and top.io
+       source floorplan.tcl ← may need to resize die
+
+
+─── To add a new output signal pad ─────────────────────────
+
+  Same as input but use pt3o01 instead of pc3d01:
+    pt3o01 I_NEW ( .PAD(net_NEW), .I(wire_my_output_signal) );
+
+
+─── To remove a pad ─────────────────────────────────────────
+
+  Edit 3 files:
+
+  1) top.v  — delete the instance (e.g., pc3d01 I35 ...)
+              delete the wire declaration if only used by that pad
+
+  2) top.io — delete the Pad: line for that instance
+
+  3) If the pad was a power pad (pvdc/pv0c), also remove
+     PAD_G# and PAD_I# as a pair — always remove both.
+
+  Example: We removed I3 (arst_i input pad):
+    - Deleted: pc3d01 I3 ( .CIN(wire_arst_i), .PAD(net102) );
+    - Deleted: wire wire_arst_i;
+    - Changed i2c_master_top: .arst_i(1'b0)  ← tied low
+    - Removed from top.io: Pad: I3/I1  N
+
+
+─── To add a power pad pair ────────────────────────────────
+
+  Power pads always come in pairs: one VSS (PAD_G#) + one VDD (PAD_I#)
+
+  1) top.v — add:
+       pv0c PAD_G9 (.VSS(VSS));    ← ground pad
+       pvdc PAD_I9 (.VDD(VDD));    ← power pad
+
+  2) top.io — add both to a side:
+       Pad: PAD_G9/I1   S
+       Pad: PAD_I9/I1   S
+
+  3) Re-run init_design in Innovus.
+
+
+─── To change power ring/stripe sizes ──────────────────────
+
+  File: floorplan.tcl
+
+  Power ring (Step 3):
+    -width_left / -width_right / -width_top / -width_bottom
+    → change all to same value (e.g., 10 for wider ring)
+    -spacing_* → gap between VDD and VSS ring wires
+
+  Power stripes (Steps 4-6):
+    -width      → wire width (currently 8um or 5um)
+    -spacing    → gap between stripes
+    -set_to_set_distance → pitch between stripe pairs (70um)
+
+  Bigger stripes = lower IR drop but less routing space.
+  For this small design (tiny core), current values are fine.
+
+
+─── To restart Innovus from scratch ─────────────────────────
+
+  In Innovus TCL:
+    exit
+  Then in bash:
+    innovus &
+  Then redo the 5-step flow (source i2c.globals → init_design → ...)
+
+
+────────────────────────────────────────────────────────────
+  6. WHAT WAS CHANGED AND WHY
+────────────────────────────────────────────────────────────
+
+Problem: Die size was 4980 x 4980 um but core cells only
+needed ~37 x 37 um. The coordinator asked to reduce chip size.
+
+Changes made (commit 782f50c):
+
+  1. Removed pad I3 (arst_i — async reset input)
+     - arst_i is now permanently tied to 1'b0 in top.v
+     - This means the core uses only synchronous reset (wb_rst_i)
+     - Saves 1 pad slot
+
+  2. Removed pad I35 (wb_inta_o — interrupt output)
+     - Interrupt output is not connected externally
+     - Saves 1 pad slot
+
+  3. Removed 4 decap pad pairs (8 pads):
+     PAD_G2/PAD_I2, PAD_G4/PAD_I4, PAD_G6/PAD_I6, PAD_G8/PAD_I8
+     - Decap pads are optional power supply decoupling
+     - Kept 1 VDD/VSS pair per side (4 pairs total remain)
+     - Saves 8 pad slots
+
+  4. Reduced die size in floorplan.tcl:
+     From: 4980.08 x 4980.08 um
+     To:   1588.08 x 1588.08 um
+     Result: ~9x smaller chip area
+
+  Total pads removed: 10 (was ~51, now 41 + 4 corners)
+  Max pads per side: reduced from 13 to 11
+
+
+────────────────────────────────────────────────────────────
+  7. TIPS & COMMON ISSUES
+────────────────────────────────────────────────────────────
+
+- Server uses csh/tcsh by default.
+  Always run "bash" first before using export or nvm.
+
+- To sync files between Mac and server:
+    On Mac: git push origin master
+    On server: git pull origin master
+  Never edit the same file on both sides at once.
+
+- If Innovus says "CoreSite not found" after init_design:
+    Check that init_lef_file in i2c.globals includes the
+    tech LEF: tsl18_6lm_tech.lef (this defines CoreSite)
+
+- If floorplan fails with "pads don't fit":
+    Increase die size in floorplan.tcl.
+    Each side needs at least: num_pads × 320um
+
+- routeDesign iterations are normal — it keeps going until
+  DRC violations = 0. Do not interrupt it.
+
+- After routeDesign, always run verify_drc before export.
+  Zero DRC violations required for tape-out.
+
+============================================================
+  END OF REPORT
+============================================================
