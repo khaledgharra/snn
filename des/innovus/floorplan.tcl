@@ -53,7 +53,6 @@ addStripe \
     -set_to_set_distance 300 \
     -stacked_via_top_layer TOP_M \
     -stacked_via_bottom_layer M1 \
-    -start_from bottom \
     -stop_at first_last_and_ring
 
 puts "=== STEP 5: Route power to standard cell pins and pad pins ==="
