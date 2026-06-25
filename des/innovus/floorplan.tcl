@@ -27,7 +27,6 @@ setAddRingMode \
 addRing \
     -nets {VDD VSS} \
     -around default_power_domain \
-    -follow io \
     -layer {top TOP_M bottom TOP_M left M5 right M5} \
     -width 6 \
     -spacing 1.8 \
