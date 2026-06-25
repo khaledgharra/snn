@@ -1,23 +1,20 @@
 #============================================================
 # i2c_master_top — Floorplan + Power Planning
-# Follows ExecBE.pdf lab instructions exactly
+# Matches GUI settings from screenshots exactly
 # Usage:  source floorplan.tcl
 #============================================================
 
 puts "=== STEP 1: Floorplan ==="
-# 2500x2500 um die — gives ~1800um core after 320um IO pads each side
-# Small core (~40x40um cells) has plenty of routing space
-floorPlan -site CoreSite -d 2500.08 2500.08 50 50 50 50
+# Die=1799.84x1799.84, Core to IO boundary, margins ~75um
+floorPlan -site CoreSite -d 1799.84 1799.84 75.6 75.6 75.04 75.04
 
 puts "=== STEP 2: Connect global power/ground nets ==="
 source glnets.src
 deselectAll
 
-puts "=== STEP 3: Add power ring (along IO boundary) ==="
-# Per ExecBE.pdf:
-#   TOP_M = top, bottom   (horizontal segments)
-#   M5    = left, right   (vertical segments)
-#   Width = 6, Spacing = 1.8, Centre of Channel
+puts "=== STEP 3: Add power ring (Along I/O boundary) ==="
+# TOP_M(6V) top/bottom, M5(5H) left/right
+# Width=6, Spacing=1.8, Center in channel
 setAddRingMode \
     -ring_target default \
     -extend_over_row 0 \
@@ -31,7 +28,7 @@ setAddRingMode \
     -skip_via_on_wire_shape { noshape }
 
 addRing \
-    -nets {VSS VDD} \
+    -nets {VDD VSS} \
     -around default_power_domain \
     -follow io \
     -layer {top TOP_M bottom TOP_M left M5 right M5} \
@@ -41,21 +38,37 @@ addRing \
     -jog_distance 0.56 \
     -threshold 0.56
 
-puts "=== STEP 4: Add power stripes (M5 sparse — small core adaptation) ==="
-# PDF says width=6 set_to_set=100 but that fills 70% of M5 for this tiny core.
-# Using width=2 set_to_set=300 to keep M5 available for signal routing.
+puts "=== STEP 4: Add horizontal power stripes (M4) ==="
+# M4, Horizontal, Width=6, Spacing=1.8, set-to-set=100
+# Stripe boundary: Core ring, Start from Bottom
 addStripe \
-    -nets {VSS VDD} \
-    -layer M5 \
+    -nets {VDD VSS} \
+    -layer M4 \
     -direction horizontal \
-    -width 2 \
+    -width 6 \
     -spacing 1.8 \
-    -set_to_set_distance 300 \
+    -set_to_set_distance 100 \
+    -stop_at first_last_and_ring \
+    -start_from bottom \
     -stacked_via_top_layer TOP_M \
-    -stacked_via_bottom_layer M1 \
-    -stop_at first_last_and_ring
+    -stacked_via_bottom_layer M1
 
-puts "=== STEP 5: Route power to standard cell pins and pad pins ==="
+puts "=== STEP 5: Add vertical power stripes (M4) ==="
+# M4, Vertical, Width=6, Spacing=1.8, set-to-set=100
+# Stripe boundary: Core ring, Start from Left
+addStripe \
+    -nets {VDD VSS} \
+    -layer M4 \
+    -direction vertical \
+    -width 6 \
+    -spacing 1.8 \
+    -set_to_set_distance 100 \
+    -stop_at first_last_and_ring \
+    -start_from left \
+    -stacked_via_top_layer TOP_M \
+    -stacked_via_bottom_layer M1
+
+puts "=== STEP 6: Route power to standard cell pins and pad pins ==="
 sroute \
     -connect { corePin padPin padRing } \
     -layerChangeRange { M1 TOP_M } \
