@@ -48,7 +48,6 @@ addStripe \
     -width 6 \
     -spacing 1.8 \
     -set_to_set_distance 100 \
-    -stop_at first_last_and_ring \
     -start_from bottom \
     -stacked_via_top_layer TOP_M \
     -stacked_via_bottom_layer M1
@@ -63,7 +62,6 @@ addStripe \
     -width 6 \
     -spacing 1.8 \
     -set_to_set_distance 100 \
-    -stop_at first_last_and_ring \
     -start_from left \
     -stacked_via_top_layer TOP_M \
     -stacked_via_bottom_layer M1
