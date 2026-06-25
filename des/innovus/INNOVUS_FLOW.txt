@@ -36,8 +36,7 @@
    routeDesign
    (timing slack is +0.127ns so we can trade timing freedom for DRC quality)
 
-   !! DO NOT run optDesign -postRoute — it re-introduces 192 TOP_M SHORT violations
-   !! by re-routing power through IO pad cell bodies on TOP_M layer
+   DO NOT run optDesign -postRoute after routeDesign.
 
 9. Run final verification:
     verify_drc
