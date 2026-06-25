@@ -5,7 +5,9 @@
 #============================================================
 
 puts "=== STEP 1: Floorplan ==="
-floorPlan -site CoreSite -d 1588.08 1588.08 10 10 10 10
+# 2500x2500 um die — gives ~1800um core after 320um IO pads each side
+# Small core (~40x40um cells) has plenty of routing space
+floorPlan -site CoreSite -d 2500.08 2500.08 50 50 50 50
 
 puts "=== STEP 2: Connect global power/ground nets ==="
 source glnets.src
@@ -50,7 +52,9 @@ addStripe \
     -spacing 1.8 \
     -set_to_set_distance 300 \
     -stacked_via_top_layer TOP_M \
-    -stacked_via_bottom_layer M1
+    -stacked_via_bottom_layer M1 \
+    -start_from bottom \
+    -stop_at first_last_and_ring
 
 puts "=== STEP 5: Route power to standard cell pins and pad pins ==="
 sroute \
