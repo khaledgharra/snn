@@ -31,45 +31,28 @@ setAddRingMode \
 
 addRing \
     -spacing_bottom 1.8 \
-    -width_left 8 \
-    -width_bottom 8 \
-    -width_top 8 \
+    -width_left 4 \
+    -width_bottom 4 \
+    -width_top 4 \
     -spacing_top 1.8 \
-    -layer_bottom M5 \
+    -layer_bottom M3 \
     -center 1 \
-    -stacked_via_top_layer TOP_M \
-    -width_right 8 \
+    -stacked_via_top_layer M4 \
+    -width_right 4 \
     -around default_power_domain \
     -jog_distance 0.56 \
     -offset_bottom 0.56 \
-    -layer_top M5 \
+    -layer_top M3 \
     -threshold 0.56 \
     -offset_left 0.56 \
     -spacing_right 1.8 \
     -spacing_left 1.8 \
     -offset_right 0.56 \
     -offset_top 0.56 \
-    -layer_right TOP_M \
+    -layer_right M4 \
     -nets {VSS VDD} \
     -stacked_via_bottom_layer M1 \
-    -layer_left TOP_M
-
-puts "=== STEP 4: Add M5 vertical power stripes (sparse, 200um pitch) ==="
-# Sparse stripes — core is tiny, dense stripes caused routing congestion
-addStripe \
-    -block_ring_top_layer_limit TOP_M \
-    -max_same_layer_jog_length 0.88 \
-    -padcore_ring_bottom_layer_limit M4 \
-    -set_to_set_distance 200 \
-    -stacked_via_top_layer TOP_M \
-    -padcore_ring_top_layer_limit TOP_M \
-    -spacing 1.8 \
-    -merge_stripes_value 0.56 \
-    -layer M5 \
-    -block_ring_bottom_layer_limit M4 \
-    -width 4 \
-    -nets {VSS VDD} \
-    -stacked_via_bottom_layer M4
+    -layer_left M4
 
 puts "=== Floorplan + Power Planning DONE ==="
 puts "Check: Power->Power Planning->Verify Power Grid"
