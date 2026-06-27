@@ -21,12 +21,12 @@ puts "============================================================"
 # Clock for scan shift
 set_dft_signal -view existing_dft \
     -type ScanClock \
-    -port wb_clk_i
+    -port wb_clk_i \
+    -timing {45 55}
 
 set_dft_signal -view spec \
     -type ScanClock \
-    -port wb_clk_i \
-    -timing {45 55}
+    -port wb_clk_i
 
 # Synchronous reset (active high)
 set_dft_signal -view existing_dft \
@@ -80,6 +80,9 @@ dft_drc
 #------------------------------------------------------------
 # 4. Preview scan chains
 #------------------------------------------------------------
+
+puts "--- Create test protocol ---"
+create_test_protocol -infer_asynch
 
 puts "--- Preview DFT ---"
 preview_dft -show all
