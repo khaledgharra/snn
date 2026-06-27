@@ -37,6 +37,7 @@ addRing \
     -threshold 0.56
 
 puts "=== STEP 4: Add vertical power stripes (M4) ==="
+# ybottom/ytop_offset keeps stripes inside core boundary (avoids pad cell blockages)
 addStripe \
     -nets {VDD VSS} \
     -layer M4 \
@@ -46,9 +47,15 @@ addStripe \
     -set_to_set_distance 100 \
     -start_from left \
     -stacked_via_top_layer M5 \
-    -stacked_via_bottom_layer M1
+    -stacked_via_bottom_layer M1 \
+    -ybottom_offset 75.04 \
+    -ytop_offset 75.04
 
 puts "=== STEP 5: Route power to standard cell pins ==="
+# padPinLayerRange prevents sroute from using TOP_M to connect IO pad power pins
+setSrouteMode \
+    -padPinLayerRange {M1 M5} \
+    -padPinTarget nearestTarget
 sroute \
     -connect { corePin padRing } \
     -layerChangeRange { M1 M5 } \
@@ -56,5 +63,16 @@ sroute \
     -padPinPortConnect { allPort } \
     -nets { VDD VSS }
 
+puts "=== STEP 6: Routing blockages — keep signals out of pad ring area ==="
+# Prevent signal router from using M3-M5 inside the 75um pad ring margins
+createRouteBlk -layer {M3 M4 M5} \
+    -box 0 0 1799.84 75.04 -name blk_bot
+createRouteBlk -layer {M3 M4 M5} \
+    -box 0 1724.80 1799.84 1799.84 -name blk_top
+createRouteBlk -layer {M3 M4 M5} \
+    -box 0 0 75.60 1799.84 -name blk_left
+createRouteBlk -layer {M3 M4 M5} \
+    -box 1724.24 0 1799.84 1799.84 -name blk_right
+
 puts "=== Floorplan + Power Planning DONE ==="
-puts "Next: placeDesign, then routeDesign"
+puts "Next: placeDesign, source cts.tcl, then routeDesign"
