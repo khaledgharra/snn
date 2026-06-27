@@ -21,8 +21,7 @@ puts "============================================================"
 # Clock for scan shift
 set_dft_signal -view existing_dft \
     -type ScanClock \
-    -port wb_clk_i \
-    -timing {45 55}
+    -port wb_clk_i
 
 set_dft_signal -view spec \
     -type ScanClock \
@@ -51,11 +50,16 @@ set_dft_signal -view spec \
     -active_state 0 \
     -port arst_i
 
-# Scan Enable - DC will create test_se port automatically
+# Scan Enable
+create_port -direction in test_se
+set_dft_signal -view existing_dft \
+    -type ScanEnable \
+    -active_state 1 \
+    -port test_se
 set_dft_signal -view spec \
     -type ScanEnable \
     -active_state 1 \
-    -create_port test_se
+    -port test_se
 
 #------------------------------------------------------------
 # 2. Scan chain configuration - 5 chains (matches floorplan)
@@ -71,7 +75,7 @@ set_scan_configuration \
 #------------------------------------------------------------
 
 puts "--- DFT DRC pre-insertion ---"
-dft_drc -pre_insertion
+dft_drc
 
 #------------------------------------------------------------
 # 4. Preview scan chains
