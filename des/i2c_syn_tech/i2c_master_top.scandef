@@ -1,0 +1,187 @@
+VERSION 5.5 ;
+NAMESCASESENSITIVE ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN i2c_master_top ;
+
+SCANCHAINS 5 ;
+
+- 1
++ START PIN test_si1
++ FLOATING al_reg ( IN SD ) ( OUT Q )
+           byte_controller/ack_out_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/al_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/busy_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cSCL_reg[0] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cSCL_reg[1] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cSDA_reg[0] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cSDA_reg[1] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[0] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[1] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[2] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[3] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[4] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[5] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[6] ( IN SD ) ( OUT QN )
+           byte_controller/bit_controller/c_state_reg[7] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[8] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[9] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[10] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[11] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[12] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/c_state_reg[13] ( IN SD ) ( OUT QN )
+           byte_controller/bit_controller/c_state_reg[14] ( IN SD ) ( OUT QN )
+           byte_controller/bit_controller/c_state_reg[15] ( IN SD ) ( OUT QN )
+           byte_controller/bit_controller/c_state_reg[16] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/clk_en_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cmd_ack_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cmd_stop_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[0] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[1] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[2] ( IN SD ) ( OUT Q )
++ PARTITION wb_clk_i_45_45
++ STOP PIN test_so1 ;
+
+- 2
++ START PIN test_si2
++ FLOATING byte_controller/bit_controller/cnt_reg[3] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[4] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[5] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[6] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[7] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[8] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[9] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[10] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[11] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[12] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[13] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[14] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/cnt_reg[15] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/dSCL_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/dSDA_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/dout_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/dscl_oen_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/fSCL_reg[0] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/fSCL_reg[1] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/fSCL_reg[2] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/fSDA_reg[0] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/fSDA_reg[1] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/fSDA_reg[2] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[0] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[1] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[2] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[3] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[4] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[5] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[6] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[7] ( IN SD ) ( OUT Q )
++ PARTITION wb_clk_i_45_45
++ STOP PIN test_so2 ;
+
+- 3
++ START PIN test_si3
++ FLOATING byte_controller/bit_controller/filter_cnt_reg[8] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[9] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[10] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[11] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[12] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/filter_cnt_reg[13] ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/sSCL_reg ( IN SD ) ( OUT QN )
+           byte_controller/bit_controller/sSDA_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/scl_oen_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/sda_chk_reg ( IN SD ) ( OUT QN )
+           byte_controller/bit_controller/slave_wait_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/sta_condition_reg ( IN SD ) ( OUT Q )
+           byte_controller/bit_controller/sto_condition_reg ( IN SD ) ( OUT Q )
+           byte_controller/c_state_reg[0] ( IN SD ) ( OUT Q )
+           byte_controller/c_state_reg[1] ( IN SD ) ( OUT Q )
+           byte_controller/c_state_reg[2] ( IN SD ) ( OUT Q )
+           byte_controller/c_state_reg[3] ( IN SD ) ( OUT Q )
+           byte_controller/c_state_reg[4] ( IN SD ) ( OUT QN )
+           byte_controller/cmd_ack_reg ( IN SD ) ( OUT Q )
+           byte_controller/core_cmd_reg[0] ( IN SD ) ( OUT Q )
+           byte_controller/core_cmd_reg[1] ( IN SD ) ( OUT Q )
+           byte_controller/core_cmd_reg[2] ( IN SD ) ( OUT Q )
+           byte_controller/core_cmd_reg[3] ( IN SD ) ( OUT Q )
+           byte_controller/core_txd_reg ( IN SD ) ( OUT Q )
+           byte_controller/dcnt_reg[0] ( IN SD ) ( OUT Q )
+           byte_controller/dcnt_reg[1] ( IN SD ) ( OUT Q )
+           byte_controller/dcnt_reg[2] ( IN SD ) ( OUT Q )
+           byte_controller/ld_reg ( IN SD ) ( OUT Q )
+           byte_controller/shift_reg ( IN SD ) ( OUT Q )
+           byte_controller/sr_reg[0] ( IN SD ) ( OUT QN )
++ PARTITION wb_clk_i_45_45
++ STOP byte_controller/bit_controller/sda_oen_reg SD ;
+
+- 4
++ START PIN test_si4
++ FLOATING byte_controller/sr_reg[1] ( IN SD ) ( OUT QN )
+           byte_controller/sr_reg[2] ( IN SD ) ( OUT QN )
+           byte_controller/sr_reg[3] ( IN SD ) ( OUT QN )
+           byte_controller/sr_reg[4] ( IN SD ) ( OUT QN )
+           byte_controller/sr_reg[5] ( IN SD ) ( OUT QN )
+           byte_controller/sr_reg[6] ( IN SD ) ( OUT QN )
+           byte_controller/sr_reg[7] ( IN SD ) ( OUT QN )
+           cr_reg[0] ( IN SD ) ( OUT Q )
+           cr_reg[1] ( IN SD ) ( OUT Q )
+           cr_reg[2] ( IN SD ) ( OUT Q )
+           cr_reg[3] ( IN SD ) ( OUT Q )
+           cr_reg[4] ( IN SD ) ( OUT Q )
+           cr_reg[5] ( IN SD ) ( OUT Q )
+           cr_reg[6] ( IN SD ) ( OUT Q )
+           cr_reg[7] ( IN SD ) ( OUT Q )
+           ctr_reg[0] ( IN SD ) ( OUT Q )
+           ctr_reg[1] ( IN SD ) ( OUT Q )
+           ctr_reg[2] ( IN SD ) ( OUT Q )
+           ctr_reg[3] ( IN SD ) ( OUT Q )
+           ctr_reg[4] ( IN SD ) ( OUT Q )
+           ctr_reg[5] ( IN SD ) ( OUT Q )
+           ctr_reg[6] ( IN SD ) ( OUT Q )
+           ctr_reg[7] ( IN SD ) ( OUT Q )
+           irq_flag_reg ( IN SD ) ( OUT Q )
+           prer_reg[0] ( IN SD ) ( OUT Q )
+           prer_reg[1] ( IN SD ) ( OUT Q )
+           prer_reg[2] ( IN SD ) ( OUT Q )
+           prer_reg[3] ( IN SD ) ( OUT Q )
+           prer_reg[4] ( IN SD ) ( OUT Q )
+           prer_reg[5] ( IN SD ) ( OUT Q )
++ PARTITION wb_clk_i_45_45
++ STOP PIN test_so4 ;
+
+- 5
++ START PIN test_si5
++ FLOATING prer_reg[6] ( IN SD ) ( OUT Q )
+           prer_reg[7] ( IN SD ) ( OUT Q )
+           prer_reg[8] ( IN SD ) ( OUT Q )
+           prer_reg[9] ( IN SD ) ( OUT Q )
+           prer_reg[10] ( IN SD ) ( OUT Q )
+           prer_reg[11] ( IN SD ) ( OUT Q )
+           prer_reg[12] ( IN SD ) ( OUT Q )
+           prer_reg[13] ( IN SD ) ( OUT Q )
+           prer_reg[14] ( IN SD ) ( OUT Q )
+           prer_reg[15] ( IN SD ) ( OUT Q )
+           rxack_reg ( IN SD ) ( OUT Q )
+           tip_reg ( IN SD ) ( OUT Q )
+           txr_reg[0] ( IN SD ) ( OUT Q )
+           txr_reg[1] ( IN SD ) ( OUT Q )
+           txr_reg[2] ( IN SD ) ( OUT Q )
+           txr_reg[3] ( IN SD ) ( OUT Q )
+           txr_reg[4] ( IN SD ) ( OUT Q )
+           txr_reg[5] ( IN SD ) ( OUT Q )
+           txr_reg[6] ( IN SD ) ( OUT Q )
+           txr_reg[7] ( IN SD ) ( OUT Q )
+           wb_ack_o_reg ( IN SD ) ( OUT Q )
+           wb_dat_o_reg[0] ( IN SD ) ( OUT Q )
+           wb_dat_o_reg[1] ( IN SD ) ( OUT Q )
+           wb_dat_o_reg[2] ( IN SD ) ( OUT Q )
+           wb_dat_o_reg[3] ( IN SD ) ( OUT Q )
+           wb_dat_o_reg[4] ( IN SD ) ( OUT Q )
+           wb_dat_o_reg[5] ( IN SD ) ( OUT Q )
+           wb_dat_o_reg[6] ( IN SD ) ( OUT Q )
+           wb_dat_o_reg[7] ( IN SD ) ( OUT Q )
++ PARTITION wb_clk_i_45_45
++ STOP wb_inta_o_reg SD ;
+
+END SCANCHAINS
+
+END DESIGN

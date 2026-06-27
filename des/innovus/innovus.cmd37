@@ -472,3 +472,7 @@ zoomBox -327633.01000 -408075.70100 414494.50900 256286.83900
 fit
 create_ccopt_clock_tree_spec
 ctd_win -side none -id ctd_window -unit_delay -include_reporting_only_skew_groups
+routeDesign
+optDesign -postRoute -drv
+verify_drc
+verify_connectivity

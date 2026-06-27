@@ -1,0 +1,3553 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.33-s082_1, built Wed Nov 13 14:07:39 PST 2024
+Options:	
+Date:		Fri Jun 26 00:38:09 2026
+Host:		vlsi-ria87 (x86_64 w/Linux 3.10.0-1160.62.1.el7.x86_64) (8cores*8cpus*Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz 12288KB)
+OS:		RHEL
+
+License:
+		[00:38:09.069545] Configured Lic search path (23.02-s006): /etc/local/cadence/license_8x.3868dd0560aa:5280@132.68.59.69:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.64:/etc/local/cadence/license_8x.0894ef683fc3:5280@132.68.59.79:5280@132.68.59.61:27019@132.68.59.69:27019@132.68.59.79
+
+		invs	Innovus Implementation System	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
+Info: Process UID = 30238 / ab45ad17-1213-4490-990d-49906342c860 / ZmwR6hpbjg
+source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_attr_defs.tcl
+Loading attribute definitions from mini dummy db...
+Info: Defined 23820 Synthesis attributes
+Info: Skipped defining 357 Synthesis attributes already defined in Innovus
+source /tools/eda/cadence/2024-25/RHELx86/DDIEXPORT_23.33.000/INNOVUS231/tools.lnx86/../etc/synth/attr_def/plus_msg_defs.tcl
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> getVersion
+<CMD> getVersion
+[INFO] Loading PVS 24.10 fill procedures
+<CMD> win
+<CMD> set defHierChar /
+<CMD> set init_verilog top.v
+<CMD> set init_top_cell top
+<CMD> set init_io_file top.io
+<CMD> set init_mmmc_file mmmc.view
+<CMD> set init_pwr_net {VDD VDDC VDDO}
+<CMD> set init_gnd_net {VSS VSSC VSSO}
+<CMD> set init_assign_buffer 1
+<CMD> setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+<CMD> set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+Set Default Input Pin Transition as 120 ps.
+<CMD> set delaycal_input_transition_delay 120ps
+<CMD> set conf_in_tran_delay 120.0ps
+<CMD> set conf_ioOri R0
+<CMD> set init_abstract_view abstract
+<CMD> set init_layout_view layout
+<CMD> set init_lef_file {/users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef /users/iit/cadence/tsl018b/lef/tsl18fs120.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+<CMD> set init_design_uniquify 1
+<CMD> set load_netlist_ignore_undefined_cell 1
+<CMD> set init_verilog_tolerate_port_mismatch 0
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+<CMD> set timing_enable_default_delay_arc 1
+<CMD> init_design
+#% Begin Load MMMC data ... (date=06/26 00:39:00, mem=1633.3M)
+#% End Load MMMC data ... (date=06/26 00:39:00, total cpu=0:00:00.0, real=0:00:00.0, peak res=1634.5M, current mem=1634.5M)
+SlowRC FastRC
+
+Loading LEF file /users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef ...
+WARNING (LEFPARS-2027): MINFEATURE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file /users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef at line 17.
+WARNING (LEFPARS-2003): BUSBITCHARS is a required statement in LEF files with version 5.5 and earlier.
+Without BUSBITCHARS defined, the LEF file is technically incorrect.
+Refer to the LEF/DEF 5.5 or earlier Language Reference manual on how to define this statement. See file /users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef at line 669.
+WARNING (LEFPARS-2004): DIVIDERCHAR is a required statement in LEF files with version 5.5 and earlier.
+Without DIVIDECHAR defined, the LEF file is technically incorrect.
+Refer to the LEF/DEF 5.5 or earlier Language Reference manual on how to define this statement. See file /users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef at line 669.
+
+Loading LEF file /users/iit/cadence/tsl018b/lef/tsl18fs120.lef ...
+Set DBUPerIGU to M2 pitch 560.
+
+Loading LEF file /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef ...
+**WARN: (IMPLF-201):	Pin 'PAD' in macro 'PVPP_33_NA' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PVPP_33_NA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'PADR' in macro 'PVPP_33_NA' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'PADR' in macro 'PVPP_33_NA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PVDC_NA_NA_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PVDC_NA_NA_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PVDC_NA_NA_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PVDC_NA_NA_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PVDC_NA_NA_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PVDC_NA_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PVDC_NA_NA_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PVDC_NA_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_33_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_33_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_18_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_18_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_18_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_18_33' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_33_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_33_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_33_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_33_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDC' in macro 'PV0C_18_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VDDC' in macro 'PV0C_18_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VSSC' in macro 'PV0C_18_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'VSSC' in macro 'PV0C_18_18_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_33_33' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_33_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_33_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDDO_OK' in macro 'POK_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'VDD_OK' in macro 'POK_18_18' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPLF-200):	Pin 'DRIVE_STR' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'EN' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'PULL_ON' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'PULL_UP_DOWN' in macro 'PIOL_NA_18' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from mmmc.view
+Reading Max timing library '/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_max.lib' ...
+Read 537 cells in library 'tsl18fs120_max' 
+Reading Max timing library '/tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/liberty/1.8V-Only/PIO320SL_ss_1p62v_1p62v_125c.lib' ...
+Read 13 cells in library 'PIO320SL_ss_1p62v_1p62v_125c' 
+Reading Min timing library '/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_min.lib' ...
+Read 537 cells in library 'tsl18fs120_min' 
+Reading Min timing library '/tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/liberty/1.8V-Only/PIO320SL_ff_1p98v_1p98v_m40c.lib' ...
+Read 13 cells in library 'PIO320SL_ff_1p98v_1p98v_m40c' 
+*** End library_loading (cpu=0.08min, real=0.08min, mem=26.0M, fe_cpu=0.56min, fe_real=0.93min, fe_mem=1894.6M) ***
+#% Begin Load netlist data ... (date=06/26 00:39:05, mem=1658.1M)
+*** Begin netlist parsing (mem=1894.6M) ***
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'adiode' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'adiode' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'cload1' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'cload1' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'bh01d1' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'bh01d1' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr03da' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr03da' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr03d7' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr03d7' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr03d4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr03d4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr03d2' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr03d2' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr03d1' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr03d1' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr02da' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr02da' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'xr02d7' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'xr02d7' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Pin 'VDD' of cell 'PVDI_NA_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+Pin 'VDDO' of cell 'PVDF_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+Pin 'VDDO' of cell 'PVDA_18_NA' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+Pin 'VSS' of cell 'PV0I_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+Pin 'VSSO' of cell 'PV0F_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+Pin 'VSSO' of cell 'PV0A_18_18' is declared as power/ground in LEF but as signal in timing library.  Treat it as power/ground.
+Created 550 new cells from 4 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'top.v'
+
+*** Memory Usage v#2 (Current mem = 1894.559M, initial mem = 831.188M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1894.6M) ***
+#% End Load netlist data ... (date=06/26 00:39:05, total cpu=0:00:00.1, real=0:00:00.0, peak res=1670.1M, current mem=1670.1M)
+Set top cell to top.
+**WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht4' in timing library 'tsl18fs120_max'.
+Type 'man IMPTS-124' for more detail.
+**WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht2' in timing library 'tsl18fs120_max'.
+Type 'man IMPTS-124' for more detail.
+**WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht1' in timing library 'tsl18fs120_max'.
+Type 'man IMPTS-124' for more detail.
+**WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht4' in timing library 'tsl18fs120_min'.
+Type 'man IMPTS-124' for more detail.
+**WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht2' in timing library 'tsl18fs120_min'.
+Type 'man IMPTS-124' for more detail.
+**WARN: (IMPTS-124):	Timing library description of pin 'nint' is missing from cell 'slnht1' in timing library 'tsl18fs120_min'.
+Type 'man IMPTS-124' for more detail.
+Hooked 1100 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell top ...
+***** UseNewTieNetMode *****.
+*** Netlist is NOT unique.
+** info: there are 1156 modules.
+** info: there are 561 stdCell insts.
+** info: there are 561 stdCell insts with at least one signal pin.
+** info: there are 45 Pad insts.
+
+*** Memory Usage v#2 (Current mem = 1951.984M, initial mem = 831.188M) ***
+*info: set bottom ioPad orient R0
+Reading IO assignment file "top.io" ...
+Adjusting Core to Left to: 0.2000. Core to Bottom to: 0.2000.
+**WARN: (IMPFP-3961):	The techSite 'CO_MSTR_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CO_MSTR_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CO_MSTR_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CO_MSTR' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Horizontal Layer M1 offset = 0 (derived)
+Vertical Layer M2 offset = 280 (derived)
+Start create_tracks
+Set Default Input Pin Transition as 120 ps.
+Pre-connect netlist-defined P/G connections...
+Extraction setup Started for TopCell top 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+**WARN: (IMPEXT-6202):	In addition to the technology file, the capacitance table file is specified for all the RC corners. If the technology file  is already specified for all the RC corners, the capacitance table file is not required for preRoute and postRoute extraction. In a new session, the capacitance table files can be removed from the create_rc_corner command to enable the technology file to be used for preRoute and postRoute (effort level medium/high/signoff) extraction engines.
+Type 'man IMPEXT-6202' for more detail.
+Reading Capacitance Table File /tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl ...
+Cap table was created using Encounter 09.12-s159_1.
+Process name: TSL_0.18SL_6LM.
+**WARN: (IMPEXT-2760):	Layer M7 specified in the cap table is ignored because it is greater than the maximum number of layers, 6, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+**WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M2 and M3 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M3 and M4 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M4 and M5 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M5 and M6 is not defined in the capacitance table file. The via resistance of 13 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2710):	Basic Cap table for layer M7 is ignored because the layer is not specified in the technology LEF file.
+Reading Capacitance Table File /tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl ...
+Cap table was created using Encounter 09.12-s159_1.
+Process name: TSL_0.18SL_6LM.
+**WARN: (IMPEXT-2760):	Layer M7 specified in the cap table is ignored because it is greater than the maximum number of layers, 6, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+**WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M2 and M3 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M3 and M4 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M4 and M5 is not defined in the capacitance table file. The via resistance of 20 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M5 and M6 is not defined in the capacitance table file. The via resistance of 13 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2710):	Basic Cap table for layer M7 is ignored because the layer is not specified in the technology LEF file.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: SlowView
+    RC-Corner Name        : SlowRC
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : '/tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/tools/kits/tower/PDK_TS18SL/iit/qrcTechFile'
+ 
+ Analysis View: FastView
+    RC-Corner Name        : FastRC
+    RC-Corner Index       : 1
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : '/tools/kits/tower/PDK_TS18SL/iit/TSL_0.18_6M1L.CapTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/tools/kits/tower/PDK_TS18SL/iit/qrcTechFile'
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+*Info: initialize multi-corner CTS.
+Reading timing constraints file 'top.sdc' ...
+Current (total cpu=0:00:34.8, real=0:00:57.0, peak res=2090.2M, current mem=2090.2M)
+------------------------------------------------------------------------------------
+CONSTRAINT READING SUMMARY                                                          
+------------------------------------------------------------------------------------
+Constraint                                        | Success        | Fail           
+------------------------------------------------------------------------------------
+create_clock                                      | 1              | 0              
+------------------------------------------------------------------------------------
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2109.2M, current mem=2109.2M)
+Current (total cpu=0:00:34.9, real=0:00:57.0, peak res=2109.2M, current mem=2109.2M)
+Total number of combinational cells: 324
+Total number of sequential cells: 203
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: bufbd1 bufbd2 bufbd4 bufbd3 bufbd7 bufbda bufbdf buffd1 buffd3 buffd2 buffd4 buffd7 buffda
+Total number of usable buffers: 13
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: inv0d0 inv0d1 inv0d2 inv0d4 inv0d7 inv0da invbd2 invbd4 invbd7 invbda invbdf invbdk
+Total number of usable inverters: 12
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: bufbdk dl01d1 dl01d2 dl01d4 dl02d1 dl03d1 dl02d2 dl02d4 dl04d1 dl03d2 dl03d4 dl04d2 dl04d4
+Total number of identified usable delay cells: 13
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+**WARN: (IMPSYC-2):	Timing information is not defined for cell PCORNER_NA_NA; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-200           88  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201           40  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPFP-3961           8  The techSite '%s' has no related standar...
+WARNING   IMPTS-124            6  Timing library description of pin '%s' i...
+WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+WARNING   IMPEXT-2773          2  The via resistance between layers %s and...
+WARNING   IMPEXT-2776          8  The via resistance between layers %s and...
+WARNING   IMPSYC-2             1  Timing information is not defined for ce...
+WARNING   IMPVL-159         1121  Pin '%s' of cell '%s' is defined in LEF ...
+*** Message Summary: 1279 warning(s), 0 error(s)
+
+<CMD> floorPlan -site CoreSite -d 1799.84 1799.84 75.6 75.6 75.04 75.04
+**WARN: (IMPFP-3961):	The techSite 'CO_MSTR_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CO_MSTR_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CO_MSTR_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CO_MSTR' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite_p' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite_s' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite_c' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Horizontal Layer M1 offset = 0 (derived)
+Vertical Layer M2 offset = 280 (derived)
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> setPreference ConstraintUserYGrid 0.01
+**WARN: (IMPSYT-3004):	Option ConstraintUserYGrid is obsolete and will be removed in future release.  Use 'setFPlanMode -user_define_grid' instead. To avoid this warning and to ensure compatibility with  future releases, please remove the obsolete preference from your script.
+<CMD> setPreference ConstraintUserXGrid 0.01
+**WARN: (IMPSYT-3004):	Option ConstraintUserXGrid is obsolete and will be removed in future release.  Use 'setFPlanMode -user_define_grid' instead. To avoid this warning and to ensure compatibility with  future releases, please remove the obsolete preference from your script.
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+<CMD> globalNetConnect VSSC -type pgpin -pin VSSC -inst * -module {}
+**ERROR: (IMPDB-1221):	A Global Net Connection (GNC) is specified to connect the ground pins with the 'VSSC' name pattern to a global net.  Unable to establish connection because the 'ground' pin with the name pattern doesn't match in any cell.  Check the pin name in the Lef file or liberty and ensure it is correct.
+<CMD> globalNetConnect VDDC -type pgpin -pin VDDC -inst * -module {}
+**ERROR: (IMPDB-1221):	A Global Net Connection (GNC) is specified to connect the power pins with the 'VDDC' name pattern to a global net.  Unable to establish connection because the 'power' pin with the name pattern doesn't match in any cell.  Check the pin name in the Lef file or liberty and ensure it is correct.
+<CMD> globalNetConnect VDD -type tiehi -module {}
+<CMD> globalNetConnect VSS -type tielo -module {}
+<CMD> deselectAll
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {VDD VSS} -around default_power_domain -layer {top TOP_M bottom TOP_M left M5 right M5} -width 6 -spacing 1.8 -center 1 -jog_distance 0.56 -threshold 0.56
+#% Begin addRing (date=06/26 00:39:10, mem=2166.3M)
+
+
+viaInitial starts at Fri Jun 26 00:39:10 2026
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM1 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM2 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM3 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM4 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM5 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM6 GENERATE.
+Type 'man IMPPP-557' for more detail.
+viaInitial ends at Fri Jun 26 00:39:10 2026
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2453.5M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 166 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M5   |       44       |       NA       |
+|  TOP_V |        8       |        0       |
+|  TOP_M |       122      |       NA       |
++--------+----------------+----------------+
+#% End addRing (date=06/26 00:39:10, total cpu=0:00:00.0, real=0:00:00.0, peak res=2170.2M, current mem=2170.2M)
+<CMD> addStripe -nets {VDD VSS} -layer M4 -direction horizontal -width 6 -spacing 1.8 -set_to_set_distance 100 -start_from bottom -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1
+#% Begin addStripe (date=06/26 00:39:10, mem=2170.2M)
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+
+Initialize fgc environment(mem: 2453.5M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2453.5M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2453.5M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2453.5M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2453.5M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 24 wires.
+ViaGen created 4 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M4   |       24       |       NA       |
+|   V5   |        4       |        0       |
++--------+----------------+----------------+
+#% End addStripe (date=06/26 00:39:10, total cpu=0:00:00.1, real=0:00:00.0, peak res=2173.6M, current mem=2172.5M)
+<CMD> addStripe -nets {VDD VSS} -layer M4 -direction vertical -width 6 -spacing 1.8 -set_to_set_distance 100 -start_from left -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1
+#% Begin addStripe (date=06/26 00:39:10, mem=2172.5M)
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+
+Initialize fgc environment(mem: 2454.5M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & TOP_M at (418.44, 295.84) (420.38, 301.84).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & TOP_M at (418.44, 295.84) (420.38, 301.84).
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+**WARN: (IMPPP-531):	ViaGen Warning: Due to SPACING rule violation, viaGen fail to generate via on layer V5 at (1018.44, 1495.44) (1018.70, 1501.44).
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2454.5M)
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M5 & TOP_M at (418.44, 295.84) (420.38, 301.84).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M3 & TOP_M at (418.44, 295.84) (420.38, 301.84).
+**WARN: (IMPPP-531):	ViaGen Warning: Due to SPACING rule violation, viaGen fail to generate via on layer TOP_V at (1017.98, 1495.44) (1018.44, 1501.44).
+**WARN: (IMPPP-531):	ViaGen Warning: Due to SPACING rule violation, viaGen fail to generate via on layer V4 at (1018.44, 1495.44) (1018.70, 1501.44).
+Stripe generation is complete.
+vias are now being generated.
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M4 & M5 at (303.64, 303.64) (309.64, 316.94).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M5 & M4 at (303.64, 310.94) (316.64, 316.64).
+addStripe created 302 wires.
+ViaGen created 7 vias, deleted 1 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M4   |       301      |       NA       |
+|   V5   |        5       |        1       |
+|   M5   |        1       |       NA       |
+|  TOP_V |        2       |        0       |
++--------+----------------+----------------+
+#% End addStripe (date=06/26 00:39:10, total cpu=0:00:00.1, real=0:00:00.0, peak res=2172.8M, current mem=2172.8M)
+<CMD> sroute -connect { corePin padRing } -layerChangeRange { M1 M5 } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort } -nets { VDD VSS }
+#% Begin sroute (date=06/26 00:39:10, mem=2172.8M)
+**WARN: (IMPSR-4058):	Sroute option: padPinPortConnect should be used in conjunction with option: -connect padPin. 
+**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+*** Begin SPECIAL ROUTE on Fri Jun 26 00:39:10 2026 ***
+SPECIAL ROUTE ran on directory: /users/epkgms/Desktop/khaled/des/innovus
+SPECIAL ROUTE ran on machine: vlsi-ria87 (Linux 3.10.0-1160.62.1.el7.x86_64 x86_64 3.90Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "VDD VSS"
+routeSpecial set to true
+srouteBottomLayerLimit set to 1
+srouteConnectBlockPin set to false
+srouteConnectConverterPin set to false
+srouteConnectPadPin set to false
+srouteConnectStripe set to false
+srouteFollowCorePinEnd set to 3
+srouteJogControl set to "preferWithChanges differentLayer"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 5
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 145.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 12 layers, 6 routing layers, 1 overlap layer
+Read in 544 macros, 53 used
+Read in 94 components
+  49 core components: 49 unplaced, 0 placed, 0 fixed
+  45 pad components: 0 unplaced, 0 placed, 45 fixed
+Read in 88 special nets, 2 routed
+Read in 270 terminals
+2 nets selected.
+
+Begin power routing ...
+**WARN: (IMPSR-554):	The specified top target layer is beyond top routing layer. Set top target layer to 5.
+CPU time for VDD FollowPin 0 seconds
+CPU time for VSS FollowPin 0 seconds
+  Number of Core ports routed: 207  open: 215
+  Number of Pad ports routed: 0
+  Number of Pad Ring connections: 8
+  Number of Followpin connections: 211
+End power routing: cpu: 0:00:06, real: 0:00:06, peak: 255.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 10 via definition ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+
+sroute post-processing starts at Fri Jun 26 00:39:16 2026
+The viaGen is rebuilding shadow vias for net VSS.
+sroute post-processing ends at Fri Jun 26 00:39:16 2026
+
+sroute post-processing starts at Fri Jun 26 00:39:16 2026
+The viaGen is rebuilding shadow vias for net VDD.
+sroute post-processing ends at Fri Jun 26 00:39:16 2026
+sroute created 810 wires.
+ViaGen created 7847 vias, deleted 2 vias to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M1   |       262      |       NA       |
+|   V2   |      2540      |        0       |
+|   M2   |       279      |       NA       |
+|   V3   |      2597      |        0       |
+|   M3   |       140      |       NA       |
+|   V4   |      2605      |        0       |
+|   M4   |       70       |       NA       |
+|   V5   |       105      |        2       |
+|   M5   |       59       |       NA       |
++--------+----------------+----------------+
+#% End sroute (date=06/26 00:39:16, total cpu=0:00:05.8, real=0:00:06.0, peak res=2285.2M, current mem=2219.1M)
+<CMD> setPlaceMode -prerouteAsObs {3 4 5 6}
+<CMD> getPlaceMode -place_hierarchical_flow -quiet
+<CMD> report_message -start_cmd
+<CMD> getRouteMode -maxRouteLayer -quiet
+<CMD> getRouteMode -user -maxRouteLayer
+<CMD> getPlaceMode -place_global_place_io_pins -quiet
+<CMD> getPlaceMode -user -maxRouteLayer
+<CMD> getPlaceMode -quiet -adaptiveFlowMode
+<CMD> getPlaceMode -timingDriven -quiet
+<CMD> getPlaceMode -adaptive -quiet
+<CMD> getPlaceMode -relaxSoftBlockageMode -quiet
+<CMD> getPlaceMode -user -relaxSoftBlockageMode
+<CMD> getPlaceMode -ignoreScan -quiet
+<CMD> getPlaceMode -user -ignoreScan
+<CMD> getPlaceMode -repairPlace -quiet
+<CMD> getPlaceMode -user -repairPlace
+<CMD> getPlaceMode -inPlaceOptMode -quiet
+<CMD> getPlaceMode -quiet -bypassFlowEffortHighChecking
+<CMD> getDesignMode -quiet -siPrevention
+<CMD> getPlaceMode -quiet -place_global_exp_enable_3d
+<CMD> getPlaceMode -quiet -place_global_exp_ignore_intra_ilm_out_of_corebox_check
+*** placeDesign #1 [begin] () : totSession cpu/real = 0:00:43.7/0:01:30.6 (0.5), mem = 2533.7M
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> um::push_snapshot_stack
+<CMD> getDesignMode -quiet -flowEffort
+<CMD> getDesignMode -highSpeedCore -quiet
+<CMD> getPlaceMode -quiet -adaptive
+<CMD> set spgFlowInInitialPlace 1
+<CMD> getPlaceMode -sdpAlignment -quiet
+<CMD> getPlaceMode -softGuide -quiet
+<CMD> getPlaceMode -useSdpGroup -quiet
+<CMD> getPlaceMode -sdpAlignment -quiet
+<CMD> getPlaceMode -enableDbSaveAreaPadding -quiet
+<CMD> getPlaceMode -quiet -wireLenOptEffort
+<CMD> getPlaceMode -sdpPlace -quiet
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> getPlaceMode -sdpPlace -quiet
+<CMD> getPlaceMode -groupHighLevelClkGate -quiet
+<CMD_INTERNAL> setvar spgRptErrorForScanConnection 0
+<CMD> getPlaceMode -place_global_exp_allow_missing_scan_chain -quiet
+<CMD> getPlaceMode -place_check_library -quiet
+<CMD> getPlaceMode -place_detail_exp_enable_3d_hdb -quiet
+<CMD> getPlaceMode -place_global_exp_heterogeneous_3d_placement -quiet
+<CMD> getPlaceMode -trimView -quiet
+<CMD> getPlaceMode -expTrimOptBeforeTDGP -quiet
+<CMD> getPlaceMode -quiet -useNonTimingDeleteBufferTree
+<CMD> getPlaceMode -congEffort -quiet
+<CMD> getPlaceMode -relaxSoftBlockageMode -quiet
+<CMD> getPlaceMode -user -relaxSoftBlockageMode
+<CMD> getPlaceMode -ignoreScan -quiet
+<CMD> getPlaceMode -user -ignoreScan
+<CMD> getPlaceMode -repairPlace -quiet
+<CMD> getPlaceMode -user -repairPlace
+<CMD> getPlaceMode -congEffort -quiet
+<CMD> getPlaceMode -fp -quiet
+<CMD> getPlaceMode -timingDriven -quiet
+<CMD> getPlaceMode -user -timingDriven
+<CMD> getPlaceMode -fastFp -quiet
+<CMD> getPlaceMode -clusterMode -quiet
+<CMD> get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
+<CMD> getPlaceMode -inPlaceOptMode -quiet
+<CMD> getPlaceMode -quiet -bypassFlowEffortHighChecking
+<CMD> getPlaceMode -ultraCongEffortFlow -quiet
+<CMD> getPlaceMode -forceTiming -quiet
+<CMD> getPlaceMode -fp -quiet
+<CMD> getPlaceMode -fastfp -quiet
+<CMD> getPlaceMode -timingDriven -quiet
+<CMD> getPlaceMode -fp -quiet
+<CMD> getPlaceMode -fastfp -quiet
+<CMD> getPlaceMode -powerDriven -quiet
+<CMD> getExtractRCMode -quiet -engine
+<CMD> getAnalysisMode -quiet -clkSrcPath
+<CMD> getAnalysisMode -quiet -clockPropagation
+<CMD> getAnalysisMode -quiet -cppr
+<CMD> setExtractRCMode -engine preRoute
+<CMD> setAnalysisMode -clkSrcPath false -clockPropagation forcedIdeal
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD_INTERNAL> isAnalysisModeSetup
+<CMD> getPlaceMode -quiet -place_global_exp_solve_unbalance_path
+<CMD> getPlaceMode -quiet -NMPsuppressInfo
+<CMD> getPlaceMode -quiet -place_global_exp_wns_focus_v2
+<CMD> getPlaceMode -quiet -place_incr_exp_isolation_flow
+<CMD> getPlaceMode -wl_budget_mode -quiet
+<CMD> setPlaceMode -reset -place_global_exp_balance_buffer_chain
+<CMD> getPlaceMode -wl_budget_mode -quiet
+<CMD> setPlaceMode -reset -place_global_exp_balance_pipeline
+<CMD> getPlaceMode -place_global_exp_balance_buffer_chain -quiet
+<CMD> getPlaceMode -place_global_exp_balance_pipeline -quiet
+<CMD> getPlaceMode -tdgpMemFlow -quiet
+<CMD> getPlaceMode -user -resetCombineRFLevel
+<CMD> getPlaceMode -quiet -resetCombineRFLevel
+<CMD> setPlaceMode -resetCombineRFLevel 1000
+<CMD_INTERNAL> setvar spgSpeedupBuildVSM 1
+<CMD> getPlaceMode -tdgpResetCteTG -quiet
+<CMD> getPlaceMode -macroPlaceMode -quiet
+<CMD> getPlaceMode -place_global_replace_QP -quiet
+<CMD> getPlaceMode -macroPlaceMode -quiet
+<CMD> getPlaceMode -enableDistPlace -quiet
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> getPlaceMode -place_global_ignore_spare -quiet
+<CMD> getPlaceMode -quiet -expNewFastMode
+<CMD> setPlaceMode -expHiddenFastMode 1
+<CMD> setPlaceMode -reset -ignoreScan
+<CMD> getPlaceMode -quiet -place_global_exp_auto_finish_floorplan
+<CMD> getPlaceMode -quiet -IOSlackAdjust
+*** Starting placeDesign default flow ***
+<CMD> getPlaceMode -tdgpCteZeroDelayModeDelBuf -quiet
+<CMD> set_global timing_enable_zero_delay_analysis_mode true
+<CMD> getPlaceMode -quiet -useNonTimingDeleteBufferTree
+<CMD> getPlaceMode -quiet -prePlaceOptSimplifyNetlist
+<CMD> getPlaceMode -quiet -enablePrePlaceOptimizations
+<CMD> getPlaceMode -quiet -prePlaceOptDecloneInv
+<CMD> deleteBufferTree -decloneInv
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+
+*summary: 20 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:00.1) ***
+<CMD> getPlaceMode -tdgpCteZeroDelayModeDelBuf -quiet
+<CMD> set_global timing_enable_zero_delay_analysis_mode false
+<CMD> getAnalysisMode -quiet -honorClockDomains
+<CMD> getPlaceMode -honorUserPathGroup -quiet
+<CMD> getAnalysisMode -quiet -honorClockDomains
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+<CMD> set delaycal_use_default_delay_limit 101
+Set Default Net Delay as 0 ps.
+<CMD> set delaycal_default_net_delay 0
+Set Default Net Load as 0 pF. 
+<CMD> set delaycal_default_net_load 0
+<CMD> set delaycal_default_net_load_ignore_for_ilm 0
+Set Default Input Pin Transition as 1 ps.
+<CMD> set delaycal_input_transition_delay 1ps
+<CMD> getAnalysisMode -clkSrcPath -quiet
+<CMD> getAnalysisMode -clockPropagation -quiet
+<CMD> getAnalysisMode -checkType -quiet
+<CMD> buildTimingGraph
+<CMD> getDelayCalMode -ignoreNetLoad -quiet
+<CMD> getDelayCalMode -ignoreNetLoad -quiet
+<CMD> setDelayCalMode -ignoreNetLoad true -quiet
+**INFO: Analyzing IO path groups for slack adjustment
+<CMD> get_global timing_enable_path_group_priority
+<CMD> get_global timing_constraint_enable_group_path_resetting
+<CMD> set_global timing_enable_path_group_priority false
+<CMD> set_global timing_constraint_enable_group_path_resetting false
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+<CMD> set_global _is_ipo_interactive_path_groups 1
+<CMD> group_path -name reg2reg_tmp.30238 -from 0x6 -to 0x7
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+<CMD> setPathGroupOptions reg2reg_tmp.30238 -effortLevel high
+Effort level <high> specified for reg2reg_tmp.30238 path_group
+AAE_INFO: opIsDesignInPostRouteState() is 0
+AAE DB initialization (MEM=2227.863281 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+<CMD> get_capacitance_unit
+Start delay calculation (fullDC) (1 T). (MEM=2237.12)
+<CMD_INTERNAL> isAnalysisModeSetup
+<CMD> getAnalysisMode -analysisType -quiet
+<CMD_INTERNAL> isAnalysisModeSetup
+<CMD> all_setup_analysis_views
+<CMD> all_hold_analysis_views
+<CMD> get_analysis_view $view -delay_corner
+<CMD> get_delay_corner $dcCorner -power_domain_list
+<CMD> get_delay_corner $dcCorner -library_set
+<CMD> get_library_set $libSetName -si
+<CMD> get_delay_corner $dcCorner -late_library_set
+<CMD> get_delay_corner $dcCorner -early_library_set
+<CMD> get_analysis_view $view -delay_corner
+<CMD> get_delay_corner $dcCorner -power_domain_list
+<CMD> get_delay_corner $dcCorner -library_set
+<CMD> get_library_set $libSetName -si
+<CMD> get_delay_corner $dcCorner -late_library_set
+<CMD> get_delay_corner $dcCorner -early_library_set
+Total number of fetched objects 623
+End delay calculation. (MEM=2249.22 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2238.29 CPU=0:00:00.3 REAL=0:00:00.0)
+<CMD> reset_path_group -name reg2reg_tmp.30238
+<CMD> set_global _is_ipo_interactive_path_groups 0
+**INFO: Disable pre-place timing setting for timing analysis
+<CMD> setDelayCalMode -ignoreNetLoad false
+Set Using Default Delay Limit as 1000.
+<CMD> set delaycal_use_default_delay_limit 1000
+Set Default Net Delay as 1000 ps.
+<CMD> set delaycal_default_net_delay 1000ps
+Set Default Input Pin Transition as 120 ps.
+<CMD> set delaycal_input_transition_delay 120ps
+Set Default Net Load as 0.5 pF. 
+<CMD> set delaycal_default_net_load 0.5pf
+<CMD> set delaycal_default_net_load_ignore_for_ilm 0
+<CMD> all_setup_analysis_views
+<CMD> getPlaceMode -place_global_exp_ignore_low_effort_path_groups -quiet
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> getAnalysisMode -quiet -honorClockDomains
+**INFO: Pre-place timing setting for timing analysis already disabled
+<CMD> getPlaceMode -quiet -expSkipGP
+<CMD> getPlaceMode -quiet -place_global_exp_inverter_rewiring
+<CMD> getPlaceMode -quiet -place_global_exp_enable_wdir_incrP_handoff
+<CMD> getPlaceMode -ignoreUnproperPowerInit -quiet
+<CMD> getPlaceMode -quiet -expSkipGP
+Deleted 0 physical inst  (cell - / prefix -).
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+*** Starting "NanoPlace(TM) placement v#23 (mem=2714.9M)" ...
+<CMD> setDelayCalMode -engine feDc
+Estimated loop count for BSM: 92170
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:05.3 mem=2722.9M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:06.0 mem=2756.9M) ***
+No user-set net weight.
+Net fanout histogram:
+2		: 279 (49.3%) nets
+3		: 111 (19.6%) nets
+4     -	14	: 166 (29.3%) nets
+15    -	39	: 8 (1.4%) nets
+40    -	79	: 0 (0.0%) nets
+80    -	159	: 2 (0.4%) nets
+160   -	319	: 0 (0.0%) nets
+320   -	639	: 0 (0.0%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 0 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Scan chains were not defined.
+#std cell=544 (0 fixed + 544 movable) #buf cell=0 #inv cell=81 #block=0 (0 floating + 0 preplaced)
+#ioInst=45 #net=566 #term=2171 #term/net=3.84, #fixedIo=45, #floatIo=0, #fixedPin=0, #floatPin=0
+stdCell: 544 single + 0 double + 0 multi
+Total standard cell length = 3.1416 (mm), area = 0.0176 (mm^2)
+Estimated cell power/ground rail width = 0.700 um
+Average module density = 0.018.
+Density for the design = 0.018.
+       = stdcell_area 5610 sites (17593 um^2) / alloc_area 306564 sites (961385 um^2).
+Pin Density = 0.004911.
+            = total # of pins 2171 / total area 442050.
+[spp] 0
+Clock gating cells determined by native netlist tracing.
+<CMD> createBasicPathGroups -quiet
+=== lastAutoLevel = 9 
+Iteration  1: Total net bbox = 3.612e+04 (1.75e+04 1.87e+04)
+              Est.  stn bbox = 4.118e+04 (1.95e+04 2.17e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2957.9M
+Iteration  2: Total net bbox = 3.612e+04 (1.75e+04 1.87e+04)
+              Est.  stn bbox = 4.118e+04 (1.95e+04 2.17e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2957.9M
+Iteration  3: Total net bbox = 3.942e+04 (1.96e+04 1.98e+04)
+              Est.  stn bbox = 4.736e+04 (2.26e+04 2.47e+04)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 2976.3M
+Active setup views:
+    SlowView
+Iteration  4: Total net bbox = 3.706e+04 (1.84e+04 1.86e+04)
+              Est.  stn bbox = 4.421e+04 (2.11e+04 2.31e+04)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 2976.3M
+Iteration  5: Total net bbox = 3.202e+04 (1.61e+04 1.59e+04)
+              Est.  stn bbox = 3.706e+04 (1.80e+04 1.90e+04)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 2976.3M
+Iteration  6: Total net bbox = 3.322e+04 (1.50e+04 1.83e+04)
+              Est.  stn bbox = 3.798e+04 (1.66e+04 2.14e+04)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 2994.3M
+<CMD> psp::embedded_egr_init_
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+[NR-eGR] Started Early Global Route kernel ( Curr Mem: 2.90 MB )
+<CMD> psp::embedded_egr_term_
+Iteration  7: Total net bbox = 3.482e+04 (1.65e+04 1.84e+04)
+              Est.  stn bbox = 3.964e+04 (1.81e+04 2.15e+04)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 2998.8M
+Iteration  8: Total net bbox = 3.482e+04 (1.65e+04 1.84e+04)
+              Est.  stn bbox = 3.964e+04 (1.81e+04 2.15e+04)
+              cpu = 0:00:00.7 real = 0:00:01.0 mem = 2998.8M
+<CMD> psp::embedded_egr_init_
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+<CMD> psp::embedded_egr_term_
+Iteration  9: Total net bbox = 3.780e+04 (1.92e+04 1.86e+04)
+              Est.  stn bbox = 4.293e+04 (2.12e+04 2.18e+04)
+              cpu = 0:00:00.5 real = 0:00:01.0 mem = 3002.9M
+Iteration 10: Total net bbox = 3.780e+04 (1.92e+04 1.86e+04)
+              Est.  stn bbox = 4.293e+04 (2.12e+04 2.18e+04)
+              cpu = 0:00:00.8 real = 0:00:01.0 mem = 3002.9M
+<CMD> psp::embedded_egr_init_
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+<CMD> psp::embedded_egr_term_
+Iteration 11: Total net bbox = 4.039e+04 (2.11e+04 1.93e+04)
+              Est.  stn bbox = 4.592e+04 (2.33e+04 2.26e+04)
+              cpu = 0:00:00.7 real = 0:00:00.0 mem = 3005.7M
+Iteration 12: Total net bbox = 4.039e+04 (2.11e+04 1.93e+04)
+              Est.  stn bbox = 4.592e+04 (2.33e+04 2.26e+04)
+              cpu = 0:00:00.8 real = 0:00:01.0 mem = 3008.3M
+Iteration 13: Total net bbox = 4.283e+04 (2.20e+04 2.08e+04)
+              Est.  stn bbox = 4.848e+04 (2.43e+04 2.42e+04)
+              cpu = 0:00:01.2 real = 0:00:01.0 mem = 3013.7M
+Iteration 14: Total net bbox = 4.283e+04 (2.20e+04 2.08e+04)
+              Est.  stn bbox = 4.848e+04 (2.43e+04 2.42e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3013.7M
+Iteration 15: Total net bbox = 4.283e+04 (2.20e+04 2.08e+04)
+              Est.  stn bbox = 4.848e+04 (2.43e+04 2.42e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3013.7M
+*** cost = 4.283e+04 (2.20e+04 2.08e+04) (cpu for global=0:00:05.3) real=0:00:06.0***
+<CMD> reset_path_group
+<CMD> set_global _is_ipo_interactive_path_groups 0
+Info: 0 clock gating cells identified, 0 (on average) moved 0/7
+Solver runtime cpu: 0:00:02.3 real: 0:00:02.3
+Core Placement runtime cpu: 0:00:02.8 real: 0:00:03.0
+<CMD> scanReorder
+Begin: Reorder Scan Chains
+**WARN: (IMPSP-9025):	No scan chain specified/traced.
+Type 'man IMPSP-9025' for more detail.
+End: Reorder Scan Chains
+*** Starting refinePlace (0:00:57.1 mem=3013.7M) ***
+Total net bbox length = 4.283e+04 (2.205e+04 2.079e+04) (ext = 2.032e+04)
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+Move report: Detail placement moves 544 insts, mean move: 1.96 um, max move: 25.47 um 
+	Max move on inst (I0/ctr_reg[6]): (1060.19, 965.84) --> (1045.92, 977.04)
+	Runtime: CPU: 0:00:00.1 REAL: 0:00:00.0 MEM: 2985.5MB
+Summary Report:
+Instances move: 544 (out of 544 movable)
+Instances flipped: 0
+Mean displacement: 1.96 um
+Max displacement: 25.47 um (Instance: I0/ctr_reg[6]) (1060.19, 965.841) -> (1045.92, 977.04)
+	Length: 28 sites, height: 1 rows, site name: CoreSite, cell type: decrq1
+Physical-only instances move: 0 (out of 0 movable physical-only)
+Total net bbox length = 4.148e+04 (2.072e+04 2.076e+04) (ext = 2.028e+04)
+Runtime: CPU: 0:00:00.1 REAL: 0:00:00.0 MEM: 2985.5MB
+*** Finished refinePlace (0:00:57.2 mem=2985.5M) ***
+*** End of Placement (cpu=0:00:12.0, real=0:00:13.0, mem=2985.5M) ***
+default core: bins with density > 0.750 =  0.22 % ( 1 / 462 )
+Density distribution unevenness ratio = 92.415%
+*** Free Virtual Timing Model ...(mem=2985.5M)
+<CMD> setDelayCalMode -engine aae
+<CMD> all_setup_analysis_views
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> set_global timing_enable_path_group_priority $gpsPrivate::optSave_ctePGPriority
+<CMD> set_global timing_constraint_enable_group_path_resetting $gpsPrivate::optSave_ctePGResetting
+<CMD> getPlaceMode -quiet -tdgpAdjustNetWeightBySlack
+<CMD> get_ccopt_clock_trees *
+<CMD> getPlaceMode -exp_insert_guidance_clock_tree -quiet
+<CMD> getPlaceMode -exp_cluster_based_high_fanout_buffering -quiet
+<CMD> getPlaceMode -quiet -place_global_exp_heterogeneous_3d_placement
+<CMD> getPlaceMode -place_global_exp_incr_skp_preserve_mode_v2 -quiet
+<CMD> getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+<CMD> getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+<CMD> getPlaceMode -quiet -place_global_high_effort_density_smoother
+<CMD> getPlaceMode -quiet -timingEffort
+<CMD> getPlaceMode -quiet -place_detail_exp_enable_full_fgc_in_pod
+<CMD> getPlaceMode -quiet -place_detail_refinePlace_v3
+<CMD> getPlaceMode -quiet -place_detail_refinePlace_v2
+<CMD> getPlaceMode -quiet -place_detail_refinePlace_v2_pa_fgc_prects_on
+<CMD> getAnalysisMode -quiet -honorClockDomains
+<CMD> getPlaceMode -honorUserPathGroup -quiet
+<CMD> getAnalysisMode -quiet -honorClockDomains
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+<CMD> set delaycal_use_default_delay_limit 101
+Set Default Net Delay as 0 ps.
+<CMD> set delaycal_default_net_delay 0
+Set Default Net Load as 0 pF. 
+<CMD> set delaycal_default_net_load 0
+<CMD> set delaycal_default_net_load_ignore_for_ilm 0
+Set Default Input Pin Transition as 1 ps.
+<CMD> set delaycal_input_transition_delay 1ps
+<CMD> getAnalysisMode -clkSrcPath -quiet
+<CMD> getAnalysisMode -clockPropagation -quiet
+<CMD> getAnalysisMode -checkType -quiet
+<CMD> buildTimingGraph
+<CMD> getDelayCalMode -ignoreNetLoad -quiet
+<CMD> getDelayCalMode -ignoreNetLoad -quiet
+<CMD> setDelayCalMode -ignoreNetLoad true -quiet
+**INFO: Analyzing IO path groups for slack adjustment
+<CMD> get_global timing_enable_path_group_priority
+<CMD> get_global timing_constraint_enable_group_path_resetting
+<CMD> set_global timing_enable_path_group_priority false
+<CMD> set_global timing_constraint_enable_group_path_resetting false
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+<CMD> set_global _is_ipo_interactive_path_groups 1
+<CMD> group_path -name reg2reg_tmp.30238 -from 0x15 -to 0x16
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+<CMD> setPathGroupOptions reg2reg_tmp.30238 -effortLevel high
+Effort level <high> specified for reg2reg_tmp.30238 path_group
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (1 T). (MEM=2423.55)
+Total number of fetched objects 623
+End delay calculation. (MEM=2438.14 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2438.14 CPU=0:00:00.1 REAL=0:00:00.0)
+<CMD> reset_path_group -name reg2reg_tmp.30238
+<CMD> set_global _is_ipo_interactive_path_groups 0
+**INFO: Disable pre-place timing setting for timing analysis
+<CMD> setDelayCalMode -ignoreNetLoad false
+Set Using Default Delay Limit as 1000.
+<CMD> set delaycal_use_default_delay_limit 1000
+Set Default Net Delay as 1000 ps.
+<CMD> set delaycal_default_net_delay 1000ps
+Set Default Input Pin Transition as 120 ps.
+<CMD> set delaycal_input_transition_delay 120ps
+Set Default Net Load as 0.5 pF. 
+<CMD> set delaycal_default_net_load 0.5pf
+<CMD> set delaycal_default_net_load_ignore_for_ilm 0
+<CMD> all_setup_analysis_views
+<CMD> getPlaceMode -place_global_exp_ignore_low_effort_path_groups -quiet
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> getPlaceMode -quiet -cong_repair_commit_clock_net_route_attr
+<CMD> getPlaceMode -enableDbSaveAreaPadding -quiet
+<CMD> getPlaceMode -quiet -wireLenOptEffort
+<CMD> setPlaceMode -reset -improveWithPsp
+<CMD> getPlaceMode -quiet -debugGlobalPlace
+<CMD> getPlaceMode -congRepair -quiet
+<CMD> getPlaceMode -fp -quiet
+<CMD> getPlaceMode -user -rplaceIncrNPClkGateAwareMode
+<CMD> getPlaceMode -user -congRepairMaxIter
+<CMD> getPlaceMode -quiet -congRepairPDClkGateMode4
+<CMD> setPlaceMode -rplaceIncrNPClkGateAwareMode 4
+<CMD> getPlaceMode -quiet -expCongRepairPDOneLoop
+<CMD> setPlaceMode -congRepairMaxIter 1
+<CMD> getPlaceMode -quickCTS -quiet
+<CMD> get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
+<CMD> getPlaceMode -congRepairForceTrialRoute -quiet
+<CMD> getPlaceMode -user -congRepairForceTrialRoute
+<CMD> setPlaceMode -congRepairForceTrialRoute true
+<CMD> ::goMC::is_advanced_metrics_collection_running
+<CMD> congRepair
+Info: Disable timing driven in postCTS congRepair.
+
+Starting congRepair ...
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+[NR-eGR] Early global route reroute all routable nets
+[NR-eGR] Track table information for default rule: 
+[NR-eGR] M1 has single uniform track structure
+[NR-eGR] M2 has single uniform track structure
+[NR-eGR] M3 has single uniform track structure
+[NR-eGR] M4 has single uniform track structure
+[NR-eGR] M5 has single uniform track structure
+[NR-eGR] TOP_M has single uniform track structure
+[NR-eGR] Read 14035 PG shapes
+[NR-eGR] Read 0 clock shapes
+[NR-eGR] Read 0 other shapes
+[NR-eGR] #Routing Blockages  : 0
+[NR-eGR] #Bump Blockages     : 0
+[NR-eGR] #Instance Blockages : 74633
+[NR-eGR] #PG Blockages       : 14035
+[NR-eGR] #Halo Blockages     : 0
+[NR-eGR] #Boundary Blockages : 0
+[NR-eGR] #Clock Blockages    : 0
+[NR-eGR] #Other Blockages    : 0
+[NR-eGR] #prerouted nets         : 0
+[NR-eGR] #prerouted special nets : 0
+[NR-eGR] #prerouted wires        : 0
+[NR-eGR] Read 566 nets ( ignored 0 )
+[NR-eGR] There are 1 clock nets ( 0 with NDR ).
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id: 0  Rule name: (Default)  Nets: 566
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 566 net(s) in layer range [2, 6]
+[NR-eGR] Early Global Route overflow of layer group 1: 0.01% H + 0.00% V. EstWL: 4.602080e+04um
+[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
+[NR-eGR]                        OverCon            
+[NR-eGR]                         #Gcell     %Gcell
+[NR-eGR]        Layer               (1)    OverCon
+[NR-eGR] ----------------------------------------------
+[NR-eGR]      M1 ( 1)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M2 ( 2)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M3 ( 3)         5( 0.01%)   ( 0.01%) 
+[NR-eGR]      M4 ( 4)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M5 ( 5)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]   TOP_M ( 6)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] ----------------------------------------------
+[NR-eGR]        Total         5( 0.00%)   ( 0.00%) 
+[NR-eGR] 
+[NR-eGR] Overflow after Early Global Route 0.00% H + 0.00% V
+[NR-eGR] Finished Early Global Route kernel ( CPU: 0.17 sec, Real: 0.17 sec, Curr Mem: 2.85 MB )
+Early Global Route congestion estimation runtime: 0.18 seconds, mem = 2950.5M
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+Skipped repairing congestion.
+[NR-eGR] Connected 0 must-join pins/ports (post-process)
+[NR-eGR] Total eGR-routed clock nets wire length: 2563um, number of vias: 429
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR]                Length (um)  Vias 
+[NR-eGR] ---------------------------------
+[NR-eGR]  M1     (1H)             0  2142 
+[NR-eGR]  M2     (2V)         23241  3257 
+[NR-eGR]  M3     (3H)         23412    35 
+[NR-eGR]  M4     (4V)            59     6 
+[NR-eGR]  M5     (5H)            52     4 
+[NR-eGR]  TOP_M  (6V)           162     0 
+[NR-eGR] ---------------------------------
+[NR-eGR]         Total        46925  5444 
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total half perimeter of net bounding box: 41483um
+[NR-eGR] Total length: 46925um, number of vias: 5444
+[NR-eGR] --------------------------------------------------------------------------
+Max route layer is changed from 127 to 6 because there is no routing track above this layer
+Early Global Route wiring runtime: 0.04 seconds, mem = 2968.8M
+Tdgp not enabled or already been cleared! skip clearing
+End of congRepair (cpu=0:00:00.2, real=0:00:00.0)
+<CMD> ::goMC::is_advanced_metrics_collection_running
+<CMD> ::goMC::is_advanced_metrics_collection_running
+<CMD> ::goMC::is_advanced_metrics_collection_running
+<CMD> setPlaceMode -reset -congRepairForceTrialRoute
+<CMD> getPlaceMode -quiet -congRepairPDClkGateMode4
+<CMD> setPlaceMode -reset -rplaceIncrNPClkGateAwareMode
+<CMD> setPlaceMode -reset -congRepairMaxIter
+<CMD> getPlaceMode -congRepairCleanupPadding -quiet
+<CMD> getPlaceMode -quiet -wireLenOptEffort
+<CMD> all_setup_analysis_views
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> set_global timing_enable_path_group_priority $gpsPrivate::optSave_ctePGPriority
+<CMD> set_global timing_constraint_enable_group_path_resetting $gpsPrivate::optSave_ctePGResetting
+<CMD> getPlaceMode -place_global_exp_incr_skp_preserve_mode_v2 -quiet
+<CMD> getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+<CMD> getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+<CMD> getPlaceMode -quiet -place_global_high_effort_density_smoother
+<CMD> getPlaceMode -quiet -timingEffort
+<CMD> getPlaceMode -tdgpDumpStageTiming -quiet
+*** Finishing placeDesign default flow ***
+<CMD> getPlaceMode -quiet -tdgpAdjustNetWeightBySlack
+**placeDesign ... cpu = 0: 0:14, real = 0: 0:16, mem = 2963.8M **
+<CMD> getPlaceMode -trimView -quiet
+<CMD> getOptMode -quiet -viewOptPolishing
+<CMD> getOptMode -quiet -fastViewOpt
+<CMD_INTERNAL> spInternalUse deleteViewOptManager
+<CMD_INTERNAL> spInternalUse tdgp clearSkpData
+Tdgp not enabled or already been cleared! skip clearing
+<CMD> setAnalysisMode -clkSrcPath true -clockPropagation sdcControl
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> setExtractRCMode -engine preRoute
+<CMD> setPlaceMode -reset -relaxSoftBlockageMode
+<CMD> setPlaceMode -reset -ignoreScan
+<CMD> setPlaceMode -reset -repairPlace
+<CMD> getPlaceMode -quiet -NMPsuppressInfo
+<CMD_INTERNAL> setvar spgSpeedupBuildVSM 0
+<CMD> getPlaceMode -macroPlaceMode -quiet
+<CMD> getPlaceMode -place_global_replace_QP -quiet
+<CMD> getPlaceMode -macroPlaceMode -quiet
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> getPlaceMode -place_global_ignore_spare -quiet
+<CMD> getPlaceMode -tdgpMemFlow -quiet
+<CMD> setPlaceMode -reset -resetCombineRFLevel
+<CMD> getPlaceMode -quiet -place_global_exp_solve_unbalance_path
+<CMD> setPlaceMode -reset -expHiddenFastMode
+<CMD> getPlaceMode -tcg2Pass -quiet
+<CMD> getPlaceMode -quiet -wireLenOptEffort
+<CMD> getPlaceMode -fp -quiet
+<CMD> getPlaceMode -fastfp -quiet
+<CMD> getPlaceMode -doRPlace -quiet
+<CMD> getPlaceMode -RTCPlaceDesignFlow -quiet
+<CMD> getPlaceMode -quickCTS -quiet
+<CMD> set spgFlowInInitialPlace 0
+<CMD> getPlaceMode -user -maxRouteLayer
+<CMD_INTERNAL> spInternalUse TDGP resetIgnoreNetLoad
+<CMD> getPlaceMode -place_global_exp_balance_pipeline -quiet
+<CMD> getDesignMode -quiet -flowEffort
+<CMD> report_message -end_cmd
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDC-1629           2  The default delay limit was set to %d. T...
+WARNING   IMPSP-9025           1  No scan chain specified/traced.          
+WARNING   TCLCMD-513           8  The software could not find a matching o...
+*** Message Summary: 11 warning(s), 0 error(s)
+
+<CMD> um::create_snapshot -name final -auto min
+<CMD> um::pop_snapshot_stack
+<CMD> um::create_snapshot -name place_design
+*** placeDesign #1 [finish] () : cpu/real = 0:00:14.5/0:00:16.1 (0.9), totSession cpu/real = 0:00:58.2/0:01:46.8 (0.5), mem = 2963.8M
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> routeDesign
+#% Begin routeDesign (date=06/26 00:40:03, mem=2392.9M)
+#routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2393.00 (MB), peak = 2439.37 (MB)
+AAE_INFO: Pre Route call back at the beginning of routeDesign
+#**INFO: setDesignMode -flowEffort standard
+#**INFO: setDesignMode -powerEffort none
+**INFO: User settings:
+setNanoRouteMode -route_route_side                      front
+setNanoRouteMode -route_extract_third_party_compatible  false
+setExtractRCMode -engine                                preRoute
+setDelayCalMode -engine                                 aae
+setDelayCalMode -ignoreNetLoad                          false
+
+#**INFO: multi-cut via swapping will be performed after routing.
+#**INFO: All auto set options tuned by routeDesign will be restored to their original settings on command completion.
+Begin checking placement ... (start mem=2965.9M, init mem=2965.9M)
+*info: Placed = 544           
+*info: Unplaced = 0           
+Placement Density:1.26%(17592/1386268)
+Placement Density (including fixed std cells):1.26%(17592/1386268)
+Finished checkPlace (total: cpu=0:00:00.0, real=0:00:01.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=2965.9M)
+
+changeUseClockNetStatus Option :  -ignoreSkipRoutingNets -noFixedNetWires 
+*** Changed status on (0) nets in Clock.
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=2965.9M) ***
+#**INFO: auto set of droutePostRouteSwapVia to multiCut
+% Begin globalDetailRoute (date=06/26 00:40:04, mem=2392.3M)
+
+globalDetailRoute
+
+#Start globalDetailRoute on Fri Jun 26 00:40:04 2026
+#
+#Generating timing data, please wait...
+#602 total nets, 566 already routed, 566 will ignore in trialRoute
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+#Reporting timing...
+#Normalized TNS: 0.000 -> 0.000, r2r 0.000 -> 0.000, unit 1000.000, clk period 12.000 (ns)
+#Stage 1: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2437.75 (MB), peak = 2455.48 (MB)
+#Library Standard Delay: 41.30ps
+#Slack threshold: 82.60ps
+#*** Analyzed 0 timing critical paths, and collected 0.
+#Stage 2: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2437.99 (MB), peak = 2455.48 (MB)
+#Stage 3: cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2443.90 (MB), peak = 2455.48 (MB)
+#Default setup view is reset to SlowView.
+#Stage 4: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2443.91 (MB), peak = 2455.48 (MB)
+#Current view: SlowView 
+#Current enabled view: SlowView 
+#Generating timing data took: cpu time = 00:00:02, elapsed time = 00:00:03, memory = 2443.16 (MB), peak = 2455.48 (MB)
+#Done generating timing data.
+#WARNING (NRIG-1303) The congestion map does not match the GCELL grid. Clearing the congestion map.
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#NanoRoute Version 23.33-s082_1 NR241029-2256/23_13-UB
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Start routing data preparation on Fri Jun 26 00:40:06 2026
+#
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Rebuild pin access data for design.
+#Initial pin access analysis.
+#Detail pin access analysis.
+# M1           H   Track-Pitch = 0.5600    Line-2-Via Pitch = 0.4850
+# M2           V   Track-Pitch = 0.5600    Line-2-Via Pitch = 0.5600
+# M3           H   Track-Pitch = 0.5600    Line-2-Via Pitch = 0.5600
+# M4           V   Track-Pitch = 0.5600    Line-2-Via Pitch = 0.5600
+# M5           H   Track-Pitch = 0.8400    Line-2-Via Pitch = 0.5600
+# TOP_M        V   Track-Pitch = 1.1200    Line-2-Via Pitch = 0.9500
+#Bottom routing layer index=1(M1), bottom routing layer for shielding=1(M1), bottom shield layer=1(M1)
+#shield_bottom_stripe_layer=1(M1), shield_top_stripe_layer=6(TOP_M)
+#pin_access_rlayer=2(M2)
+#shield_top_dpt_rlayer=-1 top_rlayer=6 top_trim_metal_rlayer=-1 rlayer_lowest=1 bottom_rlayer=1
+#enable_trim_layer_shield=F enable_dpt_layer_shield=F has_line_end_grid=F
+#enable_dpt_layer_shield=F
+#has_line_end_grid=F
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2453.70 (MB), peak = 2486.79 (MB)
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=15 tracks, using layer M3's pitch = 0.5600.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2464.53 (MB), peak = 2486.79 (MB)
+#
+#Summary of active signal nets routing constraints set by OPT:
+#	preferred routing layers      : 0
+#	preferred routing layer effort: 0
+#	preferred extra space         : 0
+#	preferred multi-cut via       : 0
+#	avoid detour                  : 0
+#	expansion ratio               : 0
+#	net priority                  : 0
+#	s2s control                   : 0
+#	avoid chaining                : 0
+#	inst-based stacking via       : 0
+#
+#Summary of active signal nets routing constraints set by USER:
+#	preferred routing layers      : 0
+#	preferred routing layer effort     : 0
+#	preferred extra space              : 0
+#	preferred multi-cut via            : 0
+#	avoid detour                       : 0
+#	net weight                         : 0
+#	avoid chaining                     : 0
+#	cell-based stacking via (required) : 0
+#	cell-based stacking via (optional) : 0
+#
+#Start timing driven prevention iteration...
+#Setup timing driven global route constraints on 0 nets
+#
+#----------------------------------------------------
+# Summary of active signal nets routing constraints
+#+--------------------------+-----------+
+#+--------------------------+-----------+
+#
+#----------------------------------------------------
+#Skipped timing-driven prevention.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2464.56 (MB), peak = 2486.79 (MB)
+#Total number of trivial nets (e.g. < 2 pins) = 203 (skipped).
+#Total number of routable nets = 568.
+#Total number of nets in the design = 771.
+#568 routable nets do not have any wires.
+#568 nets will be global routed.
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#
+#Connectivity extraction summary:
+#568 (73.67%) nets are without wires.
+#203 nets are fixed|skipped|trivial (not extracted).
+#Total number of nets = 771.
+#
+#
+#Finished routing data preparation on Fri Jun 26 00:40:07 2026
+#
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 0.17 (MB)
+#Total memory = 2464.76 (MB)
+#Peak memory = 2486.79 (MB)
+#
+#
+#Start global routing on Fri Jun 26 00:40:07 2026
+#
+#
+#Start global routing initialization on Fri Jun 26 00:40:07 2026
+#
+#Number of eco nets is 0
+#
+#Start global routing data preparation on Fri Jun 26 00:40:07 2026
+#
+#Start routing resource analysis on Fri Jun 26 00:40:07 2026
+#
+#Routing resource analysis is done on Fri Jun 26 00:40:07 2026
+#
+#  Resource Analysis:
+#
+#               Routing  #Avail      #Track     #Total     %Gcell
+#  Layer      Direction   Track     Blocked      Gcell    Blocked
+#  --------------------------------------------------------------
+#  M1             H        1214        2000       45796    46.93%
+#  M2             V        1453        1760       45796    46.70%
+#  M3             H        1559        1655       45796    45.63%
+#  M4             V        1181        2032       45796    56.25%
+#  M5             H        1093        1049       45796    46.90%
+#  TOP_M          V         816         791       45796    46.78%
+#  --------------------------------------------------------------
+#  Total                   7317      54.98%      274776    48.20%
+#
+#
+#
+#
+#Global routing data preparation is done on Fri Jun 26 00:40:07 2026
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2468.87 (MB), peak = 2486.79 (MB)
+#
+#
+#Global routing initialization is done on Fri Jun 26 00:40:07 2026
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2470.05 (MB), peak = 2486.79 (MB)
+#
+#start global routing iteration 1...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2471.11 (MB), peak = 2486.79 (MB)
+#
+#Skip 1/3 round for no nets in the round...
+#Skip 2/3 round for no nets in the round...
+#Route nets in 3/3 round...
+#start global routing iteration 2...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2471.84 (MB), peak = 2486.79 (MB)
+#
+#start global routing iteration 3...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2471.84 (MB), peak = 2486.79 (MB)
+#
+#
+#Total number of trivial nets (e.g. < 2 pins) = 203 (skipped).
+#Total number of routable nets = 568.
+#Total number of nets in the design = 771.
+#
+#568 routable nets have routed wires.
+#
+#Routed nets constraints summary:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default             568  
+#-----------------------------
+#        Total             568  
+#-----------------------------
+#
+#Routing constraints summary of the whole design:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default             568  
+#-----------------------------
+#        Total             568  
+#-----------------------------
+#
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#
+#  Congestion Analysis: (blocked Gcells are excluded)
+#
+#                 OverCon          
+#                  #Gcell    %Gcell
+#     Layer           (1)   OverCon
+#  --------------------------------
+#  M1            0(0.00%)   (0.00%)
+#  M2            0(0.00%)   (0.00%)
+#  M3            0(0.00%)   (0.00%)
+#  M4            0(0.00%)   (0.00%)
+#  M5            0(0.00%)   (0.00%)
+#  TOP_M         0(0.00%)   (0.00%)
+#  --------------------------------
+#     Total      0(0.00%)   (0.00%)
+#
+#  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 1
+#  Overflow after GR: 0.00% H + 0.00% V
+#
+#Hotspot report including placement blocked areas
+[hotspot] +----------------+-------------------+-------------------+-------------------------------------+
+[hotspot] |      layer     |    max hotspot    |   total hotspot   |            hotspot bbox             |
+[hotspot] +----------------+-------------------+-------------------+-------------------------------------+
+[hotspot] |       M1(H)    |              0.44 |              0.44 |  1030.39   828.80  1075.19   873.60 |
+[hotspot] |       M2(V)    |              0.00 |              0.00 |   (none)                            |
+[hotspot] |       M3(H)    |              0.00 |              0.00 |   (none)                            |
+[hotspot] |       M4(V)    |              0.00 |              0.00 |   (none)                            |
+[hotspot] |       M5(H)    |              0.00 |              0.00 |   (none)                            |
+[hotspot] |    TOP_M(V)    |              0.00 |              0.00 |   (none)                            |
+[hotspot] +----------------+-------------------+-------------------+-------------------------------------+
+[hotspot] |      worst     |     (M1)     0.44 |     (M1)     0.44 |                                     |
+[hotspot] +----------------+-------------------+-------------------+-------------------------------------+
+[hotspot] |   all layers   |              0.00 |              0.00 |                                     |
+[hotspot] +----------------+-------------------+-------------------+-------------------------------------+
+Local HotSpot Analysis (blockage included) (3d): normalized congestion max/total hotspot area = 0.00/0.00 (area is in unit of 4 std-cell row bins)
+#Complete Global Routing.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+
+#  Layer       | Length(um)| Vias|
+#--------------+-----------+-----+
+#  GC ( 0H)    |          0|    0|
+#  M1 ( 1H)    |       8484| 2409|
+#  M2 ( 2V)    |      24797| 1331|
+#  M3 ( 3H)    |      14137|   10|
+#  M4 ( 4V)    |        193|    0|
+#  M5 ( 5H)    |          0|    0|
+#  TOP_M ( 6V) |          0|    0|
+#--------------+-----------+-----+
+#  Total       |      47611| 3750|
+#--------------+-----------+-----+
+#
+# Total half perimeter of net bounding box: 47537 um.
+#Total number of involved regular nets 162
+#Maximum src to sink distance  1307.5
+#Average of max src_to_sink distance  116.3
+#Average of ave src_to_sink distance  87.3
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Max overcon = 0 track.
+#Total overcon = 0.00%.
+#Worst layer Gcell overcon rate = 0.00%.
+#
+#Global routing statistics:
+#Cpu time = 00:00:01
+#Elapsed time = 00:00:01
+#Increased memory = 6.03 (MB)
+#Total memory = 2470.79 (MB)
+#Peak memory = 2486.79 (MB)
+#
+#Finished global routing on Fri Jun 26 00:40:07 2026
+#
+#
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2467.05 (MB), peak = 2486.79 (MB)
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Start Track Assignment.
+#Done with 881 horizontal wires in 7 hboxes and 1200 vertical wires in 7 hboxes.
+#Done with 172 horizontal wires in 7 hboxes and 164 vertical wires in 7 hboxes.
+#Done with 7 horizontal wires in 7 hboxes and 7 vertical wires in 7 hboxes.
+#
+#Track assignment summary:
+# layer   (wire length)   (overlap)     (long ovlp)	(with obs/pg/clk)  
+#------------------------------------------------------------------------
+# M1          8430.05 	  0.00%  	  0.00% 	  0.00%
+# M2         24698.52 	  2.23%  	  0.00% 	  2.18%
+# M3         13953.24 	  0.30%  	  0.00% 	  0.27%
+# M4           197.68 	  0.00%  	  0.00% 	  0.00%
+# M5             0.00 	  0.00%  	  0.00% 	  0.00%
+# TOP_M          0.00 	  0.00%  	  0.00% 	  0.00%
+#------------------------------------------------------------------------
+# All       47279.49  	  1.25% 	  0.00% 	  0.00%
+#Complete Track Assignment.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+
+#  Layer       | Length(um)| Vias|
+#--------------+-----------+-----+
+#  GC ( 0H)    |          0|    0|
+#  M1 ( 1H)    |       8421| 2409|
+#  M2 ( 2V)    |      24650| 1331|
+#  M3 ( 3H)    |      13865|   10|
+#  M4 ( 4V)    |        197|    0|
+#  M5 ( 5H)    |          0|    0|
+#  TOP_M ( 6V) |          0|    0|
+#--------------+-----------+-----+
+#  Total       |      47132| 3750|
+#--------------+-----------+-----+
+#
+# Total half perimeter of net bounding box: 47537 um.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2467.48 (MB), peak = 2486.79 (MB)
+#
+#Start post global route fixing for timing critical nets ...
+#
+#* Updating design timing data...
+#Extracting RC...
+Un-suppress "**WARN ..." messages.
+#
+#Start tQuantus RC extraction...
+#Finish check_net_pin_list step Enter extract_rc_after_routing
+#Extract in track assign mode
+#Start extraction data preparation
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Start building rc corner(s)...
+#Number of RC Corner = 2
+#Corner SlowRC /tools/kits/tower/PDK_TS18SL/iit/qrcTechFile 125.000000 (real) 
+#Corner FastRC /tools/kits/tower/PDK_TS18SL/iit/qrcTechFile -40.000000 (real) 
+#(i=6, n=6 1000)
+#m1 -> M1 (1)
+#m2 -> M2 (2)
+#m3 -> M3 (3)
+#m4 -> M4 (4)
+#m5 -> M5 (5)
+#ml -> TOP_M (6)
+#SADV_On
+# Corner(s) : 
+#SlowRC [125.00] 
+#FastRC [-40.00]
+# Corner id: 0
+# Layout Scale: 1.000000
+# Has Metal Fill model: yes
+# Temperature was set
+# Temperature : 125.000000
+# Ref. Temp   : 25.000000
+# Corner id: 1
+# Layout Scale: 1.000000
+# Has Metal Fill model: yes
+# Temperature was set
+# Temperature : -40.000000
+# Ref. Temp   : 25.000000
+#SADV_Off
+#total pattern=56 [12, 147]
+#Reading previously stored rc_model file ( rc_model.bin ) ...
+#found CAPMODEL /tools/kits/tower/PDK_TS18SL/iit/qrcTechFile
+#found RESMODEL /tools/kits/tower/PDK_TS18SL/iit/qrcTechFile 125.000000 
+#found RESMODEL /tools/kits/tower/PDK_TS18SL/iit/qrcTechFile -40.000000 
+#CCE Version read = IQuantus/TQuantus 23.1.1-s235
+#number model r/c [2,1] [12,147] read
+#Build RC corners: cpu time = 00:00:00, elapsed time = 00:00:01, memory = 2472.00 (MB), peak = 2486.79 (MB)
+#Finish check_net_pin_list step Enter extract
+#Start init net ripin tree building
+#Finish init net ripin tree building
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 0.04 (MB)
+#Total memory = 2480.51 (MB)
+#Peak memory = 2486.79 (MB)
+#begin processing metal fill model file
+#end processing metal fill model file
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#
+#Start Post Track Assignment Wire Spread.
+#Done with 246 horizontal wires in 7 hboxes and 299 vertical wires in 7 hboxes.
+#Complete Post Track Assignment Wire Spread.
+#
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Length limit = 200 pitches
+#opt mode = 2
+#WARNING (EMS-27) Message (NRIF-95) has exceeded the current message display limit of 20.
+#To increase the message display limit, refer to the product command reference manual.
+#Finish check_net_pin_list step Fix net pin list
+#Start generate extraction boxes.
+#
+#Extract using 30 x 30 Hboxes
+#9x9 initial hboxes
+#Use area based hbox pruning.
+#0/0 hboxes pruned.
+#Complete generating extraction boxes.
+#Start step Extraction
+#Extract 25 hboxes with single thread on machine with  Core_i7 4.02GHz 12288KB Cache 8CPU...
+#Process 0 special clock nets for rc extraction
+#Total 566 nets were built. 160 nodes added to break long wires. 0 net(s) have incomplete routes.
+#Run Statistics for Extraction:
+#   Cpu time = 00:00:02, elapsed time = 00:00:02 .
+#   Increased memory =    11.35 (MB), total memory =  2492.04 (MB), peak memory =  2492.04 (MB)
+#
+#Scale RC for track assignment: res 1.000000; cap 1.000000; clk res 1.000000; clk cap 1.000000, xcap 1.000000
+#Simplify RC tree: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2482.57 (MB), peak = 2492.05 (MB)
+#RC Statistics: 3039 Res, 1964 Ground Cap, 391 XCap (Edge to Edge)
+#RC V/H edge ratio: 0.67, Avg V/H Edge Length: 8091.24 (2142), Avg L-Edge Length: 17148.99 (493)
+#Register nets and terms for rcdb /tmp/innovus_temp_30238_ab45ad17-1213-4490-990d-49906342c860_vlsi-ria87_epkgms_hLM5fj/nr30238_fXyUcq.rcdb.d
+#Finish registering nets and terms for rcdb.
+#Start writing RC data.
+#Finish writing RC data
+#Finish writing rcdb with 4135 nodes, 3569 edges, and 998 xcaps
+#160 inserted nodes are removed
+#Restored 0 tie nets, 0 tie snets, 0 partial nets
+#Remove Post Track Assignment Wire Spread
+Restoring parasitic data from file '/tmp/innovus_temp_30238_ab45ad17-1213-4490-990d-49906342c860_vlsi-ria87_epkgms_hLM5fj/nr30238_fXyUcq.rcdb.d' ...
+Reading RCDB with compressed RC data.
+Reading RCDB with compressed RC data.
+Begin read_parasitics... (cpu: 0:00:00.0 real: 0:00:00.0 mem: 3052.598M)
+Following multi-corner parasitics specified:
+	/tmp/innovus_temp_30238_ab45ad17-1213-4490-990d-49906342c860_vlsi-ria87_epkgms_hLM5fj/nr30238_fXyUcq.rcdb.d (rcdb)
+Reading RCDB with compressed RC data.
+		Cell top has rcdb /tmp/innovus_temp_30238_ab45ad17-1213-4490-990d-49906342c860_vlsi-ria87_epkgms_hLM5fj/nr30238_fXyUcq.rcdb.d specified
+Cell top, hinst 
+Reading RCDB with compressed RC data.
+Done read_parasitics... (cpu: 0:00:00.0 real: 0:00:00.0 mem: 3052.598M)
+#
+#Restore RCDB.
+#Remove Post Track Assignment Wire Spread
+#
+#Complete tQuantus RC extraction.
+#Cpu time = 00:00:03
+#Elapsed time = 00:00:03
+#Increased memory = 16.44 (MB)
+#Total memory = 2483.93 (MB)
+#Peak memory = 2496.14 (MB)
+#
+Un-suppress "**WARN ..." messages.
+#RC Extraction Completed...
+AAE_INFO: switching setDelayCal -siAware from false to true ...
+AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+#Reporting timing...
+#Normalized TNS: 0.000 -> 0.000, r2r 0.000 -> 0.000, unit 1000.000, clk period 12.000 (ns)
+#Stage 1: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2498.36 (MB), peak = 2515.14 (MB)
+#Library Standard Delay: 41.30ps
+#Slack threshold: 0.00ps
+#*** Analyzed 0 timing critical paths, and collected 0.
+#Stage 2: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2498.37 (MB), peak = 2515.14 (MB)
+#Stage 3: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2499.04 (MB), peak = 2515.14 (MB)
+**WARN: (TCLCMD-1403):	'The -tcl_list output format of report_timing will not be supported in future releases of the software.   Path collections generated by 'report_timing -collection'  can be used instead for programmatic access to timing report data. The  report_timing -tcl_list will continue to work in this release - but, you should update your scripts to use path collections so that they are compatible with future releases.'
+Worst slack reported in the design = 9.724617 (late)
+*** writeDesignTiming (0:00:00.0) ***
+#Stage 4: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2499.43 (MB), peak = 2515.14 (MB)
+Un-suppress "**WARN ..." messages.
+#Number of victim nets: 0
+#Number of aggressor nets: 0
+#Number of weak nets: 0
+#Number of critical nets: 0
+#	level 1 [   0.0, -1000.0]: 0 nets
+#	level 2 [   0.0, -1000.0]: 0 nets
+#	level 3 [   0.0, -1000.0]: 0 nets
+#Total number of nets: 566
+#Total number of significant detoured timing critical nets is 0
+#Total number of selected detoured timing critical nets is 0
+#
+#----------------------------------------------------
+# Summary of active signal nets routing constraints
+#+--------------------------+-----------+
+#+--------------------------+-----------+
+#
+#----------------------------------------------------
+Current (total cpu=0:01:07, real=0:02:04, peak res=2515.1M, current mem=2420.3M)
+------------------------------------------------------------------------------------
+CONSTRAINT READING SUMMARY                                                          
+------------------------------------------------------------------------------------
+Constraint                                        | Success        | Fail           
+------------------------------------------------------------------------------------
+create_clock                                      | 1              | 0              
+------------------------------------------------------------------------------------
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2438.0M, current mem=2438.0M)
+Current (total cpu=0:01:07, real=0:02:04, peak res=2515.1M, current mem=2438.0M)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2446.52 (MB), peak = 2515.14 (MB)
+#* Importing design timing data...
+#Number of victim nets: 0
+#Number of aggressor nets: 0
+#Number of weak nets: 0
+#Number of critical nets: 0
+#	level 1 [   0.0, -1000.0]: 0 nets
+#	level 2 [   0.0, -1000.0]: 0 nets
+#	level 3 [   0.0, -1000.0]: 0 nets
+#Total number of nets: 566
+#
+#timing driven effort level: 3
+#Start Track Assignment With Timing Driven.
+#Done with 26 horizontal wires in 7 hboxes and 29 vertical wires in 7 hboxes.
+#Done with 4 horizontal wires in 7 hboxes and 12 vertical wires in 7 hboxes.
+#Done with 7 horizontal wires in 7 hboxes and 7 vertical wires in 7 hboxes.
+#
+#Track assignment summary:
+# layer   (wire length)   (overlap)     (long ovlp)	(with obs/pg/clk)  
+#------------------------------------------------------------------------
+# M1          8429.49 	  0.00%  	  0.00% 	  0.00%
+# M2         24711.40 	  2.23%  	  0.00% 	  2.18%
+# M3         13949.32 	  0.29%  	  0.00% 	  0.27%
+# M4           197.12 	  0.00%  	  0.00% 	  0.00%
+# M5             0.00 	  0.00%  	  0.00% 	  0.00%
+# TOP_M          0.00 	  0.00%  	  0.00% 	  0.00%
+#------------------------------------------------------------------------
+# All       47287.33  	  1.25% 	  0.00% 	  0.00%
+#Complete Track Assignment With Timing Driven.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+
+#  Layer       | Length(um)| Vias|
+#--------------+-----------+-----+
+#  GC ( 0H)    |          0|    0|
+#  M1 ( 1H)    |       8420| 2409|
+#  M2 ( 2V)    |      24660| 1331|
+#  M3 ( 3H)    |      13865|   10|
+#  M4 ( 4V)    |        196|    0|
+#  M5 ( 5H)    |          0|    0|
+#  TOP_M ( 6V) |          0|    0|
+#--------------+-----------+-----+
+#  Total       |      47141| 3750|
+#--------------+-----------+-----+
+#
+# Total half perimeter of net bounding box: 47537 um.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2446.60 (MB), peak = 2515.14 (MB)
+#
+#Routing data preparation, pin analysis, global routing and track assignment statistics:
+#Cpu time = 00:00:06
+#Elapsed time = 00:00:07
+#Increased memory = 1.99 (MB)
+#Total memory = 2446.61 (MB)
+#Peak memory = 2515.14 (MB)
+#Start reading timing information from file .timing_file_30238.tif.gz ...
+#Read in timing information for 0 ports, 589 instances from timing file .timing_file_30238.tif.gz.
+#
+#Start Detail Routing..
+#start initial detail routing ...
+#   number of violations = 52
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Totals|
+#---------+-------+------+-------+-------+-------+
+#  M1     |      2|     5|      9|      6|     22|
+#  M2     |      8|     9|      0|      0|     17|
+#  M3     |      0|    13|      0|      0|     13|
+#  Totals |     10|    27|      9|      6|     52|
+#---------+-------+------+-------+-------+-------+
+#
+#cpu time = 00:00:05, elapsed time = 00:00:05, memory = 2454.41 (MB), peak = 2515.14 (MB)
+#start 1st optimization iteration ...
+#   number of violations = 57
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     0|      8|      4|   0|     12|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      4|    21|      1|      1|   0|     27|
+#  M4     |      7|     5|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     11|    29|      9|      5|   3|     57|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2452.77 (MB), peak = 2515.14 (MB)
+#start 2nd optimization iteration ...
+#   number of violations = 59
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      0|     1|      0|      0|   0|      1|
+#  M3     |      8|    20|      1|      0|   0|     29|
+#  M4     |     11|     4|      0|      0|   2|     17|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     19|    29|      7|      2|   2|     59|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2451.11 (MB), peak = 2515.14 (MB)
+#start 3rd optimization iteration ...
+#   number of violations = 60
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     0|      8|      4|   0|     12|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      6|    21|      1|      1|   0|     29|
+#  M4     |      7|     6|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     13|    30|      9|      5|   3|     60|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2451.55 (MB), peak = 2515.14 (MB)
+#start 4th optimization iteration ...
+#   number of violations = 60
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      7|    19|      1|      0|   0|     27|
+#  M4     |     11|     5|      0|      0|   2|     18|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     20|    29|      7|      2|   2|     60|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2451.37 (MB), peak = 2515.14 (MB)
+#start 5th optimization iteration ...
+#   number of violations = 57
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      6|      2|   0|     11|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      6|    19|      1|      0|   0|     26|
+#  M4     |     11|     5|      0|      0|   2|     18|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     17|    29|      7|      2|   2|     57|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2451.04 (MB), peak = 2515.14 (MB)
+#start 6th optimization iteration ...
+#   number of violations = 61
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      6|      2|   0|      9|
+#  M2     |      0|     1|      0|      0|   0|      1|
+#  M3     |      9|    18|      1|      0|   0|     28|
+#  M4     |     12|     5|      0|      0|   3|     20|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     21|    28|      7|      2|   3|     61|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2450.37 (MB), peak = 2515.14 (MB)
+#start 7th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     0|      8|      4|   0|     12|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      5|    21|      0|      1|   0|     27|
+#  M4     |      8|     3|      0|      0|   3|     14|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     13|    27|      8|      5|   3|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2451.21 (MB), peak = 2515.14 (MB)
+#start 8th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      4|   0|     14|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      5|    20|      0|      0|   0|     25|
+#  M4     |     10|     2|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     15|    26|      8|      4|   2|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2450.79 (MB), peak = 2515.14 (MB)
+#start 9th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| MinCut| Mar| Totals|
+#---------+-------+------+-------+-------+-------+----+-------+
+#  M1     |      0|     0|      8|      4|      0|   0|     12|
+#  M2     |      0|     0|      0|      0|      0|   0|      0|
+#  M3     |      4|    21|      1|      1|      1|   0|     28|
+#  M4     |      6|     4|      0|      0|      0|   3|     13|
+#  M5     |      0|     3|      0|      0|      0|   0|      3|
+#  Totals |     10|    28|      9|      5|      1|   3|     56|
+#---------+-------+------+-------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.21 (MB), peak = 2515.14 (MB)
+#start 10th optimization iteration ...
+#   number of violations = 57
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| MinCut| Mar| Totals|
+#---------+-------+------+-------+-------+-------+----+-------+
+#  M1     |      0|     3|      8|      4|      0|   0|     15|
+#  M2     |      2|     0|      0|      0|      0|   0|      2|
+#  M3     |      4|    19|      1|      1|      1|   0|     26|
+#  M4     |      8|     2|      0|      0|      0|   2|     12|
+#  M5     |      0|     2|      0|      0|      0|   0|      2|
+#  Totals |     14|    26|      9|      5|      1|   2|     57|
+#---------+-------+------+-------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2451.45 (MB), peak = 2515.14 (MB)
+#start 11th optimization iteration ...
+#   number of violations = 58
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      0|     1|      0|      0|   0|      1|
+#  M3     |      5|    19|      2|      1|   0|     27|
+#  M4     |     10|     4|      0|      0|   3|     17|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     15|    29|      8|      3|   3|     58|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2451.06 (MB), peak = 2515.14 (MB)
+#start 12th optimization iteration ...
+#   number of violations = 57
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     4|      8|      4|   0|     16|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      5|    17|      0|      0|   0|     22|
+#  M4     |     10|     3|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     15|    27|      8|      4|   3|     57|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2450.22 (MB), peak = 2515.14 (MB)
+#start 13th optimization iteration ...
+#   number of violations = 58
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      8|      4|   0|     13|
+#  M2     |      0|     1|      0|      0|   0|      1|
+#  M3     |      5|    19|      0|      0|   0|     24|
+#  M4     |     10|     4|      0|      0|   3|     17|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     15|    28|      8|      4|   3|     58|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2453.09 (MB), peak = 2515.14 (MB)
+#start 14th optimization iteration ...
+#   number of violations = 52
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      5|    21|      0|      0|   0|     26|
+#  M4     |     10|     2|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     15|    27|      6|      2|   2|     52|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2451.65 (MB), peak = 2515.14 (MB)
+#start 15th optimization iteration ...
+#   number of violations = 50
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      0|     1|      0|      0|   0|      1|
+#  M3     |      7|    20|      0|      0|   0|     27|
+#  M4     |      8|     4|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     15|    29|      2|      2|   2|     50|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.06 (MB), peak = 2515.14 (MB)
+#start 16th optimization iteration ...
+#   number of violations = 60
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      8|    18|      2|      2|   0|     30|
+#  M4     |      8|     5|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     17|    28|      8|      4|   3|     60|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2450.84 (MB), peak = 2515.14 (MB)
+#start 17th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-----+-------+-------+----+-------+
+#  -      | MetSpc| Short| Loop| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-----+-------+-------+----+-------+
+#  M1     |      0|     3|    0|      2|      2|   0|      7|
+#  M2     |      1|     0|    0|      0|      0|   0|      1|
+#  M3     |      5|    17|    0|      0|      1|   0|     23|
+#  M4     |      8|     5|    0|      0|      0|   4|     17|
+#  M5     |      0|     4|    1|      0|      0|   0|      5|
+#  Totals |     14|    29|    1|      2|      3|   4|     53|
+#---------+-------+------+-----+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2451.12 (MB), peak = 2515.14 (MB)
+#start 18th optimization iteration ...
+#   number of violations = 57
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      4|   0|     14|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      8|    19|      0|      1|   0|     28|
+#  M4     |      6|     3|      0|      0|   2|     11|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     15|    27|      8|      5|   2|     57|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.08 (MB), peak = 2520.90 (MB)
+#start 19th optimization iteration ...
+#   number of violations = 50
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      7|    18|      0|      2|   0|     27|
+#  M4     |      4|     5|      0|      0|   4|     13|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     11|    29|      2|      4|   4|     50|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2454.06 (MB), peak = 2520.90 (MB)
+#start 20th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      4|   0|     14|
+#  M2     |      0|     1|      0|      0|   0|      1|
+#  M3     |      5|    19|      0|      0|   0|     24|
+#  M4     |      6|     3|      0|      0|   3|     12|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     11|    28|      8|      4|   3|     54|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2454.71 (MB), peak = 2520.90 (MB)
+#start 21th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      0|      0|   0|      1|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      6|    20|      3|      1|   0|     30|
+#  M4     |      8|     9|      0|      0|   3|     20|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     14|    33|      3|      1|   3|     54|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2451.86 (MB), peak = 2520.90 (MB)
+#start 22th optimization iteration ...
+#   number of violations = 59
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      8|      4|   0|     13|
+#  M2     |      0|     1|      0|      0|   0|      1|
+#  M3     |      8|    17|      0|      1|   0|     26|
+#  M4     |      6|     5|      0|      0|   4|     15|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     14|    28|      8|      5|   4|     59|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2451.64 (MB), peak = 2520.90 (MB)
+#start 23th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CShort| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     2|      0|   0|      2|
+#  M2     |      0|     0|      0|   0|      0|
+#  M3     |      8|    19|      1|   0|     28|
+#  M4     |     10|     5|      0|   3|     18|
+#  M5     |      0|     3|      0|   0|      3|
+#  Totals |     18|    29|      1|   3|     51|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2453.66 (MB), peak = 2520.90 (MB)
+#start 24th optimization iteration ...
+#   number of violations = 58
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      8|      0|   0|     11|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      7|    17|      2|      1|   0|     27|
+#  M4     |      8|     4|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     16|    28|     10|      1|   3|     58|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2453.43 (MB), peak = 2520.90 (MB)
+#start 25th optimization iteration ...
+#   number of violations = 49
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     4|      2|      2|   0|      8|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      7|    19|      1|      2|   0|     29|
+#  M4     |      1|     5|      0|      0|   2|      8|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     10|    30|      3|      4|   2|     49|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2451.70 (MB), peak = 2520.90 (MB)
+#start 26th optimization iteration ...
+#   number of violations = 58
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      6|    18|      2|      1|   0|     27|
+#  M4     |     10|     4|      0|      0|   2|     16|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     18|    27|      8|      3|   2|     58|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2453.20 (MB), peak = 2520.90 (MB)
+#start 27th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    18|      0|      0|   0|     28|
+#  M4     |     10|     4|      0|      0|   2|     16|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     22|    27|      2|      2|   2|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2454.57 (MB), peak = 2520.90 (MB)
+#start 28th optimization iteration ...
+#   number of violations = 59
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      6|      2|   0|      9|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      9|    19|      0|      1|   0|     29|
+#  M4     |      8|     5|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     18|    29|      6|      3|   3|     59|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2454.62 (MB), peak = 2520.90 (MB)
+#start 29th optimization iteration ...
+#   number of violations = 52
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     4|      2|      2|   0|      8|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      5|    18|      2|      2|   0|     27|
+#  M4     |      6|     4|      0|      0|   3|     13|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     12|    29|      4|      4|   3|     52|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2453.80 (MB), peak = 2520.90 (MB)
+#start 30th optimization iteration ...
+#   number of violations = 58
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      7|    19|      2|      2|   0|     30|
+#  M4     |      6|     3|      0|      0|   3|     12|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     15|    28|      8|      4|   3|     58|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.24 (MB), peak = 2520.90 (MB)
+#start 31th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     4|      0|   0|      4|
+#  M2     |      2|     0|      0|   0|      2|
+#  M3     |      7|    18|      1|   0|     26|
+#  M4     |     12|     5|      0|   2|     19|
+#  M5     |      0|     2|      0|   0|      2|
+#  Totals |     21|    29|      1|   2|     53|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.30 (MB), peak = 2520.90 (MB)
+#start 32th optimization iteration ...
+#   number of violations = 62
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|     10|      6|   0|     18|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      8|    18|      0|      0|   0|     26|
+#  M4     |      6|     3|      0|      0|   3|     12|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     16|    27|     10|      6|   3|     62|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.30 (MB), peak = 2520.90 (MB)
+#start 33th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CShort| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     2|      0|   0|      2|
+#  M2     |      1|     0|      0|   0|      1|
+#  M3     |     11|    18|      1|   0|     30|
+#  M4     |     10|     5|      0|   4|     19|
+#  M5     |      0|     4|      0|   0|      4|
+#  Totals |     22|    29|      1|   4|     56|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:03, elapsed time = 00:00:03, memory = 2453.17 (MB), peak = 2525.40 (MB)
+#start 34th optimization iteration ...
+#   number of violations = 61
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      8|      0|   0|     11|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      9|    17|      2|      1|   0|     29|
+#  M4     |      8|     4|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     19|    28|     10|      1|   3|     61|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2453.17 (MB), peak = 2525.40 (MB)
+#start 35th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      8|    16|      0|      2|   0|     26|
+#  M4     |      6|     6|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     16|    27|      2|      4|   2|     51|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2453.18 (MB), peak = 2525.40 (MB)
+#start 36th optimization iteration ...
+#   number of violations = 60
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      6|      2|   0|     11|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |     10|    17|      0|      0|   0|     27|
+#  M4     |     10|     3|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     22|    27|      6|      2|   3|     60|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2450.79 (MB), peak = 2539.48 (MB)
+#start 37th optimization iteration ...
+#   number of violations = 50
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     4|      0|      0|   0|      4|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    17|      2|      2|   0|     31|
+#  M4     |      4|     5|      0|      0|   2|     11|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     16|    28|      2|      2|   2|     50|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:04, elapsed time = 00:00:04, memory = 2451.84 (MB), peak = 2539.48 (MB)
+#start 38th optimization iteration ...
+#   number of violations = 62
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      4|   0|     14|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      9|    16|      0|      1|   0|     26|
+#  M4     |     10|     3|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     21|    25|      8|      5|   3|     62|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.02 (MB), peak = 2539.48 (MB)
+#start 39th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |     11|    18|      0|      0|   0|     29|
+#  M4     |      6|     6|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     18|    30|      2|      2|   3|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:04, elapsed time = 00:00:04, memory = 2450.67 (MB), peak = 2539.48 (MB)
+#start 40th optimization iteration ...
+#   number of violations = 59
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      6|      2|   0|      9|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      9|    17|      2|      1|   0|     29|
+#  M4     |      8|     5|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     18|    27|      8|      3|   3|     59|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2451.55 (MB), peak = 2539.48 (MB)
+#start 41th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+----+-------+
+#  -      | MetSpc| Short| Mar| Totals|
+#---------+-------+------+----+-------+
+#  M1     |      0|     3|   0|      3|
+#  M2     |      1|     0|   0|      1|
+#  M3     |     11|    18|   0|     29|
+#  M4     |      8|     6|   2|     16|
+#  M5     |      0|     2|   0|      2|
+#  Totals |     20|    29|   2|     51|
+#---------+-------+------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.38 (MB), peak = 2539.48 (MB)
+#start 42th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      8|      4|   0|     15|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      5|    17|      0|      0|   0|     22|
+#  M4     |      6|     3|      0|      0|   3|     12|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     13|    27|      8|      4|   3|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2450.94 (MB), peak = 2539.48 (MB)
+#start 43th optimization iteration ...
+#   number of violations = 52
+#
+#  By Layer and Type:
+#
+#---------+-------+------+----+-------+
+#  -      | MetSpc| Short| Mar| Totals|
+#---------+-------+------+----+-------+
+#  M1     |      0|     2|   0|      2|
+#  M2     |      1|     0|   0|      1|
+#  M3     |     10|    17|   0|     27|
+#  M4     |     10|     6|   3|     19|
+#  M5     |      0|     3|   0|      3|
+#  Totals |     21|    28|   3|     52|
+#---------+-------+------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2451.39 (MB), peak = 2539.48 (MB)
+#start 44th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      4|      4|   0|     11|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      8|    16|      2|      0|   0|     26|
+#  M4     |      7|     4|      0|      0|   3|     14|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     16|    27|      6|      4|   3|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2451.80 (MB), peak = 2539.48 (MB)
+#start 45th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |     13|    15|      0|      1|   0|     29|
+#  M4     |      6|     4|      0|      0|   2|     12|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     20|    24|      2|      3|   2|     51|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2451.95 (MB), peak = 2539.48 (MB)
+#start 46th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      9|    17|      2|      1|   0|     29|
+#  M4     |      9|     4|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     19|    27|      4|      3|   3|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2451.71 (MB), peak = 2539.48 (MB)
+#start 47th optimization iteration ...
+#   number of violations = 61
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      6|      2|   0|     11|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     11|    16|      2|      1|   0|     30|
+#  M4     |      8|     4|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     21|    26|      8|      3|   3|     61|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.10 (MB), peak = 2539.48 (MB)
+#start 48th optimization iteration ...
+#   number of violations = 57
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      4|      4|   0|     10|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      9|    17|      0|      0|   0|     26|
+#  M4     |      8|     4|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     19|    27|      4|      4|   3|     57|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.21 (MB), peak = 2539.48 (MB)
+#start 49th optimization iteration ...
+#   number of violations = 63
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     2|      8|   0|     10|
+#  M2     |      1|     0|      0|   0|      1|
+#  M3     |     13|    16|      2|   0|     31|
+#  M4     |      8|     7|      0|   3|     18|
+#  M5     |      0|     3|      0|   0|      3|
+#  Totals |     22|    28|     10|   3|     63|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.04 (MB), peak = 2539.48 (MB)
+#start 50th optimization iteration ...
+#   number of violations = 58
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      2|      2|   0|      5|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |     10|    15|      2|      1|   0|     28|
+#  M4     |      8|     7|      0|      0|   4|     19|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     19|    28|      4|      3|   4|     58|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.21 (MB), peak = 2539.48 (MB)
+#start 51th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      6|      2|   0|     11|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      6|    18|      0|      0|   0|     24|
+#  M4     |      8|     4|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     15|    28|      6|      2|   3|     54|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.21 (MB), peak = 2539.48 (MB)
+#start 52th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      2|      2|   0|      5|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      9|    18|      0|      0|   0|     27|
+#  M4     |      8|     5|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     18|    28|      2|      2|   3|     53|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.21 (MB), peak = 2539.48 (MB)
+#start 53th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     3|      0|   0|      3|
+#  M2     |      1|     0|      0|   0|      1|
+#  M3     |      9|    19|      2|   0|     30|
+#  M4     |      9|     4|      0|   2|     15|
+#  M5     |      0|     2|      0|   0|      2|
+#  Totals |     19|    28|      2|   2|     51|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2451.97 (MB), peak = 2539.48 (MB)
+#start 54th optimization iteration ...
+#   number of violations = 65
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      8|      4|   0|     13|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      9|    16|      2|      1|   0|     28|
+#  M4     |      8|     6|      0|      0|   4|     18|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     18|    28|     10|      5|   4|     65|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.20 (MB), peak = 2539.48 (MB)
+#start 55th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |     11|    16|      0|      1|   0|     28|
+#  M4     |      8|     5|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     20|    27|      2|      3|   3|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 56th optimization iteration ...
+#   number of violations = 58
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      9|    16|      0|      0|   0|     25|
+#  M4     |     10|     4|      0|      0|   3|     17|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     21|    26|      6|      2|   3|     58|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 57th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CShort| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     3|      0|   0|      3|
+#  M2     |      2|     0|      0|   0|      2|
+#  M3     |     11|    17|      1|   0|     29|
+#  M4     |      8|     6|      0|   3|     17|
+#  M5     |      0|     3|      0|   0|      3|
+#  Totals |     21|    29|      1|   3|     54|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 58th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      0|      0|   0|      2|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      9|    17|      2|      1|   0|     29|
+#  M4     |      9|     5|      0|      0|   3|     17|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     20|    28|      2|      1|   3|     54|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.19 (MB), peak = 2539.48 (MB)
+#start 59th optimization iteration ...
+#   number of violations = 59
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      9|    19|      2|      0|   0|     30|
+#  M4     |      8|     6|      0|      0|   2|     16|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     18|    29|      8|      2|   2|     59|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.19 (MB), peak = 2539.48 (MB)
+#start 60th optimization iteration ...
+#   number of violations = 50
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      0|      0|   0|      2|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      8|    16|      2|      1|   0|     27|
+#  M4     |      6|     6|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     16|    28|      2|      1|   3|     50|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2451.98 (MB), peak = 2539.48 (MB)
+#start 61th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     4|      8|      4|   0|     16|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      6|    15|      0|      1|   0|     22|
+#  M4     |      8|     3|      0|      0|   3|     14|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     15|    25|      8|      5|   3|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 62th optimization iteration ...
+#   number of violations = 48
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      8|    17|      0|      1|   0|     26|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     14|    27|      2|      3|   2|     48|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 63th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      0|      0|   0|      2|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |     11|    17|      2|      1|   0|     31|
+#  M4     |      9|     5|      0|      0|   4|     18|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     21|    28|      2|      1|   4|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 64th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      8|    19|      0|      0|   0|     27|
+#  M4     |      8|     4|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     17|    28|      6|      2|   2|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 65th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |     11|    16|      0|      1|   0|     28|
+#  M4     |      6|     6|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     18|    28|      2|      3|   3|     54|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.01 (MB), peak = 2539.48 (MB)
+#start 66th optimization iteration ...
+#   number of violations = 52
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     4|      6|      2|   0|     12|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      7|    18|      0|      0|   0|     25|
+#  M4     |      6|     3|      0|      0|   2|     11|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     14|    28|      6|      2|   2|     52|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.14 (MB), peak = 2539.48 (MB)
+#start 67th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+----+-------+
+#  -      | MetSpc| Short| Mar| Totals|
+#---------+-------+------+----+-------+
+#  M1     |      0|     4|   0|      4|
+#  M2     |      2|     0|   0|      2|
+#  M3     |     12|    17|   0|     29|
+#  M4     |     10|     5|   2|     17|
+#  M5     |      0|     2|   0|      2|
+#  Totals |     24|    28|   2|     54|
+#---------+-------+------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2451.98 (MB), peak = 2539.48 (MB)
+#start 68th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |      8|    17|      2|      1|   0|     28|
+#  M4     |      7|     5|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     17|    28|      4|      3|   3|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 69th optimization iteration ...
+#   number of violations = 61
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      4|   0|     14|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      9|    17|      2|      0|   0|     28|
+#  M4     |     10|     4|      0|      0|   2|     16|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     20|    25|     10|      4|   2|     61|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 70th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      2|      2|   0|      5|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      8|    16|      0|      0|   0|     24|
+#  M4     |      6|     6|      0|      0|   4|     16|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     15|    28|      2|      2|   4|     51|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 71th optimization iteration ...
+#   number of violations = 59
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      6|      2|   0|     11|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      7|    17|      0|      0|   0|     24|
+#  M4     |     10|     5|      0|      0|   4|     19|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     18|    29|      6|      2|   4|     59|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2451.98 (MB), peak = 2539.48 (MB)
+#start 72th optimization iteration ...
+#   number of violations = 49
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      9|    18|      0|      0|   0|     27|
+#  M4     |      6|     4|      0|      0|   2|     12|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     16|    27|      2|      2|   2|     49|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2451.97 (MB), peak = 2539.48 (MB)
+#start 73th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     4|      6|      2|   0|     12|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      8|    17|      0|      0|   0|     25|
+#  M4     |     10|     3|      0|      0|   2|     15|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     19|    27|      6|      2|   2|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 74th optimization iteration ...
+#   number of violations = 59
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      2|     1|      0|      0|   0|      3|
+#  M3     |     13|    17|      0|      0|   0|     30|
+#  M4     |      8|     6|      0|      0|   3|     17|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     23|    29|      2|      2|   3|     59|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.18 (MB), peak = 2539.48 (MB)
+#start 75th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      6|      2|   0|     11|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      9|    18|      0|      1|   0|     28|
+#  M4     |      8|     2|      0|      0|   2|     12|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     19|    25|      6|      3|   2|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 49
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.19 (MB), peak = 2539.48 (MB)
+#start 76th optimization iteration ...
+#   number of violations = 48
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CShort| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     3|      0|   0|      3|
+#  M2     |      2|     0|      0|   0|      2|
+#  M3     |     10|    18|      1|   0|     29|
+#  M4     |      6|     4|      0|   2|     12|
+#  M5     |      0|     2|      0|   0|      2|
+#  Totals |     18|    27|      1|   2|     48|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.02 (MB), peak = 2539.48 (MB)
+#start 77th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    17|      0|      1|   0|     28|
+#  M4     |      6|     4|      0|      0|   2|     12|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     18|    26|      2|      3|   2|     51|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.23 (MB), peak = 2539.48 (MB)
+#start 78th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    17|      0|      1|   0|     28|
+#  M4     |      6|     4|      0|      0|   2|     12|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     18|    26|      2|      3|   2|     51|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.24 (MB), peak = 2539.48 (MB)
+#start 79th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    17|      0|      1|   0|     28|
+#  M4     |      6|     4|      0|      0|   2|     12|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     18|    26|      2|      3|   2|     51|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2452.24 (MB), peak = 2539.48 (MB)
+#start 80th optimization iteration ...
+#   number of violations = 49
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    17|      0|      1|   0|     28|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     16|    26|      2|      3|   2|     49|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 48
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2452.22 (MB), peak = 2539.48 (MB)
+#Complete Detail Routing.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |      11046| 2492|       2378  ( 95.4%)|        114  (  4.6%)|
+#  M2 ( 2V)    |      25783| 1380|       1380  (100.0%)|          0  (  0.0%)|
+#  M3 ( 3H)    |      12890|   42|         34  ( 81.0%)|          8  ( 19.0%)|
+#  M4 ( 4V)    |        513|    4|          4  (100.0%)|          0  (  0.0%)|
+#  M5 ( 5H)    |          7|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      50240| 3918|       3796  ( 96.9%)|        122  (  3.1%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 47537 um.
+#Total number of DRC violations = 49
+#Cpu time = 00:01:54
+#Elapsed time = 00:01:54
+#Increased memory = 3.67 (MB)
+#Total memory = 2450.28 (MB)
+#Peak memory = 2539.48 (MB)
+#
+#start routing for process antenna violation fix ...
+#- start antenna fix number of process antenna vio = 16.
+#- start antenna fix number of net violated process antenna rule = 15.
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    17|      0|      1|   0|     28|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     16|    26|      2|      3|   2|     49|
+#---------+-------+------+-------+-------+----+-------+
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2451.86 (MB), peak = 2539.48 (MB)
+#
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |      11046| 2492|       2378  ( 95.4%)|        114  (  4.6%)|
+#  M2 ( 2V)    |      25631| 1420|       1420  (100.0%)|          0  (  0.0%)|
+#  M3 ( 3H)    |      12896|   62|         54  ( 87.1%)|          8  ( 12.9%)|
+#  M4 ( 4V)    |        664|    4|          4  (100.0%)|          0  (  0.0%)|
+#  M5 ( 5H)    |          7|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      50245| 3978|       3856  ( 96.9%)|        122  (  3.1%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 47537 um.
+#Total number of DRC violations = 49
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#
+#
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |      11046| 2492|       2378  ( 95.4%)|        114  (  4.6%)|
+#  M2 ( 2V)    |      25631| 1420|       1420  (100.0%)|          0  (  0.0%)|
+#  M3 ( 3H)    |      12896|   62|         54  ( 87.1%)|          8  ( 12.9%)|
+#  M4 ( 4V)    |        664|    4|          4  (100.0%)|          0  (  0.0%)|
+#  M5 ( 5H)    |          7|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      50245| 3978|       3856  ( 96.9%)|        122  (  3.1%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 47537 um.
+#Total number of DRC violations = 49
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#
+#
+#Start Post Route via swapping...
+#13.61% of area are rerouted by ECO routing.
+#   number of violations = 49
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    17|      0|      1|   0|     28|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     16|    26|      2|      3|   2|     49|
+#---------+-------+------+-------+-------+----+-------+
+#
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2455.46 (MB), peak = 2539.48 (MB)
+#CELL_VIEW top,init has 49 DRC violations
+#Total number of DRC violations = 49
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#Post Route via swapping is done.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |      11046| 2492|       1369  ( 54.9%)|       1123  ( 45.1%)|
+#  M2 ( 2V)    |      25631| 1420|        264  ( 18.6%)|       1156  ( 81.4%)|
+#  M3 ( 3H)    |      12896|   62|          6  (  9.7%)|         56  ( 90.3%)|
+#  M4 ( 4V)    |        664|    4|          2  ( 50.0%)|          2  ( 50.0%)|
+#  M5 ( 5H)    |          7|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      50245| 3978|       1641  ( 41.3%)|       2337  ( 58.7%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 47537 um.
+#
+#Start Post Route wire spreading..
+#
+#Start DRC checking..
+#   number of violations = 49
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    17|      0|      1|   0|     28|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     16|    26|      2|      3|   2|     49|
+#---------+-------+------+-------+-------+----+-------+
+#
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2456.38 (MB), peak = 2539.48 (MB)
+#CELL_VIEW top,init has 49 DRC violations
+#Total number of DRC violations = 49
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#
+#Start data preparation for wire spreading...
+#
+#Data preparation is done on Fri Jun 26 00:42:09 2026
+#
+#
+#Start Post Route Wire Spread.
+#Done with 168 horizontal wires in 14 hboxes and 203 vertical wires in 14 hboxes.
+#Complete Post Route Wire Spread.
+#
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |      11082| 2492|       1369  ( 54.9%)|       1123  ( 45.1%)|
+#  M2 ( 2V)    |      25812| 1420|        264  ( 18.6%)|       1156  ( 81.4%)|
+#  M3 ( 3H)    |      13058|   62|          6  (  9.7%)|         56  ( 90.3%)|
+#  M4 ( 4V)    |        672|    4|          2  ( 50.0%)|          2  ( 50.0%)|
+#  M5 ( 5H)    |          7|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      50631| 3978|       1641  ( 41.3%)|       2337  ( 58.7%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 47537 um.
+#
+#Start DRC checking..
+#   number of violations = 49
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    17|      0|      1|   0|     28|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     16|    26|      2|      3|   2|     49|
+#---------+-------+------+-------+-------+----+-------+
+#
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2454.94 (MB), peak = 2539.48 (MB)
+#CELL_VIEW top,init has 49 DRC violations
+#Total number of DRC violations = 49
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#   number of violations = 49
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    17|      0|      1|   0|     28|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     16|    26|      2|      3|   2|     49|
+#---------+-------+------+-------+-------+----+-------+
+#
+#cpu time = 00:00:02, elapsed time = 00:00:01, memory = 2450.63 (MB), peak = 2539.48 (MB)
+#CELL_VIEW top,init has 49 DRC violations
+#Total number of DRC violations = 49
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#Post Route wire spread is done.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |      11082| 2492|       1369  ( 54.9%)|       1123  ( 45.1%)|
+#  M2 ( 2V)    |      25812| 1420|        264  ( 18.6%)|       1156  ( 81.4%)|
+#  M3 ( 3H)    |      13058|   62|          6  (  9.7%)|         56  ( 90.3%)|
+#  M4 ( 4V)    |        672|    4|          2  ( 50.0%)|          2  ( 50.0%)|
+#  M5 ( 5H)    |          7|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      50631| 3978|       1641  ( 41.3%)|       2337  ( 58.7%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 47537 um.
+#detailRoute Statistics:
+#Cpu time = 00:01:57
+#Elapsed time = 00:01:58
+#Increased memory = 2.04 (MB)
+#Total memory = 2448.64 (MB)
+#Peak memory = 2539.48 (MB)
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+#
+#globalDetailRoute statistics:
+#Cpu time = 00:02:06
+#Elapsed time = 00:02:07
+#Increased memory = 48.50 (MB)
+#Total memory = 2440.81 (MB)
+#Peak memory = 2539.48 (MB)
+#Number of warnings = 23
+#Total number of warnings = 26
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalDetailRoute on Fri Jun 26 00:42:11 2026
+#
+% End globalDetailRoute (date=06/26 00:42:11, total cpu=0:02:06, real=0:02:07, peak res=2539.5M, current mem=2438.0M)
+#Default setup view is reset to SlowView.
+#Default setup view is reset to SlowView.
+AAE_INFO: Post Route call back at the end of routeDesign
+#routeDesign: cpu time = 00:02:06, elapsed time = 00:02:08, memory = 2424.50 (MB), peak = 2539.48 (MB)
+#
+#  Scalability Statistics
+#
+#----------------------------+---------+-------------+------------+
+#  routeDesign               | cpu time| elapsed time| scalability|
+#----------------------------+---------+-------------+------------+
+#  Pre Callback              | 00:00:00|     00:00:00|         1.0|
+#  Post Callback             | 00:00:00|     00:00:00|         1.0|
+#  Timing Data Generation    | 00:00:07|     00:00:08|         0.9|
+#  DB Import                 | 00:00:00|     00:00:00|         1.0|
+#  DB Export                 | 00:00:00|     00:00:00|         1.0|
+#  Cell Pin Access           | 00:00:00|     00:00:00|         1.0|
+#  Data Preparation          | 00:00:00|     00:00:00|         1.0|
+#  Global Routing            | 00:00:01|     00:00:01|         1.0|
+#  Track Assignment          | 00:00:00|     00:00:00|         1.0|
+#  Detail Routing            | 00:01:54|     00:01:54|         1.0|
+#  Antenna Fixing            | 00:00:00|     00:00:00|         1.0|
+#  Post Route Via Swapping   | 00:00:01|     00:00:01|         1.0|
+#  Post Route Wire Spreading | 00:00:03|     00:00:03|         1.0|
+#  Entire Command            | 00:02:06|     00:02:08|         1.0|
+#----------------------------+---------+-------------+------------+
+#
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPEXT-3530          1  The process node is not set. Use the com...
+WARNING   NRIG-1303            1  The congestion map does not match the GC...
+WARNING   NRIF-38              1  Option %s%s is not a Boolean option.     
+WARNING   NRIF-95             51  Option setNanoRouteMode -routeTopRouting...
+WARNING   TCLCMD-1403          1  '%s'                                     
+*** Message Summary: 55 warning(s), 0 error(s)
+
+#% End routeDesign (date=06/26 00:42:11, total cpu=0:02:07, real=0:02:08, peak res=2539.5M, current mem=2424.5M)
+
+*** Memory Usage v#2 (Current mem = 2944.160M, initial mem = 831.188M) ***
+*** Message Summary: 1382 warning(s), 2 error(s)
+
+--- Ending "Innovus" (totcpu=0:03:22, real=0:08:10, mem=2944.2M) ---

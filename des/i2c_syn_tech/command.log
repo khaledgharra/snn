@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version U-2022.12 for linux64 -- Nov 22, 2022
-#@ # Date:   Tue Jun 16 11:59:18 2026
-#@ # Run by: epkgms@vlsi-ria84
+#@ # Date:   Sat Jun 27 14:57:16 2026
+#@ # Run by: epkgms@vlsi-ria87
 #@ 
 
 source /eda/synopsys/2022-23/RHELx86/SYN_2022.12/admin/setup/.synopsys_dc.setup
@@ -9391,8 +9391,8 @@ source /eda/synopsys/2022-23/RHELx86/SYN_2022.12/admin/setup/.synopsys_dc.setup
 #@ 
 #@ # -- End source /eda/synopsys/2022-23/RHELx86/SYN_2022.12/admin/setup/.synopsys_dc.setup
 
-source /users/epkgms/Downloads/i2c_syn_tech/.synopsys_dc.setup
-#@ # -- Starting source /users/epkgms/Downloads/i2c_syn_tech/.synopsys_dc.setup
+source /users/epkgms/Desktop/khaled/des/i2c_syn_tech/.synopsys_dc.setup
+#@ # -- Starting source /users/epkgms/Desktop/khaled/des/i2c_syn_tech/.synopsys_dc.setup
 
 #@ # setup vars 
 #@ # setup for typical cells 
@@ -9422,7 +9422,7 @@ source /users/epkgms/Downloads/i2c_syn_tech/.synopsys_dc.setup
 #@ set verilogout_single_bit  false
 #@ #set bus_naming_style "%s_%d"
 #@ set bus_naming_style {%s[%d]}
-#@ # -- End source /users/epkgms/Downloads/i2c_syn_tech/.synopsys_dc.setup
+#@ # -- End source /users/epkgms/Desktop/khaled/des/i2c_syn_tech/.synopsys_dc.setup
 
 gui_start
 #@ # -- Starting source /eda/synopsys/2022-23/RHELx86/SYN_2022.12/auxx/tcllib/lib/itk4.1.0/itk.tcl
@@ -9628,43 +9628,8 @@ gui_start
 #@ # -- End source /eda/synopsys/2022-23/RHELx86/SYN_2022.12/auxx/tcllib/lib/iwidgets4.1/iwidgets.tcl
 
 gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {LeafCells}
-source .synopsys_dc.setup
-#@ # -- Starting source .synopsys_dc.setup
-
-#@ # setup vars 
-#@ # setup for typical cells 
-#@ set company    "Tower Semiconductors"
-#@ set designer   "Shmuel Zagury"
-#@ set TOWER_DIR "/tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12"
-#@ set SYNOPSYS "/tools/synopsys78/FEV/syn_vN-2017.09-SP3"
-#@ set TECH        tsl018
-#@ 
-#@ define_design_lib WORK -path "./WORK"
-#@ 
-#@ set search_path   [concat $search_path "." "$TOWER_DIR/models" ]
-#@ set target_library "tsl18fs120_typ.db"  
-#@ set symbol_library "$TOWER_DIR/icons/tsl18fs120_icon.sdb" 
-#@ set plot_command "lpr -Pbp" 
-#@ set synthetic_library " dw_foundation.sldb "
-#@ #set synthetic_library "dw01.sldb dw02.sldb dw03.sldb dw04.sldb \ 
-#@ #   dw05.sldb dw06.sldb dw_foundation.sldb"
-#@ 
-#@ set link_library [concat * $target_library $synthetic_library]
-#@ 
-#@ set verilogout_no_tri  true
-#@ set verilog_show_unconnected_pins  false
-#@ set verilog_unconnected_Prefix  true
-#@ set hdlout_internal_busses   true
-#@ set bus_inference_style  {%s[%d]}
-#@ set verilogout_single_bit  false
-#@ #set bus_naming_style "%s_%d"
-#@ set bus_naming_style {%s[%d]}
-#@ # -- End source .synopsys_dc.setup
-
-printvar target_library
-printvar link_library
-source i2c_syn.tcl
-#@ # -- Starting source i2c_syn.tcl
+uplevel #0 source /users/epkgms/Desktop/khaled/des/i2c_syn_tech/i2c_syn.tcl
+#@ # -- Starting source /users/epkgms/Desktop/khaled/des/i2c_syn_tech/i2c_syn.tcl
 
 #@ #============================================================
 #@ # I2C Master synthesis script - SystemVerilog version
@@ -9731,8 +9696,410 @@ source i2c_syn.tcl
 #@ puts "Top module: i2c_master_top"
 #@ puts "Clock port: wb_clk_i"
 #@ puts "============================================================"
-#@ # -- End source i2c_syn.tcl
+#@ # -- End source /users/epkgms/Desktop/khaled/des/i2c_syn_tech/i2c_syn.tcl
 
-uplevel #0 { report_area }
+compile -exact_map
+compile -exact_map
+source ~/snn/des/dft/dft.tcl
+source ../dft/dft.tcl
+#@ # -- Starting source ../dft/dft.tcl
+
+#@ #============================================================
+#@ # I2C Master DFT Script - Scan Insertion
+#@ # Tool       : Synopsys Design Compiler / Design Vision
+#@ # Top module : i2c_master_top
+#@ # Run after  : syn.tcl (design must be compiled and in memory)
+#@ # Output     : i2c_master_top_dft.v
+#@ #              i2c_master_top.scandef
+#@ #============================================================
+#@ 
+#@ # If running standalone (not after syn.tcl), uncomment below:
+#@ # source ../i2c_syn_tech/i2c_syn.tcl
+#@ 
+#@ puts "============================================================"
+#@ puts "Starting DFT - Scan Insertion"
+#@ puts "============================================================"
+#@ 
+#@ #------------------------------------------------------------
+#@ # 1. Define test signals on existing design ports
+#@ #------------------------------------------------------------
+#@ 
+#@ # Clock for scan shift
+#@ set_dft_signal -view existing_dft \
+#@     -type ScanClock \
+#@     -port wb_clk_i \
+#@     -timing {45 55}
+#@ 
+#@ set_dft_signal -view spec \
+#@     -type ScanClock \
+#@     -port wb_clk_i \
+#@     -timing {45 55}
+#@ 
+#@ # Synchronous reset (active high)
+#@ set_dft_signal -view existing_dft \
+#@     -type Reset \
+#@     -active_state 1 \
+#@     -port wb_rst_i
+#@ 
+#@ set_dft_signal -view spec \
+#@     -type Reset \
+#@     -active_state 1 \
+#@     -port wb_rst_i
+#@ 
+#@ # Asynchronous reset (active low)
+#@ set_dft_signal -view existing_dft \
+#@     -type Reset \
+#@     -active_state 0 \
+#@     -port arst_i
+#@ 
+#@ set_dft_signal -view spec \
+#@     -type Reset \
+#@     -active_state 0 \
+#@     -port arst_i
+#@ 
+#@ # Scan Enable - DC will create test_se port automatically
+#@ set_dft_signal -view spec \
+#@     -type ScanEnable \
+#@     -active_state 1 \
+#@     -create_port test_se
+#@ 
+#@ #------------------------------------------------------------
+#@ # 2. Scan chain configuration - 5 chains (matches floorplan)
+#@ #------------------------------------------------------------
+#@ 
+#@ set_scan_configuration \
+#@     -chain_count 5 \
+#@     -style multiplexed_flip_flop \
+#@     -clock_mixing no_mix
+#@ 
+#@ #------------------------------------------------------------
+#@ # 3. DRC check before insertion
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- DFT DRC pre-insertion ---"
+#@ dft_drc -pre_insertion
+#@ 
+#@ #------------------------------------------------------------
+#@ # 4. Preview scan chains
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- Preview DFT ---"
+#@ preview_dft -show all
+#@ 
+#@ #------------------------------------------------------------
+#@ # 5. Insert scan
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- Inserting scan ---"
+#@ insert_dft
+#@ 
+#@ #------------------------------------------------------------
+#@ # 6. DRC check after insertion
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- DFT DRC post-insertion ---"
+#@ dft_drc
+#@ 
+#@ #------------------------------------------------------------
+#@ # 7. Reports
+#@ #------------------------------------------------------------
+#@ 
+#@ file mkdir reports
+#@ redirect -file reports/dft_drc.rpt     { dft_drc }
+#@ redirect -file reports/scan_chains.rpt { report_scan_chains }
+#@ redirect -file reports/scan_path.rpt   { report_scan_path }
+#@ redirect -file reports/timing_dft.rpt  { report_timing -max_paths 10 }
+#@ 
+#@ #------------------------------------------------------------
+#@ # 8. Write outputs
+#@ #------------------------------------------------------------
+#@ 
+#@ # Scan-inserted netlist
+#@ write -hierarchy -format verilog -output i2c_master_top_dft.v
+#@ 
+#@ # Scan DEF for Innovus
+#@ write_scan_def -output i2c_master_top.scandef
+#@ 
+#@ puts "============================================================"
+#@ puts "DFT FINISHED SUCCESSFULLY"
+#@ puts "Scan-inserted netlist : i2c_master_top_dft.v"
+#@ puts "Scan DEF for Innovus  : i2c_master_top.scandef"
+#@ puts "Reports               : reports/dft_drc.rpt"
+#@ puts "                        reports/scan_chains.rpt"
+#@ puts "============================================================"
+#@ # -- End source ../dft/dft.tcl
+
+source ../dft/dft.tcl
+#@ # -- Starting source ../dft/dft.tcl
+
+#@ #============================================================
+#@ # I2C Master DFT Script - Scan Insertion
+#@ # Tool       : Synopsys Design Compiler / Design Vision
+#@ # Top module : i2c_master_top
+#@ # Run after  : syn.tcl (design must be compiled and in memory)
+#@ # Output     : i2c_master_top_dft.v
+#@ #              i2c_master_top.scandef
+#@ #============================================================
+#@ 
+#@ # If running standalone (not after syn.tcl), uncomment below:
+#@ # source ../i2c_syn_tech/i2c_syn.tcl
+#@ 
+#@ puts "============================================================"
+#@ puts "Starting DFT - Scan Insertion"
+#@ puts "============================================================"
+#@ 
+#@ #------------------------------------------------------------
+#@ # 1. Define test signals on existing design ports
+#@ #------------------------------------------------------------
+#@ 
+#@ # Clock for scan shift
+#@ set_dft_signal -view existing_dft \
+#@     -type ScanClock \
+#@     -port wb_clk_i
+#@ 
+#@ set_dft_signal -view spec \
+#@     -type ScanClock \
+#@     -port wb_clk_i \
+#@     -timing {45 55}
+#@ 
+#@ # Synchronous reset (active high)
+#@ set_dft_signal -view existing_dft \
+#@     -type Reset \
+#@     -active_state 1 \
+#@     -port wb_rst_i
+#@ 
+#@ set_dft_signal -view spec \
+#@     -type Reset \
+#@     -active_state 1 \
+#@     -port wb_rst_i
+#@ 
+#@ # Asynchronous reset (active low)
+#@ set_dft_signal -view existing_dft \
+#@     -type Reset \
+#@     -active_state 0 \
+#@     -port arst_i
+#@ 
+#@ set_dft_signal -view spec \
+#@     -type Reset \
+#@     -active_state 0 \
+#@     -port arst_i
+#@ 
+#@ # Scan Enable
+#@ create_port -direction in test_se
+#@ set_dft_signal -view existing_dft \
+#@     -type ScanEnable \
+#@     -active_state 1 \
+#@     -port test_se
+#@ set_dft_signal -view spec \
+#@     -type ScanEnable \
+#@     -active_state 1 \
+#@     -port test_se
+#@ 
+#@ #------------------------------------------------------------
+#@ # 2. Scan chain configuration - 5 chains (matches floorplan)
+#@ #------------------------------------------------------------
+#@ 
+#@ set_scan_configuration \
+#@     -chain_count 5 \
+#@     -style multiplexed_flip_flop \
+#@     -clock_mixing no_mix
+#@ 
+#@ #------------------------------------------------------------
+#@ # 3. DRC check before insertion
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- DFT DRC pre-insertion ---"
+#@ dft_drc
+#@ 
+#@ #------------------------------------------------------------
+#@ # 4. Preview scan chains
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- Preview DFT ---"
+#@ preview_dft -show all
+#@ 
+#@ #------------------------------------------------------------
+#@ # 5. Insert scan
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- Inserting scan ---"
+#@ insert_dft
+#@ 
+#@ #------------------------------------------------------------
+#@ # 6. DRC check after insertion
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- DFT DRC post-insertion ---"
+#@ dft_drc
+#@ 
+#@ #------------------------------------------------------------
+#@ # 7. Reports
+#@ #------------------------------------------------------------
+#@ 
+#@ file mkdir reports
+#@ redirect -file reports/dft_drc.rpt     { dft_drc }
+#@ redirect -file reports/scan_chains.rpt { report_scan_chains }
+#@ redirect -file reports/scan_path.rpt   { report_scan_path }
+#@ redirect -file reports/timing_dft.rpt  { report_timing -max_paths 10 }
+#@ 
+#@ #------------------------------------------------------------
+#@ # 8. Write outputs
+#@ #------------------------------------------------------------
+#@ 
+#@ # Scan-inserted netlist
+#@ write -hierarchy -format verilog -output i2c_master_top_dft.v
+#@ 
+#@ # Scan DEF for Innovus
+#@ write_scan_def -output i2c_master_top.scandef
+#@ 
+#@ puts "============================================================"
+#@ puts "DFT FINISHED SUCCESSFULLY"
+#@ puts "Scan-inserted netlist : i2c_master_top_dft.v"
+#@ puts "Scan DEF for Innovus  : i2c_master_top.scandef"
+#@ puts "Reports               : reports/dft_drc.rpt"
+#@ puts "                        reports/scan_chains.rpt"
+#@ puts "============================================================"
+#@ # -- End source ../dft/dft.tcl
+
+source ../dft/dft.tcl
+#@ # -- Starting source ../dft/dft.tcl
+
+#@ #============================================================
+#@ # I2C Master DFT Script - Scan Insertion
+#@ # Tool       : Synopsys Design Compiler / Design Vision
+#@ # Top module : i2c_master_top
+#@ # Run after  : syn.tcl (design must be compiled and in memory)
+#@ # Output     : i2c_master_top_dft.v
+#@ #              i2c_master_top.scandef
+#@ #============================================================
+#@ 
+#@ # If running standalone (not after syn.tcl), uncomment below:
+#@ # source ../i2c_syn_tech/i2c_syn.tcl
+#@ 
+#@ puts "============================================================"
+#@ puts "Starting DFT - Scan Insertion"
+#@ puts "============================================================"
+#@ 
+#@ #------------------------------------------------------------
+#@ # 1. Define test signals on existing design ports
+#@ #------------------------------------------------------------
+#@ 
+#@ # Clock for scan shift
+#@ set_dft_signal -view existing_dft \
+#@     -type ScanClock \
+#@     -port wb_clk_i \
+#@     -timing {45 55}
+#@ 
+#@ set_dft_signal -view spec \
+#@     -type ScanClock \
+#@     -port wb_clk_i
+#@ 
+#@ # Synchronous reset (active high)
+#@ set_dft_signal -view existing_dft \
+#@     -type Reset \
+#@     -active_state 1 \
+#@     -port wb_rst_i
+#@ 
+#@ set_dft_signal -view spec \
+#@     -type Reset \
+#@     -active_state 1 \
+#@     -port wb_rst_i
+#@ 
+#@ # Asynchronous reset (active low)
+#@ set_dft_signal -view existing_dft \
+#@     -type Reset \
+#@     -active_state 0 \
+#@     -port arst_i
+#@ 
+#@ set_dft_signal -view spec \
+#@     -type Reset \
+#@     -active_state 0 \
+#@     -port arst_i
+#@ 
+#@ # Scan Enable
+#@ create_port -direction in test_se
+#@ set_dft_signal -view existing_dft \
+#@     -type ScanEnable \
+#@     -active_state 1 \
+#@     -port test_se
+#@ set_dft_signal -view spec \
+#@     -type ScanEnable \
+#@     -active_state 1 \
+#@     -port test_se
+#@ 
+#@ #------------------------------------------------------------
+#@ # 2. Scan chain configuration - 5 chains (matches floorplan)
+#@ #------------------------------------------------------------
+#@ 
+#@ set_scan_configuration \
+#@     -chain_count 5 \
+#@     -style multiplexed_flip_flop \
+#@     -clock_mixing no_mix
+#@ 
+#@ #------------------------------------------------------------
+#@ # 3. DRC check before insertion
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- DFT DRC pre-insertion ---"
+#@ dft_drc
+#@ 
+#@ #------------------------------------------------------------
+#@ # 4. Preview scan chains
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- Create test protocol ---"
+#@ create_test_protocol -infer_asynch
+#@ 
+#@ puts "--- Preview DFT ---"
+#@ preview_dft -show all
+#@ 
+#@ #------------------------------------------------------------
+#@ # 5. Insert scan
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- Inserting scan ---"
+#@ insert_dft
+#@ 
+#@ #------------------------------------------------------------
+#@ # 6. DRC check after insertion
+#@ #------------------------------------------------------------
+#@ 
+#@ puts "--- DFT DRC post-insertion ---"
+#@ dft_drc
+#@ 
+#@ #------------------------------------------------------------
+#@ # 7. Reports
+#@ #------------------------------------------------------------
+#@ 
+#@ file mkdir reports
+#@ redirect -file reports/dft_drc.rpt     { dft_drc }
+#@ redirect -file reports/scan_chains.rpt { report_scan_chains }
+#@ redirect -file reports/scan_path.rpt   { report_scan_path }
+#@ redirect -file reports/timing_dft.rpt  { report_timing -max_paths 10 }
+#@ 
+#@ #------------------------------------------------------------
+#@ # 8. Write outputs
+#@ #------------------------------------------------------------
+#@ 
+#@ # Scan-inserted netlist
+#@ write -hierarchy -format verilog -output i2c_master_top_dft.v
+#@ 
+#@ # Scan DEF for Innovus
+#@ write_scan_def -output i2c_master_top.scandef
+#@ 
+#@ puts "============================================================"
+#@ puts "DFT FINISHED SUCCESSFULLY"
+#@ puts "Scan-inserted netlist : i2c_master_top_dft.v"
+#@ puts "Scan DEF for Innovus  : i2c_master_top.scandef"
+#@ puts "Reports               : reports/dft_drc.rpt"
+#@ puts "                        reports/scan_chains.rpt"
+#@ puts "============================================================"
+#@ # -- End source ../dft/dft.tcl
+
 uplevel #0 { report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 2 -sort_by group }
+uplevel #0 { report_area }
 uplevel #0 { report_power -analysis_effort low }
+change_selection [get_cells U260]
+write -hierarchy -format ddc
+write -hierarchy -format ddc
+write -hierarchy -format ddc

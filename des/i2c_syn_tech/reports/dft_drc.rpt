@@ -1,0 +1,54 @@
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+  ...saving simulation value info...
+
+-----------------------------------------------------------------
+Begin Clock violations...
+
+ Warning: Clock wb_rst_i cannot capture data with other clocks off. (C4-1)
+ Warning: Clock wb_rst_i used as data is different than capture clock wb_clk_i for inputs  of stable DFF (txr_reg[7]). (C26-1)
+Information: There are 140 other cells with the same violation. (TEST-171)
+
+Clock violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 142
+
+-----------------------------------------------------------------
+
+142 CLOCK VIOLATIONS
+     1 Clock unable to capture violation (C4)
+   141 Clock as data different from capture clock for stable cell violations (C26)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  0 out of 153 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 153 cells are valid scan cells
+
+Information: Test design rule checking completed. (TEST-123)
+1

@@ -2424,3 +2424,2547 @@ Reset timing graph done.
 Checking clock tree convergence...
 Checking clock tree convergence done.
 <CMD> ctd_win -side none -id ctd_window -unit_delay -include_reporting_only_skew_groups
+<CMD> routeDesign
+#% Begin routeDesign (date=06/25 23:58:39, mem=2461.1M)
+#routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2461.19 (MB), peak = 2544.85 (MB)
+AAE_INFO: Pre Route call back at the beginning of routeDesign
+#**INFO: setDesignMode -flowEffort standard
+#**INFO: setDesignMode -powerEffort none
+**INFO: User settings:
+setNanoRouteMode -route_route_side                          front
+setNanoRouteMode -route_extract_third_party_compatible      false
+setNanoRouteMode -route_global_exp_timing_driven_std_delay  41.3
+setDesignMode -process                                      180
+setExtractRCMode -coupling_c_th                             3
+setExtractRCMode -engine                                    preRoute
+setExtractRCMode -relative_c_th                             0.03
+setExtractRCMode -total_c_th                                5
+setDelayCalMode -enable_high_fanout                         true
+setDelayCalMode -enable_ideal_seq_async_pins                false
+setDelayCalMode -eng_enablePrePlacedFlow                    false
+setDelayCalMode -engine                                     aae
+setDelayCalMode -ignoreNetLoad                              false
+setDelayCalMode -socv_accuracy_mode                         low
+setSIMode -separate_delta_delay_on_data                     true
+
+#**INFO: multi-cut via swapping will be performed after routing.
+#**INFO: All auto set options tuned by routeDesign will be restored to their original settings on command completion.
+Begin checking placement ... (start mem=3030.9M, init mem=3030.9M)
+*info: Placed = 540           
+*info: Unplaced = 0           
+Placement Density:1.26%(17495/1386268)
+Placement Density (including fixed std cells):1.26%(17495/1386268)
+Finished checkPlace (total: cpu=0:00:00.0, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=3030.9M)
+
+changeUseClockNetStatus Option :  -ignoreSkipRoutingNets -noFixedNetWires 
+*** Changed status on (0) nets in Clock.
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=3030.9M) ***
+#**INFO: auto set of droutePostRouteSwapVia to multiCut
+% Begin globalDetailRoute (date=06/25 23:58:39, mem=2461.6M)
+
+globalDetailRoute
+
+#Start globalDetailRoute on Thu Jun 25 23:58:39 2026
+#
+#Generating timing data, please wait...
+#598 total nets, 563 already routed, 563 will ignore in trialRoute
+#View pruning: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2449.82 (MB), peak = 2544.85 (MB)
+#Reporting timing...
+#Normalized TNS: 0.000 -> 0.000, r2r 0.000 -> 0.000, unit 1000.000, clk period 12.000 (ns)
+#Stage 1: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2498.41 (MB), peak = 2544.85 (MB)
+#Library Standard Delay: 41.30ps
+#Slack threshold: 82.60ps
+#*** Analyzed 0 timing critical paths, and collected 0.
+#Stage 2: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2498.45 (MB), peak = 2544.85 (MB)
+#Stage 3: cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2503.54 (MB), peak = 2544.85 (MB)
+#Default setup view is reset to SlowView.
+#Stage 4: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2503.55 (MB), peak = 2544.85 (MB)
+#Current view: SlowView 
+#Current enabled view: SlowView 
+#Generating timing data took: cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2502.79 (MB), peak = 2544.85 (MB)
+#Done generating timing data.
+#WARNING (NRIG-1303) The congestion map does not match the GCELL grid. Clearing the congestion map.
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#NanoRoute Version 23.33-s082_1 NR241029-2256/23_13-UB
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Start routing data preparation on Thu Jun 25 23:58:42 2026
+#
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Rebuild pin access data for design.
+#Initial pin access analysis.
+#Detail pin access analysis.
+# M1           H   Track-Pitch = 0.5600    Line-2-Via Pitch = 0.4850
+# M2           V   Track-Pitch = 0.5600    Line-2-Via Pitch = 0.5600
+# M3           H   Track-Pitch = 0.5600    Line-2-Via Pitch = 0.5600
+# M4           V   Track-Pitch = 0.5600    Line-2-Via Pitch = 0.5600
+# M5           H   Track-Pitch = 0.8400    Line-2-Via Pitch = 0.5600
+# TOP_M        V   Track-Pitch = 1.1200    Line-2-Via Pitch = 0.9500
+#Bottom routing layer index=1(M1), bottom routing layer for shielding=1(M1), bottom shield layer=1(M1)
+#shield_bottom_stripe_layer=1(M1), shield_top_stripe_layer=6(TOP_M)
+#pin_access_rlayer=2(M2)
+#shield_top_dpt_rlayer=-1 top_rlayer=6 top_trim_metal_rlayer=-1 rlayer_lowest=1 bottom_rlayer=1
+#enable_trim_layer_shield=F enable_dpt_layer_shield=F has_line_end_grid=F
+#enable_dpt_layer_shield=F
+#has_line_end_grid=F
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2513.21 (MB), peak = 2546.30 (MB)
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=15 tracks, using layer M3's pitch = 0.5600.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2524.04 (MB), peak = 2546.30 (MB)
+#
+#Summary of active signal nets routing constraints set by OPT:
+#	preferred routing layers      : 0
+#	preferred routing layer effort: 0
+#	preferred extra space         : 0
+#	preferred multi-cut via       : 0
+#	avoid detour                  : 0
+#	expansion ratio               : 0
+#	net priority                  : 0
+#	s2s control                   : 0
+#	avoid chaining                : 0
+#	inst-based stacking via       : 0
+#
+#Summary of active signal nets routing constraints set by USER:
+#	preferred routing layers      : 0
+#	preferred routing layer effort     : 0
+#	preferred extra space              : 0
+#	preferred multi-cut via            : 0
+#	avoid detour                       : 0
+#	net weight                         : 0
+#	avoid chaining                     : 0
+#	cell-based stacking via (required) : 0
+#	cell-based stacking via (optional) : 0
+#
+#Start timing driven prevention iteration...
+#Setup timing driven global route constraints on 0 nets
+#
+#----------------------------------------------------
+# Summary of active signal nets routing constraints
+#+--------------------------+-----------+
+#+--------------------------+-----------+
+#
+#----------------------------------------------------
+#Skipped timing-driven prevention.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2524.07 (MB), peak = 2546.30 (MB)
+#Total number of trivial nets (e.g. < 2 pins) = 206 (skipped).
+#Total number of routable nets = 565.
+#Total number of nets in the design = 771.
+#565 routable nets do not have any wires.
+#565 nets will be global routed.
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#
+#Connectivity extraction summary:
+#565 (73.28%) nets are without wires.
+#206 nets are fixed|skipped|trivial (not extracted).
+#Total number of nets = 771.
+#
+#
+#Finished routing data preparation on Thu Jun 25 23:58:43 2026
+#
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 0.17 (MB)
+#Total memory = 2524.27 (MB)
+#Peak memory = 2546.30 (MB)
+#
+#
+#Start global routing on Thu Jun 25 23:58:43 2026
+#
+#
+#Start global routing initialization on Thu Jun 25 23:58:43 2026
+#
+#Number of eco nets is 0
+#
+#Start global routing data preparation on Thu Jun 25 23:58:43 2026
+#
+#Start routing resource analysis on Thu Jun 25 23:58:43 2026
+#
+#Routing resource analysis is done on Thu Jun 25 23:58:43 2026
+#
+#  Resource Analysis:
+#
+#               Routing  #Avail      #Track     #Total     %Gcell
+#  Layer      Direction   Track     Blocked      Gcell    Blocked
+#  --------------------------------------------------------------
+#  M1             H        1214        2000       45796    47.00%
+#  M2             V        1453        1760       45796    46.81%
+#  M3             H        1559        1655       45796    45.62%
+#  M4             V        1181        2032       45796    56.33%
+#  M5             H        1093        1049       45796    46.90%
+#  TOP_M          V         815         792       45796    46.94%
+#  --------------------------------------------------------------
+#  Total                   7316      54.99%      274776    48.27%
+#
+#
+#
+#
+#Global routing data preparation is done on Thu Jun 25 23:58:43 2026
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2528.36 (MB), peak = 2546.30 (MB)
+#
+#
+#Global routing initialization is done on Thu Jun 25 23:58:43 2026
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2529.54 (MB), peak = 2546.30 (MB)
+#
+#start global routing iteration 1...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2531.12 (MB), peak = 2546.54 (MB)
+#
+#Skip 1/3 round for no nets in the round...
+#Skip 2/3 round for no nets in the round...
+#Route nets in 3/3 round...
+#start global routing iteration 2...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2531.64 (MB), peak = 2546.54 (MB)
+#
+#start global routing iteration 3...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2533.70 (MB), peak = 2546.54 (MB)
+#
+#
+#Total number of trivial nets (e.g. < 2 pins) = 206 (skipped).
+#Total number of routable nets = 565.
+#Total number of nets in the design = 771.
+#
+#565 routable nets have routed wires.
+#
+#Routed nets constraints summary:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default             565  
+#-----------------------------
+#        Total             565  
+#-----------------------------
+#
+#Routing constraints summary of the whole design:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default             565  
+#-----------------------------
+#        Total             565  
+#-----------------------------
+#
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#
+#  Congestion Analysis: (blocked Gcells are excluded)
+#
+#                 OverCon       OverCon       OverCon       OverCon          
+#                  #Gcell        #Gcell        #Gcell        #Gcell    %Gcell
+#     Layer           (1)           (2)           (3)           (4)   OverCon
+#  --------------------------------------------------------------------------
+#  M1            0(0.00%)      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#  M2           14(0.06%)      3(0.01%)      1(0.00%)      1(0.00%)   (0.08%)
+#  M3            0(0.00%)      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#  M4            0(0.00%)      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#  M5            0(0.00%)      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#  TOP_M         0(0.00%)      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#  --------------------------------------------------------------------------
+#     Total     14(0.01%)      3(0.00%)      1(0.00%)      1(0.00%)   (0.01%)
+#
+#  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 4
+#  Overflow after GR: 0.00% H + 0.01% V
+#
+#Hotspot report including placement blocked areas
+[hotspot] +----------------+-------------------+-------------------+-------------------------------------+
+[hotspot] |      layer     |    max hotspot    |   total hotspot   |            hotspot bbox             |
+[hotspot] +----------------+-------------------+-------------------+-------------------------------------+
+[hotspot] |       M1(H)    |              0.44 |              0.44 |   963.20   963.20  1008.00  1008.00 |
+[hotspot] |       M2(V)    |              0.44 |              0.44 |   985.60   985.60  1030.39  1030.39 |
+[hotspot] |       M3(H)    |              0.00 |              0.00 |   (none)                            |
+[hotspot] |       M4(V)    |              0.00 |              0.00 |   (none)                            |
+[hotspot] |       M5(H)    |              0.00 |              0.00 |   (none)                            |
+[hotspot] |    TOP_M(V)    |              0.00 |              0.00 |   (none)                            |
+[hotspot] +----------------+-------------------+-------------------+-------------------------------------+
+[hotspot] |      worst     |     (M1)     0.44 |     (M1)     0.44 |                                     |
+[hotspot] +----------------+-------------------+-------------------+-------------------------------------+
+[hotspot] |   all layers   |              0.00 |              0.00 |                                     |
+[hotspot] +----------------+-------------------+-------------------+-------------------------------------+
+Local HotSpot Analysis (blockage included) (3d): normalized congestion max/total hotspot area = 0.00/0.00 (area is in unit of 4 std-cell row bins)
+#Complete Global Routing.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+
+#  Layer       | Length(um)| Vias|
+#--------------+-----------+-----+
+#  GC ( 0H)    |          0|    0|
+#  M1 ( 1H)    |       7132| 2327|
+#  M2 ( 2V)    |      21252| 1359|
+#  M3 ( 3H)    |      13969|   83|
+#  M4 ( 4V)    |        655|    4|
+#  M5 ( 5H)    |         67|    0|
+#  TOP_M ( 6V) |          0|    0|
+#--------------+-----------+-----+
+#  Total       |      43075| 3773|
+#--------------+-----------+-----+
+#
+# Total half perimeter of net bounding box: 44452 um.
+#Total number of involved regular nets 123
+#Maximum src to sink distance  1387.0
+#Average of max src_to_sink distance  127.3
+#Average of ave src_to_sink distance  93.3
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Max overcon = 4 tracks.
+#Total overcon = 0.01%.
+#Worst layer Gcell overcon rate = 0.00%.
+#
+#Global routing statistics:
+#Cpu time = 00:00:01
+#Elapsed time = 00:00:01
+#Increased memory = 8.50 (MB)
+#Total memory = 2532.77 (MB)
+#Peak memory = 2546.54 (MB)
+#
+#Finished global routing on Thu Jun 25 23:58:43 2026
+#
+#
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2526.99 (MB), peak = 2546.54 (MB)
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Start Track Assignment.
+#Done with 833 horizontal wires in 7 hboxes and 1057 vertical wires in 7 hboxes.
+#Done with 168 horizontal wires in 7 hboxes and 146 vertical wires in 7 hboxes.
+#Done with 7 horizontal wires in 7 hboxes and 7 vertical wires in 7 hboxes.
+#
+#Track assignment summary:
+# layer   (wire length)   (overlap)     (long ovlp)	(with obs/pg/clk)  
+#------------------------------------------------------------------------
+# M1          7134.52 	  0.03%  	  0.00% 	  0.03%
+# M2         21179.48 	  2.68%  	  0.00% 	  2.54%
+# M3         13622.00 	  0.42%  	  0.00% 	  0.32%
+# M4           612.64 	  0.00%  	  0.00% 	  0.00%
+# M5            67.76 	  0.00%  	  0.00% 	  0.00%
+# TOP_M          0.00 	  0.00%  	  0.00% 	  0.00%
+#------------------------------------------------------------------------
+# All       42616.40  	  1.47% 	  0.00% 	  0.00%
+#Complete Track Assignment.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+
+#  Layer       | Length(um)| Vias|
+#--------------+-----------+-----+
+#  GC ( 0H)    |          0|    0|
+#  M1 ( 1H)    |       7130| 2327|
+#  M2 ( 2V)    |      21168| 1359|
+#  M3 ( 3H)    |      13511|   83|
+#  M4 ( 4V)    |        615|    4|
+#  M5 ( 5H)    |         67|    0|
+#  TOP_M ( 6V) |          0|    0|
+#--------------+-----------+-----+
+#  Total       |      42492| 3773|
+#--------------+-----------+-----+
+#
+# Total half perimeter of net bounding box: 44452 um.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2527.42 (MB), peak = 2546.54 (MB)
+#
+#Start post global route fixing for timing critical nets ...
+#
+#* Updating design timing data...
+#Extracting RC...
+Un-suppress "**WARN ..." messages.
+#
+#Start tQuantus RC extraction...
+#Finish check_net_pin_list step Enter extract_rc_after_routing
+#Extract in track assign mode
+#Start extraction data preparation
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Start building rc corner(s)...
+#Number of RC Corner = 2
+#Corner SlowRC /tools/kits/tower/PDK_TS18SL/iit/qrcTechFile 125.000000 (real) 
+#Corner FastRC /tools/kits/tower/PDK_TS18SL/iit/qrcTechFile -40.000000 (real) 
+#(i=6, n=6 1000)
+#m1 -> M1 (1)
+#m2 -> M2 (2)
+#m3 -> M3 (3)
+#m4 -> M4 (4)
+#m5 -> M5 (5)
+#ml -> TOP_M (6)
+#SADV_On
+# Corner(s) : 
+#SlowRC [125.00] 
+#FastRC [-40.00]
+# Corner id: 0
+# Layout Scale: 1.000000
+# Has Metal Fill model: yes
+# Temperature was set
+# Temperature : 125.000000
+# Ref. Temp   : 25.000000
+# Corner id: 1
+# Layout Scale: 1.000000
+# Has Metal Fill model: yes
+# Temperature was set
+# Temperature : -40.000000
+# Ref. Temp   : 25.000000
+#SADV_Off
+#total pattern=56 [12, 147]
+#Reading previously stored rc_model file ( rc_model.bin ) ...
+#found CAPMODEL /tools/kits/tower/PDK_TS18SL/iit/qrcTechFile
+#found RESMODEL /tools/kits/tower/PDK_TS18SL/iit/qrcTechFile 125.000000 
+#found RESMODEL /tools/kits/tower/PDK_TS18SL/iit/qrcTechFile -40.000000 
+#CCE Version read = IQuantus/TQuantus 23.1.1-s235
+#number model r/c [2,1] [12,147] read
+#Build RC corners: cpu time = 00:00:00, elapsed time = 00:00:01, memory = 2531.90 (MB), peak = 2546.54 (MB)
+#Finish check_net_pin_list step Enter extract
+#Start init net ripin tree building
+#Finish init net ripin tree building
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 0.04 (MB)
+#Total memory = 2540.40 (MB)
+#Peak memory = 2546.54 (MB)
+#begin processing metal fill model file
+#end processing metal fill model file
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#
+#Start Post Track Assignment Wire Spread.
+#Done with 194 horizontal wires in 7 hboxes and 208 vertical wires in 7 hboxes.
+#Complete Post Track Assignment Wire Spread.
+#
+#WARNING (NRIF-95) Option setNanoRouteMode -routeTopRoutingLayer has invalid value "0". Reset to max routing layer "6".
+#Length limit = 200 pitches
+#opt mode = 2
+#WARNING (EMS-27) Message (NRIF-95) has exceeded the current message display limit of 20.
+#To increase the message display limit, refer to the product command reference manual.
+#Finish check_net_pin_list step Fix net pin list
+#Start generate extraction boxes.
+#
+#Extract using 30 x 30 Hboxes
+#9x9 initial hboxes
+#Use area based hbox pruning.
+#0/0 hboxes pruned.
+#Complete generating extraction boxes.
+#Start step Extraction
+#Extract 25 hboxes with single thread on machine with  Core_i7 4.00GHz 12288KB Cache 8CPU...
+#Process 0 special clock nets for rc extraction
+#Total 563 nets were built. 161 nodes added to break long wires. 0 net(s) have incomplete routes.
+#Run Statistics for Extraction:
+#   Cpu time = 00:00:02, elapsed time = 00:00:02 .
+#   Increased memory =    10.61 (MB), total memory =  2551.18 (MB), peak memory =  2551.18 (MB)
+#
+#Scale RC for track assignment: res 1.000000; cap 1.000000; clk res 1.000000; clk cap 1.000000, xcap 1.000000
+#Simplify RC tree: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2542.45 (MB), peak = 2551.19 (MB)
+#RC Statistics: 2658 Res, 1730 Ground Cap, 283 XCap (Edge to Edge)
+#RC V/H edge ratio: 0.68, Avg V/H Edge Length: 8863.26 (1806), Avg L-Edge Length: 16034.69 (469)
+#Register nets and terms for rcdb /tmp/innovus_temp_28808_3caa87b3-9547-49ee-949d-7b26ff2ddbcc_vlsi-ria87_epkgms_s86t3P/nr28808_33vkYr.rcdb.d
+#Finish registering nets and terms for rcdb.
+#Start writing RC data.
+#Finish writing RC data
+#Finish writing rcdb with 3768 nodes, 3205 edges, and 698 xcaps
+#161 inserted nodes are removed
+#Restored 0 tie nets, 0 tie snets, 0 partial nets
+#Remove Post Track Assignment Wire Spread
+Restoring parasitic data from file '/tmp/innovus_temp_28808_3caa87b3-9547-49ee-949d-7b26ff2ddbcc_vlsi-ria87_epkgms_s86t3P/nr28808_33vkYr.rcdb.d' ...
+Reading RCDB with compressed RC data.
+Reading RCDB with compressed RC data.
+Begin read_parasitics... (cpu: 0:00:00.0 real: 0:00:00.0 mem: 3105.621M)
+Following multi-corner parasitics specified:
+	/tmp/innovus_temp_28808_3caa87b3-9547-49ee-949d-7b26ff2ddbcc_vlsi-ria87_epkgms_s86t3P/nr28808_33vkYr.rcdb.d (rcdb)
+Reading RCDB with compressed RC data.
+		Cell top has rcdb /tmp/innovus_temp_28808_3caa87b3-9547-49ee-949d-7b26ff2ddbcc_vlsi-ria87_epkgms_s86t3P/nr28808_33vkYr.rcdb.d specified
+Cell top, hinst 
+Reading RCDB with compressed RC data.
+Done read_parasitics... (cpu: 0:00:00.0 real: 0:00:00.0 mem: 3105.621M)
+#
+#Restore RCDB.
+#Remove Post Track Assignment Wire Spread
+#
+#Complete tQuantus RC extraction.
+#Cpu time = 00:00:03
+#Elapsed time = 00:00:03
+#Increased memory = 15.86 (MB)
+#Total memory = 2543.29 (MB)
+#Peak memory = 2555.95 (MB)
+#
+Un-suppress "**WARN ..." messages.
+#RC Extraction Completed...
+AAE_INFO: switching setDelayCal -siAware from false to true ...
+AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+#Reporting timing...
+#Normalized TNS: 0.000 -> 0.000, r2r 0.000 -> 0.000, unit 1000.000, clk period 12.000 (ns)
+#Stage 1: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2552.28 (MB), peak = 2570.53 (MB)
+#Library Standard Delay: 41.30ps
+#Slack threshold: 0.00ps
+#*** Analyzed 0 timing critical paths, and collected 0.
+#Stage 2: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2552.28 (MB), peak = 2570.53 (MB)
+#Stage 3: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2553.04 (MB), peak = 2570.53 (MB)
+**WARN: (TCLCMD-1403):	'The -tcl_list output format of report_timing will not be supported in future releases of the software.   Path collections generated by 'report_timing -collection'  can be used instead for programmatic access to timing report data. The  report_timing -tcl_list will continue to work in this release - but, you should update your scripts to use path collections so that they are compatible with future releases.'
+Worst slack reported in the design = 9.689756 (late)
+*** writeDesignTiming (0:00:00.0) ***
+#Stage 4: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2553.38 (MB), peak = 2570.53 (MB)
+Un-suppress "**WARN ..." messages.
+#Number of victim nets: 0
+#Number of aggressor nets: 0
+#Number of weak nets: 0
+#Number of critical nets: 0
+#	level 1 [   0.0, -1000.0]: 0 nets
+#	level 2 [   0.0, -1000.0]: 0 nets
+#	level 3 [   0.0, -1000.0]: 0 nets
+#Total number of nets: 563
+#Total number of significant detoured timing critical nets is 0
+#Total number of selected detoured timing critical nets is 0
+#
+#----------------------------------------------------
+# Summary of active signal nets routing constraints
+#+--------------------------+-----------+
+#+--------------------------+-----------+
+#
+#----------------------------------------------------
+Current (total cpu=0:02:54, real=0:19:32, peak res=2570.5M, current mem=2489.5M)
+------------------------------------------------------------------------------------
+CONSTRAINT READING SUMMARY                                                          
+------------------------------------------------------------------------------------
+Constraint                                        | Success        | Fail           
+------------------------------------------------------------------------------------
+create_clock                                      | 1              | 0              
+------------------------------------------------------------------------------------
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2507.2M, current mem=2507.2M)
+Current (total cpu=0:02:54, real=0:19:32, peak res=2570.5M, current mem=2507.2M)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2515.73 (MB), peak = 2570.53 (MB)
+#* Importing design timing data...
+#Number of victim nets: 0
+#Number of aggressor nets: 0
+#Number of weak nets: 0
+#Number of critical nets: 0
+#	level 1 [   0.0, -1000.0]: 0 nets
+#	level 2 [   0.0, -1000.0]: 0 nets
+#	level 3 [   0.0, -1000.0]: 0 nets
+#Total number of nets: 563
+#
+#timing driven effort level: 3
+#Start Track Assignment With Timing Driven.
+#Done with 20 horizontal wires in 7 hboxes and 19 vertical wires in 7 hboxes.
+#Done with 5 horizontal wires in 7 hboxes and 10 vertical wires in 7 hboxes.
+#Done with 7 horizontal wires in 7 hboxes and 7 vertical wires in 7 hboxes.
+#
+#Track assignment summary:
+# layer   (wire length)   (overlap)     (long ovlp)	(with obs/pg/clk)  
+#------------------------------------------------------------------------
+# M1          7134.52 	  0.03%  	  0.00% 	  0.03%
+# M2         21189.28 	  2.67%  	  0.00% 	  2.54%
+# M3         13614.16 	  0.40%  	  0.00% 	  0.32%
+# M4           612.64 	  0.00%  	  0.00% 	  0.00%
+# M5            67.76 	  0.00%  	  0.00% 	  0.00%
+# TOP_M          0.00 	  0.00%  	  0.00% 	  0.00%
+#------------------------------------------------------------------------
+# All       42618.36  	  1.46% 	  0.00% 	  0.00%
+#Complete Track Assignment With Timing Driven.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+
+#  Layer       | Length(um)| Vias|
+#--------------+-----------+-----+
+#  GC ( 0H)    |          0|    0|
+#  M1 ( 1H)    |       7130| 2327|
+#  M2 ( 2V)    |      21179| 1359|
+#  M3 ( 3H)    |      13506|   83|
+#  M4 ( 4V)    |        615|    4|
+#  M5 ( 5H)    |         67|    0|
+#  TOP_M ( 6V) |          0|    0|
+#--------------+-----------+-----+
+#  Total       |      42497| 3773|
+#--------------+-----------+-----+
+#
+# Total half perimeter of net bounding box: 44452 um.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2521.22 (MB), peak = 2570.53 (MB)
+#
+#Routing data preparation, pin analysis, global routing and track assignment statistics:
+#Cpu time = 00:00:06
+#Elapsed time = 00:00:07
+#Increased memory = 17.12 (MB)
+#Total memory = 2521.22 (MB)
+#Peak memory = 2570.53 (MB)
+#Start reading timing information from file .timing_file_28808.tif.gz ...
+#Read in timing information for 0 ports, 585 instances from timing file .timing_file_28808.tif.gz.
+#
+#Start Detail Routing..
+#start initial detail routing ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-----+-------+-------+-------+
+#  -      | MetSpc| Short| Loop| CutSpc| CShort| Totals|
+#---------+-------+------+-----+-------+-------+-------+
+#  M1     |      2|     5|    0|      9|      6|     22|
+#  M2     |     10|     6|    0|      0|      1|     17|
+#  M3     |      1|    15|    1|      0|      0|     17|
+#  Totals |     13|    26|    1|      9|      7|     56|
+#---------+-------+------+-----+-------+-------+-------+
+#
+#cpu time = 00:00:05, elapsed time = 00:00:05, memory = 2534.37 (MB), peak = 2574.49 (MB)
+#start 1st optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|     10|      6|   0|     17|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      3|    18|      0|      1|   0|     22|
+#  M4     |      6|     3|      0|      0|   2|     11|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     10|    24|     10|      7|   2|     53|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2535.83 (MB), peak = 2574.49 (MB)
+#start 2nd optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      6|      2|   0|      9|
+#  M2     |      0|     1|      0|      0|   0|      1|
+#  M3     |      9|    19|      0|      0|   0|     28|
+#  M4     |     10|     4|      0|      0|   2|     16|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     19|    27|      6|      2|   2|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2536.45 (MB), peak = 2574.49 (MB)
+#start 3rd optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      8|      4|   0|     13|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      6|    18|      1|      1|   0|     26|
+#  M4     |      7|     5|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     13|    26|      9|      5|   2|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.38 (MB), peak = 2574.49 (MB)
+#start 4th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      1|     1|      0|      0|   0|      2|
+#  M3     |      7|    16|      1|      0|   0|     24|
+#  M4     |     11|     3|      0|      0|   2|     16|
+#  M5     |      0|     1|      0|      0|   0|      1|
+#  Totals |     19|    23|      7|      2|   2|     53|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.44 (MB), peak = 2574.49 (MB)
+#start 5th optimization iteration ...
+#   number of violations = 58
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      8|    16|      1|      0|   0|     25|
+#  M4     |     11|     5|      0|      0|   3|     19|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     20|    26|      7|      2|   3|     58|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.12 (MB), peak = 2582.98 (MB)
+#start 6th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      8|      4|   0|     15|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      7|    16|      0|      0|   0|     23|
+#  M4     |     10|     3|      0|      0|   2|     15|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     17|    24|      8|      4|   2|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2534.39 (MB), peak = 2583.86 (MB)
+#start 7th optimization iteration ...
+#   number of violations = 49
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| MinCut| Mar| Totals|
+#---------+-------+------+-------+-------+-------+----+-------+
+#  M1     |      0|     0|      6|      2|      0|   0|      8|
+#  M2     |      0|     0|      0|      0|      0|   0|      0|
+#  M3     |      4|    19|      1|      2|      1|   0|     27|
+#  M4     |      8|     2|      0|      0|      0|   2|     12|
+#  M5     |      0|     2|      0|      0|      0|   0|      2|
+#  Totals |     12|    23|      7|      4|      1|   2|     49|
+#---------+-------+------+-------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2534.82 (MB), peak = 2583.86 (MB)
+#start 8th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      8|      4|   0|     13|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      7|    18|      0|      0|   0|     25|
+#  M4     |     10|     3|      0|      0|   2|     15|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     17|    24|      8|      4|   2|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2534.87 (MB), peak = 2583.86 (MB)
+#start 9th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| MinCut| Mar| Totals|
+#---------+-------+------+-------+-------+-------+----+-------+
+#  M1     |      0|     1|      8|      4|      0|   0|     13|
+#  M2     |      0|     0|      0|      0|      0|   0|      0|
+#  M3     |      4|    18|      1|      1|      1|   0|     25|
+#  M4     |      6|     3|      0|      0|      0|   2|     11|
+#  M5     |      0|     2|      0|      0|      0|   0|      2|
+#  Totals |     10|    24|      9|      5|      1|   2|     51|
+#---------+-------+------+-------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.70 (MB), peak = 2583.86 (MB)
+#start 10th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      4|   0|     14|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      6|    17|      0|      0|   0|     23|
+#  M4     |      8|     4|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     15|    25|      8|      4|   2|     54|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.94 (MB), peak = 2583.86 (MB)
+#start 11th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      4|   0|     14|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      5|    16|      0|      0|   0|     21|
+#  M4     |     10|     4|      0|      0|   2|     16|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     15|    24|      8|      4|   2|     53|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2534.90 (MB), peak = 2593.57 (MB)
+#start 12th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      7|    16|      2|      1|   0|     26|
+#  M4     |     10|     5|      0|      0|   2|     17|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     17|    25|      8|      3|   2|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2533.94 (MB), peak = 2593.57 (MB)
+#start 13th optimization iteration ...
+#   number of violations = 52
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      6|      2|   0|      9|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      7|    20|      0|      0|   0|     27|
+#  M4     |     10|     2|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     17|    25|      6|      2|   2|     52|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.46 (MB), peak = 2593.57 (MB)
+#start 14th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      6|      2|   0|      9|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      5|    17|      2|      1|   0|     25|
+#  M4     |     10|     4|      0|      0|   3|     17|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     15|    25|      8|      3|   3|     54|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2535.36 (MB), peak = 2593.57 (MB)
+#start 15th optimization iteration ...
+#   number of violations = 48
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      4|      4|   0|     10|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      5|    17|      0|      0|   0|     22|
+#  M4     |      8|     4|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     13|    25|      4|      4|   2|     48|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.20 (MB), peak = 2593.57 (MB)
+#start 16th optimization iteration ...
+#   number of violations = 52
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      6|    16|      0|      1|   0|     23|
+#  M4     |      8|     4|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     15|    25|      6|      3|   3|     52|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.04 (MB), peak = 2598.37 (MB)
+#start 17th optimization iteration ...
+#   number of violations = 46
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CShort| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     2|      0|   0|      2|
+#  M2     |      2|     0|      0|   0|      2|
+#  M3     |      7|    18|      1|   0|     26|
+#  M4     |      8|     4|      0|   2|     14|
+#  M5     |      0|     2|      0|   0|      2|
+#  Totals |     17|    26|      1|   2|     46|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2535.14 (MB), peak = 2598.37 (MB)
+#start 18th optimization iteration ...
+#   number of violations = 59
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|     10|      6|   0|     17|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      8|    16|      0|      0|   0|     24|
+#  M4     |      6|     5|      0|      0|   3|     14|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     15|    25|     10|      6|   3|     59|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.82 (MB), peak = 2598.37 (MB)
+#start 19th optimization iteration ...
+#   number of violations = 39
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CShort| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     2|      0|   0|      2|
+#  M2     |      0|     0|      0|   0|      0|
+#  M3     |      5|    18|      2|   0|     25|
+#  M4     |      4|     4|      0|   2|     10|
+#  M5     |      0|     2|      0|   0|      2|
+#  Totals |      9|    26|      2|   2|     39|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.93 (MB), peak = 2598.37 (MB)
+#start 20th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|     10|      6|   0|     17|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      7|    18|      0|      0|   0|     25|
+#  M4     |      6|     2|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     13|    23|     10|      6|   2|     54|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2536.42 (MB), peak = 2598.37 (MB)
+#start 21th optimization iteration ...
+#   number of violations = 43
+#
+#  By Layer and Type:
+#
+#---------+-------+------+----+-------+
+#  -      | MetSpc| Short| Mar| Totals|
+#---------+-------+------+----+-------+
+#  M1     |      0|     1|   0|      1|
+#  M2     |      0|     0|   0|      0|
+#  M3     |      6|    19|   0|     25|
+#  M4     |      8|     5|   2|     15|
+#  M5     |      0|     2|   0|      2|
+#  Totals |     14|    27|   2|     43|
+#---------+-------+------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2537.31 (MB), peak = 2598.37 (MB)
+#start 22th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      8|    16|      2|      2|   0|     28|
+#  M4     |      6|     4|      0|      0|   3|     13|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     15|    25|      8|      4|   3|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.58 (MB), peak = 2598.37 (MB)
+#start 23th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      2|      2|   0|      5|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      9|    16|      0|      0|   0|     25|
+#  M4     |     10|     6|      0|      0|   3|     19|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     20|    26|      2|      2|   3|     53|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2537.55 (MB), peak = 2598.37 (MB)
+#start 24th optimization iteration ...
+#   number of violations = 52
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     2|      8|   0|     10|
+#  M2     |      2|     0|      0|   0|      2|
+#  M3     |      5|    17|      0|   0|     22|
+#  M4     |      8|     4|      0|   3|     15|
+#  M5     |      0|     3|      0|   0|      3|
+#  Totals |     15|    26|      8|   3|     52|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2537.52 (MB), peak = 2601.02 (MB)
+#start 25th optimization iteration ...
+#   number of violations = 42
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      5|    17|      0|      2|   0|     24|
+#  M4     |      0|     5|      0|      0|   2|      7|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |      7|    27|      2|      4|   2|     42|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.41 (MB), peak = 2601.02 (MB)
+#start 26th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      7|    17|      0|      0|   0|     24|
+#  M4     |     10|     5|      0|      0|   3|     18|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     18|    27|      6|      2|   3|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2539.31 (MB), peak = 2601.02 (MB)
+#start 27th optimization iteration ...
+#   number of violations = 47
+#
+#  By Layer and Type:
+#
+#---------+-------+------+----+-------+
+#  -      | MetSpc| Short| Mar| Totals|
+#---------+-------+------+----+-------+
+#  M1     |      0|     2|   0|      2|
+#  M2     |      1|     0|   0|      1|
+#  M3     |      8|    18|   0|     26|
+#  M4     |     10|     4|   2|     16|
+#  M5     |      0|     2|   0|      2|
+#  Totals |     19|    26|   2|     47|
+#---------+-------+------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2538.44 (MB), peak = 2601.02 (MB)
+#start 28th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      4|   0|     14|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      7|    15|      0|      0|   0|     22|
+#  M4     |      8|     4|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     17|    24|      8|      4|   3|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2538.44 (MB), peak = 2601.02 (MB)
+#start 29th optimization iteration ...
+#   number of violations = 46
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      0|      0|   0|      1|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      4|    19|      2|      2|   0|     27|
+#  M4     |      6|     5|      0|      0|   3|     14|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     11|    28|      2|      2|   3|     46|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2537.73 (MB), peak = 2601.02 (MB)
+#start 30th optimization iteration ...
+#   number of violations = 59
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      8|    15|      4|      3|   0|     30|
+#  M4     |      6|     5|      0|      0|   3|     14|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     16|    25|     10|      5|   3|     59|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.18 (MB), peak = 2601.02 (MB)
+#start 31th optimization iteration ...
+#   number of violations = 52
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     0|      2|      2|   0|      4|
+#  M2     |      0|     0|      0|      0|   0|      0|
+#  M3     |      6|    17|      0|      0|   0|     23|
+#  M4     |     10|     7|      0|      0|   4|     21|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     16|    28|      2|      2|   4|     52|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.02 (MB), peak = 2601.02 (MB)
+#start 32th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      4|   0|     14|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      6|    17|      0|      0|   0|     23|
+#  M4     |      6|     3|      0|      0|   3|     12|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     13|    25|      8|      4|   3|     53|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.24 (MB), peak = 2601.02 (MB)
+#start 33th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      2|      2|   0|      5|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      9|    16|      0|      0|   0|     25|
+#  M4     |     10|     6|      0|      0|   3|     19|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     20|    26|      2|      2|   3|     53|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2537.20 (MB), peak = 2601.02 (MB)
+#start 34th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     2|      8|   0|     10|
+#  M2     |      1|     0|      0|   0|      1|
+#  M3     |      9|    17|      0|   0|     26|
+#  M4     |      8|     4|      0|   3|     15|
+#  M5     |      0|     3|      0|   0|      3|
+#  Totals |     18|    26|      8|   3|     55|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2537.19 (MB), peak = 2612.11 (MB)
+#start 35th optimization iteration ...
+#   number of violations = 47
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      6|    17|      0|      2|   0|     25|
+#  M4     |      6|     4|      0|      0|   2|     12|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     14|    25|      2|      4|   2|     47|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2537.19 (MB), peak = 2612.11 (MB)
+#start 36th optimization iteration ...
+#   number of violations = 52
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      6|      2|   0|      9|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      6|    18|      0|      1|   0|     25|
+#  M4     |     10|     3|      0|      0|   2|     15|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     17|    24|      6|      3|   2|     52|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2534.74 (MB), peak = 2612.11 (MB)
+#start 37th optimization iteration ...
+#   number of violations = 46
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      0|      0|   0|      2|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      9|    17|      2|      2|   0|     30|
+#  M4     |      6|     4|      0|      0|   2|     12|
+#  M5     |      0|     1|      0|      0|   0|      1|
+#  Totals |     16|    24|      2|      2|   2|     46|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:03, elapsed time = 00:00:03, memory = 2535.79 (MB), peak = 2612.11 (MB)
+#start 38th optimization iteration ...
+#   number of violations = 58
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      8|      4|   0|     13|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      8|    15|      0|      1|   0|     24|
+#  M4     |     10|     3|      0|      0|   4|     17|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     19|    22|      8|      5|   4|     58|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.68 (MB), peak = 2612.11 (MB)
+#start 39th optimization iteration ...
+#   number of violations = 47
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      0|      0|   0|      1|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      8|    19|      2|      3|   0|     32|
+#  M4     |      6|     3|      0|      0|   2|     11|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     15|    25|      2|      3|   2|     47|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:03, elapsed time = 00:00:03, memory = 2534.77 (MB), peak = 2629.93 (MB)
+#start 40th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|     10|      6|   0|     18|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      7|    18|      0|      0|   0|     25|
+#  M4     |      8|     1|      0|      0|   2|     11|
+#  M5     |      0|     1|      0|      0|   0|      1|
+#  Totals |     16|    22|     10|      6|   2|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2535.44 (MB), peak = 2629.93 (MB)
+#start 41th optimization iteration ...
+#   number of violations = 49
+#
+#  By Layer and Type:
+#
+#---------+-------+------+----+-------+
+#  -      | MetSpc| Short| Mar| Totals|
+#---------+-------+------+----+-------+
+#  M1     |      0|     2|   0|      2|
+#  M2     |      1|     0|   0|      1|
+#  M3     |     10|    16|   0|     26|
+#  M4     |     10|     4|   3|     17|
+#  M5     |      0|     3|   0|      3|
+#  Totals |     21|    25|   3|     49|
+#---------+-------+------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.20 (MB), peak = 2629.93 (MB)
+#start 42th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      8|      4|   0|     13|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      7|    16|      0|      0|   0|     23|
+#  M4     |      8|     5|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     16|    25|      8|      4|   3|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2534.48 (MB), peak = 2629.93 (MB)
+#start 43th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+----+-------+
+#  -      | MetSpc| Short| Mar| Totals|
+#---------+-------+------+----+-------+
+#  M1     |      0|     2|   0|      2|
+#  M2     |      1|     0|   0|      1|
+#  M3     |     11|    15|   0|     26|
+#  M4     |     10|     6|   3|     19|
+#  M5     |      0|     3|   0|      3|
+#  Totals |     22|    26|   3|     51|
+#---------+-------+------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2535.30 (MB), peak = 2629.93 (MB)
+#start 44th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      4|   0|     14|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      7|    16|      0|      0|   0|     23|
+#  M4     |      8|     4|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     17|    24|      8|      4|   2|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.59 (MB), peak = 2629.93 (MB)
+#start 45th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      1|     0|      0|      1|   0|      2|
+#  M3     |      9|    16|      0|      1|   0|     26|
+#  M4     |      4|     5|      0|      0|   2|     11|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     14|    25|      6|      4|   2|     51|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2535.51 (MB), peak = 2629.93 (MB)
+#start 46th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     1|      0|   0|      1|
+#  M2     |      1|     0|      0|   0|      1|
+#  M3     |     10|    14|      1|   0|     25|
+#  M4     |     10|     8|      0|   4|     22|
+#  M5     |      0|     4|      0|   0|      4|
+#  Totals |     21|    27|      1|   4|     53|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.39 (MB), peak = 2629.93 (MB)
+#start 47th optimization iteration ...
+#   number of violations = 58
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|     10|      2|   0|     14|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |     13|    13|      0|      1|   0|     27|
+#  M4     |      6|     4|      0|      0|   3|     13|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     20|    22|     10|      3|   3|     58|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2535.61 (MB), peak = 2629.93 (MB)
+#start 48th optimization iteration ...
+#   number of violations = 48
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CShort| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     3|      0|   0|      3|
+#  M2     |      2|     0|      0|   0|      2|
+#  M3     |     10|    16|      1|   0|     27|
+#  M4     |      8|     4|      0|   2|     14|
+#  M5     |      0|     2|      0|   0|      2|
+#  Totals |     20|    25|      1|   2|     48|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.62 (MB), peak = 2629.93 (MB)
+#start 49th optimization iteration ...
+#   number of violations = 58
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      8|      0|   0|     11|
+#  M2     |      1|     0|      0|      1|   0|      2|
+#  M3     |     12|    14|      1|      0|   0|     27|
+#  M4     |     10|     4|      0|      0|   2|     16|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     23|    23|      9|      1|   2|     58|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.88 (MB), peak = 2629.93 (MB)
+#start 50th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      2|      2|   0|      5|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |     11|    14|      2|      2|   0|     29|
+#  M4     |      8|     6|      0|      0|   3|     17|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     20|    24|      4|      4|   3|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.08 (MB), peak = 2629.93 (MB)
+#start 51th optimization iteration ...
+#   number of violations = 55
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      8|    14|      1|      1|   0|     24|
+#  M4     |     10|     4|      0|      0|   3|     17|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     19|    23|      7|      3|   3|     55|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.07 (MB), peak = 2629.93 (MB)
+#start 52th optimization iteration ...
+#   number of violations = 47
+#
+#  By Layer and Type:
+#
+#---------+-------+------+----+-------+
+#  -      | MetSpc| Short| Mar| Totals|
+#---------+-------+------+----+-------+
+#  M1     |      0|     3|   0|      3|
+#  M2     |      2|     0|   0|      2|
+#  M3     |      8|    15|   0|     23|
+#  M4     |      8|     5|   3|     16|
+#  M5     |      0|     3|   0|      3|
+#  Totals |     18|    26|   3|     47|
+#---------+-------+------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2535.86 (MB), peak = 2629.93 (MB)
+#start 53th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      8|      4|   0|     13|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      6|    15|      0|      0|   0|     21|
+#  M4     |      8|     5|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     15|    24|      8|      4|   3|     54|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.07 (MB), peak = 2629.93 (MB)
+#start 54th optimization iteration ...
+#   number of violations = 49
+#
+#  By Layer and Type:
+#
+#---------+-------+------+----+-------+
+#  -      | MetSpc| Short| Mar| Totals|
+#---------+-------+------+----+-------+
+#  M1     |      0|     2|   0|      2|
+#  M2     |      2|     0|   0|      2|
+#  M3     |     10|    16|   0|     26|
+#  M4     |      8|     7|   2|     17|
+#  M5     |      0|     2|   0|      2|
+#  Totals |     20|    27|   2|     49|
+#---------+-------+------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.09 (MB), peak = 2629.93 (MB)
+#start 55th optimization iteration ...
+#   number of violations = 59
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      2|     2|      6|      2|   0|     12|
+#  M2     |      1|     0|      0|      1|   0|      2|
+#  M3     |     11|    15|      0|      1|   0|     27|
+#  M4     |      6|     6|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     20|    26|      6|      4|   3|     59|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.09 (MB), peak = 2629.93 (MB)
+#start 56th optimization iteration ...
+#   number of violations = 52
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      9|    14|      0|      0|   0|     23|
+#  M4     |      8|     6|      0|      0|   4|     18|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     18|    26|      2|      2|   4|     52|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.09 (MB), peak = 2629.93 (MB)
+#start 57th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      8|    15|      0|      2|   0|     25|
+#  M4     |      8|     4|      0|      0|   3|     15|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     17|    24|      6|      4|   3|     54|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:02, memory = 2536.09 (MB), peak = 2629.93 (MB)
+#start 58th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      0|      0|   0|      1|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |     11|    16|      1|      1|   0|     29|
+#  M4     |     10|     6|      0|      0|   3|     19|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     22|    26|      1|      1|   3|     53|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.09 (MB), peak = 2629.93 (MB)
+#start 59th optimization iteration ...
+#   number of violations = 57
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|     10|      2|   0|     15|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      7|    15|      0|      0|   0|     22|
+#  M4     |     10|     3|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     18|    24|     10|      2|   3|     57|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.09 (MB), peak = 2629.93 (MB)
+#start 60th optimization iteration ...
+#   number of violations = 48
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CShort| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     2|      0|   0|      2|
+#  M2     |      2|     0|      0|   0|      2|
+#  M3     |     12|    16|      1|   0|     29|
+#  M4     |      8|     3|      0|   2|     13|
+#  M5     |      0|     2|      0|   0|      2|
+#  Totals |     22|    23|      1|   2|     48|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.09 (MB), peak = 2629.93 (MB)
+#start 61th optimization iteration ...
+#   number of violations = 57
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      8|      4|   0|     13|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      6|    15|      0|      2|   0|     23|
+#  M4     |      8|     4|      0|      0|   4|     16|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     15|    24|      8|      6|   4|     57|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2535.98 (MB), peak = 2629.93 (MB)
+#start 62th optimization iteration ...
+#   number of violations = 46
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     3|      2|      2|   0|      7|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      7|    15|      0|      1|   0|     23|
+#  M4     |      4|     5|      0|      0|   3|     12|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     12|    26|      2|      3|   3|     46|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.28 (MB), peak = 2629.93 (MB)
+#start 63th optimization iteration ...
+#   number of violations = 59
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      6|      2|   0|      9|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      9|    15|      2|      1|   0|     27|
+#  M4     |      8|     6|      0|      0|   4|     18|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     18|    26|      8|      3|   4|     59|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.26 (MB), peak = 2629.93 (MB)
+#start 64th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      0|      0|   0|      2|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      9|    15|      2|      1|   0|     27|
+#  M4     |     10|     6|      0|      0|   3|     19|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     21|    26|      2|      1|   3|     53|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.04 (MB), peak = 2629.93 (MB)
+#start 65th optimization iteration ...
+#   number of violations = 57
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      2|     2|      8|      4|   0|     16|
+#  M2     |      1|     0|      0|      1|   0|      2|
+#  M3     |      9|    17|      0|      1|   0|     27|
+#  M4     |      6|     4|      0|      0|   1|     11|
+#  M5     |      0|     1|      0|      0|   0|      1|
+#  Totals |     18|    24|      8|      6|   1|     57|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.15 (MB), peak = 2629.93 (MB)
+#start 66th optimization iteration ...
+#   number of violations = 47
+#
+#  By Layer and Type:
+#
+#---------+-------+------+----+-------+
+#  -      | MetSpc| Short| Mar| Totals|
+#---------+-------+------+----+-------+
+#  M1     |      0|     2|   0|      2|
+#  M2     |      1|     0|   0|      1|
+#  M3     |      9|    15|   0|     24|
+#  M4     |      6|     6|   4|     16|
+#  M5     |      0|     4|   0|      4|
+#  Totals |     16|    27|   4|     47|
+#---------+-------+------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.27 (MB), peak = 2629.93 (MB)
+#start 67th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|     10|      2|   0|     14|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      8|    13|      0|      0|   0|     21|
+#  M4     |     10|     4|      0|      0|   3|     17|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     19|    22|     10|      2|   3|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.28 (MB), peak = 2629.93 (MB)
+#start 68th optimization iteration ...
+#   number of violations = 50
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     10|    16|      0|      0|   0|     26|
+#  M4     |      6|     6|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     18|    26|      2|      2|   2|     50|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.28 (MB), peak = 2629.93 (MB)
+#start 69th optimization iteration ...
+#   number of violations = 57
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      0|   0|     10|
+#  M2     |      1|     0|      0|      1|   0|      2|
+#  M3     |      8|    15|      2|      1|   0|     26|
+#  M4     |     10|     5|      0|      0|   2|     17|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     19|    24|     10|      2|   2|     57|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.26 (MB), peak = 2629.93 (MB)
+#start 70th optimization iteration ...
+#   number of violations = 51
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      2|      2|   0|      5|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      9|    14|      2|      1|   0|     26|
+#  M4     |      6|     7|      0|      0|   3|     16|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     16|    25|      4|      3|   3|     51|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.26 (MB), peak = 2629.93 (MB)
+#start 71th optimization iteration ...
+#   number of violations = 57
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      4|   0|     14|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      6|    15|      0|      0|   0|     21|
+#  M4     |     10|     5|      0|      0|   3|     18|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     17|    25|      8|      4|   3|     57|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.19 (MB), peak = 2629.93 (MB)
+#start 72th optimization iteration ...
+#   number of violations = 45
+#
+#  By Layer and Type:
+#
+#---------+-------+------+----+-------+
+#  -      | MetSpc| Short| Mar| Totals|
+#---------+-------+------+----+-------+
+#  M1     |      0|     2|   0|      2|
+#  M2     |      2|     0|   0|      2|
+#  M3     |     10|    16|   0|     26|
+#  M4     |      6|     5|   2|     13|
+#  M5     |      0|     2|   0|      2|
+#  Totals |     18|    25|   2|     45|
+#---------+-------+------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.28 (MB), peak = 2629.93 (MB)
+#start 73th optimization iteration ...
+#   number of violations = 54
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     1|      6|      2|   0|      9|
+#  M2     |      1|     0|      0|      0|   0|      1|
+#  M3     |      8|    16|      0|      0|   0|     24|
+#  M4     |     10|     4|      0|      0|   3|     17|
+#  M5     |      0|     3|      0|      0|   0|      3|
+#  Totals |     19|    24|      6|      2|   3|     54|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.26 (MB), peak = 2629.93 (MB)
+#start 74th optimization iteration ...
+#   number of violations = 56
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |     11|    14|      0|      0|   0|     25|
+#  M4     |      8|     7|      0|      0|   4|     19|
+#  M5     |      0|     4|      0|      0|   0|      4|
+#  Totals |     21|    27|      2|      2|   4|     56|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.28 (MB), peak = 2629.93 (MB)
+#start 75th optimization iteration ...
+#   number of violations = 53
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      8|    16|      0|      1|   0|     25|
+#  M4     |      8|     4|      0|      0|   2|     14|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     18|    24|      6|      3|   2|     53|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.28 (MB), peak = 2629.93 (MB)
+#start 76th optimization iteration ...
+#   number of violations = 48
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      2|      2|   0|      6|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      8|    16|      0|      1|   0|     25|
+#  M4     |      6|     5|      0|      0|   2|     13|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     16|    25|      2|      3|   2|     48|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.12 (MB), peak = 2629.93 (MB)
+#start 77th optimization iteration ...
+#   number of violations = 50
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      8|      0|   0|     10|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      7|    16|      0|      1|   0|     24|
+#  M4     |      6|     4|      0|      0|   2|     12|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     15|    24|      8|      1|   2|     50|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.10 (MB), peak = 2629.93 (MB)
+#start 78th optimization iteration ...
+#   number of violations = 43
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CShort| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     3|      0|   0|      3|
+#  M2     |      2|     0|      0|   0|      2|
+#  M3     |      7|    15|      1|   0|     23|
+#  M4     |      6|     5|      0|   2|     13|
+#  M5     |      0|     2|      0|   0|      2|
+#  Totals |     15|    25|      1|   2|     43|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.28 (MB), peak = 2629.93 (MB)
+#start 79th optimization iteration ...
+#   number of violations = 42
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+----+-------+
+#  -      | MetSpc| Short| CShort| Mar| Totals|
+#---------+-------+------+-------+----+-------+
+#  M1     |      0|     2|      0|   0|      2|
+#  M2     |      2|     0|      0|   0|      2|
+#  M3     |      6|    16|      1|   0|     23|
+#  M4     |      6|     5|      0|   2|     13|
+#  M5     |      0|     2|      0|   0|      2|
+#  Totals |     14|    25|      1|   2|     42|
+#---------+-------+------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2536.28 (MB), peak = 2629.93 (MB)
+#start 80th optimization iteration ...
+#   number of violations = 46
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      5|    16|      0|      1|   0|     22|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     11|    24|      6|      3|   2|     46|
+#---------+-------+------+-------+-------+----+-------+
+#
+#    number of process antenna violations = 45
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2536.28 (MB), peak = 2629.93 (MB)
+#Complete Detail Routing.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |       9593| 2479|       2299  ( 92.7%)|        180  (  7.3%)|
+#  M2 ( 2V)    |      22680| 1240|       1240  (100.0%)|          0  (  0.0%)|
+#  M3 ( 3H)    |      11998|  130|        103  ( 79.2%)|         27  ( 20.8%)|
+#  M4 ( 4V)    |       1084|    8|          8  (100.0%)|          0  (  0.0%)|
+#  M5 ( 5H)    |        140|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      45495| 3857|       3650  ( 94.6%)|        207  (  5.4%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 44452 um.
+#Total number of DRC violations = 46
+#Cpu time = 00:01:42
+#Elapsed time = 00:01:42
+#Increased memory = 13.14 (MB)
+#Total memory = 2534.37 (MB)
+#Peak memory = 2629.93 (MB)
+#
+#start routing for process antenna violation fix ...
+#- start antenna fix number of process antenna vio = 19.
+#- start antenna fix number of net violated process antenna rule = 15.
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      5|    16|      0|      1|   0|     22|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     11|    24|      6|      3|   2|     46|
+#---------+-------+------+-------+-------+----+-------+
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2535.20 (MB), peak = 2629.93 (MB)
+#
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |       9593| 2479|       2299  ( 92.7%)|        180  (  7.3%)|
+#  M2 ( 2V)    |      22551| 1268|       1268  (100.0%)|          0  (  0.0%)|
+#  M3 ( 3H)    |      12007|  174|        147  ( 84.5%)|         27  ( 15.5%)|
+#  M4 ( 4V)    |       1221|    8|          8  (100.0%)|          0  (  0.0%)|
+#  M5 ( 5H)    |        140|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      45512| 3929|       3722  ( 94.7%)|        207  (  5.3%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 44452 um.
+#Total number of DRC violations = 46
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#
+#
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |       9593| 2479|       2299  ( 92.7%)|        180  (  7.3%)|
+#  M2 ( 2V)    |      22551| 1268|       1268  (100.0%)|          0  (  0.0%)|
+#  M3 ( 3H)    |      12007|  174|        147  ( 84.5%)|         27  ( 15.5%)|
+#  M4 ( 4V)    |       1221|    8|          8  (100.0%)|          0  (  0.0%)|
+#  M5 ( 5H)    |        140|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      45512| 3929|       3722  ( 94.7%)|        207  (  5.3%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 44452 um.
+#Total number of DRC violations = 46
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#
+#
+#Start Post Route via swapping...
+#13.57% of area are rerouted by ECO routing.
+#   number of violations = 46
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      5|    16|      0|      1|   0|     22|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     11|    24|      6|      3|   2|     46|
+#---------+-------+------+-------+-------+----+-------+
+#
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2540.74 (MB), peak = 2629.93 (MB)
+#CELL_VIEW top,init has 46 DRC violations
+#Total number of DRC violations = 46
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#Post Route via swapping is done.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |       9593| 2479|       1290  ( 52.0%)|       1189  ( 48.0%)|
+#  M2 ( 2V)    |      22551| 1268|        225  ( 17.7%)|       1043  ( 82.3%)|
+#  M3 ( 3H)    |      12007|  174|         16  (  9.2%)|        158  ( 90.8%)|
+#  M4 ( 4V)    |       1221|    8|          2  ( 25.0%)|          6  ( 75.0%)|
+#  M5 ( 5H)    |        140|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      45512| 3929|       1533  ( 39.0%)|       2396  ( 61.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 44452 um.
+#
+#Start Post Route wire spreading..
+#
+#Start DRC checking..
+#   number of violations = 46
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      5|    16|      0|      1|   0|     22|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     11|    24|      6|      3|   2|     46|
+#---------+-------+------+-------+-------+----+-------+
+#
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2543.50 (MB), peak = 2629.93 (MB)
+#CELL_VIEW top,init has 46 DRC violations
+#Total number of DRC violations = 46
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#
+#Start data preparation for wire spreading...
+#
+#Data preparation is done on Fri Jun 26 00:00:33 2026
+#
+#
+#Start Post Route Wire Spread.
+#Done with 112 horizontal wires in 14 hboxes and 136 vertical wires in 14 hboxes.
+#Complete Post Route Wire Spread.
+#
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |       9615| 2479|       1290  ( 52.0%)|       1189  ( 48.0%)|
+#  M2 ( 2V)    |      22663| 1268|        225  ( 17.7%)|       1043  ( 82.3%)|
+#  M3 ( 3H)    |      12117|  174|         16  (  9.2%)|        158  ( 90.8%)|
+#  M4 ( 4V)    |       1228|    8|          2  ( 25.0%)|          6  ( 75.0%)|
+#  M5 ( 5H)    |        140|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      45764| 3929|       1533  ( 39.0%)|       2396  ( 61.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 44452 um.
+#
+#Start DRC checking..
+#   number of violations = 46
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      5|    16|      0|      1|   0|     22|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     11|    24|      6|      3|   2|     46|
+#---------+-------+------+-------+-------+----+-------+
+#
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2549.59 (MB), peak = 2629.93 (MB)
+#CELL_VIEW top,init has 46 DRC violations
+#Total number of DRC violations = 46
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#   number of violations = 46
+#
+#  By Layer and Type:
+#
+#---------+-------+------+-------+-------+----+-------+
+#  -      | MetSpc| Short| CutSpc| CShort| Mar| Totals|
+#---------+-------+------+-------+-------+----+-------+
+#  M1     |      0|     2|      6|      2|   0|     10|
+#  M2     |      2|     0|      0|      0|   0|      2|
+#  M3     |      5|    16|      0|      1|   0|     22|
+#  M4     |      4|     4|      0|      0|   2|     10|
+#  M5     |      0|     2|      0|      0|   0|      2|
+#  Totals |     11|    24|      6|      3|   2|     46|
+#---------+-------+------+-------+-------+----+-------+
+#
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 2542.61 (MB), peak = 2629.93 (MB)
+#CELL_VIEW top,init has 46 DRC violations
+#Total number of DRC violations = 46
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#Post Route wire spread is done.
+#
+#  Routing Statistics
+#
+#--------------+-----------+-----+---------------------+---------------------+
+#  Layer       | Length(um)| Vias|           Single-cut|            Multi-cut|
+#--------------+-----------+-----+---------------------+---------------------+
+#  GC ( 0H)    |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  M1 ( 1H)    |       9615| 2479|       1290  ( 52.0%)|       1189  ( 48.0%)|
+#  M2 ( 2V)    |      22663| 1268|        225  ( 17.7%)|       1043  ( 82.3%)|
+#  M3 ( 3H)    |      12117|  174|         16  (  9.2%)|        158  ( 90.8%)|
+#  M4 ( 4V)    |       1228|    8|          2  ( 25.0%)|          6  ( 75.0%)|
+#  M5 ( 5H)    |        140|    0|          0  (  0.0%)|          0  (  0.0%)|
+#  TOP_M ( 6V) |          0|    0|          0  (  0.0%)|          0  (  0.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#  Total       |      45764| 3929|       1533  ( 39.0%)|       2396  ( 61.0%)|
+#--------------+-----------+-----+---------------------+---------------------+
+#
+# Total half perimeter of net bounding box: 44452 um.
+#detailRoute Statistics:
+#Cpu time = 00:01:46
+#Elapsed time = 00:01:46
+#Increased memory = 16.15 (MB)
+#Total memory = 2537.37 (MB)
+#Peak memory = 2629.93 (MB)
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+#
+#globalDetailRoute statistics:
+#Cpu time = 00:01:55
+#Elapsed time = 00:01:55
+#Increased memory = 68.40 (MB)
+#Total memory = 2530.01 (MB)
+#Peak memory = 2629.93 (MB)
+#Number of warnings = 23
+#Total number of warnings = 26
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalDetailRoute on Fri Jun 26 00:00:35 2026
+#
+% End globalDetailRoute (date=06/26 00:00:35, total cpu=0:01:55, real=0:01:56, peak res=2629.9M, current mem=2526.4M)
+#Default setup view is reset to SlowView.
+#Default setup view is reset to SlowView.
+AAE_INFO: Post Route call back at the end of routeDesign
+#routeDesign: cpu time = 00:01:55, elapsed time = 00:01:56, memory = 2514.50 (MB), peak = 2629.93 (MB)
+#
+#  Scalability Statistics
+#
+#----------------------------+---------+-------------+------------+
+#  routeDesign               | cpu time| elapsed time| scalability|
+#----------------------------+---------+-------------+------------+
+#  Pre Callback              | 00:00:00|     00:00:00|         1.0|
+#  Post Callback             | 00:00:00|     00:00:00|         1.0|
+#  Timing Data Generation    | 00:00:07|     00:00:08|         0.9|
+#  DB Import                 | 00:00:00|     00:00:00|         1.0|
+#  DB Export                 | 00:00:00|     00:00:00|         1.0|
+#  Cell Pin Access           | 00:00:00|     00:00:00|         1.0|
+#  Data Preparation          | 00:00:00|     00:00:00|         1.0|
+#  Global Routing            | 00:00:01|     00:00:01|         1.0|
+#  Track Assignment          | 00:00:00|     00:00:00|         1.0|
+#  Detail Routing            | 00:01:42|     00:01:42|         1.0|
+#  Antenna Fixing            | 00:00:00|     00:00:00|         1.0|
+#  Post Route Via Swapping   | 00:00:01|     00:00:01|         1.0|
+#  Post Route Wire Spreading | 00:00:03|     00:00:03|         1.0|
+#  Entire Command            | 00:01:55|     00:01:56|         1.0|
+#----------------------------+---------+-------------+------------+
+#
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   NRIG-1303            1  The congestion map does not match the GC...
+WARNING   NRIF-38              1  Option %s%s is not a Boolean option.     
+WARNING   NRIF-95             51  Option setNanoRouteMode -routeTopRouting...
+WARNING   TCLCMD-1403          1  '%s'                                     
+*** Message Summary: 54 warning(s), 0 error(s)
+
+#% End routeDesign (date=06/26 00:00:35, total cpu=0:01:55, real=0:01:56, peak res=2629.9M, current mem=2514.5M)
+<CMD> optDesign -postRoute -drv
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 2514.6M, totSessionCpu=0:04:46 **
+*** optDesign #2 [begin] () : totSession cpu/real = 0:04:46.5/0:22:47.1 (0.2), mem = 3016.5M
+GigaOpt running with 1 threads.
+*** InitOpt #1 [begin] (optDesign #2) : totSession cpu/real = 0:04:46.5/0:22:47.1 (0.2), mem = 3016.5M
+**INFO: User settings:
+setNanoRouteMode -route_detail_use_lef_pin_taper_rule                                     true
+setNanoRouteMode -extract_rc_model_file                                                   rc_model.bin
+setNanoRouteMode -route_extract_third_party_compatible                                    false
+setNanoRouteMode -route_global_exp_timing_driven_std_delay                                41.3
+setNanoRouteMode -route_global_exp_timing_driven_use_tif_timing_engine_for_import_design  false
+setNanoRouteMode -timingEngine                                                            .timing_file_28808.tif.gz
+setDesignMode -process                                                                    180
+setExtractRCMode -coupling_c_th                                                           3
+setExtractRCMode -engine                                                                  preRoute
+setExtractRCMode -relative_c_th                                                           0.03
+setExtractRCMode -total_c_th                                                              5
+setUsefulSkewMode -opt_skew_eco_route                                                     false
+setDelayCalMode -enable_high_fanout                                                       true
+setDelayCalMode -enable_ideal_seq_async_pins                                              false
+setDelayCalMode -eng_enablePrePlacedFlow                                                  false
+setDelayCalMode -engine                                                                   aae
+setDelayCalMode -ignoreNetLoad                                                            false
+setDelayCalMode -socv_accuracy_mode                                                       low
+setOptMode -opt_view_pruning_hold_views_active_list                                       { FastView }
+setOptMode -opt_view_pruning_setup_views_active_list                                      { SlowView }
+setOptMode -opt_view_pruning_setup_views_persistent_list                                  { SlowView}
+setOptMode -opt_view_pruning_tdgr_setup_views_persistent_list                             { SlowView}
+setOptMode -opt_drv_margin                                                                0
+setOptMode -opt_drv                                                                       true
+setOptMode -opt_setup_target_slack                                                        0
+setSIMode -separate_delta_delay_on_data                                                   true
+setAnalysisMode -checkType                                                                setup
+setAnalysisMode -clkSrcPath                                                               true
+setAnalysisMode -clockPropagation                                                         sdcControl
+setAnalysisMode -skew                                                                     true
+setAnalysisMode -virtualIPO                                                               false
+
+**INFO: setDesignMode -flowEffort standard -> setting 'setOptMode -allEndPoints true' for the duration of this command.
+Disable merging buffers from different footprints for postRoute code for non-MSV designs
+Need call spDPlaceInit before registerPrioInstLoc.
+Switching SI Aware to true by default in postroute mode   
+AAE_INFO: switching setDelayCal -siAware from false to true ...
+AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+**WARN: (IMPOPT-7320):	Glitch fixing has been disabled since glitch reporting is disabled. Glitch reporting can be enabled using command setSIMode -enable_glitch_report true
+**INFO: Using Advanced Metric Collection system.
+**optDesign ... cpu = 0:00:00, real = 0:00:01, mem = 2496.7M, totSessionCpu=0:04:47 **
+Existing Dirty Nets : 0
+New Signature Flow (optDesignCheckOptions) ....
+#Taking db snapshot
+#Taking db snapshot ... done
+Begin checking placement ... (start mem=3012.6M, init mem=3012.6M)
+*info: Placed = 540           
+*info: Unplaced = 0           
+Placement Density:1.26%(17495/1386268)
+Placement Density (including fixed std cells):1.26%(17495/1386268)
+Finished checkPlace (total: cpu=0:00:00.0, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=3012.6M)
+#optDebug: { P: 180 W: 7195 FE: standard PE: none LDR: 1}
+
+**ERROR: (IMPOPT-6080):	AAE-SI Optimization can only be turned on when the timing analysis mode is set to OCV.
+
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   final
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   opt_design_drv_postroute
+Info: Summary of CRR changes:
+      - Timing transform commits:       0
+Info: Destroy the CCOpt slew target map.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPOPT-7320          1  Glitch fixing has been disabled since gl...
+ERROR     IMPOPT-6080          1  AAE-SI Optimization can only be turned o...
+*** Message Summary: 1 warning(s), 1 error(s)
+
+*** InitOpt #1 [finish] (optDesign #2) : cpu/real = 0:00:00.4/0:00:00.6 (0.8), totSession cpu/real = 0:04:46.9/0:22:47.7 (0.2), mem = 3012.6M
+*** optDesign #2 [finish] () : cpu/real = 0:00:00.4/0:00:00.6 (0.8), totSession cpu/real = 0:04:46.9/0:22:47.7 (0.2), mem = 3012.6M
+
+<CMD> verify_drc
+#-check_same_via_cell true               # bool, default=false, user setting
+ *** Starting Verify DRC (MEM: 3016.7) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+
+  Verification Complete : 250 Viols.
+
+ Violation Summary By Layer and Type:
+
+	          Short   MetSpc   CutSpc   CShort      Mar   Totals
+	M1            2        0        0        0        0        2
+	V2            0        0        6        2        0        8
+	M2            0        2        0        0        0        2
+	M3           23        5        0        0        0       28
+	V4            0        0        0        1        0        1
+	M4            7        4        0        0        2       13
+	M5            4        0        0        0        0        4
+	TOP_M       192        0        0        0        0      192
+	Totals      228       11        6        3        2      250
+
+ *** End Verify DRC (CPU TIME: 0:00:00.7  ELAPSED TIME: 0:00:01.0  MEM: 256.1M) ***
+
+<CMD> verify_connectivity
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Fri Jun 26 00:02:49 2026
+
+Design Name: top
+Database Units: 1000
+Design Boundary: (0.0000, 0.0000) (1799.8400, 1799.8400)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+Net VSS: has an unconnected terminal, has special routes with opens, dangling Wire.
+Net VDD: has an unconnected terminal, has special routes with opens, dangling Wire.
+Net PAD_G1/VDD: no routing.
+Net PAD_I1/VSS: no routing.
+Net PAD_G3/VDD: no routing.
+Net PAD_I3/VSS: no routing.
+Net PAD_G5/VDD: no routing.
+Net PAD_I5/VSS: no routing.
+Net PAD_G7/VDD: no routing.
+Net PAD_I7/VSS: no routing.
+Net I1/VDD: no routing.
+Net I1/VSS: no routing.
+Net I2/VDD: no routing.
+Net I2/VSS: no routing.
+Net I4/VDD: no routing.
+Net I4/VSS: no routing.
+Net I5/VDD: no routing.
+Net I5/VSS: no routing.
+Net I6/VDD: no routing.
+Net I6/VSS: no routing.
+Net I7/VDD: no routing.
+Net I7/VSS: no routing.
+Net I8/VDD: no routing.
+Net I8/VSS: no routing.
+Net I9/VDD: no routing.
+Net I9/VSS: no routing.
+Net I10/VDD: no routing.
+Net I10/VSS: no routing.
+Net I11/VDD: no routing.
+Net I11/VSS: no routing.
+Net I12/VDD: no routing.
+Net I12/VSS: no routing.
+Net I13/VDD: no routing.
+Net I13/VSS: no routing.
+Net I14/VDD: no routing.
+Net I14/VSS: no routing.
+Net I15/VDD: no routing.
+Net I15/VSS: no routing.
+Net I16/VDD: no routing.
+Net I16/VSS: no routing.
+Net I17/VDD: no routing.
+Net I17/VSS: no routing.
+Net I18/VDD: no routing.
+Net I18/VSS: no routing.
+Net I19/VDD: no routing.
+Net I19/VSS: no routing.
+Net I20/VDD: no routing.
+Net I20/VSS: no routing.
+Net I21/VDD: no routing.
+Net I21/VSS: no routing.
+Net I22/VDD: no routing.
+Net I22/VSS: no routing.
+Net I23/VDD: no routing.
+Net I23/VSS: no routing.
+Net I24/VDD: no routing.
+Net I24/VSS: no routing.
+Net I25/VDD: no routing.
+Net I25/VSS: no routing.
+Net I26/VDD: no routing.
+Net I26/VSS: no routing.
+Net I27/VDD: no routing.
+Net I27/VSS: no routing.
+Net I28/VDD: no routing.
+Net I28/VSS: no routing.
+Net I29/VDD: no routing.
+Net I29/VSS: no routing.
+Net I30/VDD: no routing.
+Net I30/VSS: no routing.
+Net I31/VDD: no routing.
+Net I31/VSS: no routing.
+Net I32/VDD: no routing.
+Net I32/VSS: no routing.
+Net I33/VDD: no routing.
+Net I33/VSS: no routing.
+Net I34/VDD: no routing.
+Net I34/VSS: no routing.
+Net Pcornerlr/VDD: no routing.
+Net Pcornerlr/VSS: no routing.
+Net Pcornerll/VDD: no routing.
+Net Pcornerll/VSS: no routing.
+Net Pcornerur/VDD: no routing.
+Net Pcornerur/VSS: no routing.
+Net Pcornerul/VDD: no routing.
+Net Pcornerul/VSS: no routing.
+
+Begin Summary 
+    82 Problem(s) (IMPVFC-98): Net has no global routing and no special routing.
+    7 Problem(s) (IMPVFC-96): Terminal(s) are not connected.
+    121 Problem(s) (IMPVFC-200): Special Wires: Pieces of the net are not connected together.
+    549 Problem(s) (IMPVFC-94): The net has dangling wire(s).
+    759 total info(s) created.
+End Summary
+
+End Time: Fri Jun 26 00:02:49 2026
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 759 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.1  MEM: 0.000M)
+
+
+*** Memory Usage v#2 (Current mem = 3022.762M, initial mem = 839.188M) ***
+*** Message Summary: 1386 warning(s), 4 error(s)
+
+--- Ending "Innovus" (totcpu=0:05:13, real=0:28:59, mem=3022.8M) ---
