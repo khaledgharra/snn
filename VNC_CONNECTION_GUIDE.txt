@@ -1,0 +1,186 @@
+============================================================
+  How to connect to the lab (SSH + VNC) — reference notes
+  Last updated: 2026-07-15
+============================================================
+
+--- 1. CONNECT VIA SSH ---
+
+From a Mac Terminal:
+    ssh epkgms@<lab_ip>          e.g. ssh epkgms@132.68.59.66
+
+Do NOT use "ssh -X" for this workflow — it tries to forward
+GUI windows back to an X server on your Mac (which doesn't
+have one, e.g. no XQuartz), and everything closes the moment
+you disconnect. We use vncserver + SSH port forwarding (-L)
+instead, which runs a persistent virtual desktop on the lab
+machine itself. See section 4 for why.
+
+
+--- 2. START (OR REUSE) A VNC SESSION ON THE LAB MACHINE ---
+
+Check if one is already running:
+    vncserver -list
+
+If you need a new one, pick a resolution with -geometry:
+    vncserver -geometry 1920x1080
+
+Output looks like:
+    New 'vlsi-ria66:1 (epkgms)' desktop is vlsi-ria66:1
+
+The number after the colon (":1" here) is the DISPLAY number.
+VNC port = 5900 + display number.
+    :1  -> port 5901
+    :21 -> port 5921
+    :42 -> port 5942
+
+NOTE: the home directory (~/.vnc) is shared (NFS) across ALL
+lab machines (vlsi-ria87, vlsi-ria66, vlsi-omega21, etc.), so
+old session logs/pids from other hosts will show up too —
+that's normal, ignore ones that aren't today's host.
+
+To kill a session:
+    vncserver -kill :<display_number>
+
+
+--- 3. TUNNEL THE PORT AND CONNECT FROM YOUR MAC ---
+
+In one Mac Terminal tab, open the tunnel (keep it open/logged
+in the whole time you're using VNC):
+    ssh -L <port>:localhost:<port> epkgms@<lab_ip>
+    e.g. ssh -L 5901:localhost:5901 epkgms@132.68.59.66
+
+In a SEPARATE Mac Terminal tab (not inside the SSH session —
+must run locally on the Mac), open the built-in VNC viewer
+(Screen Sharing — free, no install needed):
+    open vnc://127.0.0.1:<port>
+    e.g. open vnc://127.0.0.1:5901
+
+If prompted for a password, it's the VNC password (set via
+`vncpasswd` on the lab machine), NOT your SSH/account password.
+Sometimes it connects with no prompt at all — macOS Keychain
+may have cached it from a previous session.
+
+
+--- 4. WHY -L INSTEAD OF -X ---
+
+-X  = forwards the X11 protocol so GUI windows try to render
+      on an X server on YOUR Mac. Needs XQuartz installed,
+      fragile for big GUI apps, and dies when you disconnect.
+
+-L  = just tunnels a raw TCP port. Used here to reach
+      vncserver's own port. vncserver runs its own independent
+      virtual desktop (Xvnc) ON THE LAB MACHINE, which keeps
+      running even after you disconnect. VNC just streams a
+      picture of that remote screen back to you. This is what
+      we want for a persistent Innovus session.
+
+
+--- 5. RUNNING INNOVUS ONCE CONNECTED ---
+
+Inside a terminal on the remote desktop (or the SSH session,
+same machine):
+    bash                       (switch out of csh/tcsh first)
+    export DISPLAY=:<n>        (match the display number, e.g. :1)
+    cd ~/Desktop/khaled/des/innovus
+    git pull origin master     (get latest files from Mac, if needed)
+    innovus &
+
+Then follow des/innovus/INNOVUS_FLOW.txt for the actual P&R flow.
+
+
+============================================================
+  PROBLEMS I HIT + SOLUTIONS
+============================================================
+
+PROBLEM: "export: Command not found."
+CAUSE:   Default shell is csh/tcsh, not bash — csh uses
+         different syntax for env vars.
+FIX:     Either run `bash` first, then `export VAR=value`,
+         or stay in csh and use: `setenv VAR value`
+         (no "=" sign in csh's setenv).
+
+PROBLEM: Connected to VNC but screen is completely BLACK.
+CAUSE:   ~/.vnc/xstartup never launches a window manager
+         (or is empty/broken), so there's just a bare X
+         root window with nothing on it.
+FIX:     Check `cat ~/.vnc/xstartup`. It needs at least a
+         window manager line (e.g. `twm &`) and ideally a
+         terminal (`xterm &`) so you have something to work
+         with. After editing, `chmod +x ~/.vnc/xstartup`,
+         then `vncserver -kill :<n>` and start a fresh
+         `vncserver -geometry ...`.
+
+PROBLEM: Screen turned GREY but still nothing else visible.
+CAUSE:   A window manager (twm) started, but twm doesn't
+         open any windows automatically — you only get a
+         menu by clicking on the desktop, unless xstartup
+         also launches something like `xterm &`.
+FIX:     Add `xterm &` (or similar) to xstartup.
+
+PROBLEM: Heredoc (`cat > file << 'EOF' ... EOF`) got stuck,
+         terminal kept showing "?" prompts no matter what
+         was typed, Ctrl+C / Ctrl+Z did nothing.
+CAUSE:   tcsh/csh handles quoted heredoc terminators (`'EOF'`)
+         differently from bash — it may wait for the literal
+         string `'EOF'` (quotes included) instead of just
+         `EOF`, so it never sees the closing line.
+FIX:     Avoid heredocs in csh entirely — use `nano` to edit
+         files instead. If already stuck, try typing the exact
+         literal terminator including quotes, or just close
+         the Terminal tab and reconnect via SSH (safe — it
+         doesn't affect any already-running vncserver process).
+
+PROBLEM: `open vnc://...` gives "Couldn't get a file
+         descriptor referring to the console".
+CAUSE:   Ran `open` INSIDE the SSH session on the lab machine
+         (Linux `open` is a different command that needs a
+         real console) instead of in a local Mac Terminal tab.
+FIX:     Run `open vnc://127.0.0.1:<port>` in a Terminal tab
+         that is NOT ssh'd into anything — just your Mac itself.
+
+PROBLEM: A popup dialog (e.g. "Authentication Required" /
+         "Smart Card Manager") keeps reappearing no matter
+         how many times you click Cancel.
+CAUSE:   A background service (in one case: `gsd-smartcard`,
+         GNOME's smart-card monitor) keeps re-triggering it.
+FIX:     Find and kill the process that owns it — you can
+         kill your OWN processes without sudo:
+             ps aux | grep -i -E "colord|smart|card|polkit"
+             kill -9 <pid> <pid>
+         `xkill` (click on the offending window to force-close
+         it) is a faster alternative, BUT it can fail with
+         "unable to grab cursor" if the dialog itself has
+         grabbed input focus — in that case, killing the
+         process directly is the reliable option.
+
+PROBLEM: Wasn't sure which ~/.vnc/xstartup was "the right
+         one" after multiple edits.
+CAUSE:   ~/.vnc/xstartup gets overwritten each time you edit
+         it — check timestamps (`ls -la ~/.vnc/`) to tell which
+         file is actually the original vs. something edited
+         later in a session. Look for `xstartup.bak` /
+         `xstartup.old` as likely original/instructor-provided
+         copies.
+FIX:     `cat` both candidate files, compare, then restore
+         the correct one with:
+             cp ~/.vnc/xstartup.old ~/.vnc/xstartup
+             chmod +x ~/.vnc/xstartup
+         (In this case, xstartup.old = original xstartup.bak
+         plus one extra `xterm &` line the instructor added.)
+
+
+============================================================
+  QUICK REFERENCE — FULL SEQUENCE
+============================================================
+1. ssh epkgms@<lab_ip>
+2. vncserver -list                      (check for existing session)
+   vncserver -geometry 1920x1080        (or start new one)
+3. (new Mac tab) ssh -L <port>:localhost:<port> epkgms@<lab_ip>
+4. (new Mac tab, local — not ssh'd) open vnc://127.0.0.1:<port>
+5. Enter VNC password if asked
+6. Inside remote desktop/terminal:
+     bash
+     export DISPLAY=:<n>
+     cd ~/Desktop/khaled/des/innovus
+     innovus &
+============================================================
