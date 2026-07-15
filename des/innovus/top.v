@@ -1,4 +1,8 @@
 
+
+
+
+
 module pc3d01(CIN, PAD);
 inout PAD;
 output CIN;

@@ -1,16 +1,33 @@
+catch { setDesignMode -process 180 }
 catch { setAnalysisMode -analysisType bcwc }
 catch { setAnalysisMode -clkSrcPath true }
 catch { setAnalysisMode -clockPropagation sdcControl }
 catch { setAnalysisMode -virtualIPO false }
-catch { setExtractRCMode  -engine preRoute }
+catch { setOptMode -opt_view_pruning_hold_views_active_list { FastView } }
+catch { setOptMode -opt_view_pruning_setup_views_active_list { SlowView } }
+catch { setOptMode -opt_view_pruning_setup_views_persistent_list { SlowView} }
+catch { setOptMode -opt_view_pruning_tdgr_setup_views_persistent_list { SlowView} }
+catch { setOptMode -opt_drv_margin 0 }
+catch { setOptMode -opt_drv true }
+catch { setOptMode -opt_setup_target_slack 0 }
+catch { setExtractRCMode  -engine preRoute -total_c_th 5 -relative_c_th 0.03 -coupling_c_th 3 }
+catch {setNanoRouteMode -quiet -route_detail_fix_antenna true}
 catch {setNanoRouteMode -quiet -route_extract_third_party_compatible false}
-catch {setNanoRouteMode -quiet -route_global_exp_timing_driven_use_tif_timing_engine_for_import_design true}
+catch {setNanoRouteMode -quiet -route_global_exp_timing_driven_std_delay 41.300000}
+catch {setNanoRouteMode -quiet -route_global_exp_timing_driven_use_tif_timing_engine_for_import_design false}
 catch {setNanoRouteMode -quiet -route_with_si_driven false}
 catch {setNanoRouteMode -quiet -route_with_timing_driven false}
 
 catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
+catch { setUsefulSkewMode -opt_skew_eco_route false }
+catch { setSrouteMode -padPinLayerRange {M1 TOP_M} }
+catch { setSrouteMode -padPinTarget nearestTarget }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -enable_ideal_seq_async_pins false }
+catch { setDelayCalMode -eng_enablePrePlacedFlow false }
 catch { setDelayCalMode -engine aae }
 catch { setDelayCalMode -ignoreNetLoad false }
+catch { setDelayCalMode -socv_accuracy_mode low }
 catch { setAddRingMode -avoid_short false }
 catch { setAddRingMode -extend_over_row false }
 catch { setAddRingMode -ignore_rows false }
@@ -20,10 +37,11 @@ catch { setAddRingMode -skip_crossing_trunks none }
 catch { setAddRingMode -skip_via_on_pin standardcell }
 catch { setAddRingMode -skip_via_on_wire_shape noshape }
 catch { setAddRingMode -stacked_via_bottom_layer M1 }
-catch { setAddRingMode -stacked_via_top_layer M5 }
+catch { setAddRingMode -stacked_via_top_layer TOP_M }
 catch { setImportMode -discardFloatingVNets false }
 catch { setImportMode -keepEmptyModule false }
 catch { setImportMode -treatUndefinedCellAsBbox false }
+catch { setSIMode -separate_delta_delay_on_data true }
 catch { setFPlanMode -cellsForExtraSites {} }
 catch { setFPlanMode -defaultRowPatternSite {} }
 catch { setFPlanMode -defaultTechSite CoreSite }

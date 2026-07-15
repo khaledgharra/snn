@@ -1,0 +1,128 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sat Jun 27 17:14:55 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v23.33-s082_1 (64bit) 11/13/2024 14:07 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 23.33-s082_1 NR241029-2256/23_13-UB (database version 18.20.652_1) {superthreading v2.20}
+#@(#)CDS: AAE 23.13-s019 (64bit) 11/13/2024 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 23.13-s028_1 () Nov 11 2024 03:58:52 ( )
+#@(#)CDS: SYNTECH 23.13-s009_1 () Oct 30 2024 09:17:13 ( )
+#@(#)CDS: CPE v23.13-s062
+#@(#)CDS: IQuantus/TQuantus 23.1.1-s235 (64bit) Fri Sep 27 22:21:33 PDT 2024 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+getVersion
+getVersion
+win
+set defHierChar /
+set init_verilog top.v
+set init_top_cell top
+set init_io_file top.io
+set init_mmmc_file mmmc.view
+set init_pwr_net {VDD VDDC VDDO}
+set init_gnd_net {VSS VSSC VSSO}
+set init_assign_buffer 1
+setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+set delaycal_input_transition_delay 120ps
+set conf_in_tran_delay 120.0ps
+set conf_ioOri R0
+set init_abstract_view abstract
+set init_layout_view layout
+set init_lef_file {/users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef /users/iit/cadence/tsl018b/lef/tsl18fs120.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+set init_design_uniquify 1
+set load_netlist_ignore_undefined_cell 1
+set init_verilog_tolerate_port_mismatch 0
+set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+set timing_enable_default_delay_arc 1
+init_design
+floorPlan -site CoreSite -d 1799.84 1799.84 75.6 75.6 75.04 75.04
+setPreference ConstraintUserYGrid 0.01
+setPreference ConstraintUserXGrid 0.01
+globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+globalNetConnect VSSC -type pgpin -pin VSSC -inst * -module {}
+globalNetConnect VDDC -type pgpin -pin VDDC -inst * -module {}
+globalNetConnect VDD -type tiehi -module {}
+globalNetConnect VSS -type tielo -module {}
+deselectAll
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer M5 -stacked_via_bottom_layer M1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+addRing -nets {VDD VSS} -around default_power_domain -layer {top M5 bottom M5 left M4 right M4} -width 6 -spacing 1.8 -center 1 -jog_distance 0.56 -threshold 0.56
+addStripe -nets {VDD VSS} -layer M4 -direction vertical -width 6 -spacing 1.8 -set_to_set_distance 100 -start_from left -stacked_via_top_layer M5 -stacked_via_bottom_layer M1 -ybottom_offset 75.04 -ytop_offset 75.04
+setSrouteMode -padPinLayerRange {M1 M5} -padPinTarget nearestTarget
+sroute -connect { corePin padRing } -layerChangeRange { M1 M5 } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort } -nets { VDD VSS }
+createRouteBlk -layer {M3 M4 M5} -box 0 0 1799.84 75.04 -name blk_bot
+createRouteBlk -layer {M3 M4 M5} -box 0 1724.80 1799.84 1799.84 -name blk_top
+createRouteBlk -layer {M3 M4 M5} -box 0 0 75.60 1799.84 -name blk_left
+createRouteBlk -layer {M3 M4 M5} -box 1724.24 0 1799.84 1799.84 -name blk_right
+getIoFlowFlag
+setPlaceMode -prerouteAsObs {3 4 5 6}
+getDesignMode -user -bottomRoutingLayer
+getDesignMode -user -topRoutingLayer
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -drouteAutoStop 0
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -drouteFixAntenna 0
+setNanoRouteMode -quiet -droutePostRouteSwapVia {}
+setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+setNanoRouteMode -quiet -drouteUseMultiCutViaEffort {}
+setNanoRouteMode -quiet -drouteOnGridOnly 0
+setNanoRouteMode -quiet -routeIgnoreAntennaTopCellPin 0
+setNanoRouteMode -quiet -timingEngine {}
+setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+setPlaceMode -reset
+setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxDensity 0.3 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+getDesignMode -user -bottomRoutingLayer
+getDesignMode -user -topRoutingLayer
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -drouteEndIteration default
+setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+setPlaceMode -fp false
+place_design
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { M1(1) TOP_M(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { M1(1) TOP_M(6) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { M1(1) TOP_M(6) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { M1(1) TOP_M(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { M1(1) TOP_M(6) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { M1(1) TOP_M(6) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { M1(1) TOP_M(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { M1(1) TOP_M(6) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { M1(1) TOP_M(6) }
+zoomBox 357.49900 432.24000 1610.21400 1553.68700
+zoomBox 733.96900 824.20300 1387.89600 1409.60700
+zoomBox 892.61600 989.37900 1294.20900 1348.89000
+zoomBox 733.96900 824.20300 1387.89600 1409.60700
+zoomBox 475.63700 555.24000 1540.44900 1508.47400
+zoomBox 54.98700 117.28000 1788.85700 1669.46400
+zoomBox -137.38800 -83.01000 1902.46000 1743.08900
+zoomBox 54.98600 117.28000 1788.85700 1669.46500
+getDesignMode -user -bottomRoutingLayer
+getDesignMode -user -topRoutingLayer
+setNanoRouteMode -quiet -drouteFixAntenna 1
+setNanoRouteMode -quiet -routeInsertAntennaDiode 0
+setNanoRouteMode -quiet -routeWithTimingDriven 0
+setNanoRouteMode -quiet -routeWithEco 0
+setNanoRouteMode -quiet -routeWithLithoDriven 0
+setNanoRouteMode -quiet -droutePostRouteLithoRepair 0
+setNanoRouteMode -quiet -routeWithSiDriven 0
+setNanoRouteMode -quiet -drouteAutoStop 0
+setNanoRouteMode -quiet -routeSelectedNetOnly 0
+getDesignMode -quiet -topRoutingLayer
+getDesignMode -quiet -bottomRoutingLayer
+setNanoRouteMode -quiet -drouteEndIteration 1
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+verify_drc

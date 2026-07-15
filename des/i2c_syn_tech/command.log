@@ -10103,3 +10103,4 @@ change_selection [get_cells U260]
 write -hierarchy -format ddc
 write -hierarchy -format ddc
 write -hierarchy -format ddc
+exit

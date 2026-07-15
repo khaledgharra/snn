@@ -1,0 +1,260 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sat Jun 27 17:24:42 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v23.33-s082_1 (64bit) 11/13/2024 14:07 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 23.33-s082_1 NR241029-2256/23_13-UB (database version 18.20.652_1) {superthreading v2.20}
+#@(#)CDS: AAE 23.13-s019 (64bit) 11/13/2024 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 23.13-s028_1 () Nov 11 2024 03:58:52 ( )
+#@(#)CDS: SYNTECH 23.13-s009_1 () Oct 30 2024 09:17:13 ( )
+#@(#)CDS: CPE v23.13-s062
+#@(#)CDS: IQuantus/TQuantus 23.1.1-s235 (64bit) Fri Sep 27 22:21:33 PDT 2024 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+getVersion
+getVersion
+win
+set defHierChar /
+set init_verilog top.v
+set init_top_cell top
+set init_io_file top.io
+set init_mmmc_file mmmc.view
+set init_pwr_net {VDD VDDC VDDO}
+set init_gnd_net {VSS VSSC VSSO}
+set init_assign_buffer 1
+setImportMode -keepEmptyModule 0 -treatUndefinedCellAsBbox 0
+set init_import_mode { -keepEmptyModule 0 -treatUndefinedCellAsBbox 0}
+set delaycal_input_transition_delay 120ps
+set conf_in_tran_delay 120.0ps
+set conf_ioOri R0
+set init_abstract_view abstract
+set init_layout_view layout
+set init_lef_file {/users/iit/cadence/tsl018b/lef/tsl18_6lm_tech.lef /users/iit/cadence/tsl018b/lef/tsl18fs120.lef /tools/kits/tower/TS18SL_6_01/tsl18pio320sl_Rev_2021.11/lib/lef/stack/PIO320SL_6M1L.lef}
+set init_design_uniquify 1
+set load_netlist_ignore_undefined_cell 1
+set init_verilog_tolerate_port_mismatch 0
+set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+get_message -id GLOBAL-100 -suppress
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+set timing_enable_default_delay_arc 1
+init_design
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 0.916898362681 0.011569 75 75 75 75
+uiSetTool select
+getIoFlowFlag
+fit
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 0.916558581928 0.011565 75.24 75.24 75.04 75.04
+uiSetTool select
+getIoFlowFlag
+fit
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow io -layer {top TOP_M bottom TOP_M left M5 right M5} -width {top 6 bottom 6 left 6 right 6} -spacing {top 1.8 bottom 1.8 left 1.8 right 1.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow io -layer {top TOP_M bottom TOP_M left M5 right M5} -width {top 6 bottom 6 left 6 right 6} -spacing {top 1.8 bottom 1.8 left 1.8 right 1.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {VSS VDD} -layer M5 -direction vertical -width 6 -spacing 1.8 -set_to_set_distance 100 -start_from left -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit TOP_M -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit TOP_M -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer TOP_M -stacked_via_bottom_layer M1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {VSS VDD} -layer M5 -direction vertical -width 6 -spacing 1.8 -set_to_set_distance 100 -start_from left -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit TOP_M -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit TOP_M -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None
+setPlaceMode -prerouteAsObs {3 4 5 6}
+getDesignMode -user -bottomRoutingLayer
+getDesignMode -user -topRoutingLayer
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -drouteAutoStop 0
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -drouteFixAntenna 0
+setNanoRouteMode -quiet -droutePostRouteSwapVia {}
+setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+setNanoRouteMode -quiet -drouteUseMultiCutViaEffort {}
+setNanoRouteMode -quiet -drouteOnGridOnly 0
+setNanoRouteMode -quiet -routeIgnoreAntennaTopCellPin 0
+setNanoRouteMode -quiet -timingEngine {}
+setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+setPlaceMode -reset
+setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxDensity 0.3 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+setPlaceMode -fp false
+place_design
+getCTSMode -obs_engine -quiet
+getCTSMode -obs_engine -quiet
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { M1(1) TOP_M(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { M1(1) TOP_M(6) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { M1(1) TOP_M(6) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { M1(1) TOP_M(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { M1(1) TOP_M(6) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { M1(1) TOP_M(6) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin corePin floatingStripe } -layerChangeRange { M1(1) TOP_M(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { M1(1) TOP_M(6) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { M1(1) TOP_M(6) }
+getDesignMode -user -bottomRoutingLayer
+getDesignMode -user -topRoutingLayer
+setNanoRouteMode -quiet -drouteFixAntenna 1
+setNanoRouteMode -quiet -routeInsertAntennaDiode 0
+setNanoRouteMode -quiet -routeWithTimingDriven 0
+setNanoRouteMode -quiet -routeWithEco 0
+setNanoRouteMode -quiet -routeWithLithoDriven 0
+setNanoRouteMode -quiet -droutePostRouteLithoRepair 0
+setNanoRouteMode -quiet -routeWithSiDriven 0
+setNanoRouteMode -quiet -drouteAutoStop 0
+setNanoRouteMode -quiet -routeSelectedNetOnly 0
+getDesignMode -quiet -topRoutingLayer
+getDesignMode -quiet -bottomRoutingLayer
+setNanoRouteMode -quiet -drouteEndIteration 1
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report top.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+setLayerPreference M2 -isVisible 0
+setLayerPreference V3 -isVisible 0
+setLayerPreference M3 -isVisible 0
+setLayerPreference V4 -isVisible 0
+setLayerPreference M4 -isVisible 0
+setLayerPreference V5 -isVisible 0
+setLayerPreference M5 -isVisible 0
+setLayerPreference TOP_V -isVisible 0
+setLayerPreference TOP_M -isVisible 0
+zoomBox 425.89400 497.59700 1585.65800 1535.83300
+zoomBox 520.64000 593.91900 1506.44000 1476.42000
+zoomBox 601.17500 675.79200 1439.10500 1425.91800
+zoomBox 669.62900 745.38400 1381.87000 1382.99200
+zoomBox 947.44100 896.59100 1263.46700 1179.50200
+zoomBox 1008.93100 930.05900 1237.26000 1134.46200
+zoomBox 1032.94500 943.12900 1227.02500 1116.87200
+zoomBox 1087.67000 1000.25300 1188.98200 1090.94900
+zoomBox 1116.23600 1030.07300 1169.12300 1077.41800
+zoomBox 1120.91600 1034.95800 1165.87000 1075.20100
+zoomBox 1124.89400 1039.11000 1163.10500 1073.31700
+zoomBox 1131.14800 1045.63800 1158.75700 1070.35400
+zoomBox 1138.07900 1050.96300 1152.49200 1063.86600
+zoomBox 1139.21400 1051.83500 1151.46600 1062.80300
+zoomBox 1140.17900 1052.57700 1150.59300 1061.90000
+zoomBox 1140.99800 1053.20700 1149.85100 1061.13200
+zoomBox 1142.80100 1055.07600 1148.23800 1059.94300
+selectObject Pin I0/U75/B2
+zoomBox 1144.50100 1056.58900 1146.91500 1058.75000
+zoomBox 1144.91200 1057.29100 1146.39500 1058.61900
+zoomBox 1145.22400 1057.82400 1146.00000 1058.51900
+zoomBox 1145.31900 1057.98700 1145.88000 1058.48900
+zoomBox 1145.27500 1057.91200 1145.93500 1058.50300
+zoomBox 1145.22300 1057.82300 1146.00000 1058.51900
+zoomBox 1145.16200 1057.72000 1146.07600 1058.53800
+zoomBox 1144.79100 1057.08800 1146.54400 1058.65700
+zoomBox 1144.30400 1056.25700 1147.15800 1058.81200
+zoomBox 1143.81800 1055.43000 1147.76900 1058.96700
+zoomBox 1142.21700 1052.70100 1149.78600 1059.47700
+zoomBox 1141.62600 1051.69300 1150.53100 1059.66500
+zoomBox 1138.01800 1045.54400 1155.07800 1060.81600
+zoomBox 1135.11900 1040.60100 1158.73200 1061.74000
+zoomBox 1133.27400 1037.45800 1161.05500 1062.32800
+zoomBox 1128.55300 1029.40900 1167.00500 1063.83200
+zoomBox 1132.15000 1032.17000 1164.83400 1061.42900
+zoomBox 1140.01400 1038.20600 1160.08600 1056.17500
+zoomBox 1145.67400 1044.19700 1158.00200 1055.23300
+zoomBox 1149.15100 1047.87700 1156.72200 1054.65500
+zoomBox 1151.59800 1050.54900 1155.55200 1054.08900
+zoomBox 1152.63700 1051.63400 1154.70100 1053.48200
+zoomBox 1152.95200 1051.96300 1154.44400 1053.29900
+zoomBox 1153.46100 1052.49700 1154.02400 1053.00100
+zoomBox 1153.59600 1052.60100 1154.00400 1052.96600
+zoomBox 1153.76400 1052.73100 1153.97800 1052.92300
+zoomBox 1153.62300 1052.62100 1154.03500 1052.99000
+zoomBox 1153.57100 1052.58100 1154.05600 1053.01500
+zoomBox 1153.25200 1052.33600 1154.18300 1053.16900
+zoomBox 1152.99600 1052.13900 1154.28500 1053.29300
+setLayerPreference V2 -isVisible 0
+zoomBox 1151.51200 1051.01600 1154.93300 1054.07900
+zoomBox 1149.33100 1049.36600 1155.88600 1055.23400
+zoomBox 1146.46400 1047.19700 1157.13900 1056.75300
+zoomBox 1130.71600 1035.28200 1164.01900 1065.09500
+zoomBox 1068.83100 988.46400 1191.05000 1097.87600
+zoomBox 962.18300 907.78400 1237.63400 1154.37100
+zoomBox 1015.25800 981.21000 1184.42000 1132.64600
+zoomBox 1055.63500 1037.06900 1143.93900 1116.12000
+zoomBox 1072.64900 1060.60800 1126.88000 1109.15600
+getDesignMode -user -bottomRoutingLayer
+getDesignMode -user -topRoutingLayer
+getDesignMode -user -bottomRoutingLayer
+getDesignMode -user -topRoutingLayer
+getDesignMode -user -bottomRoutingLayer
+getDesignMode -user -topRoutingLayer
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -drouteFixAntenna 0
+getDesignMode -user -bottomRoutingLayer
+getDesignMode -user -topRoutingLayer
+setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+setNanoRouteMode -quiet -drouteFixAntenna 0
+setNanoRouteMode -quiet -routeInsertAntennaDiode 0
+setNanoRouteMode -quiet -routeWithTimingDriven 0
+setNanoRouteMode -quiet -routeWithEco 0
+setNanoRouteMode -quiet -routeWithLithoDriven 0
+setNanoRouteMode -quiet -droutePostRouteLithoRepair 0
+setNanoRouteMode -quiet -routeWithSiDriven 0
+setNanoRouteMode -quiet -drouteAutoStop 0
+setNanoRouteMode -quiet -routeSelectedNetOnly 0
+getDesignMode -quiet -topRoutingLayer
+getDesignMode -quiet -bottomRoutingLayer
+setNanoRouteMode -quiet -drouteEndIteration 1
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
